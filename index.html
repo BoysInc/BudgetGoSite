@@ -8,9 +8,9 @@
   <meta property="og:title" content="BudgetGo — The quick, joyful way to budget">
   <meta property="og:description" content="Log a spend in seconds, set goals, and watch your savings grow. Join the waitlist.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#6b5cff">
+  <meta name="theme-color" content="#0f172a">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="src/budgetgo-logo.png">
 
@@ -27,9 +27,10 @@
       </button>
       <nav class="nav-links" aria-label="primary">
         <a href="#features">Features</a>
+        <a href="#insights">Insights</a>
         <a href="#how">How it works</a>
         <a href="https://kaleidoscopic-cuchufli-68a1b3.netlify.app/">Privacy Policy</a>
-        <a class="btn ghost" href="#email">Join Waitlist</a>
+        <a class="btn ghost" href="#waitlist-cta">Join Waitlist</a>
       </nav>
     </div>
   </header>
@@ -38,47 +39,217 @@
     <section class="hero">
       <div class="shell hero-grid">
         <div>
-          <div class="kicker">THE BUDGETING APP</div>
-          <h1>The quick, joyful way to budget</h1>
-          <p class="lead">Log a spend in seconds, set goals that stick, and watch your savings grow. Built for busy people who want clarity without the spreadsheets.</p>
-          <form id="waitlist" class="waitlist" name="waitlist" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="waitlist" />
-            <label for="email" class="sr-only">Email address</label>
-            <div class="input">
-              <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="#c2c3ff" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.4l-10 6.25L2 6.4V6z"/><path fill="#b5b6ff" d="M2 8.1v9.9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.1l-9.35 5.85a3 3 0 0 1-3.3 0L2 8.1z"/></svg>
-              <input id="email" name="email" type="email" placeholder="Enter your email" required aria-describedby="emailHelp" />
+          <div class="kicker">YOUR FINANCIAL WINGMAN</div>
+          <h1>Build better spending habits, effortlessly.</h1>
+          <p class="lead">BudgetGo fixes the tracking habit, not just the budget. Get real-time awareness, supportive nudges, and a system that helps you spend with confidence.</p>
+          <div class="hero-actions">
+            <div class="hero-cta">
+              <a class="btn primary" href="#insights">Explore the app design</a>
+              <a class="btn ghost" href="#features">See features</a>
             </div>
-            <button class="btn primary ring" type="submit" aria-label="Join waitlist">Join the waitlist</button>
-            <div id="emailHelp" class="tiny">No spam. Opt out anytime.</div>
-            <div id="formMsg" class="tiny" role="status" aria-live="polite"></div>
-          </form>
-          <div class="badge-row">
-            <div class="badge">⚡ Log a spend in seconds</div>
-            <div class="badge">🎯 Goals &amp; progress tracking</div>
-            <div class="badge">🔒 Private by design</div>
           </div>
         </div>
         <div class="app-preview" aria-hidden="true">
-          <img src="src/preview/imagethreee.png" alt="BudgetGo App Interface Preview" class="app-screenshot" />
+          <div class="hero-deck">
+            <img src="src/preview/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202026-01-07%20at%2023.30.22.png" alt="BudgetGo app screen preview" class="app-screenshot hero-image deck-card back" />
+            <img src="src/preview/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202025-12-13%20at%2012.40.53.png" alt="BudgetGo app screen preview" class="app-screenshot hero-image deck-card front" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="App screens">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <h2>See BudgetGo in action.</h2>
+            <p>Four core screens that keep your plan, spending, and goals in view.</p>
+          </div>
+          <a class="btn ghost" href="#insights">Explore insights</a>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img src="src/preview/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202026-01-07%20at%2023.30.22.png" alt="BudgetGo dashboard screen" />
+          </figure>
+          <figure class="gallery-card">
+            <img src="src/preview/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202026-01-07%20at%2023.30.59.png" alt="BudgetGo categories screen" />
+          </figure>
+          <figure class="gallery-card">
+            <img src="src/preview/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202026-01-07%20at%2023.31.27.png" alt="BudgetGo goal tracking screen" />
+          </figure>
+          <figure class="gallery-card">
+            <img src="src/preview/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202026-01-07%20at%2023.32.51.png" alt="BudgetGo transaction view screen" />
+          </figure>
         </div>
       </div>
     </section>
 
     <section id="features">
       <div class="shell">
-        <h2>Fast, simple tools to stay on budget</h2>
+        <div class="section-head">
+          <div>
+            <h2>Habit-first money coaching.</h2>
+            <p>BudgetGo focuses on the real problem: spending and tracking habits. We make the right moment feel effortless, so you stay in control without pressure.</p>
+          </div>
+          <a class="btn ghost" href="#how">See the flow</a>
+        </div>
         <div class="features" role="list">
           <article class="feat" role="listitem">
-            <h3>One‑tap expense logging</h3>
-            <p>Capture spending right when it happens. Categories learn your habits over time.</p>
+            <h3>Insights and recommendations</h3>
+            <p>Daily intelligence surfaces patterns, warns you early, and suggests small course corrections before things drift.</p>
           </article>
           <article class="feat" role="listitem">
-            <h3>Goals that actually stick</h3>
-            <p>Create savings goals with amounts and timelines. We nudge you when you’re off‑track.</p>
+            <h3>Challenges + habit loops</h3>
+            <p>Short challenges help you build tracking streaks and spending awareness without guilt or restriction.</p>
           </article>
           <article class="feat" role="listitem">
-            <h3>Clear insights</h3>
-            <p>See weekly trends, streaks, and progress without complex charts.</p>
+            <h3>Smart reminders</h3>
+            <p>Bill and subscription alerts keep you ahead, so surprises never derail your month.</p>
+          </article>
+          <article class="feat" role="listitem">
+            <h3>Auto categorization</h3>
+            <p>Transactions are classified automatically, and you can correct them once to improve the model.</p>
+          </article>
+          <article class="feat" role="listitem">
+            <h3>Apple automation tracking</h3>
+            <p>Log spending moments with shortcuts so tracking happens while life happens.</p>
+          </article>
+          <article class="feat" role="listitem">
+            <h3>Chats and nudges</h3>
+            <p>Ask questions, get clarity, and receive supportive coaching right when you need it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="insights">
+      <div class="shell insights-grid">
+        <div>
+          <h2>See the whole money story.</h2>
+          <p class="lead">A single dashboard shows income vs expenses, cash flow trends, and what is safe to spend today.</p>
+          <div class="insight-points">
+            <div class="insight-point">
+              <div class="dot"></div>
+              <div>
+                <h3>Budget vs actual</h3>
+                <p>Clear variance tracking keeps you confident before the month ends.</p>
+              </div>
+            </div>
+            <div class="insight-point">
+              <div class="dot"></div>
+              <div>
+                <h3>Cash flow timeline</h3>
+                <p>Know what is coming in and out so you can plan ahead, not react.</p>
+              </div>
+            </div>
+            <div class="insight-point">
+              <div class="dot"></div>
+              <div>
+                <h3>Goal progress</h3>
+                <p>Track savings milestones and keep your momentum without spreadsheets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="insight-board" aria-hidden="true">
+          <div class="board-row">
+            <div>
+              <div class="board-label">Budget used</div>
+              <div class="board-value">72%</div>
+            </div>
+            <div class="board-pill">+$320 safe to spend</div>
+          </div>
+          <div class="board-graph">
+            <div class="spark">
+              <span style="height:30%"></span>
+              <span style="height:70%"></span>
+              <span style="height:52%"></span>
+              <span style="height:88%"></span>
+              <span style="height:60%"></span>
+              <span style="height:95%"></span>
+            </div>
+            <div class="legend">
+              <div><span></span>Income</div>
+              <div><span class="alt"></span>Expenses</div>
+            </div>
+          </div>
+          <div class="board-list">
+            <div class="board-item">
+              <span>Rent</span>
+              <span>$1,020</span>
+            </div>
+            <div class="board-item">
+              <span>Groceries</span>
+              <span>$248</span>
+            </div>
+            <div class="board-item">
+              <span>Transit</span>
+              <span>$64</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="onboarding" class="onboarding">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <h2>Onboarding that feels like a mirror.</h2>
+            <p>We learn how you drift, what stresses you, and where support should show up—so your plan fits real life.</p>
+          </div>
+          <a class="btn ghost" href="#features">Why it works</a>
+        </div>
+        <div class="question-grid">
+          <article class="question-card">
+            <h3>Which of these happens more often than you’d like?</h3>
+            <p>Money runs out early • Small purchases add up • Avoid checking balance</p>
+          </article>
+          <article class="question-card">
+            <h3>When spending goes off-track, what’s usually missing?</h3>
+            <p>Awareness • A clear plan • A pause before buying</p>
+          </article>
+          <article class="question-card">
+            <h3>What part of money management feels heavier than it should?</h3>
+            <p>Tracking, surprise expenses, guilt after spending</p>
+          </article>
+          <article class="question-card">
+            <h3>What breaks first when life gets busy?</h3>
+            <p>Tracking expenses • Sticking to a plan • Reviewing finances</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <h2>Budget clarity that sticks.</h2>
+            <p>Fast setup, gentle nudges, and a plan you will actually follow.</p>
+          </div>
+          <a class="btn ghost" href="#how">How it works</a>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>“BudgetGo finally made budgeting feel calm. I can see where my money goes without digging through spreadsheets.”</p>
+            <div class="testimonial-meta">
+              <div class="avatar">RS</div>
+              <div>
+                <div class="name">Riley S.</div>
+                <div class="role">Founder, Arcwave</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <p>“The needs/wants/savings guide keeps us balanced. It is like a financial co-pilot for our household.”</p>
+            <div class="testimonial-meta">
+              <div class="avatar">JM</div>
+              <div>
+                <div class="name">Jordan M.</div>
+                <div class="role">Product Lead, Lumen</div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -87,25 +258,30 @@
 
     <section id="how">
       <div class="shell">
-        <h2>Set up in minutes</h2>
+        <div class="section-head">
+          <div>
+            <h2>Set up in minutes, stay on track for years.</h2>
+            <p>Simple steps, zero spreadsheets. BudgetGO keeps everything in one clean flow.</p>
+          </div>
+        </div>
         <div class="steps">
-          <div class="step"><b>1. Budget length</b>Choose weekly, bi‑weekly, or monthly.</div>
-          <div class="step"><b>2. Income &amp; style</b>Tell us how you track—envelopes or flexible.</div>
-          <div class="step"><b>3. Financial life</b>Pick what matters: rent, food, travel, subscriptions.</div>
-          <div class="step"><b>4. Add a goal</b>Name it, set an amount, pick a timeline, done.</div>
+          <div class="step"><b>1. Link accounts</b>Connect your bank or add transactions manually.</div>
+          <div class="step"><b>2. Pick your structure</b>Choose needs, wants, and savings targets.</div>
+          <div class="step"><b>3. Set guardrails</b>Budget limits and alerts keep you in control.</div>
+          <div class="step"><b>4. Grow goals</b>Track your progress and adjust with confidence.</div>
         </div>
       </div>
     </section>
 
-    <section class="cta" aria-labelledby="cta-title">
+    <section id="waitlist-cta" class="cta" aria-labelledby="cta-title">
       <div class="shell">
-        <h2 id="cta-title">Be first to try BudgetGo</h2>
-        <p>Join our early access and help shape the app.</p>
+        <h2 id="cta-title">Your next budget starts here.</h2>
+        <p>Join the waitlist for early access and share what you want to see in BudgetGo.</p>
         <form class="waitlist" name="waitlist-cta" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="waitlist-cta" />
           <label for="email-cta" class="sr-only">Email address</label>
           <div class="input">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="#c2c3ff" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.4l-10 6.25L2 6.4V6z"/><path fill="#b5b6ff" d="M2 8.1v9.9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.1l-9.35 5.85a3 3 0 0 1-3.3 0L2 8.1z"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="#9aa5ff" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.4l-10 6.25L2 6.4V6z"/><path fill="#7782ff" d="M2 8.1v9.9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.1l-9.35 5.85a3 3 0 0 1-3.3 0L2 8.1z"/></svg>
             <input id="email-cta" name="email" type="email" placeholder="Email address" required />
           </div>
           <button class="btn primary ring" type="submit">Join the waitlist</button>
@@ -113,8 +289,8 @@
         </form>
         <div class="badge-row" style="justify-content:center; margin-top:18px">
           <div class="badge">iOS &amp; Android</div>
-          <div class="badge">Lightweight &amp; fast</div>
-          <div class="badge">Made with ❤️ for everyday budgeting</div>
+          <div class="badge">Secure bank sync</div>
+          <div class="badge">Real humans behind the product</div>
         </div>
       </div>
     </section>
