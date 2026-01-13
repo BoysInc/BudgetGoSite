@@ -542,6 +542,8 @@ footer a[aria-disabled="true"]{opacity:.6; cursor:not-allowed}
     align-items:center;
     gap:24px;
     font-size:18px;
+    overflow-y:auto;
+    padding:80px 20px;
   }
   .nav-links.active{display:flex}
   .features,.steps{grid-template-columns:1fr}
@@ -550,6 +552,29 @@ footer a[aria-disabled="true"]{opacity:.6; cursor:not-allowed}
   .shell{padding:0 16px}
   footer .row{flex-direction:column; text-align:center; gap:12px}
   .gallery-grid{grid-template-columns:1fr}
+}
+
+@media (max-width: 600px){
+  section{padding:56px 0}
+  .hero{padding:40px 0 16px}
+  .gallery{padding-top:32px}
+  .hero-deck{
+    min-height:auto;
+    padding:16px 0;
+  }
+  .deck-card{
+    position:relative;
+    transform:none;
+  }
+  .deck-card.back{display:none}
+  .hero-deck:hover .deck-card.front{transform:none}
+  .hero-image{width:min(240px, 85%)}
+  .insight-board{padding:18px}
+  .board-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
 }
 
 .sr-only{position:absolute; width:1px; height:1px; margin:-1px; clip:rect(0,0,0,0); overflow:hidden}
