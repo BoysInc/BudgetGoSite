@@ -146,24 +146,6 @@ ul li::marker {
   background: var(--section-base-solid);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(22px) scale(0.985);
-  filter: blur(4px);
-  transition:
-    opacity 600ms cubic-bezier(0.2, 0.65, 0.3, 1),
-    transform 650ms cubic-bezier(0.2, 0.65, 0.3, 1),
-    filter 650ms cubic-bezier(0.2, 0.65, 0.3, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform, filter;
-}
-
-.reveal.in-view {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
-}
-
 .narrow {
   max-width: 760px;
 }
@@ -994,6 +976,10 @@ h2 {
     min-height: 40rem;
   }
 
+  .section > .container {
+    width: min(var(--container), calc(100% - 3rem));
+  }
+
   h1 {
     max-width: 20ch;
   }
@@ -1031,8 +1017,12 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .footer-grid {
+    padding-left: 1.5rem;
+  }
+
   .footer-bottom {
-    padding-left: 1.1rem;
+    padding-left: 1.5rem;
     align-items: flex-start;
   }
 }
@@ -1079,9 +1069,4 @@ h2 {
     scroll-behavior: auto !important;
   }
 
-  .reveal {
-    opacity: 1;
-    transform: none;
-    filter: none;
-  }
 }

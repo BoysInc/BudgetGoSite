@@ -188,7 +188,7 @@
         <a href="#overview">Overview</a>
         <a href="#features">Features</a>
         <a href="#">Pricing</a>
-        <a href="#">Download</a>
+        <a href="https://testflight.apple.com/join/V6pXPwcp" target="_blank" rel="noopener noreferrer">Download</a>
       </div>
 
       <div>
@@ -323,45 +323,6 @@
         syncFeatureUi();
       }
 
-      const revealSelectors = [
-        '.hero-copy > *',
-        '#how-it-works .step-card',
-        '#features h2',
-        '#features .feature-card',
-        '.difference-list li',
-        '#security .container > *'
-      ];
-
-      const revealItems = [];
-      revealSelectors.forEach(function (selector) {
-        revealItems.push.apply(revealItems, Array.from(document.querySelectorAll(selector)));
-      });
-
-      revealItems.forEach(function (item, index) {
-        item.classList.add('reveal');
-        item.style.setProperty('--reveal-delay', String((index % 6) * 70) + 'ms');
-      });
-
-      if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver(function (entries, observer) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          });
-        }, {
-          threshold: 0.16,
-          rootMargin: '0px 0px -8% 0px'
-        });
-
-        revealItems.forEach(function (item) {
-          revealObserver.observe(item);
-        });
-      } else {
-        revealItems.forEach(function (item) {
-          item.classList.add('in-view');
-        });
-      }
     })();
   </script>
 </body>
