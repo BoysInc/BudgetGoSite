@@ -386,13 +386,25 @@ ul li::marker {
 
 .nav-links .nav-cta-half {
   --btn-radius: 11px;
-  --btn-depth: 4px;
+  --btn-depth: 0;
   font-size: 0.665rem;
 }
 
 .nav-links .nav-cta-half .front {
   min-width: 8.4rem;
   padding: 0.5rem 1.12rem;
+  transform: none;
+  transition: background-color 220ms ease;
+}
+
+.nav-links .nav-cta-half .edge {
+  display: none;
+}
+
+.nav-links .nav-cta-half:hover .front,
+.nav-links .nav-cta-half:focus-visible .front,
+.nav-links .nav-cta-half:active .front {
+  transform: none;
 }
 
 .btn-ghost {
@@ -459,6 +471,11 @@ h1 {
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
+}
+
+.hero-actions .btn-primary .front {
+  min-width: 15.5rem;
+  padding-inline: 2.2rem;
 }
 
 .hero-main-shot {
@@ -948,7 +965,7 @@ h2 {
 
   .nav-links .nav-cta-half {
     --btn-radius: 16px;
-    --btn-depth: 6px;
+    --btn-depth: 0;
     font-size: 0.95rem;
   }
 
@@ -981,9 +998,27 @@ h2 {
     max-width: 20ch;
   }
 
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-grid {
+    justify-items: center;
+  }
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+  h1,
+  .lead {
+    margin-inline: auto;
+  }
+
   .hero-actions {
     width: 100%;
     flex-direction: column;
+    align-items: center;
   }
 
   .hero-main-shot {
