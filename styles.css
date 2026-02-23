@@ -26,6 +26,7 @@
   --container-border: rgba(71, 85, 105, 0.35);
   --section-hero-solid: #141a31;
   --section-base-solid: #0f172a;
+  --section-min-height: 46rem;
   --section-hero-bg: linear-gradient(180deg, #17162a 0%, #141a31 72%, #121b34 100%);
   --section-base-bg: linear-gradient(180deg, #0d1327 0%, #111827 44%, #0f172a 100%);
   --radius-sm: 14px;
@@ -128,6 +129,9 @@ ul li::marker {
 
 .section {
   padding: 4.2rem 0;
+  min-height: var(--section-min-height);
+  display: flex;
+  align-items: center;
 }
 
 .section-tint {
@@ -840,9 +844,7 @@ h2 {
   position: relative;
   overflow: hidden;
   padding: 4.4rem 0 2.8rem;
-  background:
-    radial-gradient(circle at 85% 18%, rgba(138, 111, 240, 0.12), transparent 35%),
-    linear-gradient(180deg, #020c2b 0%, #000f36 100%);
+  background: #000f36;
   border-top: 1px solid transparent;
 }
 
@@ -859,6 +861,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
+  padding-left: 2.25rem;
 }
 
 .footer-grid h3 {
@@ -881,15 +884,11 @@ h2 {
 .footer-bottom {
   margin-top: 2rem;
   padding-top: 1.3rem;
+  padding-left: 2.25rem;
   border-top: 1px solid transparent;
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.footer-bottom img {
-  border-radius: 0.85rem;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.28);
 }
 
 .footer-bottom p {
@@ -992,6 +991,7 @@ h2 {
 
   .section {
     padding: 3.2rem 0;
+    min-height: 40rem;
   }
 
   h1 {
@@ -1032,6 +1032,7 @@ h2 {
   }
 
   .footer-bottom {
+    padding-left: 1.1rem;
     align-items: flex-start;
   }
 }
