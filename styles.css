@@ -79,20 +79,25 @@ ul {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 30;
-  border-bottom: 1px solid transparent;
-  background: rgba(10, 8, 16, 0.9);
-  backdrop-filter: blur(14px);
+  width: min(var(--container), calc(100% - 2rem));
+  border-radius: 999px;
+  background: rgba(12, 9, 18, 0.72);
+  backdrop-filter: blur(18px) saturate(1.15);
+  box-shadow: 0 18px 40px rgba(6, 4, 12, 0.24);
 }
 
 .nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 5rem;
+  min-height: 4.4rem;
   gap: 1rem;
+  padding: 0 1.25rem;
 }
 
 .brand {
@@ -257,7 +262,7 @@ ul {
 }
 
 .nav-cta img {
-  height: 2.75rem;
+  height: 2.3rem;
 }
 
 .section {
@@ -281,12 +286,32 @@ ul {
 }
 
 .hero {
-  padding: 3rem 0 1.5rem;
+  padding: 8rem 0 1.75rem;
   position: relative;
+  overflow: clip;
   background:
-    radial-gradient(circle at 50% 18%, rgba(113, 50, 245, 0.24), transparent 28%),
-    var(--bg-deep);
+    radial-gradient(circle at 18% 22%, rgba(255, 202, 98, 0.16), transparent 24%),
+    radial-gradient(circle at 80% 14%, rgba(113, 50, 245, 0.22), transparent 26%),
+    linear-gradient(180deg, #110d1a 0%, #0b0811 55%, #09070f 100%);
   color: var(--text-inverse);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.045), transparent 32%),
+    radial-gradient(circle at 50% 32%, rgba(247, 244, 255, 0.08), transparent 30%),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 76px,
+      rgba(255, 255, 255, 0.028) 76px,
+      rgba(255, 255, 255, 0.028) 77px
+    );
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .hero::after {
@@ -302,11 +327,48 @@ ul {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
+  position: relative;
+  min-height: calc(100svh - 5rem - 1.75rem);
+  align-items: center;
+  isolation: isolate;
+}
+
+.hero-layout::before,
+.hero-layout::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(16px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-layout::before {
+  width: min(72vw, 58rem);
+  height: min(72vw, 58rem);
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(circle, rgba(113, 50, 245, 0.3) 0%, rgba(113, 50, 245, 0.14) 34%, transparent 68%);
+  animation: hero-drift-center 14s ease-in-out infinite;
+}
+
+.hero-layout::after {
+  width: min(52vw, 34rem);
+  height: min(52vw, 34rem);
+  right: 8%;
+  bottom: 1.5rem;
+  background:
+    radial-gradient(circle, rgba(255, 202, 98, 0.18) 0%, rgba(255, 202, 98, 0.06) 38%, transparent 72%);
+  animation: hero-drift-side 18s ease-in-out infinite reverse;
 }
 
 .hero-copy {
   max-width: 42rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-copy .section-label {
@@ -744,6 +806,28 @@ h1 {
   }
 }
 
+@keyframes hero-drift-center {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(16px) scale(1.04);
+  }
+}
+
+@keyframes hero-drift-side {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-18px) scale(1.06);
+    opacity: 1;
+  }
+}
+
 @keyframes border-pulse {
   0%,
   100% {
@@ -860,13 +944,18 @@ h1 {
 }
 
 @media (max-width: 920px) {
+  .site-header {
+    width: calc(100% - 1.5rem);
+    top: 0.75rem;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
 
   .nav-links {
     position: fixed;
-    top: 5.2rem;
+    top: 5.55rem;
     left: 1rem;
     right: 1rem;
     display: grid;
@@ -911,7 +1000,8 @@ h1 {
   }
 
   .hero {
-    padding-top: 2.25rem;
+    padding-top: 7rem;
+    padding-bottom: 1.5rem;
   }
 
   .intro-band {
@@ -920,6 +1010,10 @@ h1 {
 
   .hero-copy {
     max-width: none;
+  }
+
+  .hero-layout {
+    min-height: auto;
   }
 
   .download-card {
@@ -945,17 +1039,39 @@ h1 {
     width: min(var(--container), calc(100% - 1.5rem));
   }
 
+  .site-header {
+    width: calc(100% - 1rem);
+    top: 0.5rem;
+  }
+
   .section {
     padding: 3.75rem 0;
   }
 
   .hero {
-    padding-top: 1.75rem;
+    padding-top: 6.5rem;
     padding-bottom: 1rem;
   }
 
   .hero-layout {
     position: relative;
+  }
+
+  .hero::before {
+    opacity: 0.5;
+  }
+
+  .hero-layout::before {
+    width: 34rem;
+    height: 34rem;
+    top: -5rem;
+  }
+
+  .hero-layout::after {
+    width: 20rem;
+    height: 20rem;
+    right: -2rem;
+    bottom: 2rem;
   }
 
   .hero-copy {
