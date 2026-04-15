@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Support | BudgetGo</title>
-  <meta name="description" content="Contact BudgetGo support for app help, bug reports, account questions, and privacy requests." />
+  <meta name="description" content="Get help with BudgetGo, report an issue, ask account questions, or submit a privacy request." />
   <meta property="og:title" content="Support | BudgetGo" />
-  <meta property="og:description" content="Get help with BudgetGo, report an issue, or contact GraphLeaf LLC." />
+  <meta property="og:description" content="Get help with BudgetGo, report an issue, ask account questions, or submit a privacy request." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0A0810" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,117 +15,357 @@
   <link rel="icon" href="src/images/logo.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .support-hero,
-    .support-section {
-      min-height: 0;
-    }
-
     .support-hero {
-      padding-top: 6rem;
-      padding-bottom: 2rem;
+      padding: 2.75rem 0 2.35rem;
+      background:
+        radial-gradient(circle at 50% 16%, rgba(113, 50, 245, 0.26), transparent 42%),
+        var(--bg-deep);
     }
 
-    .support-hero .lead {
-      max-width: 42rem;
+    .support-hero-layout {
+      display: block;
+    }
+
+    .support-hero-copy {
+      max-width: 35rem;
+      padding-top: 0.7rem;
+    }
+
+    .support-hero-copy h1 {
+      max-width: 8.5ch;
+      margin-top: 0.35rem;
+      margin-inline: 0;
+      font-size: clamp(3.1rem, 4.8vw, 4.4rem);
+      line-height: 0.98;
+    }
+
+    .support-intro {
+      margin-top: 1rem;
+      max-width: 31rem;
+      color: var(--text-soft);
+      font-size: 1rem;
     }
 
     .support-actions {
-      margin-top: 2rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
+      margin-top: 1.85rem;
     }
 
-    .support-actions .btn-primary .front {
-      min-width: 13.5rem;
+    .support-actions .btn {
+      min-width: 11.5rem;
+    }
+
+    .support-routes {
+      background: var(--bg-muted);
+    }
+
+    .support-form-section {
+      padding-top: 2.5rem;
+      padding-bottom: 4.25rem;
+    }
+
+    .support-form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .support-form-panel {
+      padding: 1.45rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 18px 34px rgba(8, 6, 14, 0.2);
+    }
+
+    .support-form-panel h2 {
+      font-size: 2rem;
+      max-width: 12ch;
+    }
+
+    .support-form-panel p {
+      margin-top: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .support-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.95rem;
+      margin-top: 1.35rem;
+    }
+
+    .support-form-field {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .support-form-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .support-form-field label {
+      color: rgba(242, 239, 255, 0.8);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .support-form-field input,
+    .support-form-field select,
+    .support-form-field textarea {
+      width: 100%;
+      padding: 0.85rem 0.95rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(10, 8, 16, 0.9);
+      color: var(--text-inverse);
+      font: inherit;
+      resize: vertical;
+      transition: border-color 220ms var(--ease-smooth), box-shadow 220ms var(--ease-smooth), background-color 220ms var(--ease-smooth);
+    }
+
+    .support-form-field textarea {
+      min-height: 9rem;
+    }
+
+    .support-form-field input::placeholder,
+    .support-form-field textarea::placeholder {
+      color: rgba(190, 183, 213, 0.62);
+    }
+
+    .support-form-field input:focus,
+    .support-form-field select:focus,
+    .support-form-field textarea:focus {
+      outline: none;
+      border-color: rgba(113, 50, 245, 0.64);
+      box-shadow: 0 0 0 3px rgba(113, 50, 245, 0.16);
+    }
+
+    .support-form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.1rem;
+    }
+
+    .support-form-note {
+      margin-top: 0.95rem;
+      color: rgba(242, 239, 255, 0.66);
+      font-size: 0.9rem;
+    }
+
+    .support-form-helper {
+      display: grid;
+      gap: 0.95rem;
+    }
+
+    .support-form-helper ul {
+      margin-top: 0.9rem;
+    }
+
+    .support-form-helper li + li {
+      margin-top: 0.45rem;
     }
 
     .support-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
+    .support-route,
     .support-panel {
-      height: 100%;
-      padding: 1.5rem;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--container-border);
-      background: rgba(15, 23, 42, 0.84);
-      box-shadow: 0 20px 40px rgba(2, 6, 23, 0.28);
+      min-height: 100%;
+      padding: 1.45rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: transform 320ms var(--ease-fluid), border-color 320ms var(--ease-fluid), box-shadow 320ms var(--ease-fluid);
     }
 
-    .support-panel h2,
+    .support-route:hover,
+    .support-route:focus-within,
+    .support-panel:hover,
+    .support-panel:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(113, 50, 245, 0.46);
+      box-shadow: 0 18px 34px rgba(8, 6, 14, 0.28);
+    }
+
+    .support-route-kicker,
+    .support-panel-kicker {
+      margin-bottom: 0.55rem;
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .support-route h3,
     .support-panel h3 {
-      margin-bottom: 0.8rem;
+      font-size: 1.28rem;
     }
 
-    .support-panel p + p,
-    .support-panel ul + p,
-    .support-panel p + ul {
+    .support-route p,
+    .support-panel p,
+    .support-panel li {
+      color: var(--text-soft);
+    }
+
+    .support-route p,
+    .support-panel p,
+    .support-panel ul,
+    .support-panel-address,
+    .support-route-link {
+      margin-top: 0.75rem;
+    }
+
+    .support-route ul,
+    .support-panel ul {
       margin-top: 0.95rem;
     }
 
-    .support-list {
+    .support-route li + li,
+    .support-panel li + li {
+      margin-top: 0.45rem;
+    }
+
+    .support-route-link,
+    .support-inline-link {
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    .support-route-link:hover,
+    .support-route-link:focus-visible,
+    .support-inline-link:hover,
+    .support-inline-link:focus-visible {
+      color: #ffd98d;
+    }
+
+    .support-detail {
+      padding-top: 4.5rem;
+    }
+
+    .support-detail-layout {
       display: grid;
-      gap: 0.8rem;
-      padding-left: 1.2rem;
+      grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+      gap: 1rem;
+      align-items: start;
     }
 
-    .support-list li {
-      color: var(--text-mid);
+    .support-side-stack {
+      display: grid;
+      gap: 1rem;
     }
 
-    .support-meta {
+    .support-links {
       display: grid;
       gap: 0.7rem;
+      margin-top: 0.85rem;
     }
 
-    .support-meta strong {
-      color: var(--text-high);
+    .support-final {
+      padding-top: 4rem;
+      padding-bottom: 5rem;
     }
 
-    .support-link {
-      color: #f8c561;
-      text-decoration: underline;
-      text-decoration-color: rgba(248, 197, 97, 0.45);
-      text-underline-offset: 0.15em;
+    .support-final-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.75rem 0 0;
     }
 
-    .support-link:hover,
-    .support-link:focus-visible {
-      color: #ffd68a;
-      text-decoration-color: currentColor;
+    .support-final-inner p {
+      margin-top: 0.75rem;
+      color: var(--text-soft);
+      max-width: 35rem;
     }
 
-    .support-note {
-      margin-top: 1rem;
-      padding: 1rem 1.1rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(245, 158, 11, 0.32);
-      background: rgba(245, 158, 11, 0.08);
+    .support-final-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    @media (max-width: 900px) {
+    .support-download-btn {
+      min-width: 11rem;
+    }
+
+    .footer-attribution {
+      margin-top: 0.55rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-attribution a {
+      color: rgba(242, 239, 255, 0.62);
+    }
+
+    .footer-attribution a:hover,
+    .footer-attribution a:focus-visible {
+      color: var(--text-inverse);
+    }
+
+    @media (max-width: 980px) {
+      .support-detail-layout,
+      .support-form-layout,
+      .support-final-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .support-hero-copy {
+        padding-top: 0;
+      }
+
       .support-grid {
         grid-template-columns: 1fr;
       }
-    }
 
-    @media (max-width: 760px) {
-      .support-hero {
-        padding-top: 5.2rem;
+      .support-form-panel h2 {
+        max-width: none;
       }
 
-      .support-actions {
+      .support-final-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .support-hero {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .support-hero-copy h1 {
+        max-width: 9ch;
+        font-size: 2.8rem;
+      }
+
+      .support-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .support-actions,
+      .support-final-actions,
+      .support-form-actions {
         flex-direction: column;
         align-items: stretch;
       }
 
-      .support-actions .btn-primary,
-      .support-actions .btn-ghost {
+      .support-actions .btn,
+      .support-final-actions .btn,
+      .support-form-actions .btn {
         width: 100%;
+        max-width: 18rem;
       }
+
     }
   </style>
 </head>
@@ -137,92 +377,237 @@
         <span>BudgetGo</span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
         <span></span>
       </button>
 
       <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
         <a href="index.html#overview">Overview</a>
-        <a href="index.html#how-it-works">How it works</a>
-        <a href="index.html#features">Features</a>
+        <a href="index.html#showcase">Product</a>
         <a href="support.html" aria-current="page">Support</a>
-        <a class="btn btn-primary nav-cta-half" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">
-          <span class="edge" aria-hidden="true"></span>
-          <span class="front">Download app</span>
+        <a
+          class="btn btn-secondary nav-cta-text"
+          href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download
         </a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero section support-hero">
-      <div class="container narrow">
-        <p class="eyebrow">BudgetGo support</p>
-        <h1>Need help with BudgetGo?</h1>
-        <p class="lead">Use this page to contact support, report an app issue, ask account questions, or submit a privacy-related request.</p>
-        <div class="support-actions">
-          <a class="btn btn-primary" href="mailto:support@budgetgo.ai">
-            <span class="edge" aria-hidden="true"></span>
-            <span class="front">Email support</span>
-          </a>
-          <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSeUy2x4PREIZswT7UxxJtwDpBnU8uByq0vRzWzu3dnMg1YAdg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Privacy request form</a>
+    <section class="hero support-hero">
+      <div class="container support-hero-layout">
+        <div class="support-hero-copy">
+          <p class="section-label">BudgetGo support</p>
+          <h1>Get support</h1>
+          <p class="support-intro">
+            Use the form below for product questions, bug reports, account help, and billing issues.
+            Use the privacy form for data access, correction, or deletion requests.
+          </p>
+
+          <div class="support-actions">
+            <a class="btn btn-primary" href="mailto:support@budgetgo.ai">Email support</a>
+            <a
+              class="btn btn-secondary"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeUy2x4PREIZswT7UxxJtwDpBnU8uByq0vRzWzu3dnMg1YAdg/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy request form
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section support-form-section">
+      <div class="container support-form-layout">
+        <article class="support-form-panel">
+          <p class="support-panel-kicker">Send a message</p>
+          <h2>Write the support request here</h2>
+          <p>
+            Fill this out and BudgetGo will open an email draft with the details already structured.
+          </p>
+
+          <form id="supportForm" class="support-form-grid">
+            <div class="support-form-field">
+              <label for="supportName">Name</label>
+              <input id="supportName" name="name" type="text" placeholder="Your name" />
+            </div>
+
+            <div class="support-form-field">
+              <label for="supportEmail">Email</label>
+              <input id="supportEmail" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="support-form-field">
+              <label for="supportType">Request type</label>
+              <select id="supportType" name="type">
+                <option value="App issue">App issue</option>
+                <option value="Account help">Account help</option>
+                <option value="Billing question">Billing question</option>
+                <option value="Feature feedback">Feature feedback</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="support-form-field">
+              <label for="supportSubject">Subject</label>
+              <input id="supportSubject" name="subject" type="text" placeholder="Short summary" required />
+            </div>
+
+            <div class="support-form-field support-form-field-full">
+              <label for="supportMessage">Message</label>
+              <textarea id="supportMessage" name="message" placeholder="Describe the issue or request" required></textarea>
+            </div>
+
+            <div class="support-form-actions support-form-field-full">
+              <button class="btn btn-primary" type="submit">Open email draft</button>
+              <a class="btn btn-secondary" href="mailto:support@budgetgo.ai">Email support directly</a>
+            </div>
+          </form>
+
+          <p class="support-form-note">
+            After your email app opens, you can attach screenshots, recordings, or files before sending.
+          </p>
+        </article>
+
+        <aside class="support-form-panel support-form-helper">
+          <div>
+            <p class="support-panel-kicker">Helpful details</p>
+            <h3>Include enough context to speed up the first reply</h3>
+            <ul>
+              <li>Your account email if it is relevant to the issue</li>
+              <li>Your device model and iOS version for app problems</li>
+              <li>The current BudgetGo app version</li>
+              <li>What happened, what you expected, and what changed</li>
+            </ul>
+          </div>
+          <p>
+            Do not include sensitive payment information in the message body.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section support-routes">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Choose the fastest route</p>
+          <h2>Use the right support channel for the request</h2>
+        </div>
+
+        <div class="support-grid">
+          <article class="support-route">
+            <p class="support-route-kicker">App issues</p>
+            <h3>Report bugs, sync problems, or unexpected behavior</h3>
+            <p>
+              Send the steps that led to the issue, your device model, iOS version, app version,
+              and anything visible on screen when it happened.
+            </p>
+            <a class="support-route-link" href="mailto:support@budgetgo.ai">Email app support</a>
+          </article>
+
+          <article class="support-route">
+            <p class="support-route-kicker">Account and billing</p>
+            <h3>Ask about access, subscriptions, or product help</h3>
+            <p>
+              Use the email address tied to your BudgetGo account when possible so the request can
+              be matched quickly.
+            </p>
+            <a class="support-route-link" href="mailto:support@budgetgo.ai">Email account support</a>
+          </article>
+
+          <article class="support-route">
+            <p class="support-route-kicker">Privacy requests</p>
+            <h3>Request access, correction, or deletion of personal information</h3>
+            <p>
+              Use the privacy form for data-related requests so they are routed through the right
+              workflow from the start.
+            </p>
+            <a
+              class="support-route-link"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeUy2x4PREIZswT7UxxJtwDpBnU8uByq0vRzWzu3dnMg1YAdg/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open the privacy form
+            </a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt-base support-section">
-      <div class="container support-grid">
+    <section class="section support-detail">
+      <div class="container support-detail-layout">
         <article class="support-panel">
-          <h2>How To Reach Us</h2>
-          <div class="support-meta">
-            <p><strong>Email:</strong> <a class="support-link" href="mailto:support@budgetgo.ai">support@budgetgo.ai</a></p>
-            <p><strong>Company:</strong> GraphLeaf LLC</p>
-            <p><strong>Mailing address:</strong> 5830 E 2nd St Ste 7000 Casper, WY 82609, United States</p>
-          </div>
-          <div class="support-note">
-            <p>For the fastest resolution, send support requests from the email address associated with your BudgetGo account when possible.</p>
-          </div>
+          <p class="support-panel-kicker">What to include</p>
+          <h3>Send enough context to make the first reply useful</h3>
+          <ul>
+            <li>A short description of the issue or request</li>
+            <li>The email address tied to the account, if relevant</li>
+            <li>Your device model and iOS version for app issues</li>
+            <li>The current BudgetGo app version</li>
+            <li>Screenshots or screen recordings if they clarify what happened</li>
+          </ul>
+          <p>
+            Avoid sending full payment details or sensitive financial information by email.
+          </p>
         </article>
 
-        <article class="support-panel">
-          <h2>What To Include</h2>
-          <ul class="support-list">
-            <li>A short description of the problem or request</li>
-            <li>The email address tied to your account, if relevant</li>
-            <li>Your device model and iOS version for app issues</li>
-            <li>The BudgetGo app version and your iOS version</li>
-            <li>Screenshots or screen recordings if they help explain the issue</li>
-          </ul>
-        </article>
+        <div class="support-side-stack">
+          <article class="support-panel">
+            <p class="support-panel-kicker">Related pages</p>
+            <h3>Policies and product links</h3>
+            <div class="support-links">
+              <a class="support-inline-link" href="privacy_policy.html">Privacy Policy</a>
+              <a class="support-inline-link" href="terms_of_service.html">Terms of Service</a>
+              <a
+                class="support-inline-link"
+                href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BudgetGo on the App Store
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-alt-hero support-section">
-      <div class="container support-grid">
-        <article class="support-panel">
-          <h3>App Issues And Product Feedback</h3>
-          <p>If the app is crashing, syncing incorrectly, or behaving unexpectedly, email support with the steps needed to reproduce the issue.</p>
-          <p>You can always grab the latest release here: <a class="support-link" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">BudgetGo on the App Store</a>.</p>
-        </article>
+    <section class="section support-final">
+      <div class="container support-final-inner">
+        <div>
+          <p class="section-label">Still need help</p>
+          <h2>Use email for anything that does not fit the form</h2>
+          <p>
+            Product questions, feature feedback, account issues, and general help requests all go
+            through the same support inbox.
+          </p>
+        </div>
 
-        <article class="support-panel">
-          <h3>Account And Billing Help</h3>
-          <p>Use support email for account access issues, subscription questions, and general product help.</p>
-          <p>Include enough detail for us to identify the correct account without sharing sensitive payment data by email.</p>
-        </article>
-
-        <article class="support-panel">
-          <h3>Privacy And Data Requests</h3>
-          <p>To request access, correction, or deletion of personal information, use the dedicated form linked in the Privacy Policy.</p>
-          <p><a class="support-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeUy2x4PREIZswT7UxxJtwDpBnU8uByq0vRzWzu3dnMg1YAdg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Open the privacy request form</a></p>
-        </article>
-
-        <article class="support-panel">
-          <h3>Related Pages</h3>
-          <p><a class="support-link" href="privacy_policy.html">Privacy Policy</a></p>
-          <p><a class="support-link" href="terms_of_service.html">Terms of Service</a></p>
-          <p><a class="support-link" href="index.html">Back to the homepage</a></p>
-        </article>
+        <div class="support-final-actions">
+          <a class="btn btn-primary" href="mailto:support@budgetgo.ai">Email support</a>
+          <a
+            class="btn btn-secondary support-download-btn"
+            href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download BudgetGo
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -232,7 +617,7 @@
       <div>
         <h3>Product</h3>
         <a href="index.html#overview">Overview</a>
-        <a href="index.html#features">Features</a>
+        <a href="index.html#showcase">Product</a>
         <a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Download</a>
       </div>
 
@@ -267,38 +652,76 @@
     <div class="container footer-bottom">
       <div>
         <p>&copy; 2026 GraphLeaf LLC.</p>
+        <p class="footer-attribution">
+          <a href="https://www.flaticon.com/free-icons/ios" title="ios icons">Ios icons created by Freepik - Flaticon</a>
+        </p>
       </div>
     </div>
   </footer>
 
   <script>
     (function () {
-      const toggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('.nav-links');
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+      const supportForm = document.getElementById("supportForm");
 
-      if (!toggle || !nav) return;
+      if (toggle && nav) {
+        const closeMenu = function () {
+          toggle.setAttribute("aria-expanded", "false");
+          nav.classList.remove("open");
+          document.body.classList.remove("menu-open");
+        };
 
-      const closeMenu = function () {
-        toggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('open');
-        document.body.classList.remove('menu-open');
-      };
+        toggle.addEventListener("click", function () {
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", String(!expanded));
+          nav.classList.toggle("open");
+          document.body.classList.toggle("menu-open");
+        });
 
-      toggle.addEventListener('click', function () {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-        document.body.classList.toggle('menu-open');
-      });
+        nav.addEventListener("click", function (event) {
+          if (event.target instanceof HTMLAnchorElement) closeMenu();
+        });
 
-      nav.addEventListener('click', function (event) {
-        if (event.target instanceof HTMLAnchorElement) closeMenu();
-      });
+        window.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeMenu();
+        });
 
-      window.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') closeMenu();
-      });
-    }());
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 820) closeMenu();
+        });
+      }
+
+      if (supportForm) {
+        supportForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(supportForm);
+          const email = String(formData.get("email") || "").trim();
+          const requestType = String(formData.get("type") || "").trim();
+          const subject = String(formData.get("subject") || "").trim();
+          const name = String(formData.get("name") || "").trim();
+          const message = String(formData.get("message") || "").trim();
+
+          const bodyLines = [
+            "Support request details",
+            "",
+            "Name: " + (name || "-"),
+            "Email: " + (email || "-"),
+            "Request type: " + (requestType || "-"),
+            "",
+            "Message:",
+            message || "-"
+          ];
+
+          const mailto = "mailto:support@budgetgo.ai?subject=" +
+            encodeURIComponent((requestType ? requestType + ": " : "") + subject) +
+            "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+          window.location.href = mailto;
+        });
+      }
+    })();
   </script>
 </body>
 </html>

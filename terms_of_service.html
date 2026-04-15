@@ -2,7 +2,10 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#0A0810" name="theme-color"/>
+  <link href="src/images/logo.png" rel="icon"/>
+  <link href="styles.css" rel="stylesheet"/>
   <title>
    Terms of Service | BudgetGo
   </title>
@@ -19,15 +22,15 @@
   }
 
   :root {
-    --ink: #0f172a;
-    --muted: #475569;
-    --accent: #2563eb;
-    --card: #ffffff;
-    --border: #e2e8f0;
-    --bg-1: #f8fafc;
-    --bg-2: #eef2ff;
-    --shadow: 0 18px 48px rgba(15, 23, 42, 0.12);
-    --radius: 20px;
+    --ink: #f2efff;
+    --muted: #beb7d5;
+    --accent: #ffca62;
+    --card: rgba(24, 21, 34, 0.96);
+    --border: rgba(104, 107, 130, 0.34);
+    --bg-1: #0a0810;
+    --bg-2: #14101d;
+    --shadow: 0 24px 48px rgba(8, 6, 14, 0.42);
+    --radius: 8px;
   }
 
   body {
@@ -35,10 +38,13 @@
     font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
     color: var(--ink);
     background:
-      radial-gradient(1200px 700px at 10% -10%, #dbeafe 0%, transparent 60%),
-      radial-gradient(1000px 600px at 100% 0%, #fef9c3 0%, transparent 55%),
+      radial-gradient(circle at 50% 0%, rgba(113, 50, 245, 0.2), transparent 32%),
       linear-gradient(180deg, var(--bg-2), var(--bg-1));
     line-height: 1.7;
+  }
+
+  .legal-main {
+    padding: 1.25rem 0 5rem;
   }
 
   [data-custom-class='body'], [data-custom-class='body'] * {
@@ -47,12 +53,24 @@
 
   [data-custom-class='body'] {
     max-width: 920px;
-    margin: 48px auto 80px;
+    margin: 0 auto;
     padding: 56px 64px;
     background: var(--card) !important;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+  }
+
+  [data-custom-class='body'] div,
+  [data-custom-class='body'] span,
+  [data-custom-class='body'] p,
+  [data-custom-class='body'] li {
+    color: var(--muted) !important;
+  }
+
+  [data-custom-class='body'] strong,
+  [data-custom-class='body'] b {
+    color: var(--ink) !important;
   }
 
   [data-custom-class='title'], [data-custom-class='title'] * {
@@ -108,6 +126,20 @@
     text-decoration: underline;
   }
 
+  .footer-attribution {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+  }
+
+  .footer-attribution a {
+    color: rgba(242, 239, 255, 0.62);
+  }
+
+  .footer-attribution a:hover,
+  .footer-attribution a:focus-visible {
+    color: var(--ink);
+  }
+
   ul {
     padding-left: 1.25rem;
     margin: 0.5rem 0 1.25rem;
@@ -123,18 +155,55 @@
 
   @media (max-width: 720px) {
     [data-custom-class='body'] {
-      margin: 24px 16px 48px;
+      margin: 0 16px;
       padding: 28px 22px;
-      border-radius: 16px;
+      border-radius: 8px;
     }
 
     [data-custom-class='title'], [data-custom-class='title'] * {
       font-size: 32px !important;
     }
+
+    .legal-main {
+      padding-top: 1rem;
+      padding-bottom: 4rem;
+    }
   }
   </style>
  </head>
- <body>
+ <body class="legal-page">
+  <header class="site-header" id="top">
+   <div class="container nav-row">
+    <a aria-label="BudgetGo homepage" class="brand" href="index.html">
+     <img alt="BudgetGo logo" height="36" src="src/images/logo.png" width="36"/>
+     <span>
+      BudgetGo
+     </span>
+    </a>
+    <button aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">
+     <span>
+     </span>
+    </button>
+    <nav aria-label="Primary navigation" class="nav-links" id="site-nav">
+     <a href="index.html#overview">
+      Overview
+     </a>
+     <a href="index.html#showcase">
+      Product
+     </a>
+     <a href="index.html#security">
+      Security
+     </a>
+     <a href="support.html">
+      Support
+     </a>
+     <a class="btn btn-secondary nav-cta-text" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" rel="noopener noreferrer" target="_blank">
+      Download
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="legal-main">
  <div data-custom-class="body">
   <div align="center" style="text-align: left;">
    <div class="MsoNormal" data-custom-class="title" style="line-height: 1.5;">
@@ -3811,5 +3880,108 @@ Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N
    Terms and Conditions Generator
   </a>
  </div>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <h3>
+      Product
+     </h3>
+     <a href="index.html#overview">
+      Overview
+     </a>
+     <a href="index.html#showcase">
+      Product
+     </a>
+     <a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" rel="noopener noreferrer" target="_blank">
+      Download
+     </a>
+    </div>
+    <div>
+     <h3>
+      Resources
+     </h3>
+     <a href="support.html">
+      Support
+     </a>
+     <a href="terms_of_service.html">
+      Terms of Service
+     </a>
+     <a href="privacy_policy.html">
+      Privacy Policy
+     </a>
+    </div>
+    <div>
+     <h3>
+      Social
+     </h3>
+     <a class="footer-link-with-icon" href="https://instagram.com/budgetgo.ai" rel="noopener noreferrer" target="_blank">
+      <span aria-hidden="true" class="footer-link-icon">
+       <svg focusable="false" viewBox="0 0 24 24">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.75A3.75 3.75 0 1 0 15.75 12 3.75 3.75 0 0 0 12 8.25Z" fill="currentColor"></path>
+       </svg>
+      </span>
+      <span>
+       Instagram
+      </span>
+     </a>
+     <a class="footer-link-with-icon" href="mailto:support@budgetgo.ai">
+      <span aria-hidden="true" class="footer-link-icon">
+       <svg focusable="false" viewBox="0 0 24 24">
+        <path d="M4 5.5h16A2.5 2.5 0 0 1 22.5 8v8A2.5 2.5 0 0 1 20 18.5H4A2.5 2.5 0 0 1 1.5 16V8A2.5 2.5 0 0 1 4 5.5Zm0 1.75a.75.75 0 0 0-.75.75v.34l8.75 5.73 8.75-5.73V8a.75.75 0 0 0-.75-.75Zm16 9.5a.75.75 0 0 0 .75-.75V10.42l-8.27 5.42a.88.88 0 0 1-.96 0L3.25 10.42V16A.75.75 0 0 0 4 16.75Z" fill="currentColor"></path>
+       </svg>
+      </span>
+      <span>
+       Email
+      </span>
+     </a>
+    </div>
+   </div>
+   <div class="container footer-bottom">
+    <div>
+     <p>
+      © 2026 GraphLeaf LLC.
+     </p>
+     <p class="footer-attribution">
+      <a href="https://www.flaticon.com/free-icons/ios" title="ios icons">
+       Ios icons created by Freepik - Flaticon
+      </a>
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   (function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+
+      if (!toggle || !nav) return;
+
+      const closeMenu = function () {
+        toggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+      };
+
+      toggle.addEventListener("click", function () {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
+      });
+
+      nav.addEventListener("click", function (event) {
+        if (event.target instanceof HTMLAnchorElement) closeMenu();
+      });
+
+      window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 820) closeMenu();
+      });
+    })();
+  </script>
  </body>
 </html>
