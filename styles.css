@@ -605,6 +605,10 @@ h1 {
   padding-top: 2.75rem;
 }
 
+.showcase-section .section-heading {
+  text-align: left;
+}
+
 .showcase-gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
