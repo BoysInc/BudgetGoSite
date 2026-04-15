@@ -344,6 +344,7 @@ h1 {
 .hero-actions .btn-secondary,
 .cta-actions .btn-secondary {
   min-height: 3rem;
+  padding: 0;
 }
 
 .download-card {
