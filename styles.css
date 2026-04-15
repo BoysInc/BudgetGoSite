@@ -980,17 +980,36 @@ h1 {
   .hero-actions,
   .cta-actions {
     flex-direction: column;
+    align-items: center;
   }
 
-  .hero-actions .btn,
-  .cta-actions .btn,
-  .nav-links .btn,
-  .app-store-badge-link {
+  .hero-actions .app-store-badge-link,
+  .cta-actions .app-store-badge-link,
+  .hero-actions .btn-secondary,
+  .cta-actions .btn-secondary {
     width: 100%;
-    max-width: 18rem;
+    max-width: 14rem;
   }
 
-  .app-store-badge-link img {
+  .hero-actions .btn-secondary,
+  .cta-actions .btn-secondary {
+    min-height: 3.85rem;
+    padding-inline: 1rem;
+  }
+
+  .hero-actions .app-store-badge-link img,
+  .cta-actions .app-store-badge-link img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-links .app-store-badge-link {
+    width: 9.5rem;
+    max-width: 9.5rem;
+    align-self: flex-start;
+  }
+
+  .nav-links .app-store-badge-link img {
     width: 100%;
     height: auto;
   }
