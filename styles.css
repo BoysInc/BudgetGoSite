@@ -343,7 +343,7 @@ h1 {
 
 .hero-actions .btn-secondary,
 .cta-actions .btn-secondary {
-  min-height: 3rem;
+  min-height: 3.68rem;
 }
 
 .download-card {
@@ -988,12 +988,12 @@ h1 {
   .hero-actions .btn-secondary,
   .cta-actions .btn-secondary {
     width: 100%;
-    max-width: 14rem;
+    max-width: 12.5rem;
   }
 
   .hero-actions .btn-secondary,
   .cta-actions .btn-secondary {
-    min-height: 3.85rem;
+    min-height: 4.2rem;
     padding-inline: 1rem;
   }
 
