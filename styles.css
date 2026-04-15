@@ -290,9 +290,9 @@ ul {
   position: relative;
   overflow: clip;
   background:
-    radial-gradient(circle at 18% 22%, rgba(255, 202, 98, 0.16), transparent 24%),
-    radial-gradient(circle at 80% 14%, rgba(113, 50, 245, 0.22), transparent 26%),
-    linear-gradient(180deg, #110d1a 0%, #0b0811 55%, #09070f 100%);
+    radial-gradient(circle at 50% -6%, rgba(120, 99, 255, 0.2), transparent 34%),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.055), transparent 28%),
+    linear-gradient(180deg, #12101a 0%, #0d0b13 52%, #09070f 100%);
   color: var(--text-inverse);
 }
 
@@ -301,16 +301,11 @@ ul {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.045), transparent 32%),
-    radial-gradient(circle at 50% 32%, rgba(247, 244, 255, 0.08), transparent 30%),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 76px,
-      rgba(255, 255, 255, 0.028) 76px,
-      rgba(255, 255, 255, 0.028) 77px
-    );
-  opacity: 0.7;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 22%),
+    radial-gradient(circle at 50% 24%, rgba(247, 244, 255, 0.09), transparent 24%),
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.03), transparent 20%),
+    radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.025), transparent 18%);
+  opacity: 0.58;
   pointer-events: none;
 }
 
@@ -417,29 +412,30 @@ h1 {
   max-width: 31rem;
   margin-top: 2.9rem;
   margin-inline: auto;
-  padding: 0.9rem;
-  border: 1px solid rgba(104, 107, 130, 0.36);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(33, 31, 45, 0.96), rgba(24, 21, 34, 0.98));
-  box-shadow: 0 22px 40px rgba(5, 4, 12, 0.26);
-  transition: transform 420ms var(--ease-fluid), border-color 420ms var(--ease-fluid), box-shadow 420ms var(--ease-fluid);
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(28, 24, 39, 0.72), rgba(18, 15, 28, 0.62));
+  backdrop-filter: blur(16px) saturate(1.08);
+  box-shadow: 0 20px 44px rgba(5, 4, 12, 0.18);
+  transition: transform 420ms var(--ease-fluid), border-color 420ms var(--ease-fluid), box-shadow 420ms var(--ease-fluid), background-color 420ms var(--ease-fluid);
 }
 
 .download-card:hover,
 .download-card:focus-within {
-  transform: translateY(-4px);
-  border-color: rgba(113, 50, 245, 0.44);
-  box-shadow: 0 26px 46px rgba(5, 4, 12, 0.34);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 48px rgba(5, 4, 12, 0.22);
 }
 
 .download-qr-shell {
   display: grid;
   place-items: center;
   aspect-ratio: 1;
-  padding: 0.7rem;
-  border-radius: 6px;
-  background: rgba(10, 8, 16, 0.82);
-  border: 1px solid rgba(113, 50, 245, 0.18);
+  padding: 0.8rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .download-qr {
@@ -448,7 +444,8 @@ h1 {
   display: grid;
   place-items: center;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 12px;
+  background: rgba(8, 6, 12, 0.18);
 }
 
 .download-qr img,
