@@ -35,7 +35,9 @@ body {
   min-width: 320px;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -80,7 +82,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 30;
-  border-bottom: 1px solid rgba(104, 107, 130, 0.28);
+  border-bottom: 1px solid transparent;
   background: rgba(10, 8, 16, 0.9);
   backdrop-filter: blur(14px);
 }
@@ -282,7 +284,7 @@ ul {
   padding: 3rem 0 1.5rem;
   position: relative;
   background:
-    radial-gradient(circle at 78% 20%, rgba(113, 50, 245, 0.22), transparent 24%),
+    radial-gradient(circle at 50% 18%, rgba(113, 50, 245, 0.24), transparent 28%),
     var(--bg-deep);
   color: var(--text-inverse);
 }
@@ -298,22 +300,23 @@ ul {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 520px);
-  align-items: center;
-  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
 }
 
 .hero-copy {
-  max-width: 34rem;
+  max-width: 42rem;
+  text-align: center;
 }
 
 .hero-copy .section-label {
-  color: var(--accent-gold);
+  color: rgba(242, 239, 255, 0.72);
 }
 
 h1 {
-  font-size: 3.55rem;
-  max-width: 12ch;
+  font-size: clamp(4.4rem, 7vw, 5.6rem);
+  max-width: 10ch;
+  margin-inline: auto;
 }
 
 .lead {
@@ -325,9 +328,22 @@ h1 {
 
 .hero-actions {
   display: flex;
-  gap: 0.9rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  justify-content: center;
+  margin-top: 1.85rem;
+}
+
+.hero-actions .app-store-badge-link,
+.cta-actions .app-store-badge-link,
+.hero-actions .btn-secondary,
+.cta-actions .btn-secondary {
+  width: 11rem;
+}
+
+.hero-actions .btn-secondary,
+.cta-actions .btn-secondary {
+  min-height: 3rem;
 }
 
 .download-card {
@@ -336,7 +352,8 @@ h1 {
   gap: 1rem;
   align-items: center;
   max-width: 31rem;
-  margin-top: 1.35rem;
+  margin-top: 2.9rem;
+  margin-inline: auto;
   padding: 0.9rem;
   border: 1px solid rgba(104, 107, 130, 0.36);
   border-radius: var(--radius);
@@ -381,6 +398,7 @@ h1 {
 .download-copy {
   display: grid;
   gap: 0.45rem;
+  text-align: left;
 }
 
 .download-label {
@@ -419,50 +437,13 @@ h1 {
   transform: translateX(2px);
 }
 
-.hero-visual {
-  position: relative;
-  height: 32rem;
-  perspective: 1200px;
-}
-
-.device {
-  position: absolute;
-  border-radius: var(--radius);
-  border: 1px solid rgba(113, 50, 245, 0.16);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 28px 48px rgba(5, 4, 12, 0.44);
-  transition: transform 520ms var(--ease-fluid), box-shadow 520ms var(--ease-fluid);
-  will-change: transform;
-}
-
-.hero-device-main {
-  inset: 0.5rem auto auto 6rem;
-  width: 14.25rem;
-  z-index: 2;
-  animation: device-float-main 8.5s ease-in-out infinite;
-}
-
-.hero-device-left {
-  inset: 7rem auto auto 0;
-  width: 11rem;
-  transform: rotate(-8deg);
-  animation: device-float-left 11s ease-in-out infinite;
-}
-
-.hero-device-right {
-  inset: 3.3rem 0 auto auto;
-  width: 12rem;
-  transform: rotate(8deg);
-  animation: device-float-right 10s ease-in-out infinite;
-}
-
 .intro-band {
   background: var(--bg);
-  margin-top: -2rem;
-  padding-top: 6.25rem;
+  margin-top: 0;
+  padding-top: 5rem;
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(104, 107, 130, 0.3);
+  border-top: 1px solid transparent;
 }
 
 .split-layout {
@@ -498,6 +479,15 @@ h1 {
   padding: 1.25rem 0 1.1rem;
   border-top: 1px solid var(--line);
   transition: transform 420ms var(--ease-fluid), border-color 420ms var(--ease-fluid);
+}
+
+.detail-kicker {
+  margin-bottom: 0.45rem;
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .detail-list h3,
@@ -548,9 +538,13 @@ h1 {
   padding-bottom: 0;
 }
 
+.showcase-lead {
+  padding-top: 2.75rem;
+}
+
 .showcase-band {
   padding: 3rem 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid transparent;
 }
 
 .showcase-band-alt {
@@ -734,62 +728,6 @@ h1 {
   filter: drop-shadow(0 10px 16px rgba(113, 50, 245, 0.3));
 }
 
-.motion-ready .reveal {
-  opacity: 0;
-  filter: blur(10px);
-  transform: translate3d(0, 32px, 0) scale(0.985);
-  transition:
-    opacity 700ms var(--ease-smooth),
-    transform 900ms var(--ease-fluid),
-    filter 900ms var(--ease-fluid);
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: transform, opacity, filter;
-}
-
-.motion-ready .reveal[data-reveal="left"] {
-  transform: translate3d(-36px, 24px, 0) scale(0.985);
-}
-
-.motion-ready .reveal[data-reveal="right"] {
-  transform: translate3d(36px, 24px, 0) scale(0.985);
-}
-
-.motion-ready .reveal.is-visible {
-  opacity: 1;
-  filter: blur(0);
-  transform: translate3d(0, 0, 0) scale(1);
-}
-
-@keyframes device-float-main {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -12px, 0);
-  }
-}
-
-@keyframes device-float-left {
-  0%,
-  100% {
-    transform: rotate(-8deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate(-10deg) translate3d(-4px, -10px, 0);
-  }
-}
-
-@keyframes device-float-right {
-  0%,
-  100% {
-    transform: rotate(8deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate(10deg) translate3d(4px, -12px, 0);
-  }
-}
-
 @keyframes sheen-pass {
   0% {
     transform: translateX(-48%);
@@ -909,28 +847,7 @@ h1 {
 
 @media (max-width: 1120px) {
   h1 {
-    font-size: 3.05rem;
-  }
-
-  .hero-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
-  }
-
-  .hero-visual {
-    height: 29rem;
-  }
-
-  .hero-device-main {
-    left: 4rem;
-    width: 12.5rem;
-  }
-
-  .hero-device-left {
-    width: 9.8rem;
-  }
-
-  .hero-device-right {
-    width: 10.5rem;
+    font-size: 3.95rem;
   }
 
   .section-copy h2,
@@ -997,7 +914,6 @@ h1 {
   }
 
   .intro-band {
-    margin-top: 0;
     padding-top: 3.75rem;
   }
 
@@ -1007,33 +923,6 @@ h1 {
 
   .download-card {
     max-width: 100%;
-  }
-
-  .hero-visual {
-    order: -1;
-    height: 18rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-device-main {
-    left: 50%;
-    width: 10.6rem;
-    transform: translateX(-50%);
-    animation-name: device-float-main-mobile;
-  }
-
-  .hero-device-left {
-    top: 5rem;
-    left: 0.25rem;
-    width: 7.4rem;
-    animation: device-float-left-mobile 11s ease-in-out infinite;
-  }
-
-  .hero-device-right {
-    top: 3.7rem;
-    right: 0.25rem;
-    width: 7.8rem;
-    animation: device-float-right-mobile 10s ease-in-out infinite;
   }
 
   .portrait-frame,
@@ -1069,12 +958,12 @@ h1 {
   }
 
   .hero-copy {
-    padding-right: 7.5rem;
+    padding-right: 0;
   }
 
   h1 {
-    font-size: 2.3rem;
-    max-width: 9ch;
+    font-size: 3.15rem;
+    max-width: 10ch;
   }
 
   .section-copy h2,
@@ -1098,6 +987,7 @@ h1 {
   .nav-links .btn,
   .app-store-badge-link {
     width: 100%;
+    max-width: 18rem;
   }
 
   .app-store-badge-link img {
@@ -1107,38 +997,13 @@ h1 {
 
   .download-card {
     grid-template-columns: 1fr;
-    justify-items: start;
+    justify-items: center;
     padding: 0.85rem;
+    margin-top: 2.35rem;
   }
 
   .download-qr-shell {
     width: 8.15rem;
-  }
-
-  .hero-visual {
-    position: absolute;
-    top: 0.4rem;
-    right: 0;
-    width: 7rem;
-    height: 0;
-    margin: 0;
-  }
-
-  .hero-device-main {
-    left: auto;
-    right: 0;
-    top: 0;
-    width: 6.75rem;
-    transform: none;
-    animation-name: device-float-main;
-  }
-
-  .hero-device-left {
-    display: none;
-  }
-
-  .hero-device-right {
-    display: none;
   }
 
   .process-step,
@@ -1157,35 +1022,5 @@ h1 {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-@keyframes device-float-main-mobile {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-}
-
-@keyframes device-float-left-mobile {
-  0%,
-  100% {
-    transform: rotate(-8deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate(-10deg) translate3d(-3px, -8px, 0);
-  }
-}
-
-@keyframes device-float-right-mobile {
-  0%,
-  100% {
-    transform: rotate(8deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate(10deg) translate3d(3px, -8px, 0);
   }
 }
