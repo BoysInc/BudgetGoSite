@@ -413,7 +413,6 @@ h1 {
   margin-top: 2.9rem;
   margin-inline: auto;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
   background: linear-gradient(180deg, rgba(28, 24, 39, 0.72), rgba(18, 15, 28, 0.62));
   backdrop-filter: blur(16px) saturate(1.08);
@@ -424,7 +423,6 @@ h1 {
 .download-card:hover,
 .download-card:focus-within {
   transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.14);
   box-shadow: 0 24px 48px rgba(5, 4, 12, 0.22);
 }
 
@@ -435,7 +433,6 @@ h1 {
   padding: 0.8rem;
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
-  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .download-qr {
