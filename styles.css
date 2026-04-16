@@ -285,6 +285,11 @@ ul {
   margin-top: 1rem;
 }
 
+.section-copy h2 + p,
+.cta-layout h2 + p {
+  margin-top: 1.1rem;
+}
+
 .hero {
   padding: 8rem 0 1.75rem;
   position: relative;
@@ -877,9 +882,10 @@ h1 {
 }
 
 .footer-grid a.footer-link-with-icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  width: max-content;
+  max-width: 100%;
+  width: fit-content;
 }
 
 .footer-link-icon {
