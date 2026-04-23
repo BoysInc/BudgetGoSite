@@ -18,11 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <link rel="icon" href="src/images/logo.png" />
+  <link rel="icon" type="image/png" href="src/images/favicon-rounded.png" />
+  <link rel="apple-touch-icon" href="src/images/favicon-rounded.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -76,7 +77,6 @@
             >
               <img src="src/images/app-store-badge.svg" alt="Download on the App Store" />
             </a>
-            <a class="btn btn-secondary" href="#showcase">See the product</a>
           </div>
 
           <div class="download-card">
@@ -101,51 +101,103 @@
     </section>
 
     <section id="showcase" class="section showcase-section showcase-lead">
-      <div class="container section-heading">
-        <p class="section-label">Product walkthrough</p>
-        <h2>How BudgetGo works</h2>
+      <div class="container section-heading showcase-heading">
+        <div>
+          <p class="section-label">Product walkthrough</p>
+          <h2>How BudgetGo works</h2>
+        </div>
       </div>
 
-      <div class="container showcase-gallery">
-        <article class="showcase-gallery-item">
-          <div class="showcase-gallery-media">
-            <img src="src/images/home2_splash.png" alt="BudgetGo home dashboard preview" />
-          </div>
-          <div class="showcase-gallery-label">
-            <h3>Home</h3>
-            <p>See the month, category progress, and recent activity at a glance.</p>
-          </div>
-        </article>
+      <div class="container showcase-carousel-shell">
+        <div class="showcase-controls" aria-label="Product carousel controls">
+          <button class="showcase-control" type="button" data-carousel-prev aria-label="Show previous features" aria-controls="showcaseCarousel">
+            <span aria-hidden="true">&#8592;</span>
+          </button>
+          <button class="showcase-control" type="button" data-carousel-next aria-label="Show next features" aria-controls="showcaseCarousel">
+            <span aria-hidden="true">&#8594;</span>
+          </button>
+        </div>
+        <div class="showcase-gallery" id="showcaseCarousel" data-showcase-carousel>
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">Home</div>
+              <img src="src/images/home2_splash.png" alt="BudgetGo home dashboard preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>See the month, category progress, and recent activity at a glance.</p>
+            </div>
+          </article>
 
-        <article class="showcase-gallery-item">
-          <div class="showcase-gallery-media">
-            <img src="src/images/categories_splash.png" alt="BudgetGo categories preview" />
-          </div>
-          <div class="showcase-gallery-label">
-            <h3>Categories</h3>
-            <p>Keep spending organized automatically with clearer totals and faster review.</p>
-          </div>
-        </article>
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">AI Insights</div>
+              <img src="src/images/insights1_splash.png" alt="BudgetGo AI insights preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Get simple guidance on what changed and what deserves attention next.</p>
+            </div>
+          </article>
 
-        <article class="showcase-gallery-item">
-          <div class="showcase-gallery-media">
-            <img src="src/images/recurring_splash.png" alt="BudgetGo recurring spending preview" />
-          </div>
-          <div class="showcase-gallery-label">
-            <h3>Recurring</h3>
-            <p>Keep bills and subscriptions visible so routine spending is easier to plan.</p>
-          </div>
-        </article>
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">AI Auto-Categorization</div>
+              <img src="src/images/ai_categorized.png" alt="BudgetGo AI auto-categorization preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Use AI-assisted categorization to sort spending faster and reduce review work.</p>
+            </div>
+          </article>
 
-        <article class="showcase-gallery-item">
-          <div class="showcase-gallery-media">
-            <img src="src/images/insights1_splash.png" alt="BudgetGo insights preview" />
-          </div>
-          <div class="showcase-gallery-label">
-            <h3>Insights</h3>
-            <p>Get simple guidance on what changed and what deserves attention next.</p>
-          </div>
-        </article>
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">Connect Bank</div>
+              <img src="src/images/connect_bank.png" alt="BudgetGo bank connection preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Bring your accounts in faster so balances and transactions stay up to date.</p>
+            </div>
+          </article>
+
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">Automation</div>
+              <img src="src/images/automation.png" alt="BudgetGo automation preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Let automatic rules keep routine budget actions moving without manual cleanup.</p>
+            </div>
+          </article>
+
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">Bills &amp; Subscriptions</div>
+              <img src="src/images/recurring_splash.png" alt="BudgetGo recurring spending preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Keep bills and subscriptions visible so routine spending is easier to plan.</p>
+            </div>
+          </article>
+
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">Categories</div>
+              <img src="src/images/categories_splash.png" alt="BudgetGo categories preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Keep spending organized automatically with clearer totals and faster review.</p>
+            </div>
+          </article>
+
+          <article class="showcase-gallery-item">
+            <div class="showcase-gallery-media">
+              <div class="showcase-gallery-badge">Streaks</div>
+              <img src="src/images/streaks.png" alt="BudgetGo streak tracking preview" />
+            </div>
+            <div class="showcase-gallery-label">
+              <p>Build consistency with streak tracking that keeps daily money habits visible.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -249,7 +301,6 @@
           >
             <img src="src/images/app-store-badge.svg" alt="Download on the App Store" />
           </a>
-          <a class="btn btn-secondary" href="support.html">Contact support</a>
         </div>
       </div>
     </section>
@@ -340,6 +391,73 @@
             correctLevel: window.QRCode.CorrectLevel.M
           });
         }
+      }
+
+      const carousel = document.querySelector("[data-showcase-carousel]");
+      const prevButton = document.querySelector("[data-carousel-prev]");
+      const nextButton = document.querySelector("[data-carousel-next]");
+      if (carousel && prevButton && nextButton) {
+        const cards = Array.from(carousel.querySelectorAll(".showcase-gallery-item"));
+        const autoAdvanceDelay = 4200;
+        let autoAdvanceTimer = null;
+
+        const getScrollAmount = function () {
+          const firstCard = carousel.querySelector(".showcase-gallery-item");
+          if (!(firstCard instanceof HTMLElement)) return carousel.clientWidth * 0.86;
+          const gap = Number.parseFloat(window.getComputedStyle(carousel).columnGap || window.getComputedStyle(carousel).gap || "0");
+          return firstCard.getBoundingClientRect().width + gap;
+        };
+
+        const getCurrentIndex = function () {
+          const scrollAmount = getScrollAmount();
+          if (!scrollAmount) return 0;
+          return Math.round(carousel.scrollLeft / scrollAmount);
+        };
+
+        const moveToIndex = function (index) {
+          const totalCards = cards.length;
+          if (!totalCards) return;
+          const normalizedIndex = ((index % totalCards) + totalCards) % totalCards;
+          carousel.scrollTo({
+            left: getScrollAmount() * normalizedIndex,
+            behavior: "smooth"
+          });
+        };
+
+        const resetAutoAdvance = function () {
+          if (autoAdvanceTimer) window.clearInterval(autoAdvanceTimer);
+          autoAdvanceTimer = window.setInterval(function () {
+            moveToIndex(getCurrentIndex() + 1);
+          }, autoAdvanceDelay);
+        };
+
+        const pauseAutoAdvance = function () {
+          if (!autoAdvanceTimer) return;
+          window.clearInterval(autoAdvanceTimer);
+          autoAdvanceTimer = null;
+        };
+
+        prevButton.addEventListener("click", function () {
+          moveToIndex(getCurrentIndex() - 1);
+          resetAutoAdvance();
+        });
+
+        nextButton.addEventListener("click", function () {
+          moveToIndex(getCurrentIndex() + 1);
+          resetAutoAdvance();
+        });
+
+        carousel.addEventListener("pointerenter", pauseAutoAdvance);
+        carousel.addEventListener("pointerleave", resetAutoAdvance);
+        carousel.addEventListener("focusin", pauseAutoAdvance);
+        carousel.addEventListener("focusout", resetAutoAdvance);
+        carousel.addEventListener("touchstart", pauseAutoAdvance, { passive: true });
+        carousel.addEventListener("touchend", resetAutoAdvance, { passive: true });
+        window.addEventListener("resize", function () {
+          moveToIndex(getCurrentIndex());
+        });
+
+        resetAutoAdvance();
       }
 
     })();
