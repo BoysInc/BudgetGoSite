@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BudgetGo | Money habits without spreadsheet fatigue</title>
+  <title>BudgetGo | Stay ahead of your spending</title>
   <meta
     name="description"
-    content="BudgetGo keeps your budget visible in real time with automatic categories, recurring bill awareness, and practical AI guidance."
+    content="BudgetGo keeps budgets, recurring bills, and AI guidance visible in one place so you can catch spending drift early."
   />
-  <meta property="og:title" content="BudgetGo | Money habits without spreadsheet fatigue" />
+  <meta property="og:title" content="BudgetGo | Stay ahead of your spending" />
   <meta
     property="og:description"
-    content="BudgetGo keeps your budget visible in real time with automatic categories, recurring bill awareness, and practical AI guidance."
+    content="BudgetGo keeps budgets, recurring bills, and AI guidance visible in one place so you can catch spending drift early."
   />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0A0810" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <link rel="icon" type="image/png" href="src/images/favicon-rounded.png" />
   <link rel="apple-touch-icon" href="src/images/favicon-rounded.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -30,7 +29,7 @@
   <header class="site-header" id="top">
     <div class="container nav-row">
       <a class="brand" href="#top" aria-label="BudgetGo homepage">
-        <img src="src/images/logo.png" alt="BudgetGo logo" width="36" height="36" />
+        <img src="src/images/logo.png" alt="BudgetGo logo" width="1024" height="1024" />
         <span>BudgetGo</span>
       </a>
 
@@ -45,28 +44,43 @@
       </button>
 
       <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+        <details class="nav-dropdown">
+          <summary>Features</summary>
+          <div class="nav-dropdown-menu">
+            <a href="#feature-home">Spending Overview</a>
+            <a href="#feature-insights">AI Insights</a>
+            <a href="#feature-recurring">Recurring Bills</a>
+            <a href="#feature-connect">Bank Connection</a>
+            <a href="#feature-categorization">AI Categorization</a>
+            <a href="#feature-automation">Automation</a>
+            <a href="#feature-analytics">Analytics</a>
+          </div>
+        </details>
         <a href="#overview">Overview</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#showcase">Product</a>
+        <a href="#security">Security</a>
         <a
-          class="app-store-badge-link nav-cta"
+          class="btn btn-secondary nav-cta-text"
           href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Download BudgetGo on the App Store"
         >
-          <img src="src/images/app-store-badge.svg" alt="Download on the App Store" />
+          Download
         </a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="overview" class="hero">
-      <div class="container hero-layout">
+    <section id="overview" class="hero hero-home">
+      <div class="container hero-shell">
         <div class="hero-copy">
           <p class="section-label">No spreadsheets. Just clarity</p>
-          <h1>Stay one step ahead of your spending.</h1>
+          <h1>See the month before your spending drifts.</h1>
+          <p class="lead">
+            BudgetGo keeps transactions, recurring bills, and AI guidance in one focused
+            view so you can correct course before a rough week becomes an expensive month.
+          </p>
+
           <div class="hero-actions">
             <a
               class="app-store-badge-link"
@@ -75,233 +89,282 @@
               rel="noopener noreferrer"
               aria-label="Download BudgetGo on the App Store"
             >
-              <img src="src/images/app-store-badge.svg" alt="Download on the App Store" />
+              <img
+                src="src/images/app-store-badge.svg"
+                alt="Download on the App Store"
+                width="120"
+                height="40"
+              />
             </a>
-          </div>
-
-          <div class="download-card">
-            <div class="download-qr-shell">
-              <div id="downloadQr" class="download-qr" aria-label="QR code to download BudgetGo"></div>
-            </div>
-            <div class="download-copy">
-              <p class="download-label">Scan with your camera to download</p>
-              <p class="download-note">Open the App Store directly on your iPhone.</p>
-              <a
-                class="download-link"
-                href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on the App Store
-              </a>
-            </div>
+            <a class="btn btn-secondary" href="#showcase">See the Product</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="showcase" class="section showcase-section showcase-lead">
-      <div class="container section-heading showcase-heading">
-        <div>
-          <p class="section-label">Product walkthrough</p>
-          <h2>How BudgetGo works</h2>
-        </div>
-      </div>
-
-      <div class="container showcase-carousel-shell">
-        <div class="showcase-controls" aria-label="Product carousel controls">
-          <button class="showcase-control" type="button" data-carousel-prev aria-label="Show previous features" aria-controls="showcaseCarousel">
-            <span aria-hidden="true">&#8592;</span>
-          </button>
-          <button class="showcase-control" type="button" data-carousel-next aria-label="Show next features" aria-controls="showcaseCarousel">
-            <span aria-hidden="true">&#8594;</span>
-          </button>
-        </div>
-        <div class="showcase-gallery" id="showcaseCarousel" data-showcase-carousel>
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">Home</div>
-              <img src="src/images/home2_splash.png" alt="BudgetGo home dashboard preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>See the month, category progress, and recent activity at a glance.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">AI Insights</div>
-              <img src="src/images/insights1_splash.png" alt="BudgetGo AI insights preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Get simple guidance on what changed and what deserves attention next.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">AI Auto-Categorization</div>
-              <img src="src/images/ai_categorized.png" alt="BudgetGo AI auto-categorization preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Use AI-assisted categorization to sort spending faster and reduce review work.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">Connect Bank</div>
-              <img src="src/images/connect_bank.png" alt="BudgetGo bank connection preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Bring your accounts in faster so balances and transactions stay up to date.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">Automation</div>
-              <img src="src/images/automation.png" alt="BudgetGo automation preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Let automatic rules keep routine budget actions moving without manual cleanup.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">Bills &amp; Subscriptions</div>
-              <img src="src/images/recurring_splash.png" alt="BudgetGo recurring spending preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Keep bills and subscriptions visible so routine spending is easier to plan.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">Categories</div>
-              <img src="src/images/categories_splash.png" alt="BudgetGo categories preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Keep spending organized automatically with clearer totals and faster review.</p>
-            </div>
-          </article>
-
-          <article class="showcase-gallery-item">
-            <div class="showcase-gallery-media">
-              <div class="showcase-gallery-badge">Streaks</div>
-              <img src="src/images/streaks.png" alt="BudgetGo streak tracking preview" />
-            </div>
-            <div class="showcase-gallery-label">
-              <p>Build consistency with streak tracking that keeps daily money habits visible.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section intro-band" id="why-exists">
-      <div class="container split-layout">
-        <div class="section-copy">
-          <p class="section-label">What BudgetGo helps you catch</p>
-          <h2>Stay on top of the moments where budgets usually drift.</h2>
-          <p>
-            Catch drift, renewals, and spending changes before they pile up.
+    <section class="proof-strip" aria-label="BudgetGo proof points">
+      <div class="container proof-grid">
+        <div class="proof-intro">
+          <p class="proof-caption">Built for real daily money habits</p>
+          <p class="proof-text">
+            The product is designed to feel calm, fast, and understandable even when the month is not.
           </p>
         </div>
+        <article class="proof-item">
+          <p class="proof-title">Track spending</p>
+          <p>See the month, the categories, and the recent activity without cleanup work.</p>
+        </article>
+        <article class="proof-item">
+          <p class="proof-title">Catch recurring spend</p>
+          <p>Keep subscriptions and routine bills visible before they stack up.</p>
+        </article>
+        <article class="proof-item">
+          <p class="proof-title">Act earlier</p>
+          <p>Use AI guidance to notice what shifted and what deserves attention next.</p>
+        </article>
+      </div>
+    </section>
 
-        <div class="detail-list" aria-label="BudgetGo outcomes">
-          <article>
-            <p class="detail-kicker">Before checkout</p>
-            <h3>See category drift early.</h3>
-            <p>Adjust before one rough week throws off the month.</p>
-          </article>
-          <article>
-            <p class="detail-kicker">Before renewals hit</p>
-            <h3>Keep recurring bills visible.</h3>
-            <p>Expected charges stay easy to review.</p>
-          </article>
-          <article>
-            <p class="detail-kicker">Before habits harden</p>
-            <h3>Get the next useful correction.</h3>
-            <p>See what changed and where to respond.</p>
-          </article>
+    <section id="showcase" class="section story-section">
+      <div class="container section-heading story-heading">
+        <p class="section-label">Product walkthrough</p>
+        <h2>A calmer way to stay on top of money.</h2>
+        <p>
+          BudgetGo follows the same pattern across the product: show the month clearly, reveal
+          what changed, and make the next move obvious.
+        </p>
+      </div>
+
+      <div class="container story-stack">
+        <article id="feature-home" class="story-row">
+          <div class="story-copy">
+            <p class="story-kicker">Home</p>
+            <h3>Open to the numbers that matter first.</h3>
+            <p>
+              Your monthly position, budget progress, and recent transactions stay visible on one
+              screen so the app feels like a dashboard, not a maze.
+            </p>
+            <ul class="story-list">
+              <li>Monthly progress stays easy to scan.</li>
+              <li>Category drift is easier to catch early.</li>
+              <li>Recent activity stays readable at a glance.</li>
+            </ul>
+          </div>
+
+          <div class="story-media">
+            <img
+              src="src/images/home2_splash.png"
+              alt="BudgetGo dashboard showing budgets, balances, and recent activity"
+              width="2568"
+              height="5556"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </article>
+
+        <article id="feature-insights" class="story-row story-row-reverse">
+          <div class="story-copy">
+            <p class="story-kicker">Insights</p>
+            <h3>See what changed before the month gets away from you.</h3>
+            <p>
+              AI insights turn movement into something actionable, so you do not have to infer the
+              story from raw transaction lists.
+            </p>
+            <ul class="story-list">
+              <li>Spending shifts are called out clearly.</li>
+              <li>Patterns stay visible without manual review.</li>
+              <li>Guidance stays short and practical.</li>
+            </ul>
+          </div>
+
+          <div class="story-media">
+            <img
+              src="src/images/insights1_splash.png"
+              alt="BudgetGo AI insights screen explaining spending changes"
+              width="2568"
+              height="5556"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </article>
+
+        <article id="feature-recurring" class="story-row">
+          <div class="story-copy">
+            <p class="story-kicker">Recurring spending</p>
+            <h3>Keep bills and subscriptions visible before they pile up.</h3>
+            <p>
+              Routine charges stay easy to review so recurring spending feels planned instead of
+              surprising.
+            </p>
+            <ul class="story-list">
+              <li>Upcoming charges are easier to remember.</li>
+              <li>Recurring patterns stay separate from one-off spend.</li>
+              <li>Monthly planning starts with the fixed costs already in view.</li>
+            </ul>
+          </div>
+
+          <div class="story-media">
+            <img
+              src="src/images/recurring_splash.png"
+              alt="BudgetGo recurring spending screen showing bills and subscriptions"
+              width="2568"
+              height="5556"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section surface-section">
+      <div class="container surface-layout">
+        <div class="surface-copy">
+          <p class="section-label">The rest of the product</p>
+          <h2>Everything else follows the same visual discipline.</h2>
+          <p>
+            Account connection, AI categorization, automation, and analytics all use the
+            same restrained design language, so the product feels consistent instead of stitched together.
+          </p>
+
+          <ul class="surface-points">
+            <li>Bring accounts in faster with a focused connection flow.</li>
+            <li>Let automation handle repeat budget actions in the background.</li>
+            <li>See trends and breakdowns in a clearer analytics view.</li>
+          </ul>
+        </div>
+
+        <div class="surface-collage">
+          <figure id="feature-connect" class="surface-shot surface-shot-wide">
+            <img
+              src="src/images/connect_bank.png"
+              alt="BudgetGo bank connection screen"
+              width="1284"
+              height="2778"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure id="feature-categorization" class="surface-shot">
+            <img
+              src="src/images/ai_categorized.png"
+              alt="BudgetGo AI categorization screen"
+              width="1284"
+              height="2778"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure id="feature-automation" class="surface-shot">
+            <img
+              src="src/images/automation.png"
+              alt="BudgetGo automation screen"
+              width="1284"
+              height="2778"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure id="feature-analytics" class="surface-shot surface-shot-wide">
+            <img
+              src="src/images/analytics_splash.png"
+              alt="BudgetGo analytics screen"
+              width="2568"
+              height="5556"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </div>
     </section>
 
     <section id="how-it-works" class="section process-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">How it works</p>
-          <h2>A simple loop for daily money habits.</h2>
-        </div>
+      <div class="container section-heading">
+        <p class="section-label">How it works</p>
+        <h2>A simple loop for steadier money habits.</h2>
+        <p>
+          BudgetGo is built around three repeated moments: see the activity, understand the pattern,
+          and adjust before the month locks in.
+        </p>
+      </div>
 
-        <div class="process-grid">
-          <article class="process-step">
-            <span class="step-index">1</span>
-            <h3>Transactions arrive organized</h3>
-            <p>
-              BudgetGo categorizes activity in real time.
-            </p>
-          </article>
-          <article class="process-step">
-            <span class="step-index">2</span>
-            <h3>Patterns stay visible</h3>
-            <p>
-              Bills, subscriptions, and category shifts stay easy to spot.
-            </p>
-          </article>
-          <article class="process-step">
-            <span class="step-index">3</span>
-            <h3>Guidance shows up when it matters</h3>
-            <p>
-              Nudges and AI insights help you correct course sooner.
-            </p>
-          </article>
-        </div>
+      <div class="container process-grid">
+        <article class="process-step">
+          <span class="step-index">1</span>
+          <h3>Transactions arrive organized</h3>
+          <p>BudgetGo categorizes spending so the month starts in a readable state.</p>
+        </article>
+        <article class="process-step">
+          <span class="step-index">2</span>
+          <h3>Patterns stay visible</h3>
+          <p>Recurring bills, category drift, and spending shifts stay easier to inspect.</p>
+        </article>
+        <article class="process-step">
+          <span class="step-index">3</span>
+          <h3>Guidance shows up early</h3>
+          <p>AI insights help you respond while there is still room to correct the month.</p>
+        </article>
       </div>
     </section>
 
-    <section id="security" class="section security-section">
-      <div class="container security-layout">
-        <div class="section-copy">
-          <p class="section-label">Trust and security</p>
-          <h2>Financial context stays protected.</h2>
+    <section id="security" class="section trust-section">
+      <div class="container trust-layout">
+        <div class="trust-copy">
+          <p class="section-label">Trust &amp; security</p>
+          <h2>Financial context stays protected and under your control.</h2>
           <p>
-            BudgetGo uses encrypted, privacy-first data handling.
+            BudgetGo keeps the trust layer simple: protected connections, privacy-first data
+            handling, and features that stay understandable when you review them.
           </p>
         </div>
 
-        <ul class="security-list">
-          <li>Bank-grade encryption for sensitive data</li>
-          <li>Privacy-first data handling across the product</li>
-          <li>No sale of personal financial data</li>
-        </ul>
+        <div class="trust-stack">
+          <article class="trust-item">
+            <h3>Encrypted handling</h3>
+            <p>Connections and sensitive financial data are protected with modern encryption.</p>
+          </article>
+          <article class="trust-item">
+            <h3>Privacy-first product choices</h3>
+            <p>Your financial data is used to power the budgeting experience, not sold as inventory.</p>
+          </article>
+          <article class="trust-item">
+            <h3>Reviewable by design</h3>
+            <p>Recurring charges, categories, and AI insights stay visible enough to inspect before you act.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section cta-section">
-      <div class="container cta-layout">
-        <div>
-          <p class="section-label">Get started</p>
-          <h2>Start building steadier spending habits.</h2>
+      <div class="container cta-shell">
+        <div class="cta-copy">
+          <p class="section-label">Download BudgetGo</p>
+          <h2>Keep the month visible before it gets expensive.</h2>
           <p>
-            Download BudgetGo and keep your budget visible all month.
+            Start with one place for budgets, bills, categories, and AI guidance, then build steadier
+            money habits from there.
           </p>
+          <div class="cta-actions">
+            <a
+              class="app-store-badge-link"
+              href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download BudgetGo on the App Store"
+            >
+              <img
+                src="src/images/app-store-badge.svg"
+                alt="Download on the App Store"
+                width="120"
+                height="40"
+              />
+            </a>
+          </div>
         </div>
-        <div class="cta-actions">
-          <a
-            class="app-store-badge-link"
-            href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download BudgetGo on the App Store"
-          >
-            <img src="src/images/app-store-badge.svg" alt="Download on the App Store" />
-          </a>
-        </div>
+
       </div>
     </section>
   </main>
@@ -312,7 +375,13 @@
         <h3>Product</h3>
         <a href="#overview">Overview</a>
         <a href="#showcase">Product</a>
-        <a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Download</a>
+        <a
+          href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download
+        </a>
       </div>
 
       <div>
@@ -324,7 +393,12 @@
 
       <div>
         <h3>Contact</h3>
-        <a class="footer-link-with-icon" href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">
+        <a
+          class="footer-link-with-icon"
+          href="https://instagram.com/budgetgo.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span class="footer-link-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false">
               <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.75A3.75 3.75 0 1 0 15.75 12 3.75 3.75 0 0 0 12 8.25Z" fill="currentColor"/>
@@ -352,114 +426,46 @@
     (function () {
       const toggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector(".nav-links");
-      if (toggle && nav) {
-        const closeMenu = function () {
-          toggle.setAttribute("aria-expanded", "false");
-          nav.classList.remove("open");
-          document.body.classList.remove("menu-open");
-        };
+      const dropdowns = Array.from(document.querySelectorAll(".nav-dropdown"));
 
-        toggle.addEventListener("click", function () {
-          const expanded = toggle.getAttribute("aria-expanded") === "true";
-          toggle.setAttribute("aria-expanded", String(!expanded));
-          nav.classList.toggle("open");
-          document.body.classList.toggle("menu-open");
+      if (!toggle || !nav) return;
+
+      const closeDropdowns = function () {
+        dropdowns.forEach(function (dropdown) {
+          dropdown.removeAttribute("open");
         });
+      };
 
-        nav.addEventListener("click", function (event) {
-          if (event.target instanceof HTMLAnchorElement) closeMenu();
-        });
+      const closeMenu = function () {
+        toggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        closeDropdowns();
+      };
 
-        window.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") closeMenu();
-        });
+      toggle.addEventListener("click", function () {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
+      });
 
-        window.addEventListener("resize", function () {
-          if (window.innerWidth > 820) closeMenu();
-        });
-      }
+      nav.addEventListener("click", function (event) {
+        if (event.target instanceof HTMLAnchorElement) closeMenu();
+      });
 
-      if (window.QRCode) {
-        const qrMount = document.getElementById("downloadQr");
-        if (qrMount) {
-          new window.QRCode(qrMount, {
-            text: "https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917",
-            width: 144,
-            height: 144,
-            colorDark: "#F7F4FF",
-            colorLight: "#181522",
-            correctLevel: window.QRCode.CorrectLevel.M
-          });
-        }
-      }
+      document.addEventListener("click", function (event) {
+        if (!(event.target instanceof Node)) return;
+        if (!nav.contains(event.target)) closeDropdowns();
+      });
 
-      const carousel = document.querySelector("[data-showcase-carousel]");
-      const prevButton = document.querySelector("[data-carousel-prev]");
-      const nextButton = document.querySelector("[data-carousel-next]");
-      if (carousel && prevButton && nextButton) {
-        const cards = Array.from(carousel.querySelectorAll(".showcase-gallery-item"));
-        const autoAdvanceDelay = 4200;
-        let autoAdvanceTimer = null;
+      window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMenu();
+      });
 
-        const getScrollAmount = function () {
-          const firstCard = carousel.querySelector(".showcase-gallery-item");
-          if (!(firstCard instanceof HTMLElement)) return carousel.clientWidth * 0.86;
-          const gap = Number.parseFloat(window.getComputedStyle(carousel).columnGap || window.getComputedStyle(carousel).gap || "0");
-          return firstCard.getBoundingClientRect().width + gap;
-        };
-
-        const getCurrentIndex = function () {
-          const scrollAmount = getScrollAmount();
-          if (!scrollAmount) return 0;
-          return Math.round(carousel.scrollLeft / scrollAmount);
-        };
-
-        const moveToIndex = function (index) {
-          const totalCards = cards.length;
-          if (!totalCards) return;
-          const normalizedIndex = ((index % totalCards) + totalCards) % totalCards;
-          carousel.scrollTo({
-            left: getScrollAmount() * normalizedIndex,
-            behavior: "smooth"
-          });
-        };
-
-        const resetAutoAdvance = function () {
-          if (autoAdvanceTimer) window.clearInterval(autoAdvanceTimer);
-          autoAdvanceTimer = window.setInterval(function () {
-            moveToIndex(getCurrentIndex() + 1);
-          }, autoAdvanceDelay);
-        };
-
-        const pauseAutoAdvance = function () {
-          if (!autoAdvanceTimer) return;
-          window.clearInterval(autoAdvanceTimer);
-          autoAdvanceTimer = null;
-        };
-
-        prevButton.addEventListener("click", function () {
-          moveToIndex(getCurrentIndex() - 1);
-          resetAutoAdvance();
-        });
-
-        nextButton.addEventListener("click", function () {
-          moveToIndex(getCurrentIndex() + 1);
-          resetAutoAdvance();
-        });
-
-        carousel.addEventListener("pointerenter", pauseAutoAdvance);
-        carousel.addEventListener("pointerleave", resetAutoAdvance);
-        carousel.addEventListener("focusin", pauseAutoAdvance);
-        carousel.addEventListener("focusout", resetAutoAdvance);
-        carousel.addEventListener("touchstart", pauseAutoAdvance, { passive: true });
-        carousel.addEventListener("touchend", resetAutoAdvance, { passive: true });
-        window.addEventListener("resize", function () {
-          moveToIndex(getCurrentIndex());
-        });
-
-        resetAutoAdvance();
-      }
-
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 880) closeMenu();
+      });
     })();
   </script>
 </body>

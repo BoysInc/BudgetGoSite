@@ -8,7 +8,7 @@
   <link rel="icon" href="src/images/logo.png" />
   <link rel="stylesheet" href="styles.css" />
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
   *, *::before, *::after {
     box-sizing: border-box;
@@ -33,7 +33,7 @@
 
   body {
     margin: 0;
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
     color: var(--ink);
     background:
       radial-gradient(circle at 50% 0%, rgba(113, 50, 245, 0.2), transparent 32%),
@@ -72,7 +72,7 @@
   }
 
   [data-custom-class='title'], [data-custom-class='title'] * {
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 40px !important;
     color: var(--ink) !important;
     font-weight: 700;
@@ -81,7 +81,7 @@
   }
 
   [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
     color: var(--muted) !important;
     font-size: 15px !important;
     text-transform: uppercase;
@@ -89,7 +89,7 @@
   }
 
   [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 24px !important;
     color: var(--ink) !important;
     font-weight: 700;
@@ -98,7 +98,7 @@
   }
 
   [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 20px !important;
     color: var(--ink) !important;
     font-weight: 700;
@@ -109,13 +109,13 @@
   [data-custom-class='body_text'], [data-custom-class='body_text'] * {
     color: var(--muted) !important;
     font-size: 16px !important;
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
   }
 
   [data-custom-class='link'], [data-custom-class='link'] * {
     color: var(--accent) !important;
     font-size: 16px !important;
-    font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
     word-break: break-word !important;
     text-decoration: none;
   }
@@ -188,8 +188,19 @@
       </button>
 
       <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+        <details class="nav-dropdown">
+          <summary>Features</summary>
+          <div class="nav-dropdown-menu">
+            <a href="index.html#feature-home">Spending Overview</a>
+            <a href="index.html#feature-insights">AI Insights</a>
+            <a href="index.html#feature-recurring">Recurring Bills</a>
+            <a href="index.html#feature-connect">Bank Connection</a>
+            <a href="index.html#feature-categorization">AI Categorization</a>
+            <a href="index.html#feature-automation">Automation</a>
+            <a href="index.html#feature-analytics">Analytics</a>
+          </div>
+        </details>
         <a href="index.html#overview">Overview</a>
-        <a href="index.html#showcase">Product</a>
         <a href="index.html#security">Security</a>
         <a href="support.html">Support</a>
         <a
@@ -258,7 +269,7 @@
               <path d="M4 5.5h16A2.5 2.5 0 0 1 22.5 8v8A2.5 2.5 0 0 1 20 18.5H4A2.5 2.5 0 0 1 1.5 16V8A2.5 2.5 0 0 1 4 5.5Zm0 1.75a.75.75 0 0 0-.75.75v.34l8.75 5.73 8.75-5.73V8a.75.75 0 0 0-.75-.75Zm16 9.5a.75.75 0 0 0 .75-.75V10.42l-8.27 5.42a.88.88 0 0 1-.96 0L3.25 10.42V16A.75.75 0 0 0 4 16.75Z" fill="currentColor"/>
             </svg>
           </span>
-          <span>Email</span>
+          <span>support@budgetgo.ai</span>
         </a>
       </div>
     </div>
@@ -277,13 +288,21 @@
     (function () {
       const toggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector(".nav-links");
+      const dropdowns = Array.from(document.querySelectorAll(".nav-dropdown"));
 
       if (!toggle || !nav) return;
+
+      const closeDropdowns = function () {
+        dropdowns.forEach(function (dropdown) {
+          dropdown.removeAttribute("open");
+        });
+      };
 
       const closeMenu = function () {
         toggle.setAttribute("aria-expanded", "false");
         nav.classList.remove("open");
         document.body.classList.remove("menu-open");
+        closeDropdowns();
       };
 
       toggle.addEventListener("click", function () {
@@ -295,6 +314,11 @@
 
       nav.addEventListener("click", function (event) {
         if (event.target instanceof HTMLAnchorElement) closeMenu();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!(event.target instanceof Node)) return;
+        if (!nav.contains(event.target)) closeDropdowns();
       });
 
       window.addEventListener("keydown", function (event) {
