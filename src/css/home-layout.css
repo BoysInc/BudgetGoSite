@@ -1,0 +1,265 @@
+/* Centered introduction and broad product panels, inspired by Calendly's layout. */
+.home { --container: 1200px; }
+.landing-hero { position: relative; isolation: isolate; overflow: hidden; padding: 9.5rem 1.5rem 3.5rem; text-align: center; }
+.landing-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url("../images/hero-people.webp") center / cover no-repeat; opacity: .68; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 72%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 72%, transparent); }
+.landing-hero .hero-intro { padding: 0; }
+.landing-hero h1 { font-size: clamp(3.25rem, 6.5vw, 5.7rem); line-height: 1.08; letter-spacing: -.055em; }
+.landing-hero h1 > span { color: #c3aff1; }
+.landing-hero .hero-description { max-width: 44rem; margin: 1.6rem auto 0; font-size: 1.05rem; line-height: 1.8; }
+.landing-hero .hero-download { justify-content: center; gap: .85rem; margin-top: 1.9rem; }
+.landing-hero .app-store-badge-link { --button-height: 3.2rem; }
+.hero-secondary { background: #25232a; display: inline-flex; gap: 1.2rem; align-items: center; justify-content: center; min-height: 3.2rem; padding: .7rem 1.2rem; border: 0; border-radius: 11px; font-size: .77rem; }
+.hero-secondary:hover { background: #242127; }
+.landing-hero .hero-footnote { margin-top: .95rem; }
+.product-tour { max-width: 1376px; margin: 0 auto; padding: 0 24px; scroll-margin-top: 100px; }
+.tour-shell { padding: 2rem; border-radius: 40px; border: 0; background: radial-gradient(ellipse at 90% 20%, #38284b80, transparent 55%), #211e27; }
+.tour-tabs { display: flex; width: fit-content; max-width: 100%; margin: 0 auto 1.5rem; gap: .6rem; }
+.tour-tabs button { display: flex; align-items: center; justify-content: center; gap: .6rem; border: 0; border-radius: 18px; padding: .8rem 1.2rem; background: transparent; color: #bfb5cd; font: inherit; font-size: .77rem; cursor: pointer; transition: color 180ms ease, background 180ms ease; }
+.tour-tabs button:disabled { cursor: default; }
+.tour-tabs button svg, .tour-kicker svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+.tour-tabs button[data-tour-tab="insights"] svg, [data-tour-panel="insights"] .tour-kicker svg { stroke-width: 3.5; }
+.tour-tabs button[aria-selected="true"] { background: #bfa6f1; color: #211630; }
+.tour-tabs button:hover:not([aria-selected="true"]) { background: #ffffff08; color: #ece3f8; }
+.tour-tabs button:focus-visible { outline: 2px solid #f0e8ff; outline-offset: 4px; }
+.product-tour .tour-panel { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2.75rem; padding: 3rem; min-height: 665px; align-items: center; border: 0; border-radius: 30px; background: #161518; box-shadow: 0 18px 38px #08060c24; overflow: visible; }
+.tour-panel + .tour-panel { margin-top: 1.5rem; }
+.tour-ready .tour-panel + .tour-panel { margin-top: 0; }
+.product-tour .tour-copy { padding: 0; }
+.tour-kicker { display: inline-flex; align-items: center; gap: .65rem; font-size: .8rem; color: #d5c2f4; }
+.tour-kicker svg { width: 26px; height: 26px; background: #33283f; padding: 4px; border-radius: 8px; box-sizing: content-box; }
+.tour-copy h2 { font-size: clamp(2rem, 3.2vw, 2.9rem); line-height: 1.17; letter-spacing: -.045em; margin: 1.4rem 0 1.2rem; }
+.product-tour .tour-copy > p { max-width: 24rem; font-size: .94rem; line-height: 1.8; }
+.tour-copy .text-link { margin-top: 1.6rem; border-bottom: 1px solid #746481; padding-bottom: .25rem; }
+.tour-canvas { min-width: 0; padding: 1.2rem; border-radius: 28px; background: #211d28; border: 0; }
+.tour-canvas-overview { background: #211b2b; }
+.tour-canvas-categories { background: #251f2a; }
+.tour-canvas-insights { background: #211d2c; }
+.tour-canvas-bills { background: #1c2425; }
+.product-tour .tour-canvas .feature-visual { margin: 0; padding: 1.3rem; background: #19191c; border: 0; border-radius: 24px; }
+.product-tour .app-preview { padding: 1.3rem; border-radius: 24px; background: #19191c; box-shadow: none; }
+.product-tour .preview-toolbar { margin-bottom: 1rem; }
+.product-tour .preview-toolbar > span:first-child { font-size: 1rem; }
+.product-tour .overview-total { padding: 1.15rem 1.3rem 4rem; border-radius: 19px; }
+.product-tour .overview-total > strong { font-size: 2.55rem; }
+.product-tour .overview-spark { height: 3rem; }
+.product-tour .hero-categories { padding-top: .8rem; }
+.product-tour .preview-section-heading { margin-top: 1rem; }
+.product-tour .preview-transactions li { padding: .7rem 0; }
+.product-tour .overview-upcoming { padding: .75rem; margin-top: .5rem; }
+.product-tour .visual-caption { font-size: .57rem; margin-top: 1rem; }
+.product-tour .insight-toolbar { gap: .5rem; }
+.product-tour .donut-stage { width: 230px; margin-top: .85rem; }
+.product-tour .category-choice { padding-block: .45rem; }
+.product-tour .category-choice .category-icon { width: 34px; height: 34px; }
+.product-tour .category-choice .category-icon > span { width: 18px; height: 18px; }
+.product-tour .category-name { font-size: .78rem; }
+.product-tour .category-choice strong { font-size: .77rem; }
+.product-tour .category-instruction { font-size: .62rem; margin-block: .45rem .7rem; }
+.product-tour .trend-summary { margin-top: 1rem; }
+.product-tour .trend-summary .trend-total { font-size: 2.35rem; }
+.product-tour .cumulative-chart svg { height: 150px; }
+.product-tour .chart-legend { margin-block: .75rem 1rem; }
+.product-tour .week-track { height: 100px; }
+.product-tour .week-amount { font-size: .6rem; }
+.product-tour .trend-context { margin-top: 1rem; padding: .6rem .8rem; min-height: 50px; font-size: .65rem; }
+.product-tour .trend-context .category-icon { width: 30px; height: 30px; }
+.product-tour .trend-context .category-icon > span { width: 17px; height: 17px; }
+.product-tour .bills-heading { padding-block: .5rem 1.5rem; }
+.product-tour .bill-list li { padding: 1.2rem 0; }
+.home .source-strip { padding: 3.3rem 0 4.5rem; }
+.home .source-strip > .container { border: 0; padding: 0; }
+.home .source-strip p { font-size: .76rem; }
+.home .source-list { gap: 1.5rem 3.8rem; margin-top: 1.6rem; }
+.home .workflow-section { border: 0; background: transparent; padding: 2rem 24px 4.5rem; }
+.home .feature-panel { max-width: 1328px; padding: 4rem; border-radius: 40px; background: #19181c; border: 0; width: 100%; }
+.home .workflow-layout { gap: 4rem; }
+.home .workflow-copy h2 { font-size: clamp(2.35rem, 3.5vw, 3.3rem); }
+.home .workflow-copy .section-description { font-size: .91rem; }
+.workflow-mode { color: #a4a0ac; font-size: .74rem; line-height: 1.8; max-width: 25rem; margin: 1.5rem 0 .7rem; }
+.workflow-mode strong { color: #d8d1e2; }
+.home .reconcile-visual { background: #211d28; padding: 2rem; }
+.centered-intro { flex-direction: column; align-items: center; text-align: center; gap: 1rem; margin-bottom: 3rem; }
+.centered-intro h2 br { display: none; }
+.home .essentials-section { padding-top: 3rem; }
+.home .essential-card { padding: 2.5rem; border-radius: 32px; background: #19191c; }
+.home .essential-top { margin-bottom: 2.4rem; }
+.home .privacy-section { padding: 2rem 24px 5rem; }
+.home .privacy-layout { gap: 4rem; padding-top: 4rem; background: #1c2020; }
+.home .privacy-layout h2 { font-size: clamp(2.35rem, 3.5vw, 3.3rem); }
+.home .faq-section { border: 0; padding-top: 1rem; padding-bottom: 6rem; }
+.home .faq-layout { grid-template-columns: 1fr; gap: 2.5rem; max-width: 820px; }
+.home .faq-layout > div:first-child { text-align: center; }
+.home .faq-layout h2 br { display: none; }
+.home .faq-layout > div > p:not(.section-label) { margin-top: 1rem; }
+.home .faq-list { border-top: 1px solid var(--line); }
+.home .faq-list summary { padding: 1.5rem .5rem; font-size: .92rem; }
+.home .download-panel { text-align: center; padding: 4.5rem 2rem; background: #261e33; border-radius: 40px; }
+.home .download-panel .app-store-badge-link { margin-inline: auto; }
+
+@media (min-width: 1200px) {
+  .product-tour .breakdown-visual { display: grid; grid-template-columns: 1fr 1.06fr; gap: .4rem 1rem; }
+  .product-tour .breakdown-visual .insight-toolbar { grid-column: 1 / -1; margin-bottom: .6rem; }
+  .product-tour .donut-stage { grid-column: 1; grid-row: 2; width: 230px; max-width: 100%; align-self: center; }
+  .product-tour .category-instruction { grid-column: 1; grid-row: 3; max-width: 11rem; justify-self: center; }
+  .product-tour .category-choices { grid-column: 2; grid-row: 2 / 4; }
+  .product-tour .breakdown-visual .visual-caption { grid-column: 1 / -1; }
+  .product-tour .category-choice { gap: .5rem; padding-inline: .3rem; }
+  .product-tour .category-choice-arrow { display: none; }
+  .product-tour .category-name { font-size: .72rem; }
+  .product-tour .category-name small { font-size: .52rem; }
+  .product-tour .category-choice strong { font-size: .71rem; }
+  .product-tour .donut-amount { font-size: 1.3rem; }
+  .product-tour .donut-category-label { font-size: .66rem; }
+  .product-tour .donut-share { font-size: .51rem; }
+}
+@media (max-width: 1100px) {
+  .tour-shell { padding: 1.4rem; }
+  .product-tour .tour-panel { gap: 2rem; padding: 2rem; grid-template-columns: .82fr 1.18fr; }
+  .tour-canvas { padding: .75rem; }
+  .product-tour .tour-canvas .feature-visual { padding: 1rem; }
+  .tour-tabs button { padding: .8rem 1rem; }
+  .tour-copy h2 { font-size: 2.4rem; }
+  .product-tour .tour-copy > p { font-size: .84rem; }
+  .product-tour .category-choice-arrow { display: none; }
+  .product-tour .trend-summary .trend-total { font-size: 2rem; }
+  .product-tour .trend-change { font-size: .57rem; padding: .3rem .5rem; }
+  .product-tour .week-amount { font-size: .53rem; }
+  .home .feature-panel { padding: 3rem; }
+  .home .workflow-layout, .home .privacy-layout { gap: 2.5rem; }
+  .home .reconcile-visual { padding: 1.4rem; }
+}
+@media (max-width: 900px) {
+  .landing-hero::before { inset: auto 0 0; height: clamp(160px, 42vw, 380px); background-size: cover; background-position: center; opacity: .85; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 75%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 75%, transparent); }
+  .landing-hero { padding-top: 8rem; padding-bottom: calc(clamp(160px, 42vw, 380px) + 1.5rem); }
+  .landing-hero h1 { font-size: clamp(3rem, 7.8vw, 4.6rem); }
+  .landing-hero .hero-description { font-size: .95rem; }
+  .product-tour { padding-inline: 18px; }
+  .tour-shell { padding: 1.25rem; border-radius: 32px; }
+  .product-tour .tour-panel { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; min-height: 0; }
+  .product-tour .tour-copy { max-width: 36rem; }
+  .tour-copy h2 { font-size: 2.35rem; margin-block: 1.1rem 1rem; }
+  .tour-copy h2 br { display: none; }
+  .product-tour .tour-copy > p { max-width: 34rem; font-size: .9rem; }
+  .tour-copy .text-link { margin-top: 1rem; }
+  .tour-canvas { width: 100%; max-width: 600px; justify-self: center; padding: 1.2rem; }
+  .product-tour .app-preview { padding: 1.4rem; }
+  .product-tour .preview-transactions strong, .product-tour .preview-transactions b { font-size: .83rem; }
+  .product-tour .preview-transactions li div > span { font-size: .65rem; }
+  .product-tour .hero-categories a { font-size: .7rem; }
+  .product-tour .preview-section-heading > span { display: inline; }
+  .product-tour .overview-total > strong { font-size: 3rem; }
+  .product-tour .overview-comparison { font-size: .72rem; }
+  .product-tour .category-choice { padding: .6rem .75rem; }
+  .product-tour .category-name, .product-tour .category-choice strong { font-size: .87rem; }
+  .product-tour .category-name small { font-size: .64rem; }
+  .product-tour .category-choice .category-icon { width: 40px; height: 40px; }
+  .product-tour .category-choice .category-icon > span { width: 21px; height: 21px; }
+  .product-tour .category-choice-arrow { display: block; }
+  .product-tour .donut-stage { width: 270px; }
+  .product-tour .trend-summary .trend-total { font-size: 2.5rem; }
+  .product-tour .trend-change { font-size: .65rem; padding: .4rem .65rem; }
+  .product-tour .cumulative-chart svg { height: 180px; }
+  .product-tour .week-track { height: 130px; }
+  .product-tour .week-amount { font-size: .67rem; }
+  .home .feature-panel { padding: 2rem; }
+  .home .workflow-layout, .home .privacy-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .home .workflow-copy .section-description, .home .workflow-mode, .home .workflow-steps p { max-width: 100%; }
+  .home .reconcile-visual { max-width: 540px; width: 100%; justify-self: center; padding: 1.75rem; }
+  .home .workflow-section, .home .privacy-section { padding-inline: 18px; }
+}
+@media (max-width: 640px) {
+  .landing-hero { padding: 7.5rem 20px calc(clamp(160px, 42vw, 380px) + 1.5rem); }
+  .landing-hero > .container { width: 100%; }
+  .landing-hero h1 { font-size: clamp(2.7rem, 9.5vw, 3.6rem); }
+  .landing-hero .hero-description { margin-top: 1.4rem; font-size: .85rem; line-height: 1.8; }
+  .desktop-break { display: none; }
+  .landing-hero .hero-download { gap: .6rem; }
+  .landing-hero .app-store-badge-link { --button-height: 2.9rem; }
+  .hero-secondary { min-height: 2.9rem; padding: .6rem .8rem; font-size: .68rem; gap: .6rem; }
+  .product-tour { padding-inline: 12px; }
+  .tour-shell { padding: .65rem; border-radius: 30px; }
+  .tour-tabs { width: 100%; justify-content: space-between; gap: .2rem; margin-block: .3rem .9rem; }
+  .tour-tabs button { flex-direction: column; flex: 1; padding: .65rem .3rem; border-radius: 15px; gap: .45rem; font-size: .61rem; }
+  .tour-tabs button svg { width: 20px; height: 20px; }
+  .product-tour .tour-panel { padding: 1.45rem .85rem .85rem; gap: 1.65rem; border-radius: 22px; }
+  .product-tour .tour-copy { padding-inline: .4rem; }
+  .tour-kicker { font-size: .72rem; gap: .5rem; }
+  .tour-kicker svg { width: 20px; height: 20px; }
+  .tour-copy h2 { font-size: 2rem; }
+  .product-tour .tour-copy > p { font-size: .82rem; }
+  .tour-copy .text-link { font-size: .75rem; }
+  .tour-canvas { padding: .55rem; border-radius: 22px; }
+  .product-tour .tour-canvas .feature-visual, .product-tour .app-preview { padding: 1rem; border-radius: 18px; }
+  .product-tour .preview-toolbar > span:first-child { font-size: .9rem; }
+  .product-tour .overview-total { padding: 1rem 1rem 3.5rem; }
+  .product-tour .overview-total > strong { font-size: 2.4rem; }
+  .product-tour .hero-categories a { font-size: .55rem; gap: .3rem; }
+  .product-tour .hero-categories .category-icon { width: 28px; height: 28px; }
+  .product-tour .preview-section-heading h3 { font-size: .78rem; }
+  .product-tour .preview-section-heading > span { display: none; }
+  .product-tour .preview-transactions strong, .product-tour .preview-transactions b { font-size: .76rem; }
+  .product-tour .preview-transactions li div > span { font-size: .56rem; }
+  .product-tour .overview-upcoming { padding: .65rem; }
+  .product-tour .overview-upcoming strong { font-size: .65rem; }
+  .product-tour .overview-upcoming b { font-size: .7rem; }
+  .product-tour .overview-upcoming div > span { font-size: .52rem; }
+  .product-tour .insight-toolbar .visual-label { font-size: .66rem; }
+  .product-tour .category-reset { font-size: .56rem; padding-inline: .6rem; }
+  .product-tour .donut-stage { width: 245px; max-width: 100%; }
+  .product-tour .category-choice { padding: .55rem .25rem; gap: .6rem; }
+  .product-tour .category-name, .product-tour .category-choice strong { font-size: .77rem; }
+  .product-tour .category-name small { font-size: .57rem; }
+  .product-tour .category-choice-arrow { display: none; }
+  .product-tour .category-choice .category-icon { width: 34px; height: 34px; }
+  .product-tour .category-choice .category-icon > span { width: 18px; height: 18px; }
+  .product-tour .trend-summary .trend-total { font-size: 2.1rem; }
+  .product-tour .trend-change { font-size: .6rem; }
+  .product-tour .cumulative-chart svg { height: 145px; }
+  .product-tour .week-amount { font-size: .55rem; }
+  .product-tour .week-track { height: 110px; }
+  .product-tour .weekly-chart { gap: .5rem; }
+  .product-tour .bills-heading strong { font-size: 2rem; }
+  .home .source-strip { padding: 2.7rem 20px 3rem; }
+  .home .source-list { gap: 1.2rem 1.5rem; }
+  .home .source-list li { font-size: .75rem; }
+  .home .feature-panel { padding: 1.6rem; border-radius: 30px; }
+  .home .workflow-section { padding-bottom: 2.5rem; }
+  .home .workflow-copy h2, .home .privacy-layout h2 { font-size: 2.25rem; }
+  .home .workflow-copy .section-description { font-size: .83rem; }
+  .home .reconcile-visual { padding: 1.2rem; }
+  .home .essential-card { padding: 1.75rem; }
+  .centered-intro h2 { font-size: 2.25rem; }
+  .home .privacy-section { padding-bottom: 3.5rem; }
+  .home .privacy-layout { gap: 2rem; }
+  .home .faq-section { padding-bottom: 4rem; }
+  .home .faq-layout h2 { font-size: 2.25rem; }
+  .home .download-panel { padding: 3rem 1.5rem; border-radius: 30px; }
+}
+@media (max-width: 360px) {
+  .landing-hero { padding-inline: 14px; }
+  .landing-hero .hero-download { flex-direction: column; }
+  .hero-secondary { border: 0; min-height: 2.3rem; }
+  .product-tour .tour-panel { padding-inline: .6rem; }
+  .tour-canvas { padding: .35rem; }
+  .product-tour .app-preview, .product-tour .tour-canvas .feature-visual { padding: .75rem; }
+  .product-tour .hero-categories a { font-size: .5rem; gap: .2rem; }
+  .product-tour .hero-categories .category-icon { width: 24px; height: 24px; }
+  .product-tour .preview-toolbar { gap: .4rem; }
+  .product-tour .preview-toolbar > span:first-child { font-size: .82rem; }
+  .product-tour .preview-period { font-size: .56rem; }
+  .product-tour .overview-total > strong { font-size: 2.05rem; }
+  .product-tour .overview-comparison { font-size: .59rem; }
+  .product-tour .preview-transactions img { width: 28px; height: 28px; }
+  .product-tour .preview-transactions strong, .product-tour .preview-transactions b { font-size: .68rem; }
+  .product-tour .preview-transactions li div > span { font-size: .5rem; }
+  .product-tour .category-name, .product-tour .category-choice strong { font-size: .69rem; }
+  .product-tour .category-name small { font-size: .52rem; }
+  .product-tour .category-choice { gap: .45rem; }
+  .product-tour .category-choice .category-icon { width: 30px; height: 30px; }
+  .product-tour .donut-amount { font-size: 1.35rem; }
+  .product-tour .donut-share { font-size: .51rem; }
+  .product-tour .trend-summary .trend-total { font-size: 1.9rem; }
+  .product-tour .week-amount { font-size: .48rem; }
+  .product-tour .bill-count { font-size: .53rem; }
+  .product-tour .bill-list strong, .product-tour .bill-list b { font-size: .75rem; }
+}

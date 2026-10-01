@@ -3,14 +3,15 @@
  <head>
   <meta charset="utf-8"/>
  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="#0A0810" name="theme-color"/>
+  <meta content="#101112" name="theme-color"/>
   <link href="src/images/logo.png" rel="icon"/>
+  <link href="https://budgetgo.ai/terms_of_service.html" rel="canonical"/>
   <link href="styles.css" rel="stylesheet"/>
   <title>
    Terms of Service | BudgetGo
   </title>
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
 
   *, *::before, *::after {
     box-sizing: border-box;
@@ -22,29 +23,24 @@
   }
 
   :root {
-    --ink: #f2efff;
-    --muted: #beb7d5;
-    --accent: #ffca62;
-    --card: rgba(24, 21, 34, 0.96);
-    --border: rgba(104, 107, 130, 0.34);
-    --bg-1: #0a0810;
-    --bg-2: #14101d;
-    --shadow: 0 24px 48px rgba(8, 6, 14, 0.42);
-    --radius: 16px;
+    --ink: var(--text);
+    --muted: var(--text-soft);
+    --link: var(--accent-light);
+    --card: var(--surface);
+    --bg-1: var(--bg);
+    --radius-card: 16px;
   }
 
   body {
     margin: 0;
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
     color: var(--ink);
-    background:
-      radial-gradient(circle at 50% 0%, rgba(113, 50, 245, 0.2), transparent 32%),
-      linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    background: var(--bg-1);
     line-height: 1.7;
   }
 
   .legal-main {
-    padding: 1.25rem 0 5rem;
+    padding: 7.5rem 0 5rem;
   }
 
   [data-custom-class='body'], [data-custom-class='body'] * {
@@ -54,11 +50,10 @@
   [data-custom-class='body'] {
     max-width: 920px;
     margin: 0 auto;
-    padding: 56px 64px;
+    padding: 48px 56px;
+    border: 1px solid var(--line);
     background: var(--card) !important;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    border-radius: var(--radius-card);
   }
 
   [data-custom-class='body'] div,
@@ -74,24 +69,22 @@
   }
 
   [data-custom-class='title'], [data-custom-class='title'] * {
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 40px !important;
     color: var(--ink) !important;
-    font-weight: 700;
     letter-spacing: -0.5px;
     margin: 0;
   }
 
   [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif !important;
     color: var(--muted) !important;
     font-size: 15px !important;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0;
   }
 
   [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 24px !important;
     color: var(--ink) !important;
     font-weight: 700;
@@ -100,7 +93,7 @@
   }
 
   [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 20px !important;
     color: var(--ink) !important;
     font-weight: 700;
@@ -111,13 +104,13 @@
   [data-custom-class='body_text'], [data-custom-class='body_text'] * {
     color: var(--muted) !important;
     font-size: 16px !important;
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif !important;
   }
 
   [data-custom-class='link'], [data-custom-class='link'] * {
-    color: var(--accent) !important;
+    color: var(--link) !important;
     font-size: 16px !important;
-    font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif !important;
     word-break: break-word !important;
     text-decoration: none;
   }
@@ -132,7 +125,7 @@
   }
 
   .footer-attribution a {
-    color: rgba(242, 239, 255, 0.62);
+    color: var(--muted);
   }
 
   .footer-attribution a:hover,
@@ -157,7 +150,7 @@
     [data-custom-class='body'] {
       margin: 0 16px;
       padding: 28px 22px;
-      border-radius: 16px;
+      border-radius: var(--radius-card);
     }
 
     [data-custom-class='title'], [data-custom-class='title'] * {
@@ -165,7 +158,7 @@
     }
 
     .legal-main {
-      padding-top: 1rem;
+      padding-top: 6rem;
       padding-bottom: 4rem;
     }
   }
@@ -190,27 +183,14 @@
        Features
       </summary>
       <div class="nav-dropdown-menu">
-       <a href="index.html#feature-home">
-        Spending Overview
-       </a>
-       <a href="index.html#feature-insights">
-        AI Insights
-       </a>
-       <a href="index.html#feature-recurring">
-        Recurring Bills
-       </a>
-       <a href="index.html#feature-connect">
-        Bank Connection
-       </a>
-       <a href="index.html#feature-categorization">
-        AI Categorization
-       </a>
-       <a href="index.html#feature-automation">
-        Automation
-       </a>
-       <a href="index.html#feature-analytics">
-        Analytics
-       </a>
+       <a href="index.html#feature-home">Home overview</a>
+       <a href="index.html#feature-insights">AI insights</a>
+       <a href="index.html#feature-categories">Spending breakdown</a>
+       <a href="index.html#feature-duplicates">Duplicate review</a>
+       <a href="index.html#feature-recurring">Recurring bills</a>
+       <a href="index.html#feature-reports">Forecast</a>
+       <a href="index.html#feature-automation">Automations</a>
+       <a href="index.html#feature-imports">Imports</a>
       </div>
      </details>
      <a href="index.html#overview">
@@ -219,11 +199,14 @@
      <a href="index.html#security">
       Security
      </a>
+     <a href="automations.html">
+      Guides
+     </a>
      <a href="support.html">
       Support
      </a>
-     <a class="btn btn-secondary nav-cta-text" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" rel="noopener noreferrer" target="_blank">
-      Download
+     <a aria-label="Download BudgetGo on the App Store" class="app-store-badge-link nav-badge" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" rel="noopener noreferrer" target="_blank">
+      <img alt="Download on the App Store" height="40" src="src/images/app-store-badge.svg" width="120"/>
      </a>
     </nav>
    </div>
@@ -605,7 +588,7 @@ mso-themetint:166;">
        <span style="font-size:11.0pt;line-height:115%;font-family: Arial, Calibri;color:#595959;mso-themecolor:text1;mso-themetint:166;">
         <bdt class="block-component">
         </bdt>
-        <bdt class="block-container if" data-type="if" id="a2595956-7028-dbe5-123e-d3d3a93ed076">
+        <bdt class="block-container if" data-type="if">
          <bdt data-type="conditional-block">
           <bdt data-type="body">
            <span style="color: rgb(89, 89, 89); font-size: 14.6667px;">
@@ -692,18 +675,10 @@ mso-themetint:166;">
       </bdt>
      </span>
     </span>
-    <a data-custom-class="link" href="#products">
-    </a>
+
    </div>
    <div class="MsoNormal" style="line-height: 1.5;">
-    <a data-custom-class="link" href="#products">
-     <span style="color: rgb(0, 58, 250); font-size: 15px;">
-      <span data-custom-class="body_text">
-       <bdt class="block-component">
-       </bdt>
-      </span>
-     </span>
-    </a>
+
     <a data-custom-class="link" href="#purchases">
     </a>
    </div>
@@ -849,30 +824,14 @@ mso-themetint:166;">
       </span>
      </span>
     </a>
-    <a data-custom-class="link" href="#thirdparty">
-    </a>
+
    </div>
    <div class="MsoNormal" style="line-height: 1.5;">
-    <a data-custom-class="link" href="#thirdparty">
-     <span style="color: rgb(0, 58, 250); font-size: 15px;">
-      <span data-custom-class="body_text">
-       <bdt class="block-component">
-       </bdt>
-      </span>
-     </span>
-    </a>
-    <a data-custom-class="link" href="#advertisers">
-    </a>
+
+
    </div>
    <div class="MsoNormal" style="line-height: 1.5;">
-    <a data-custom-class="link" href="#advertisers">
-     <span style="color: rgb(0, 58, 250); font-size: 15px;">
-      <span data-custom-class="body_text">
-       <bdt class="block-component">
-       </bdt>
-      </span>
-     </span>
-    </a>
+
     <a data-custom-class="link" href="#sitemanage">
     </a>
    </div>
@@ -899,34 +858,14 @@ mso-themetint:166;">
       </span>
      </span>
     </a>
-    <a data-custom-class="link" href="#ppno">
-    </a>
+
    </div>
    <div class="MsoNormal" style="line-height: 1.5;">
-    <a data-custom-class="link" href="#ppno">
-     <span style="color: rgb(0, 58, 250); font-size: 15px;">
-      <span data-custom-class="body_text">
-       <bdt class="block-component">
-       </bdt>
-      </span>
-     </span>
-    </a>
-    <a data-custom-class="link" href="#dmca">
-    </a>
+
+
    </div>
    <div class="MsoNormal" style="line-height: 1.5;">
-    <a data-custom-class="link" href="#dmca">
-     <span style="color: rgb(0, 58, 250); font-size: 15px;">
-      <span data-custom-class="body_text">
-       <bdt class="block-component">
-       </bdt>
-       <bdt class="block-component">
-       </bdt>
-       <bdt class="statement-end-if-in-editor">
-       </bdt>
-      </span>
-     </span>
-    </a>
+
    </div>
    <div class="MsoNormal" style="line-height: 1.5;">
     <span style="font-size: 15px;">
@@ -3314,10 +3253,10 @@ otherwise; (
       </bdt>
      </bdt>
      applicable to agreements made and to be entirely performed within
-     <bdt class="block-container if" data-type="if" id="b86653c1-52f0-c88c-a218-e300b912dd6b" style="font-size: 14.6667px;">
+     <bdt class="block-container if" data-type="if" style="font-size: 14.6667px;">
       <bdt data-type="conditional-block">
        <span style="font-size: 11pt; line-height: 16.8667px; color: rgb(89, 89, 89);">
-        <bdt class="block-container if" data-type="if" id="b86653c1-52f0-c88c-a218-e300b912dd6b">
+        <bdt class="block-container if" data-type="if">
          <bdt data-type="conditional-block">
           <bdt class="block-component" data-record-question-key="governing_law" data-type="statement">
           </bdt>
@@ -3893,7 +3832,7 @@ Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N
         list-style-type: square;
       }
       ol li {
-        font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+        font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
       }
  </style>
  <br/>
@@ -3926,6 +3865,12 @@ Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N
      <h3>
       Resources
      </h3>
+     <a href="automations.html">
+      Automation setup
+     </a>
+     <a href="mcp.html">
+      MCP (coming soon)
+     </a>
      <a href="support.html">
       Support
      </a>
@@ -4027,7 +3972,7 @@ Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N
       });
 
       window.addEventListener("resize", function () {
-        if (window.innerWidth > 820) closeMenu();
+        if (window.innerWidth > 880) closeMenu();
       });
     })();
   </script>

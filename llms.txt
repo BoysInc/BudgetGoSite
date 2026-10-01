@@ -1,0 +1,35 @@
+# BudgetGo
+
+> BudgetGo is a personal-finance app for iPhone that keeps a complete, reconciled record of your spending. It combines transactions from Apple Pay, bank SMS alerts, linked accounts, bank statements, and manual entry, flags what is missing, categorizes everything with AI, and surfaces insights that help you save. Users can review and edit every transaction, category, and allocation.
+
+BudgetGo is published by GraphLeaf LLC and is available on the App Store: https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917
+
+Key facts:
+
+- Platform: iPhone (iOS). Automations use Apple's built-in Shortcuts app.
+- Modes: one active budget at a time (a spending limit for the period, allocated across categories), or tracking-only mode with no budget.
+- Transaction sources: Apple Pay payments (Shortcuts Wallet automation), bank SMS alerts (Shortcuts Message automation), Apple Wallet accounts, banks linked through Plaid where supported, imported files (PDF bank statements, CSV and Excel exports, receipt photos), and manual entry.
+- Imports: PDF, Excel, or CSV up to 5 MB and 500 transactions per file. Duplicates already imported from the same file are skipped, nothing is added until the user confirms, and uploaded files are deleted after 24 hours.
+- SMS alerts are parsed on the device. Only recognized financial messages create transactions.
+- AI categorizes transactions automatically. Users can change any category.
+- Insights: pacing alerts, saving opportunities, and end-of-period reviews.
+- Recurring bills and subscriptions are detected and shown as upcoming charges.
+- Data export: transactions can be exported as CSV.
+- Support: support@budgetgo.ai
+
+## Pages
+
+- [Home](https://budgetgo.ai/): Product overview, how BudgetGo reconciles multiple sources, and its features
+- [Automation setup guide](https://budgetgo.ai/automations.html): Step-by-step setup of Apple Shortcuts automations for Apple Pay payments and bank SMS alerts, plus troubleshooting
+- [BudgetGo MCP (coming soon)](https://budgetgo.ai/mcp.html): Waitlist for the upcoming BudgetGo Model Context Protocol server, which will let MCP-compatible AI assistants answer questions using a user's BudgetGo spending data
+- [Support](https://budgetgo.ai/support.html): Contact options for product, account, and billing help, and privacy requests
+
+## Shortcuts actions
+
+- [Add Transaction to Budget Go](https://budgetgo.ai/automations.html#wallet): Inputs are Amount (required), Merchant (required), and Currency (optional ISO code, which defaults to the user's currency). Used by the Wallet "Transaction" automation.
+- [Import SMS Transaction](https://budgetgo.ai/automations.html#sms): Inputs are Message (required, the SMS content) and Sender (optional). Used by the Messages automation.
+
+## Legal
+
+- [Privacy Policy](https://budgetgo.ai/privacy_policy.html)
+- [Terms of Service](https://budgetgo.ai/terms_of_service.html)

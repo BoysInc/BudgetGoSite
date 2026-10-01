@@ -8,18 +8,17 @@
   <meta property="og:title" content="Support | BudgetGo" />
   <meta property="og:description" content="Get help with BudgetGo, report an issue, ask account questions, or submit a privacy request." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0A0810" />
+  <meta name="theme-color" content="#101112" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
   <link rel="icon" href="src/images/logo.png" />
+  <link rel="canonical" href="https://budgetgo.ai/support.html" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .support-hero {
-      padding: 2.75rem 0 2.35rem;
-      background:
-        radial-gradient(circle at 50% 16%, rgba(113, 50, 245, 0.26), transparent 42%),
-        var(--bg-deep);
+      padding: 8.5rem 0 2.35rem;
+      background: var(--bg);
     }
 
     .support-hero-layout {
@@ -75,15 +74,14 @@
 
     .support-form-panel {
       padding: 1.45rem;
-      border-radius: 22px;
-      background: rgba(16, 13, 24, 0.84);
-      backdrop-filter: blur(14px) saturate(1.06);
-      box-shadow: 0 18px 36px rgba(7, 5, 12, 0.18);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
     }
 
     .support-form-panel h2 {
       font-size: 2rem;
-      max-width: 12ch;
+      max-width: 18ch;
     }
 
     .support-form-panel p {
@@ -108,9 +106,10 @@
     }
 
     .support-form-field label {
-      color: rgba(242, 239, 255, 0.8);
+      color: var(--text-soft);
       font-size: 0.88rem;
-      font-weight: 700;
+      font-weight: 800;
+      letter-spacing: 0;
     }
 
     .support-form-field input,
@@ -118,9 +117,9 @@
     .support-form-field textarea {
       width: 100%;
       padding: 0.85rem 0.95rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(10, 8, 16, 0.9);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--button-radius);
+      background: var(--bg-soft);
       color: var(--text-inverse);
       font: inherit;
       resize: vertical;
@@ -133,15 +132,14 @@
 
     .support-form-field input::placeholder,
     .support-form-field textarea::placeholder {
-      color: rgba(190, 183, 213, 0.62);
+      color: var(--text-faint);
     }
 
     .support-form-field input:focus,
     .support-form-field select:focus,
     .support-form-field textarea:focus {
       outline: none;
-      border-color: rgba(113, 50, 245, 0.64);
-      box-shadow: 0 0 0 3px rgba(113, 50, 245, 0.16);
+      border-color: var(--text);
     }
 
     .support-form-actions {
@@ -153,7 +151,7 @@
 
     .support-form-note {
       margin-top: 0.95rem;
-      color: rgba(242, 239, 255, 0.66);
+      color: var(--text-faint);
       font-size: 0.9rem;
     }
 
@@ -180,25 +178,16 @@
     .support-panel {
       min-height: 100%;
       padding: 1.45rem;
-      border-radius: 22px;
-      background: rgba(24, 20, 35, 0.76);
-      backdrop-filter: blur(14px) saturate(1.04);
-      box-shadow: 0 18px 34px rgba(7, 5, 12, 0.16);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
       transition: transform 320ms var(--ease-fluid), box-shadow 320ms var(--ease-fluid), background-color 320ms var(--ease-fluid);
-    }
-
-    .support-route:hover,
-    .support-route:focus-within,
-    .support-panel:hover,
-    .support-panel:focus-within {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 40px rgba(7, 5, 12, 0.24);
     }
 
     .support-route-kicker,
     .support-panel-kicker {
       margin-bottom: 0.55rem;
-      color: var(--accent-gold);
+      color: var(--accent-light);
       font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -236,7 +225,7 @@
 
     .support-route-link,
     .support-inline-link {
-      color: var(--accent-gold);
+      color: var(--accent-light);
       font-weight: 700;
     }
 
@@ -244,7 +233,7 @@
     .support-route-link:focus-visible,
     .support-inline-link:hover,
     .support-inline-link:focus-visible {
-      color: #ffd98d;
+      color: var(--text);
     }
 
     .support-detail {
@@ -305,7 +294,7 @@
     }
 
     .footer-attribution a {
-      color: rgba(242, 239, 255, 0.62);
+      color: var(--text-faint);
     }
 
     .footer-attribution a:hover,
@@ -339,7 +328,7 @@
 
     @media (max-width: 680px) {
       .support-hero {
-        padding-top: 2rem;
+        padding-top: 6.5rem;
         padding-bottom: 2rem;
       }
 
@@ -391,24 +380,27 @@
         <details class="nav-dropdown">
           <summary>Features</summary>
           <div class="nav-dropdown-menu">
-            <a href="index.html#feature-home">Spending Overview</a>
-            <a href="index.html#feature-insights">AI Insights</a>
-            <a href="index.html#feature-recurring">Recurring Bills</a>
-            <a href="index.html#feature-connect">Bank Connection</a>
-            <a href="index.html#feature-categorization">AI Categorization</a>
-            <a href="index.html#feature-automation">Automation</a>
-            <a href="index.html#feature-analytics">Analytics</a>
+            <a href="index.html#feature-home">Home overview</a>
+            <a href="index.html#feature-insights">AI insights</a>
+            <a href="index.html#feature-categories">Spending breakdown</a>
+            <a href="index.html#feature-duplicates">Duplicate review</a>
+            <a href="index.html#feature-recurring">Recurring bills</a>
+            <a href="index.html#feature-reports">Forecast</a>
+            <a href="index.html#feature-automation">Automations</a>
+            <a href="index.html#feature-imports">Imports</a>
           </div>
         </details>
         <a href="index.html#overview">Overview</a>
+        <a href="automations.html">Guides</a>
         <a href="support.html" aria-current="page">Support</a>
         <a
-          class="btn btn-secondary nav-cta-text"
+          class="app-store-badge-link nav-badge"
           href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Download BudgetGo on the App Store"
         >
-          Download
+          <img src="src/images/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
         </a>
       </nav>
     </div>
@@ -601,7 +593,7 @@
       <div class="container support-final-inner">
         <div>
           <p class="section-label">Still need help</p>
-          <h2>Use email for anything that does not fit the form</h2>
+          <h2>Anything else? Email us.</h2>
           <p>
             Product questions, feature feedback, account issues, and general help requests all go
             through the same support inbox.
@@ -611,12 +603,13 @@
         <div class="support-final-actions">
           <a class="btn btn-primary" href="mailto:support@budgetgo.ai">Email support</a>
           <a
-            class="btn btn-secondary support-download-btn"
+            class="app-store-badge-link"
             href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Download BudgetGo on the App Store"
           >
-            Download BudgetGo
+            <img src="src/images/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
           </a>
         </div>
       </div>
@@ -634,6 +627,8 @@
 
       <div>
         <h3>Resources</h3>
+        <a href="automations.html">Automation setup</a>
+        <a href="mcp.html">MCP (coming soon)</a>
         <a href="support.html">Support</a>
         <a href="terms_of_service.html">Terms of Service</a>
         <a href="privacy_policy.html">Privacy Policy</a>
@@ -720,7 +715,7 @@
         });
 
         window.addEventListener("resize", function () {
-          if (window.innerWidth > 820) closeMenu();
+          if (window.innerWidth > 880) closeMenu();
         });
       }
 

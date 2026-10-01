@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Set Up Apple Shortcuts Automations | BudgetGo</title>
+  <meta
+    name="description"
+    content="Step-by-step guide to importing Apple Wallet payments and bank SMS alerts into BudgetGo automatically with Apple Shortcuts automations."
+  />
+  <meta property="og:title" content="Set Up Apple Shortcuts Automations | BudgetGo" />
+  <meta
+    property="og:description"
+    content="Import Apple Wallet payments and bank SMS alerts into BudgetGo automatically with Apple Shortcuts."
+  />
+  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://budgetgo.ai/automations.html" />
+  <meta name="theme-color" content="#101112" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="icon" type="image/png" href="src/images/favicon-rounded.png" />
+  <link rel="apple-touch-icon" href="src/images/favicon-rounded.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .guide-hero {
+      position: relative;
+      overflow: clip;
+      padding: 8rem 0 4rem;
+      background: var(--bg);
+    }
+
+    .guide-hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .guide-hero h1 {
+      max-width: 13ch;
+      font-size: clamp(2.7rem, 5.4vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .guide-hero .lead {
+      margin-inline: 0;
+      max-width: 36rem;
+    }
+
+    .guide-jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 2rem;
+    }
+
+    .guide-jump a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-height: 2.75rem;
+      padding: 0 1.1rem;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 0;
+      font-size: 0.92rem;
+      font-weight: 800;
+      transition: background-color 220ms var(--ease-smooth), transform 220ms var(--ease-smooth);
+    }
+
+    .guide-jump a:hover,
+    .guide-jump a:focus-visible {
+      background: var(--surface-high);
+      transform: translateY(-2px);
+    }
+
+    /* Three steps show the capture flow. */
+    .flow {
+      position: relative;
+      display: grid;
+      gap: 1.6rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .flow::before {
+      content: "";
+      position: absolute;
+      top: 2.5rem;
+      bottom: 2.5rem;
+      left: 2.45rem;
+      width: 2px;
+      background: repeating-linear-gradient(180deg, var(--accent-light) 0 6px, transparent 6px 12px);
+      background-size: 2px 24px;
+      opacity: 0.6;
+    }
+
+
+    .flow-node {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem 1rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+    }
+
+    .flow-node:nth-child(2) { margin-left: 1.5rem; }
+    .flow-node:nth-child(3) { margin-left: 3rem; }
+
+    .flow-node strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .flow-node small {
+      color: var(--text-soft);
+      font-size: 0.85rem;
+    }
+
+    .flow-icon,
+    .flow-logo {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 2.9rem;
+      height: 2.9rem;
+      border-radius: 0.9rem;
+    }
+
+    .flow-icon svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    .flow-icon-wallet {
+      background: var(--surface-high);
+      color: var(--text);
+    }
+
+    .flow-icon-shortcuts {
+      background: var(--accent-soft);
+      color: var(--accent-light);
+    }
+
+    .flow-node-final {
+      background: var(--action);
+      color: var(--on-action);
+    }
+
+    .flow-node-final small {
+      color: rgba(16, 16, 16, 0.7);
+    }
+
+    /* ---------- Sections ---------- */
+
+    .guide-section {
+      padding: 5rem 0;
+    }
+
+    .guide-section:nth-of-type(even) {
+      background: var(--bg-soft);
+    }
+
+    .guide-section-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1.4rem;
+      align-items: start;
+      max-width: 50rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .guide-badge {
+      grid-row: span 3;
+      display: grid;
+      place-items: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1.2rem;
+    }
+
+    .guide-badge svg {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
+
+    .guide-badge-lime { background: var(--action); color: var(--on-action); }
+    .guide-badge-purple { background: var(--accent-soft); color: var(--accent-light); }
+    .guide-badge-gold { background: var(--surface-high); color: var(--text); }
+
+    .guide-section-head .section-label {
+      margin-bottom: 0.4rem;
+    }
+
+    .guide-section-head h2 {
+      font-size: clamp(2rem, 3.6vw, 3rem);
+    }
+
+    .guide-section-head p:not(.section-label) {
+      margin-top: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .guide-section-head strong,
+    .guide-step-copy strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    /* Steps sit on a vertical timeline like the in-app guide's progress. */
+    .guide-steps {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      padding: 0 0 0 3.6rem;
+      list-style: none;
+    }
+
+    .guide-steps::before {
+      content: "";
+      position: absolute;
+      top: 1.6rem;
+      bottom: 1.6rem;
+      left: 1.25rem;
+      width: 2px;
+      border-radius: 999px;
+      background: var(--line-strong);
+    }
+
+    .guide-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 21rem);
+      gap: 1.5rem 2.5rem;
+      align-items: start;
+      padding: 1.8rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+    }
+
+    .guide-step .step-index {
+      position: absolute;
+      top: 1.6rem;
+      left: -3.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      margin: 0;
+      box-shadow: 0 0 0 0.4rem var(--bg);
+    }
+
+    .guide-section:nth-of-type(even) .guide-step .step-index {
+      box-shadow: 0 0 0 0.4rem var(--bg-soft);
+    }
+
+    .guide-step-solo {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .guide-step-copy h3 {
+      font-size: 1.3rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .guide-step-copy p,
+    .guide-step-copy li {
+      color: var(--text-soft);
+    }
+
+    .guide-step-copy > p {
+      margin-top: 0.6rem;
+      max-width: 40rem;
+    }
+
+    .guide-step-copy ol {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.9rem;
+      padding-left: 1.2rem;
+    }
+
+    .guide-step-copy li::marker {
+      color: var(--accent-light);
+      font-weight: 800;
+    }
+
+    .guide-shots {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .guide-shots img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .guide-device {
+      width: min(13rem, 100%);
+      justify-self: center;
+    }
+
+    /* Block layout keeps the bold lead-in and its sentence flowing as one line of text. */
+    .guide-note {
+      position: relative;
+      display: block;
+      margin-top: 1.1rem;
+      padding: 1rem 1.2rem 1rem 3.2rem;
+      border-radius: var(--radius-sm);
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+
+    .guide-note::before {
+      content: "i";
+      position: absolute;
+      top: 1.05rem;
+      left: 1.2rem;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-top: 0.1rem;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: #101010;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .guide-checklist {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .guide-checklist li {
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+      color: var(--text-soft);
+    }
+
+    .guide-checklist strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .guide-checklist .check {
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 999px;
+      background: var(--action);
+      color: var(--on-action);
+    }
+
+    .guide-checklist .check svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .guide-faq {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .guide-faq details {
+      padding: 1.3rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+    }
+
+    .guide-faq summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      list-style: none;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .guide-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .guide-faq summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      color: var(--accent-light);
+      font-size: 1.3rem;
+      line-height: 1;
+      transition: transform 200ms var(--ease-smooth);
+    }
+
+    .guide-faq details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .guide-faq p {
+      margin-top: 0.7rem;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 960px) {
+      .guide-hero-grid,
+      .guide-step,
+      .guide-faq,
+      .guide-checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-shots {
+        grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .guide-hero {
+        padding-top: 6.5rem;
+      }
+
+      .guide-section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-badge {
+        grid-row: auto;
+        margin-bottom: 1rem;
+      }
+
+      .guide-steps {
+        padding-left: 0;
+      }
+
+      .guide-steps::before {
+        display: none;
+      }
+
+      .guide-step {
+        padding: 1.4rem;
+      }
+
+      .guide-step .step-index {
+        position: static;
+        margin-bottom: 0.9rem;
+        box-shadow: none;
+      }
+
+      .flow-node:nth-child(2),
+      .flow-node:nth-child(3) {
+        margin-left: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flow::before,
+      .flow-node {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-row">
+      <a class="brand" href="index.html" aria-label="BudgetGo homepage">
+        <img src="src/images/logo.png" alt="BudgetGo logo" width="1024" height="1024" />
+        <span>BudgetGo</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+        <details class="nav-dropdown">
+          <summary>Features</summary>
+          <div class="nav-dropdown-menu">
+            <a href="index.html#feature-home">Home overview</a>
+            <a href="index.html#feature-insights">AI insights</a>
+            <a href="index.html#feature-categories">Spending breakdown</a>
+            <a href="index.html#feature-duplicates">Duplicate review</a>
+            <a href="index.html#feature-recurring">Recurring bills</a>
+            <a href="index.html#feature-reports">Forecast</a>
+            <a href="index.html#feature-automation">Automations</a>
+            <a href="index.html#feature-imports">Imports</a>
+          </div>
+        </details>
+        <a href="index.html#overview">Overview</a>
+        <a href="automations.html" aria-current="page">Guides</a>
+        <a href="support.html">Support</a>
+        <a
+          class="app-store-badge-link nav-badge"
+          href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download BudgetGo on the App Store"
+        >
+          <img src="src/images/app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="guide-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container guide-hero-grid">
+        <div>
+          <p class="hero-eyebrow">
+            <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+            Setup guide · about 2 minutes each
+          </p>
+          <h1>Log spending <span class="hl">the moment it happens.</span></h1>
+          <p class="lead">
+            Apple Shortcuts automations can send Apple Pay payments and bank SMS alerts straight to
+            BudgetGo, so transactions land in your records without typing a thing. Everything runs
+            on your iPhone.
+          </p>
+          <nav class="guide-jump" aria-label="Guide sections">
+            <a href="#wallet"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
+            <a href="#sms"><span class="chip-dot" style="--c: #b994f5"></span>Bank SMS alerts</a>
+            <a href="#troubleshooting"><span class="chip-dot" style="--c: #ffd64e"></span>Troubleshooting</a>
+          </nav>
+        </div>
+
+        <ol class="flow" aria-label="How an automation works">
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-wallet" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg>
+            </span>
+            <span><strong>You pay or get a bank text</strong><small>Apple Pay tap or SMS alert</small></span>
+          </li>
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-shortcuts" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 4h8l4 4v8l-4 4H8l-4-4V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 9l4 3-4 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span><strong>Shortcuts runs instantly</strong><small>Your personal automation</small></span>
+          </li>
+          <li class="flow-node flow-node-final">
+            <img class="flow-logo" src="src/images/logo.png" alt="" width="40" height="40" />
+            <span><strong>BudgetGo logs it</strong><small>Amount, merchant, and category</small></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="before-you-start" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <p class="section-label">Before you start</p>
+          <h2>Three quick checks.</h2>
+        </div>
+        <ul class="guide-checklist">
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>BudgetGo is installed</strong>Download it from the App Store and sign in once so its actions appear in Shortcuts.</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>Shortcuts is on your iPhone</strong>Apple's Shortcuts app comes preinstalled on iOS 17 and later.</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>Imports are on</strong>In BudgetGo, open Data Hub and turn on Wallet or SMS imports. When they're off, BudgetGo ignores anything the automation sends.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wallet" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-lime" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <p class="section-label">Apple Wallet</p>
+          <h2>Log Apple Pay payments automatically.</h2>
+          <p>
+            This automation runs every time you tap a Wallet card to pay, then sends the amount and
+            merchant to BudgetGo's <strong>Add Transaction to Budget Go</strong> action.
+          </p>
+        </div>
+
+        <ol class="guide-steps">
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>Open Shortcuts</h3>
+              <p>Find and open the Shortcuts app on your iPhone.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="src/images/automation/step1.jpg" alt="The Shortcuts app icon on the iPhone home screen" width="900" height="509" loading="lazy" decoding="async" />
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>Create a personal automation</h3>
+              <p>Open the <strong>Automation</strong> tab, then tap <strong>+</strong> to create a new personal automation.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="src/images/automation/step2_a.jpg" alt="The Automation tab in the Shortcuts app" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step2_b.jpg" alt="The plus button for creating a personal automation" loading="lazy" decoding="async" />
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Choose the Wallet trigger</h3>
+              <ol>
+                <li>Search for <strong>Transaction</strong> (shown as <strong>Wallet</strong> on some iOS versions) and select it.</li>
+                <li>Select every card you want BudgetGo to track.</li>
+                <li>Choose <strong>Run Immediately</strong> so the automation never waits for confirmation, then tap <strong>Next</strong>.</li>
+              </ol>
+            </div>
+            <div class="guide-shots">
+              <img src="src/images/automation/step3_a.jpg" alt="Searching for the Transaction trigger, described as When I tap a Wallet Card or Pass" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step3_b.jpg" alt="Selecting the Wallet cards to track" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step3_d.jpg" alt="The Run Immediately option selected" loading="lazy" decoding="async" />
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>Add the BudgetGo action</h3>
+              <p>
+                Tap <strong>New Blank Automation</strong>, search for <strong>BudgetGo</strong>, and choose
+                <strong>Add Transaction to Budget Go</strong>.
+              </p>
+            </div>
+            <div class="guide-shots">
+              <img src="src/images/automation/step4.jpg" alt="Creating a new blank shortcut for the automation" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step4_b.jpg" alt="Searching for the Add Transaction to Budget Go action" loading="lazy" decoding="async" />
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>Connect the payment details</h3>
+              <ol>
+                <li>Tap the <strong>Amount</strong> field, choose <strong>Select Variable</strong>, then pick <strong>Shortcut Input</strong>.</li>
+                <li>Tap the inserted <strong>Shortcut Input</strong> and change it to <strong>Amount</strong>.</li>
+                <li>Repeat for <strong>Merchant</strong>, choosing <strong>Merchant</strong> from Shortcut Input.</li>
+                <li>Tap the play button to test it, then tap <strong>Done</strong>.</li>
+              </ol>
+              <p class="guide-note">
+                <strong>Currency is optional.</strong> Leave it empty to use your BudgetGo default
+                currency, or enter a code such as USD, EUR, or NGN.
+              </p>
+            </div>
+            <div class="guide-shots">
+              <img src="src/images/automation/step5_a.jpg" alt="Choosing Select Variable on the Amount field" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step5_c.jpg" alt="Choosing Amount from the Shortcut Input" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step5_d.jpg" alt="The completed automation with the play button for testing" loading="lazy" decoding="async" />
+            </div>
+          </li>
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">6</span>
+              <h3>Check it in BudgetGo</h3>
+              <p>
+                In BudgetGo, open <strong>Data Hub</strong> and tap <strong>Wallet Automation</strong>.
+                Make sure <strong>Apple Wallet tracking</strong> is on, then tap <strong>Run test shortcut</strong>.
+                The status changes to verified once BudgetGo receives a payment from your automation.
+              </p>
+            </div>
+            <div class="guide-shots">
+              <div class="device guide-device"><div class="device-screen"><img src="src/images/app/21-wallet-automation.webp" alt="BudgetGo Wallet Automation screen with Apple Wallet tracking switched on and a Run test shortcut button" width="720" height="1565" loading="lazy" /></div></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sms" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <p class="section-label">Messages</p>
+          <h2>Turn bank SMS alerts into transactions.</h2>
+          <p>
+            If your bank texts you about card payments and transfers, a Message automation can pass
+            each alert to BudgetGo's <strong>Import SMS Transaction</strong> action. BudgetGo reads
+            the message on your device and creates a transaction only when it recognizes a financial alert.
+          </p>
+        </div>
+
+        <ol class="guide-steps">
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>Create a Message automation</h3>
+              <p>
+                In Shortcuts, open the <strong>Automation</strong> tab, tap <strong>+</strong>, and choose
+                <strong>Message</strong>.
+              </p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>Limit it to your bank's messages</h3>
+              <ol>
+                <li>Tap <strong>Sender</strong> and choose your bank's contact or number, or use <strong>Message Contains</strong> with a word that appears in every alert, such as your bank's name.</li>
+                <li>Choose <strong>Run Immediately</strong>, then tap <strong>Next</strong>.</li>
+              </ol>
+              <p class="guide-note">
+                <strong>Keep the filter narrow.</strong> Matching only your bank keeps personal
+                conversations out of BudgetGo.
+              </p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Add the BudgetGo action</h3>
+              <p>
+                Tap <strong>New Blank Automation</strong>, search for <strong>BudgetGo</strong>, and choose
+                <strong>Import SMS Transaction</strong>.
+              </p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>Pass in the message</h3>
+              <ol>
+                <li>Tap the <strong>Message</strong> field, choose <strong>Select Variable</strong>, pick <strong>Shortcut Input</strong>, and set it to <strong>Content</strong>.</li>
+                <li>Tap the <strong>Sender</strong> field and choose <strong>Shortcut Input</strong> set to <strong>Sender</strong>. This is optional but helps BudgetGo identify your bank.</li>
+                <li>Tap <strong>Done</strong>.</li>
+              </ol>
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>Test it</h3>
+              <p>
+                Wait for your next bank alert, or open the automation's detail in BudgetGo's
+                <strong>Data Hub</strong> and tap <strong>Test connection</strong>. Then return to BudgetGo
+                to review the imported transaction.
+              </p>
+            </div>
+            <div class="guide-shots">
+              <div class="device guide-device"><div class="device-screen"><img src="src/images/app/30-sms-automation.webp" alt="BudgetGo SMS Automation screen with the forwarding toggle, status, and Test connection button" width="720" height="1565" loading="lazy" /></div></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17.2v.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <p class="section-label">Troubleshooting</p>
+          <h2>If a transaction doesn't show up.</h2>
+        </div>
+
+        <div class="guide-faq">
+          <details>
+            <summary>I can't find the BudgetGo actions in Shortcuts</summary>
+            <p>
+              Open BudgetGo once after installing or updating so iOS registers its actions, then
+              search Shortcuts again for "BudgetGo".
+            </p>
+          </details>
+          <details>
+            <summary>I got a "Transaction Import Failed" notification</summary>
+            <p>
+              The Wallet automation sent an empty amount or merchant. Re-open the automation and
+              make sure both fields use Shortcut Input with Amount and Merchant selected.
+            </p>
+          </details>
+          <details>
+            <summary>The automation asks before it runs</summary>
+            <p>
+              Edit the automation in Shortcuts and switch it from Run After Confirmation to
+              <strong>Run Immediately</strong>.
+            </p>
+          </details>
+          <details>
+            <summary>An SMS alert didn't create a transaction</summary>
+            <p>
+              Only supported financial messages produce transactions. Check that imports are on in
+              Data Hub and that the Message field uses the message Content.
+            </p>
+          </details>
+        </div>
+
+        <p class="guide-note">
+          Still stuck? Email <a class="support-inline-link" href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>
+          or use the <a class="support-inline-link" href="support.html">support page</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Product</h3>
+        <a href="index.html#overview">Overview</a>
+        <a href="index.html#showcase">Product</a>
+        <a
+          href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download
+        </a>
+      </div>
+
+      <div>
+        <h3>Resources</h3>
+        <a href="automations.html">Automation setup</a>
+        <a href="mcp.html">MCP (coming soon)</a>
+        <a href="support.html">Support</a>
+        <a href="terms_of_service.html">Terms of Service</a>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a
+          class="footer-link-with-icon"
+          href="https://instagram.com/budgetgo.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="footer-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.75A3.75 3.75 0 1 0 15.75 12 3.75 3.75 0 0 0 12 8.25Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>Instagram</span>
+        </a>
+        <a
+          class="footer-link-with-icon"
+          href="https://www.tiktok.com/@budgetgo.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="footer-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M14.75 3h2a5.7 5.7 0 0 0 1.78 3.52A5.9 5.9 0 0 0 22 8.05v2.04a7.7 7.7 0 0 1-5.1-1.85v7.04a5.72 5.72 0 1 1-5.72-5.72c.28 0 .55.02.82.06v2.1a3.72 3.72 0 1 0 2.75 3.56Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>TikTok</span>
+        </a>
+        <a class="footer-link-with-icon" href="mailto:support@budgetgo.ai">
+          <span class="footer-link-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M4 5.5h16A2.5 2.5 0 0 1 22.5 8v8A2.5 2.5 0 0 1 20 18.5H4A2.5 2.5 0 0 1 1.5 16V8A2.5 2.5 0 0 1 4 5.5Zm0 1.75a.75.75 0 0 0-.75.75v.34l8.75 5.73 8.75-5.73V8a.75.75 0 0 0-.75-.75Zm16 9.5a.75.75 0 0 0 .75-.75V10.42l-8.27 5.42a.88.88 0 0 1-.96 0L3.25 10.42V16A.75.75 0 0 0 4 16.75Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>support@budgetgo.ai</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 GraphLeaf LLC.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+      const dropdowns = Array.from(document.querySelectorAll(".nav-dropdown"));
+
+      if (!toggle || !nav) return;
+
+      const closeDropdowns = function () {
+        dropdowns.forEach(function (dropdown) {
+          dropdown.removeAttribute("open");
+        });
+      };
+
+      const closeMenu = function () {
+        toggle.setAttribute("aria-expanded", "false");
+        nav.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        closeDropdowns();
+      };
+
+      toggle.addEventListener("click", function () {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
+      });
+
+      nav.addEventListener("click", function (event) {
+        if (event.target instanceof HTMLAnchorElement) closeMenu();
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!(event.target instanceof Node)) return;
+        if (!nav.contains(event.target)) closeDropdowns();
+      });
+
+      window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 880) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>

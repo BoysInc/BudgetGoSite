@@ -1,0 +1,13 @@
+Generated with the built-in image_gen tool.
+
+Use case: photorealistic-natural.
+Asset type: wide photographic hero background for BudgetGo, a calm, premium personal finance website.
+Primary request: a warm, human-centered photograph about enjoying everyday life, with ample negative space for a centered headline. Real people are the focus.
+
+Scene: a quiet neighborhood café at early evening. Two friends, around thirty, sit at opposite ends of a shared table, having an easy, relaxed conversation. A woman with short curly dark hair, a simple cream knit top, on the far left, smiling naturally mid-conversation. A man in a muted olive overshirt on the far right, listening with a small warm smile. Their expressions and posture feel candid and believable. No one looks at the camera. Real skin texture, subtle imperfections, natural hands and anatomy. Two ordinary coffee cups are incidental, not featured.
+
+Composition: very wide cinematic landscape, approximately 2.4:1. People occupy the OUTER left and right quarters; their faces are clearly visible and positioned in the outer quarters. Keep the middle 50–55% spacious, softly out of focus, and visually quiet: a dark charcoal café wall in the background, with no signs or wall art. Table and any hands stay close to the bottom edge. This central space must accommodate a large two-line website headline. A naturally coherent single photographic scene, not a collage, not separate portraits. Eye-level medium-wide editorial photograph with room around the subjects.
+
+Lighting and palette: gentle warm window light on their faces, subdued café atmosphere, dark charcoal and warm neutral surroundings, muted wardrobe, restrained color. Welcoming, calm, understated. A soft falloff into shadow toward the edges so the image blends with a #101112 website background. Faces should still be clear and human, not silhouettes.
+Photography style: high-end candid lifestyle editorial, realistic lens rendering, modest depth of field, fine photographic grain, authentic everyday moment.
+Avoid: 3D, CGI, render, plastic surfaces, sculpted objects, illustration, cartoon, icons, charts, UI, letters, text, logos, currency signs, conspicuous technology, phones as focal points, staged stock-photo poses, corporate offices, business suits, handshakes, exaggerated laughter. No objects-only composition.
