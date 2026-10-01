@@ -7,8 +7,7 @@
 .home .brand img { width: 34px; height: 34px; border-radius: 9px; }
 .home .nav-links { gap: 1rem; }
 .home .nav-links a, .home .nav-dropdown summary { font-size: .78rem; font-weight: 600; }
-.home .nav-links .nav-download { background: #d2c0f6; color: #1d1728; border-radius: 9px; min-height: 42px; padding-inline: 1.1rem; margin-left: 1.2rem; font-weight: 800; }
-.home .nav-links .nav-download:hover { background: #e4d8fa; }
+.home .nav-links .nav-download { min-height: 42px; padding-inline: 1.1rem; margin-left: 1.2rem; font-weight: 800; }
 .home .nav-dropdown-menu { border: 1px solid #ffffff13; padding: .65rem; }
 .home .nav-dropdown-menu a { justify-content: flex-start; }
 .home .landing-hero { padding: 158px 0 78px; text-align: left; overflow: clip; }
@@ -22,7 +21,7 @@
 .home .landing-hero .hero-download { justify-content: flex-start; gap: 1.6rem; margin-top: 2rem; }
 .home .landing-hero .app-store-badge-link { --button-height: 3.05rem; transition: transform 180ms ease; }
 .home .app-store-badge-link:hover { transform: translateY(-2px); }
-.home .landing-hero .hero-secondary { background: transparent; padding: .5rem 0; border-radius: 0; min-height: 2.8rem; color: #d4c4f1; font-size: .8rem; font-weight: 700; gap: .75rem; }
+.home .landing-hero .hero-secondary { background: transparent; padding: .5rem 0; border-radius: var(--button-radius); min-height: 2.8rem; color: #d4c4f1; font-size: .8rem; font-weight: 700; gap: .75rem; }
 .home .hero-secondary > span { transition: transform 180ms ease; }
 .home .hero-secondary:hover > span { transform: translate(2px, -2px); }
 .home .landing-hero .hero-footnote { color: #929399; font-size: .68rem; margin-top: 1.2rem; font-weight: 500; }

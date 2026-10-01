@@ -24,7 +24,7 @@
   --error: #f0788d;
   --shadow-xl: 0 24px 56px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.2);
-  --button-radius: 10px;
+  --button-radius: 999px;
   --button-height: 3.125rem;
   --app-store-badge-width: calc(var(--button-height) * 2.9916);
   --radius: 16px;
@@ -63,7 +63,7 @@ ul { padding-left: 1.15rem; }
 [id] { scroll-margin-top: 7rem; }
 [hidden] { display: none !important; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-.skip-link { position: fixed; top: -6rem; left: 1rem; padding: .8rem 1.25rem; background: var(--text); color: var(--bg); z-index: 100; border-radius: 8px; }
+.skip-link { position: fixed; top: -6rem; left: 1rem; padding: .8rem 1.25rem; background: var(--text); color: var(--bg); z-index: 100; border-radius: var(--button-radius); }
 .skip-link:focus { top: 1rem; }
 .container { width: min(var(--container), calc(100% - 5rem)); margin-inline: auto; }
 .section { padding: 5rem 0; }
@@ -91,10 +91,10 @@ ul { padding-left: 1.15rem; }
 .nav-dropdown-menu { position: absolute; top: calc(100% + .7rem); left: 0; min-width: 14rem; padding: .5rem; border: 0; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow-xl); display: grid; gap: .1rem; z-index: 45; }
 .nav-dropdown-menu a { justify-content: flex-start; min-height: 2.5rem; border-radius: 6px; }
 .nav-dropdown-menu a:hover { background: var(--surface-high); }
-.nav-links .nav-download { margin-left: 1rem; padding: 0 1rem; min-height: 2.5rem; gap: 1rem; background: var(--text); color: var(--bg); border-radius: 7px; font-weight: 800; }
+.nav-links .nav-download { margin-left: 1rem; padding: 0 1rem; min-height: 2.5rem; gap: 1rem; background: #fff; color: var(--bg); border-radius: var(--button-radius); font-weight: 800; }
 .nav-links .nav-download:hover { background: #d9d8dc; color: var(--bg); }
 .nav-links a.nav-badge { --button-height: 2.5rem; min-height: 0; padding: 0; margin-left: .7rem; }
-.menu-toggle { display: none; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: 8px; background: var(--surface); color: var(--text); cursor: pointer; }
+.menu-toggle { display: none; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: var(--button-radius); background: var(--surface); color: var(--text); cursor: pointer; }
 .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { content: ""; display: block; width: 1rem; height: 1.5px; background: currentColor; transition: transform 180ms ease; }
 .menu-toggle span { position: relative; }
 .menu-toggle span::before { position: absolute; top: -.3rem; }

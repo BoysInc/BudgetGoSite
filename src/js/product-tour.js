@@ -6,6 +6,7 @@
     "feature-home": "overview",
     "feature-categories": "categories",
     "feature-insights": "insights",
+    "feature-reports": "insights",
     "feature-recurring": "bills"
   };
 

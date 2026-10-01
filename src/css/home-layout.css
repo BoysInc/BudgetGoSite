@@ -7,13 +7,13 @@
 .landing-hero .hero-description { max-width: 44rem; margin: 1.6rem auto 0; font-size: 1.05rem; line-height: 1.8; }
 .landing-hero .hero-download { justify-content: center; gap: .85rem; margin-top: 1.9rem; }
 .landing-hero .app-store-badge-link { --button-height: 3.2rem; }
-.hero-secondary { background: #25232a; display: inline-flex; gap: 1.2rem; align-items: center; justify-content: center; min-height: 3.2rem; padding: .7rem 1.2rem; border: 0; border-radius: 11px; font-size: .77rem; }
+.hero-secondary { background: #25232a; display: inline-flex; gap: 1.2rem; align-items: center; justify-content: center; min-height: 3.2rem; padding: .7rem 1.2rem; border: 0; border-radius: var(--button-radius); font-size: .77rem; }
 .hero-secondary:hover { background: #242127; }
 .landing-hero .hero-footnote { margin-top: .95rem; }
 .product-tour { max-width: 1376px; margin: 0 auto; padding: 0 24px; scroll-margin-top: 100px; }
 .tour-shell { padding: 2rem; border-radius: 40px; border: 0; background: radial-gradient(ellipse at 90% 20%, #38284b80, transparent 55%), #211e27; }
 .tour-tabs { display: flex; width: fit-content; max-width: 100%; margin: 0 auto 1.5rem; gap: .6rem; }
-.tour-tabs button { display: flex; align-items: center; justify-content: center; gap: .6rem; border: 0; border-radius: 18px; padding: .8rem 1.2rem; background: transparent; color: #bfb5cd; font: inherit; font-size: .77rem; cursor: pointer; transition: color 180ms ease, background 180ms ease; }
+.tour-tabs button { display: flex; align-items: center; justify-content: center; gap: .6rem; border: 0; border-radius: var(--button-radius); padding: .8rem 1.2rem; background: transparent; color: #bfb5cd; font: inherit; font-size: .77rem; cursor: pointer; transition: color 180ms ease, background 180ms ease; }
 .tour-tabs button:disabled { cursor: default; }
 .tour-tabs button svg, .tour-kicker svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
 .tour-tabs button[data-tour-tab="insights"] svg, [data-tour-panel="insights"] .tour-kicker svg { stroke-width: 3.5; }
@@ -177,7 +177,7 @@
   .product-tour { padding-inline: 12px; }
   .tour-shell { padding: .65rem; border-radius: 30px; }
   .tour-tabs { width: 100%; justify-content: space-between; gap: .2rem; margin-block: .3rem .9rem; }
-  .tour-tabs button { flex-direction: column; flex: 1; padding: .65rem .3rem; border-radius: 15px; gap: .45rem; font-size: .61rem; }
+  .tour-tabs button { flex-direction: column; flex: 1; padding: .65rem .3rem; border-radius: var(--button-radius); gap: .45rem; font-size: .61rem; }
   .tour-tabs button svg { width: 20px; height: 20px; }
   .product-tour .tour-panel { padding: 1.45rem .85rem .85rem; gap: 1.65rem; border-radius: 22px; }
   .product-tour .tour-copy { padding-inline: .4rem; }

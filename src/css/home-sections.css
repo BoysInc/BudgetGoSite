@@ -69,7 +69,7 @@
 .home .tour-tabs button {
   min-height: 44px;
   padding: .7rem 1.2rem;
-  border-radius: 8px;
+  border-radius: var(--button-radius);
   color: #a8a7b0;
   font-size: .78rem;
   gap: .6rem;
@@ -305,7 +305,7 @@
   .home .product-tour { padding-top: 3rem; }
   .home .tour-shell { border-radius: 12px; }
   .home .tour-tabs { gap: .25rem; padding: .7rem; }
-  .home .tour-tabs button { flex: 1; flex-direction: column; gap: .45rem; padding: .65rem .25rem; border-radius: 7px; font-size: .6rem; }
+  .home .tour-tabs button { flex: 1; flex-direction: column; gap: .45rem; padding: .65rem .25rem; border-radius: var(--button-radius); font-size: .6rem; }
   .home .tour-tabs button svg { width: 18px; height: 18px; }
   .home .product-tour .tour-panel { gap: 1.75rem; padding: 1.5rem .75rem .75rem; }
   .home .product-tour .tour-copy { padding-inline: .65rem; }

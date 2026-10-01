@@ -1,0 +1,173 @@
+/* Floating objects share an invisible orbit. */
+.life-hero { position: relative; padding: 0 0 34px; isolation: isolate; }
+.life-hero-stage {
+  --hero-unit: min(1px, calc((100svh - 111px) / 832));
+  --orbit-reference-height: 832;
+  --orbit-inset: 90px;
+  --orbit-top: 112px;
+  --orbit-bottom: 112px;
+  --orbit-radius: 180px;
+  --orbit-band-height: 0px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: calc(832 * var(--hero-unit));
+  min-height: 0;
+  padding: 0;
+  isolation: isolate;
+}
+.life-hero-copy { width: 100%; max-width: 770px; margin-inline: auto; }
+.life-hero h1 { margin-top: 0; font-size: min(clamp(76px, 7.3vw, 104px), calc(104 * var(--hero-unit))); }
+.life-hero-description { font-size: clamp(14px, calc(16 * var(--hero-unit)), 16px); max-width: 490px; margin-top: max(20px, calc(26 * var(--hero-unit))); }
+.life-hero-actions { margin-top: max(20px, calc(27 * var(--hero-unit))); }
+.life-hero-actions .life-button { min-height: max(54px, calc(58 * var(--hero-unit))); font-size: clamp(14px, calc(15 * var(--hero-unit)), 15px); gap: 20px; }
+.life-button .life-apple-icon { width: 24px; height: 28px; flex: none; }
+.life-orbit-layer { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.life-orbit-track { display: none; }
+.life-orbit {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -50%) rotate(var(--object-angle, 0deg));
+}
+.life-hero-stage[data-orbit-ready="true"] .life-orbit {
+  left: 0;
+  top: 0;
+  transform: translate3d(var(--orbit-x), var(--orbit-y), 0) translate(-50%, -50%) rotate(calc(var(--object-angle, 0deg) + var(--orbit-turn, 0deg)));
+}
+.life-orbit-visual {
+  display: block; width: 100%; height: 100%;
+  transform-origin: 50% 50%;
+  transform: perspective(900px) rotateX(var(--object-tilt-x, 0deg)) rotateY(var(--object-tilt-y, 0deg)) rotateZ(var(--object-spin, 0deg));
+}
+.life-orbit-visual img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 12px 16px #0003); transition: filter .18s ease; }
+.life-orbit-target {
+  display: block; width: 100%; height: 100%; padding: 0; border: 0;
+  appearance: none; background: transparent; pointer-events: auto;
+  cursor: pointer; border-radius: 16px; -webkit-user-select: none; user-select: none;
+}
+.life-orbit-target:disabled { cursor: default; }
+.life-orbit-target:focus-visible { outline: 2px solid var(--purple); outline-offset: 6px; }
+.life-orbit[data-price-active="true"] img { filter: drop-shadow(0 0 12px #b994f54d) drop-shadow(0 12px 16px #0003); }
+.life-price-card {
+  position: absolute; left: var(--price-x, 0px); top: var(--price-y, 0px); z-index: 6;
+  display: flex; align-items: center; gap: 12px;
+  width: 300px; max-width: calc(100% - 16px); min-height: 66px;
+  padding: 12px; border: 1px solid transparent; border-radius: 16px;
+  background: var(--surface); box-shadow: 0 10px 24px #0006;
+  text-align: left; pointer-events: auto; line-height: 1.5;
+}
+.life-price-avatar {
+  display: grid; place-items: center; flex: 0 0 40px; width: 40px; height: 40px;
+  border-radius: 50%; background: var(--merchant-color, #8b5cf6); color: #fff;
+  font-size: 15px; font-weight: 700; letter-spacing: .5px;
+}
+.life-price-details { flex: 1; min-width: 0; }
+.life-price-label, .life-price-category { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.life-price-label { display: block; color: var(--ink); font-size: 14px; font-weight: 700; }
+.life-price-category { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.life-price-value { flex: none; color: var(--ink); font-size: 14px; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.life-orbit--coffee { left: 7.3%; top: 44%; width: calc(160 * var(--hero-unit)); height: calc(190 * var(--hero-unit)); --object-angle: -10deg; }
+.life-orbit--tennis { left: 83%; top: 14%; width: calc(130 * var(--hero-unit)); height: calc(130 * var(--hero-unit)); --object-angle: 18deg; }
+.life-orbit--burger { left: 92.5%; top: 68%; width: calc(208 * var(--hero-unit)); height: calc(170 * var(--hero-unit)); --object-angle: 8deg; }
+.life-orbit--shopping { left: 17.5%; top: 85.5%; width: calc(170 * var(--hero-unit)); height: calc(184 * var(--hero-unit)); --object-angle: -7deg; }
+.life-orbit--plane { left: 41.5%; top: 12.2%; width: calc(184 * var(--hero-unit)); height: calc(124 * var(--hero-unit)); --object-angle: -8deg; }
+.life-orbit--ticket { left: 58.6%; top: 87.8%; width: calc(180 * var(--hero-unit)); height: calc(110 * var(--hero-unit)); --object-angle: -12deg; }
+.life-motion-toggle {
+  position: absolute; bottom: 16px; right: 0; z-index: 4;
+  display: grid; place-items: center; width: 34px; height: 34px;
+  padding: 0; border: 1px solid var(--line); border-radius: 50%;
+  background: var(--paper); color: var(--muted); cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.life-motion-toggle:hover { color: var(--ink); border-color: var(--muted); }
+.life-motion-toggle:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
+.life-motion-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.life-motion-toggle .life-motion-play { display: none; }
+.life-motion-toggle[data-paused="true"] .life-motion-pause { display: none; }
+.life-motion-toggle[data-paused="true"] .life-motion-play { display: block; }
+.life-payment-sources { border-top: 1px solid var(--line); padding: 32px 0 12px; text-align: center; }
+.life-payment-sources h2 { color: var(--muted); font-size: 22px; line-height: 1.4; letter-spacing: -.025em; }
+.life-payment-sources ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; list-style: none; padding: 0; margin: 22px 0 0; }
+.life-payment-sources li { padding: 12px 20px; border: 1px solid #2d2d32; border-radius: 999px; background: var(--surface); color: #d6d3dc; font-size: 18px; line-height: 1.5; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .life-hero-copy { animation: none; }
+  .life-orbit-visual img { animation: life-object-arrive 800ms var(--ease) both; }
+  .life-orbit--tennis img { animation-delay: 80ms; }
+  .life-orbit--burger img { animation-delay: 160ms; }
+  .life-orbit--shopping img { animation-delay: 240ms; }
+  .life-orbit--plane img { animation-delay: 320ms; }
+  .life-orbit--ticket img { animation-delay: 400ms; }
+  .life-price-card:not([hidden]) { animation: life-price-arrive 160ms ease-out; }
+  @keyframes life-object-arrive { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes life-price-arrive { from { opacity: 0; } to { opacity: 1; } }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .life-hero-stage {
+    --hero-unit: min(1px, calc((100svh - 111px) / 772));
+    --orbit-reference-height: 772;
+    --orbit-inset: 70px; --orbit-top: 102px; --orbit-bottom: 102px; --orbit-radius: 160px;
+    height: calc(772 * var(--hero-unit));
+  }
+  .life-hero-copy { max-width: 700px; }
+  .life-hero h1 { font-size: min(clamp(66px, 7.15vw, 86px), calc(86 * var(--hero-unit))); }
+  .life-orbit--coffee { width: calc(140 * var(--hero-unit)); height: calc(175 * var(--hero-unit)); }
+  .life-orbit--tennis { width: calc(110 * var(--hero-unit)); height: calc(110 * var(--hero-unit)); }
+  .life-orbit--burger { width: calc(180 * var(--hero-unit)); height: calc(150 * var(--hero-unit)); }
+  .life-orbit--shopping { width: calc(150 * var(--hero-unit)); height: calc(168 * var(--hero-unit)); }
+  .life-orbit--plane { width: calc(168 * var(--hero-unit)); height: calc(114 * var(--hero-unit)); }
+  .life-orbit--ticket { width: calc(160 * var(--hero-unit)); height: calc(100 * var(--hero-unit)); }
+}
+
+@media (min-width: 901px) and (max-height: 650px) {
+  .life-hero-description { margin-top: 16px; line-height: 1.5; }
+  .life-hero-actions { margin-top: 16px; }
+  .life-hero-actions .life-button { min-height: 50px; }
+}
+
+@media (max-width: 900px) {
+  .life-hero-stage {
+    --hero-unit: 1px; --orbit-reference-height: 0;
+    --orbit-inset: 60px; --orbit-top: 68px; --orbit-bottom: 45px; --orbit-radius: 70px; --orbit-band-height: 230px;
+    display: block; height: auto; padding: 260px 0 32px;
+  }
+  .life-hero h1 { font-size: clamp(58px, 8.9vw, 78px); }
+  .life-hero-description { font-size: 15px; }
+  .life-orbit--coffee { left: 15%; top: 65px; width: 70px; height: 100px; }
+  .life-orbit--tennis { left: 84%; top: 55px; width: 58px; height: 58px; }
+  .life-orbit--burger { left: 93%; top: 148px; width: 100px; height: 78px; }
+  .life-orbit--shopping { left: 12%; top: 165px; width: 82px; height: 96px; }
+  .life-orbit--plane { left: 45%; top: 45px; width: 112px; height: 76px; }
+  .life-orbit--ticket { left: 55%; top: 185px; width: 92px; height: 56px; }
+}
+
+@media (max-width: 640px) {
+  .life-hero { padding-bottom: 8px; }
+  .life-hero-stage { --orbit-inset: 32px; --orbit-top: 56px; padding-bottom: 64px; }
+  .life-hero h1 { font-size: clamp(44px, 11.7vw, 72px); line-height: 1.05; }
+  .life-hero-description { font-size: 13px; max-width: 330px; margin-top: 22px; }
+  .life-hero-actions { gap: 18px; }
+  .life-hero-actions .life-button { min-height: 54px; font-size: 14px; gap: 13px; padding-inline: 19px; }
+  .life-orbit--coffee { width: 58px; height: 86px; }
+  .life-orbit--tennis { width: 48px; height: 48px; }
+  .life-orbit--burger { width: 84px; height: 64px; }
+  .life-orbit--shopping { width: 66px; height: 80px; }
+  .life-orbit--plane { width: 88px; height: 58px; }
+  .life-orbit--ticket { width: 74px; height: 48px; }
+  .life-payment-sources { padding: 28px 0 24px; }
+  .life-payment-sources h2 { max-width: 300px; margin-inline: auto; font-size: 20px; text-wrap: balance; }
+  .life-payment-sources ul { gap: 10px; margin-top: 20px; }
+  .life-payment-sources li { padding: 10px 16px; font-size: 14px; }
+}
+
+@media (max-width: 380px) {
+  .life-hero h1 { font-size: clamp(39px, 11.7vw, 44px); }
+  .life-hero-actions { flex-direction: column; gap: 6px; }
+  .life-hero-actions .life-button { min-width: 210px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-orbit-visual { transform: none; }
+  .life-orbit-visual img { animation: none; }
+}

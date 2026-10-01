@@ -173,7 +173,7 @@
 .donut-share { font-size: .58rem; color: #aaa6b4; margin-top: .35rem; white-space: nowrap; }
 .product-card .category-instruction { font-size: .67rem; color: #aaa6b4; text-align: center; margin: .7rem 0 .9rem; }
 .category-choices { list-style: none; padding: 0; display: grid; gap: .3rem; }
-.category-choice { display: flex; align-items: center; gap: .75rem; width: 100%; border: 0; border-radius: 20px; background: transparent; color: #eeedf0; font: inherit; text-align: left; padding: .55rem .65rem; cursor: pointer; transition: background 280ms ease; }
+.category-choice { display: flex; align-items: center; gap: .75rem; width: 100%; border: 0; border-radius: var(--button-radius); background: transparent; color: #eeedf0; font: inherit; text-align: left; padding: .55rem .65rem; cursor: pointer; transition: background 280ms ease; }
 .category-choice:hover, .category-choice[aria-pressed="true"] { background: color-mix(in srgb, var(--category-color) 8%, #19191c); }
 .category-choice:disabled { cursor: default; opacity: 1; }
 .category-choice .category-icon { transition: transform 280ms cubic-bezier(.2,.7,.2,1); }
