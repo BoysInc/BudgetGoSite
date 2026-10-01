@@ -1,0 +1,384 @@
+/* Homepage sections. Product graphics retain their own app-specific styling. */
+.home .product-tour,
+.home .home-section > .container,
+.home .source-strip > .container,
+.home .download-section > .container,
+.home .site-footer > .container {
+  width: min(1200px, calc(100% - 5rem));
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.home .home-section { padding: 6.5rem 0; }
+.home .home-section .section-label,
+.home .product-tour .section-label {
+  margin-bottom: 1.25rem;
+  color: #c8b1f0;
+  font-size: .68rem;
+  letter-spacing: .13em;
+}
+.home .home-section h2,
+.home .product-tour > .section-intro h2 {
+  font-size: clamp(2.25rem, 3.8vw, 3.3rem);
+  line-height: 1.12;
+  letter-spacing: -.055em;
+}
+.home .home-section h2 span { color: #9d9ca6; }
+.home .section-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.home .section-intro > p {
+  max-width: 25rem;
+  margin: 0;
+  color: #a8a7b0;
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 1.85;
+}
+.home .home-section .text-link,
+.home .product-tour .text-link {
+  color: #e2d8f5;
+  font-size: .8rem;
+}
+.home .home-section .text-link:hover,
+.home .product-tour .text-link:hover { color: #fff; }
+
+/* Keep the navigation and the live example on one quiet surface. */
+.home .product-tour { padding: 5.5rem 0 0; scroll-margin-top: 7rem; }
+.home .tour-shell {
+  padding: 0;
+  border: 1px solid #303034;
+  border-radius: 18px;
+  background: #171719;
+}
+.home .tour-tabs {
+  width: 100%;
+  max-width: none;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #303034;
+}
+.home .tour-tabs button {
+  min-height: 44px;
+  padding: .7rem 1.2rem;
+  border-radius: 8px;
+  color: #a8a7b0;
+  font-size: .78rem;
+  gap: .6rem;
+}
+.home .tour-tabs button[aria-selected="true"] {
+  background: #cbb4f1;
+  color: #21172f;
+}
+.home .tour-tabs button:hover:not([aria-selected="true"]) {
+  background: #252428;
+  color: #f1eef7;
+}
+.home .tour-tabs button svg { width: 18px; height: 18px; }
+.home .product-tour .tour-panel {
+  grid-template-columns: .84fr 1.16fr;
+  min-height: 650px;
+  gap: 3.5rem;
+  padding: 3.2rem;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+.home .product-tour .tour-panel + .tour-panel {
+  margin-top: 0;
+  border-top: 1px solid #303034;
+}
+.home .product-tour.tour-ready .tour-panel { border-top: 0; }
+.home .product-tour .tour-copy { padding: 0; }
+.home .tour-kicker { color: #c8b1f0; font-size: .74rem; }
+.home .tour-kicker svg { background: none; padding: 0; width: 22px; height: 22px; border-radius: 0; }
+.home .tour-copy h2 {
+  margin: 1.35rem 0 1.2rem;
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  letter-spacing: -.05em;
+  line-height: 1.15;
+}
+.home .product-tour .tour-copy > p {
+  max-width: 23rem;
+  color: #a8a7b0;
+  font-size: .91rem;
+  font-weight: 500;
+  line-height: 1.85;
+}
+.home .tour-copy .text-link { margin-top: 1.3rem; border: 0; padding: 0; }
+.home .tour-canvas { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.home .product-tour .tour-canvas .feature-visual,
+.home .product-tour .app-preview {
+  width: 100%;
+  margin: 0;
+  padding: 1.4rem;
+  border: 1px solid #333237;
+  border-radius: 18px;
+  background: #111113;
+  box-shadow: 0 16px 32px #00000014;
+}
+.home .product-tour .overview-total { border-radius: 13px; }
+.home .product-tour .overview-upcoming { border-radius: 10px; }
+.home .product-tour .visual-caption { margin-top: 1.1rem; color: #9b98a4; font-size: .61rem; }
+.home .product-tour .category-reset[aria-pressed="true"] { background: #cab3ef; color: #241a31; }
+.home .product-tour .category-choice[aria-pressed="true"] { background: #30273d; }
+
+.home .source-strip { padding: 2.75rem 0 4.5rem; }
+.home .source-strip > .container { padding: 0 0 3rem; border: 0; border-bottom: 1px solid #2b2b30; }
+.home .source-strip p { color: #97959f; font-size: .75rem; font-weight: 500; }
+.home .source-list { gap: 1.4rem 3.4rem; margin-top: 1.6rem; }
+.home .source-list li { color: #cbc9d1; font-size: .8rem; gap: .65rem; }
+.home .source-list svg { width: 19px; height: 19px; color: #aaa0ba; }
+
+/* The page frame remains open; only the app examples use cards. */
+.home .workflow-section { padding-top: 2rem; border: 0; background: transparent; }
+.home .home-section .feature-panel { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.home .workflow-layout { grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.home .workflow-copy .section-description { max-width: 28rem; margin-top: 1.6rem; font-size: .9rem; font-weight: 500; line-height: 1.85; }
+.home .workflow-steps { gap: 0; margin-top: 2rem; }
+.home .workflow-steps li { gap: 1.3rem; padding: 1.2rem 0; border-bottom: 1px solid #2b2b30; }
+.home .workflow-steps li:last-child { border-bottom: 0; }
+.home .workflow-steps li > span { color: #c8b1f0; font-size: .63rem; line-height: 1.9rem; }
+.home .workflow-steps h3 { font-size: .9rem; line-height: 1.9; }
+.home .workflow-steps p { max-width: 25rem; color: #a6a3af; font-size: .8rem; font-weight: 500; line-height: 1.8; }
+.home .workflow-mode { max-width: 28rem; margin: 1.2rem 0 .5rem; color: #9894a3; font-size: .78rem; font-weight: 500; }
+.home .workflow-mode strong { color: #d7d2df; font-weight: 700; }
+.home .reconcile-visual { width: 100%; padding: 2.2rem; border: 1px solid #353239; border-radius: 18px; background: #19181c; }
+.home .reconcile-heading .visual-label { font-size: .61rem; letter-spacing: .13em; color: #c8b1f0; }
+.home .reconcile-heading h3 { font-size: clamp(1.7rem, 2.5vw, 2.25rem); margin-top: 1rem; letter-spacing: -.04em; }
+.home .reconcile-heading p { color: #b0aab9; font-size: .8rem; font-weight: 500; }
+.home .duplicate-pair { margin-top: 2rem; gap: 1rem; }
+.home .duplicate-entry { padding: 1.15rem; border-radius: 10px; background: #252229; }
+.home .duplicate-entry img { margin-block: 1.1rem .75rem; }
+.home .duplicate-entry b { font-size: 1.7rem; }
+.home .review-connector { padding: 1.3rem 0; color: #aca4b7; font-size: .68rem; }
+.home .resolved-entry { border: 1px solid #3b4934; border-radius: 10px; background: #252d22; }
+.home .reconcile-visual .visual-caption { color: #929099; font-size: .6rem; }
+
+.home .essentials-section { padding-top: 1.5rem; }
+.home .essentials-section .section-intro { margin-bottom: 3rem; }
+.home .essentials-section .centered-intro h2 br { display: initial; }
+.home .essentials-grid { gap: 0; border-top: 1px solid #323037; }
+.home .essential-card { padding: 2.5rem 3.5rem 0 0; border: 0; border-radius: 0; background: transparent; }
+.home .essential-card + .essential-card { padding-left: 3.5rem; padding-right: 0; border-left: 1px solid #323037; }
+.home .essential-top { margin-bottom: 2rem; }
+.home .essential-card h3 { max-width: 22rem; font-size: 1.65rem; line-height: 1.25; letter-spacing: -.035em; }
+.home .essential-card p { max-width: 29rem; color: #a8a5b1; font-size: .88rem; font-weight: 500; line-height: 1.85; }
+.home .essential-card .text-link { margin-top: 1.25rem; }
+.home .essential-top .line-icon { width: 2.75rem; height: 2.75rem; border-radius: 10px; color: #d1baf4; background: #2b2434; }
+.home .essential-top .line-icon svg { width: 23px; height: 23px; }
+.home .essential-top .card-index { color: #aaa4b3; font-size: .56rem; letter-spacing: .1em; }
+.home .file-types { gap: .35rem; }
+.home .file-types span { padding: .25rem .5rem; border: 1px solid #3e3846; border-radius: 4px; color: #bab1c7; font-size: .56rem; }
+.home .quiet-note { color: #9d94ab; font-size: .75rem; }
+
+.home .privacy-section { padding-block: 5.5rem; border-block: 1px solid #2b2b30; background: #141416; }
+.home .privacy-layout { grid-template-columns: 1fr 1fr; gap: 6rem; }
+.home .privacy-points article { gap: 1.5rem; padding: 1.5rem 0; border-color: #323036; }
+.home .privacy-points article:first-child { padding-top: 0; }
+.home .privacy-points article:last-child { padding-bottom: 0; }
+.home .privacy-points article > span { color: #c8b1f0; font-size: .65rem; line-height: 1.8rem; }
+.home .privacy-points h3 { font-size: 1rem; }
+.home .privacy-points p { max-width: 27rem; color: #a8a5b0; font-size: .85rem; font-weight: 500; line-height: 1.85; margin-top: .5rem; }
+
+.home .reviews-section { border-bottom: 1px solid #2b2b30; }
+.home .review-card { border: 1px solid #323037; border-radius: 12px; background: #18171b; }
+.home .faq-section { border: 0; padding-block: 6.5rem; }
+.home .faq-layout { grid-template-columns: .85fr 1.15fr; gap: 6rem; }
+.home .faq-layout > div:first-child { text-align: left; }
+.home .faq-layout h2 br { display: initial; }
+.home .faq-layout > div > p:not(.section-label) { margin-top: 1.5rem; font-size: .85rem; font-weight: 500; }
+.home .faq-list { border-top: 1px solid #36323c; }
+.home .faq-list details { border-color: #36323c; }
+.home .faq-list summary { min-height: 76px; padding: 1.4rem 0; color: #e7e2ee; font-size: .88rem; line-height: 1.6; }
+.home .faq-list summary:hover { color: #d1b9f4; }
+.home .faq-list summary > span { color: #cbb4ee; flex: 0 0 auto; }
+.home .faq-list details p { padding: 0 2.2rem 1.5rem 0; color: #aaa4b3; font-size: .85rem; font-weight: 500; line-height: 1.85; }
+
+.home .download-section { padding-bottom: 5.5rem; }
+.home .download-panel {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 3.5rem;
+  border: 0;
+  border-radius: 20px;
+  background: #d2bdf5;
+  color: #251c30;
+  text-align: left;
+}
+.home .download-panel > img { grid-column: 1; grid-row: 1; width: 40px; height: 40px; margin: 0; border-radius: 10px; }
+.home .download-panel .section-label { grid-column: 2 / -1; grid-row: 1; margin: 0; color: #514060; font-size: .62rem; letter-spacing: .12em; }
+.home .download-panel h2 { grid-column: 1 / 3; grid-row: 2; max-width: 22ch; margin-top: .8rem; font-size: clamp(2.3rem, 3.8vw, 3.35rem); letter-spacing: -.05em; line-height: 1.12; }
+.home .download-panel h2 span { color: #655276; }
+.home .download-panel > p:not(.section-label) { grid-column: 1 / 3; grid-row: 3; max-width: 32rem; margin: .4rem 0 0; color: #51445e; font-size: .88rem; font-weight: 500; }
+.home .download-panel .app-store-badge-link { --button-height: 3.6rem; grid-column: 3; grid-row: 2 / 4; margin: 0 0 0 2rem; align-self: center; }
+.home .download-panel .app-store-badge-link:focus-visible { outline-color: #392349; }
+
+.home .site-footer { padding: 4.5rem 0 1.8rem; background: #101112; border-color: #2a292e; }
+.home .footer-grid { grid-template-columns: 1.5fr .75fr 1fr 1fr; gap: 3rem; }
+.home .footer-brand { grid-column: auto; margin: 0; }
+.home .footer-grid a.brand { font-size: 1.2rem; }
+.home .footer-grid h3 { color: #ded8e7; font-size: .72rem; margin-bottom: 1rem; }
+.home .footer-grid a:not(.brand) { min-height: 28px; margin-top: .4rem; color: #a49dab; font-size: .74rem; font-weight: 500; }
+.home .footer-grid a:hover { color: #d5bdf8; }
+.home .footer-brand p { max-width: 18rem; margin-top: 1rem; color: #948c9d; font-size: .76rem; font-weight: 500; }
+.home .footer-bottom { margin-top: 4rem; padding-top: 1.5rem; border-color: #2a292e; }
+.home .footer-bottom p { color: #938d9b; font-size: .67rem; font-weight: 500; }
+
+.home .product-tour :is(a, button, [role="tabpanel"]):focus-visible,
+.home .home-section :is(a, button, summary):focus-visible,
+.home .site-footer a:focus-visible {
+  outline: 2px solid #d6baff;
+  outline-offset: 5px;
+}
+
+@media (max-width: 1100px) {
+  .home .product-tour .tour-panel { gap: 2.5rem; padding: 2.5rem; }
+  .home .workflow-layout,
+  .home .privacy-layout,
+  .home .faq-layout { gap: 3.5rem; }
+  .home .reconcile-visual { padding: 1.7rem; }
+  .home .essential-card { padding-right: 2.5rem; }
+  .home .essential-card + .essential-card { padding-left: 2.5rem; }
+  .home .footer-grid { gap: 2rem; }
+  .home .download-panel { padding: 3rem; }
+  .home .download-panel .app-store-badge-link { --button-height: 3.15rem; margin-left: 1rem; }
+}
+
+@media (max-width: 900px) {
+  .home .home-section { padding-block: 4.75rem; }
+  .home .product-tour { padding-top: 4rem; }
+  .home .section-intro { gap: 2rem; }
+  .home .section-intro > p { max-width: 19rem; font-size: .83rem; }
+  .home .tour-tabs { padding-inline: 1.5rem; }
+  .home .product-tour .tour-panel { grid-template-columns: 1fr; min-height: 0; gap: 2.5rem; padding: 2.5rem; }
+  .home .product-tour .tour-copy { max-width: 34rem; }
+  .home .product-tour .tour-copy > p { max-width: 32rem; }
+  .home .tour-copy h2 br { display: none; }
+  .home .tour-canvas { width: 100%; max-width: 600px; justify-self: center; }
+  .home .source-strip { padding-bottom: 1.5rem; }
+  .home .source-list { gap: 1.25rem 2rem; }
+  .home .workflow-layout,
+  .home .privacy-layout,
+  .home .faq-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .home .workflow-copy .section-description,
+  .home .workflow-steps p,
+  .home .workflow-mode { max-width: 36rem; }
+  .home .reconcile-visual { max-width: 540px; justify-self: center; padding: 2.2rem; }
+  .home .privacy-points p { max-width: 36rem; }
+  .home .essentials-section { padding-top: 0; }
+  .home .essential-card { padding-right: 2rem; }
+  .home .essential-card + .essential-card { padding-left: 2rem; }
+  .home .essential-top { flex-wrap: wrap; gap: 1rem; }
+  .home .download-panel .app-store-badge-link { grid-column: 1 / -1; grid-row: 4; margin: 1rem 0 0; }
+  .home .download-panel h2,
+  .home .download-panel > p:not(.section-label) { grid-column: 1 / -1; }
+  .home .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home .footer-brand { grid-column: 1 / -1; margin-bottom: 1rem; }
+}
+
+@media (max-width: 640px) {
+  .home .product-tour,
+  .home .home-section > .container,
+  .home .source-strip > .container,
+  .home .download-section > .container,
+  .home .site-footer > .container { width: calc(100% - 2.5rem); }
+  .home .home-section { padding-block: 3.5rem; }
+  .home .home-section h2,
+  .home .product-tour > .section-intro h2 { font-size: clamp(2rem, 8vw, 2.7rem); }
+  .home .home-section .section-label,
+  .home .product-tour .section-label { font-size: .61rem; margin-bottom: 1rem; }
+  .home .section-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 1.35rem; margin-bottom: 2rem; }
+  .home .section-intro > p { max-width: 28rem; font-size: .85rem; line-height: 1.8; }
+  .home .section-intro > .text-link { margin: 0; }
+  .home .product-tour { padding-top: 3rem; }
+  .home .tour-shell { border-radius: 12px; }
+  .home .tour-tabs { gap: .25rem; padding: .7rem; }
+  .home .tour-tabs button { flex: 1; flex-direction: column; gap: .45rem; padding: .65rem .25rem; border-radius: 7px; font-size: .6rem; }
+  .home .tour-tabs button svg { width: 18px; height: 18px; }
+  .home .product-tour .tour-panel { gap: 1.75rem; padding: 1.5rem .75rem .75rem; }
+  .home .product-tour .tour-copy { padding-inline: .65rem; }
+  .home .tour-kicker { font-size: .68rem; }
+  .home .tour-kicker svg { width: 18px; height: 18px; }
+  .home .tour-copy h2 { font-size: 1.9rem; margin-block: 1rem; }
+  .home .product-tour .tour-copy > p { font-size: .83rem; line-height: 1.8; }
+  .home .tour-copy .text-link { margin-top: .9rem; }
+  .home .product-tour .tour-canvas .feature-visual,
+  .home .product-tour .app-preview { padding: 1rem; border-radius: 10px; }
+  .home .product-tour .visual-caption { font-size: .56rem; }
+  .home .source-strip { padding: 2.5rem 0 .5rem; }
+  .home .source-strip > .container { padding-bottom: 2.5rem; }
+  .home .source-list { gap: 1.2rem 1.4rem; }
+  .home .source-list li { font-size: .72rem; gap: .45rem; }
+  .home .source-list svg { width: 17px; height: 17px; }
+  .home .workflow-layout { gap: 2.5rem; }
+  .home .workflow-copy .section-description { margin-top: 1.25rem; font-size: .85rem; }
+  .home .workflow-steps { margin-top: 1.5rem; }
+  .home .workflow-steps li { gap: 1rem; padding-block: 1rem; }
+  .home .workflow-steps p { font-size: .79rem; }
+  .home .workflow-mode { font-size: .76rem; }
+  .home .reconcile-visual { padding: 1.5rem; border-radius: 12px; }
+  .home .duplicate-pair { gap: .65rem; margin-top: 1.6rem; }
+  .home .duplicate-entry { padding: .9rem; border-radius: 8px; }
+  .home .duplicate-entry b { font-size: 1.5rem; }
+  .home .resolved-entry { gap: .65rem; padding: .85rem; border-radius: 8px; }
+  .home .resolved-entry strong { font-size: .65rem; }
+  .home .resolved-entry div > span { font-size: .6rem; }
+  .home .resolved-entry b { font-size: .8rem; }
+  .home .essentials-section { padding-top: .5rem; }
+  .home .essentials-section .section-intro { margin-bottom: 2rem; }
+  .home .essentials-grid { grid-template-columns: 1fr; }
+  .home .essential-card { padding: 2rem 0; }
+  .home .essential-card + .essential-card { padding: 2rem 0 0; border-left: 0; border-top: 1px solid #323037; }
+  .home .essential-top { margin-bottom: 1.5rem; }
+  .home .essential-card h3 { font-size: 1.5rem; }
+  .home .essential-card p { font-size: .84rem; }
+  .home .privacy-layout { gap: 2.5rem; }
+  .home .privacy-points article { gap: 1rem; }
+  .home .privacy-points p { font-size: .82rem; }
+  .home .faq-layout { gap: 2rem; }
+  .home .faq-list summary { min-height: 72px; padding-block: 1.3rem; font-size: .83rem; }
+  .home .faq-list details p { padding-right: .5rem; font-size: .82rem; }
+  .home .download-section { padding-bottom: 3.5rem; }
+  .home .download-panel { grid-template-columns: 36px minmax(0, 1fr); gap: 1rem; padding: 2rem 1.5rem; border-radius: 14px; }
+  .home .download-panel > img { width: 36px; height: 36px; border-radius: 9px; }
+  .home .download-panel .section-label { font-size: .56rem; letter-spacing: .09em; }
+  .home .download-panel h2 { font-size: clamp(1.95rem, 8vw, 2.6rem); margin-top: .6rem; }
+  .home .download-panel > p:not(.section-label) { font-size: .81rem; margin-top: 0; }
+  .home .download-panel .app-store-badge-link { --button-height: 3rem; margin-top: .8rem; }
+  .home .site-footer { padding-top: 3rem; }
+  .home .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+  .home .footer-brand { margin-bottom: .5rem; }
+  .home .footer-grid > div:last-child { grid-column: 1 / -1; }
+  .home .footer-grid a:not(.brand) { min-height: 32px; font-size: .75rem; }
+  .home .footer-bottom { flex-direction: column; margin-top: 2.5rem; padding-top: 1.2rem; gap: .4rem; }
+}
+
+@media (max-width: 360px) {
+  .home .product-tour .tour-canvas .feature-visual,
+  .home .product-tour .app-preview { padding: .8rem; }
+  .home .reconcile-visual { padding: 1.1rem; }
+  .home .duplicate-entry { padding: .75rem; }
+  .home .resolved-entry { flex-wrap: wrap; }
+  .home .resolved-entry b { margin-left: 2.3rem; }
+  .home .download-panel { padding-inline: 1.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home .tour-tabs button,
+  .home .home-section .text-link span,
+  .home .product-tour .text-link span,
+  .home .faq-list summary > span,
+  .home .footer-grid a { transition: none; }
+}

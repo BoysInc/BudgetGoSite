@@ -1,0 +1,87 @@
+/* Homepage composition. Shared guide and legal pages keep their own styling. */
+.home { --container: 1200px; --text-soft: #aaabb1; --accent-light: #c3aff1; font-weight: 500; }
+.home .container { width: min(calc(100% - 80px), var(--container)); }
+.home .site-header { background: rgba(16, 17, 18, .88); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-color: #ffffff0d; }
+.home .nav-row { min-height: 82px; }
+.home .brand { font-size: 1.2rem; gap: .65rem; }
+.home .brand img { width: 34px; height: 34px; border-radius: 9px; }
+.home .nav-links { gap: 1rem; }
+.home .nav-links a, .home .nav-dropdown summary { font-size: .78rem; font-weight: 600; }
+.home .nav-links .nav-download { background: #d2c0f6; color: #1d1728; border-radius: 9px; min-height: 42px; padding-inline: 1.1rem; margin-left: 1.2rem; font-weight: 800; }
+.home .nav-links .nav-download:hover { background: #e4d8fa; }
+.home .nav-dropdown-menu { border: 1px solid #ffffff13; padding: .65rem; }
+.home .nav-dropdown-menu a { justify-content: flex-start; }
+.home .landing-hero { padding: 158px 0 78px; text-align: left; overflow: clip; }
+.home .hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5.2rem; }
+.home .landing-hero .hero-intro { padding: 0; min-width: 0; }
+.home .landing-hero .hero-eyebrow { display: flex; align-items: center; gap: .55rem; color: #bcb9c4; font-size: .6rem; line-height: 1.6; letter-spacing: .1em; font-weight: 700; margin-bottom: 1.5rem; }
+.home .hero-eyebrow > span { width: 6px; height: 6px; border-radius: 50%; background: #c3aff1; }
+.home .landing-hero h1 { font-size: clamp(3.75rem, 6.15vw, 5.65rem); font-weight: 800; line-height: 1.035; letter-spacing: -.063em; }
+.home .landing-hero h1 > span { color: #c3aff1; }
+.home .landing-hero .hero-description { margin: 1.75rem 0 0; max-width: 30rem; font-size: 1.03rem; line-height: 1.85; font-weight: 500; color: #b4b3bc; }
+.home .landing-hero .hero-download { justify-content: flex-start; gap: 1.6rem; margin-top: 2rem; }
+.home .landing-hero .app-store-badge-link { --button-height: 3.05rem; transition: transform 180ms ease; }
+.home .app-store-badge-link:hover { transform: translateY(-2px); }
+.home .landing-hero .hero-secondary { background: transparent; padding: .5rem 0; border-radius: 0; min-height: 2.8rem; color: #d4c4f1; font-size: .8rem; font-weight: 700; gap: .75rem; }
+.home .hero-secondary > span { transition: transform 180ms ease; }
+.home .hero-secondary:hover > span { transform: translate(2px, -2px); }
+.home .landing-hero .hero-footnote { color: #929399; font-size: .68rem; margin-top: 1.2rem; font-weight: 500; }
+.home .section-label { font-size: .61rem; letter-spacing: .11em; font-weight: 700; color: #b7a4d8; }
+.home .tour-section-intro h2 { font-size: clamp(2rem, 3.9vw, 3.45rem); line-height: 1.15; font-weight: 700; letter-spacing: -.055em; }
+.home .tour-section-intro h2 > span { color: #89868f; }
+.home .tour-section-intro > p { font-weight: 500; font-size: .88rem; }
+.home a:focus-visible, .home button:focus-visible, .home summary:focus-visible { outline: 2px solid #d2c0f6; outline-offset: 5px; }
+.home .motion-reveal.is-visible { animation: section-enter 650ms cubic-bezier(.2,.65,.3,1) both; }
+@keyframes section-enter { from { transform: translateY(18px); } to { transform: translateY(0); } }
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .home .hero-eyebrow { animation: section-enter 700ms 40ms both; }
+  .home .hero-intro h1 { animation: section-enter 750ms 90ms both; }
+  .home .hero-description { animation: section-enter 750ms 160ms both; }
+  .home .hero-download, .home .hero-footnote { animation: section-enter 750ms 230ms both; }
+}
+@media (max-width: 1100px) {
+  .home .container { width: calc(100% - 64px); }
+  .home .hero-grid { gap: 2.5rem; }
+  .home .landing-hero { padding-top: 144px; }
+  .home .landing-hero h1 { font-size: clamp(3.5rem, 6.4vw, 4.8rem); }
+  .home .landing-hero .hero-description { font-size: .93rem; }
+  .home .landing-hero .hero-download { gap: 1.1rem; }
+}
+@media (max-width: 900px) {
+  .home .landing-hero { padding: 132px 0 52px; }
+  .home .hero-grid { grid-template-columns: 1fr; gap: 3.7rem; max-width: 680px; }
+  .home .landing-hero h1 { font-size: clamp(3.7rem, 8vw, 5.2rem); }
+  .home .landing-hero h1 br:nth-of-type(2) { display: none; }
+  .home .landing-hero .hero-description { margin-left: 0; }
+  .home .nav-links { gap: .3rem; }
+}
+@media (max-width: 880px) {
+  .home .nav-links { inset: 5.2rem 1.2rem auto; border: 1px solid #ffffff18; padding: .8rem; }
+  .home .nav-links a, .home .nav-dropdown summary { justify-content: flex-start; font-size: .88rem; min-height: 44px; }
+  .home .nav-links .nav-download { margin: .5rem 0 0; justify-content: center; }
+  .home .nav-dropdown-menu { border: 0; }
+}
+@media (max-width: 600px) {
+  .home .container { width: calc(100% - 40px); }
+  .home .nav-row { min-height: 72px; }
+  .home .brand { font-size: 1.1rem; }
+  .home .brand img { width: 31px; height: 31px; }
+  .home .landing-hero { padding: 112px 0 40px; }
+  .home .hero-grid { gap: 3rem; }
+  .home .landing-hero h1 { font-size: clamp(3rem, 11.2vw, 4.4rem); line-height: 1.06; letter-spacing: -.06em; }
+  .home .landing-hero .hero-eyebrow { font-size: .53rem; margin-bottom: 1.2rem; }
+  .home .landing-hero .hero-description { font-size: .91rem; line-height: 1.8; margin-top: 1.4rem; }
+  .home .landing-hero .hero-download { gap: 1.1rem; margin-top: 1.6rem; flex-direction: row; }
+  .home .landing-hero .app-store-badge-link { --button-height: 2.8rem; }
+  .home .landing-hero .hero-secondary { font-size: .73rem; }
+  .home .landing-hero .hero-footnote { font-size: .61rem; }
+  .home .tour-section-intro h2 { font-size: 2.25rem; }
+}
+@media (max-width: 360px) {
+  .home .container { width: calc(100% - 32px); }
+  .home .landing-hero .hero-download { gap: .7rem; flex-wrap: wrap; }
+  .home .landing-hero .hero-secondary { font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home *, .home *::before, .home *::after { animation: none !important; scroll-behavior: auto !important; transition: none !important; }
+}
