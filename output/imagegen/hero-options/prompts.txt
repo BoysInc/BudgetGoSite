@@ -1,0 +1,38 @@
+Generated using the built-in ImageGen tool.
+
+City evening
+File: 01-city-evening.png
+
+Use case: photorealistic-natural.
+Asset type: a full-bleed photographic hero background for BudgetGo, a personal spending app with a charcoal #101112 website and pale lilac typography.
+Generate a single finished photograph, landscape 2.4:1 aspect ratio, ideally 2400 x 1000. It is an image asset only, not a website mockup.
+Art direction: sophisticated independent lifestyle editorial photography, intimate and believable, real skin texture, natural expressions, subtle fine grain, beautiful natural light, strong photographic composition. Feel like an unposed moment from a real life worth enjoying. Restrained colors, warm human skin against rich charcoal surroundings. People must be clearly visible with readable expressions, not silhouettes.
+Layout requirement: the website puts a large centered heading and buttons over the middle 50% of the image. Keep that central zone organically dark, low contrast and visually quiet, with no faces, hands or prominent objects there. Make the composition feel like one real contiguous place. Main people should be inside the outer quarter, with breathing room from the edges. No artificial black rectangle or obvious empty Photoshop gap. Top and bottom should blend softly into dark charcoal.
+No typography, UI, watermarks, logos, charts, currency symbols, prominent technology, business suits, exaggerated laughter, plastic skin, oversaturated colors, staged stock-photo posing, collage or split screen.
+Scene: an intimate pedestrian side street at blue hour, quiet understated European city architecture, a softly glowing cafe window near the far right edge. Two friends in their late twenties, a Black woman in a warm brown jacket and a man in a charcoal overshirt, walk slowly together on the RIGHT side of the frame, caught in easy conversation and a subtle spontaneous smile. Waist-up medium-wide framing, faces at roughly x=77% and x=90%, y=40%; both entirely outside the center. One carries a small ordinary paper grocery bag down low. The left and central expanse is a continuous softly textured dark stone wall falling into soft focus, with warm reflected light and architectural depth but no bright signs. Shot like an honest 35mm film still, a little movement in their jackets, beautifully lit faces, natural proportions. Quiet confidence and freedom to enjoy an ordinary evening. Keep subjects bright enough to survive a subtle website dark overlay.
+
+--------------------
+
+Slow morning
+File: 02-slow-morning.png
+
+Use case: photorealistic-natural.
+Asset type: a full-bleed photographic hero background for BudgetGo, a personal spending app with a charcoal #101112 website and pale lilac typography.
+Generate a single finished photograph, landscape 2.4:1 aspect ratio, ideally 2400 x 1000. It is an image asset only, not a website mockup.
+Art direction: sophisticated independent lifestyle editorial photography, intimate and believable, real skin texture, natural expressions, subtle fine grain, beautiful natural light, strong photographic composition. Feel like an unposed moment from a real life worth enjoying. Restrained colors, warm human skin against rich charcoal surroundings. People must be clearly visible with readable expressions, not silhouettes.
+Layout requirement: the website puts a large centered heading and buttons over the middle 50% of the image. Keep that central zone organically dark, low contrast and visually quiet, with no faces, hands or prominent objects there. Make the composition feel like one real contiguous place. Main people should be inside the outer quarter, with breathing room from the edges. No artificial black rectangle or obvious empty Photoshop gap. Top and bottom should blend softly into dark charcoal.
+No typography, UI, watermarks, logos, charts, currency symbols, prominent technology, business suits, exaggerated laughter, plastic skin, oversaturated colors, staged stock-photo posing, collage or split screen.
+Scene: a beautifully ordinary apartment in early morning, window at far left, dark charcoal painted plaster and soft shadows running across the middle and right. On the LEFT quarter, a woman around thirty with short dark curls sits sideways in a low armchair beside the window, wearing a softly textured muted oatmeal cardigan over a dark top. She has set her closed book on her lap and looks out of the window with a gentle relaxed smile, caught in a genuinely private restful moment, not posing. Face centered at x=17%, y=38%; visible head, shoulders and relaxed lap, comfortably within the frame. Delicate warm window light across her face, natural shadows and pores, hands casually resting on the book at the lower left. The background gradually falls into a spacious dark living room with very minimal defocused detail; the central 50% stays empty and dark for website text. Editorial environmental portrait, 50mm lens feeling, authentic comfortable home, premium but not luxurious. Clear luminous human subject and calm, tactile surroundings.
+
+--------------------
+
+Dinner together
+File: 03-dinner-together.png
+
+Use case: photorealistic-natural.
+Asset type: a full-bleed photographic hero background for BudgetGo, a personal spending app with a charcoal #101112 website and pale lilac typography.
+Generate a single finished photograph, landscape 2.4:1 aspect ratio, ideally 2400 x 1000. It is an image asset only, not a website mockup.
+Art direction: sophisticated independent lifestyle editorial photography, intimate and believable, real skin texture, natural expressions, subtle fine grain, beautiful natural light, strong photographic composition. Feel like an unposed moment from a real life worth enjoying. Restrained colors, warm human skin against rich charcoal surroundings. People must be clearly visible with readable expressions, not silhouettes.
+Layout requirement: the website puts a large centered heading and buttons over the middle 50% of the image. Keep that central zone organically dark, low contrast and visually quiet, with no faces, hands or prominent objects there. Make the composition feel like one real contiguous place. Main people should be inside the outer quarter, with breathing room from the edges. No artificial black rectangle or obvious empty Photoshop gap. Top and bottom should blend softly into dark charcoal.
+No typography, UI, watermarks, logos, charts, currency symbols, prominent technology, business suits, exaggerated laughter, plastic skin, oversaturated colors, staged stock-photo posing, collage or split screen.
+Scene: a candid early-evening moment in a modest modern apartment kitchen, two friends cooking a simple dinner together in the RIGHT outer third of the image. A woman with medium brown skin and shoulder-length dark hair in a muted terracotta linen shirt and a man with wavy dark hair in a soft gray t-shirt are shoulder-to-shoulder around a low wooden counter. She is gently stirring a bowl while he looks at her with an affectionate small smile; expressions feel spontaneous and human, not advertising grins. Faces around x=76% and x=90%, y=36%. Hands and the bowl are at the lower right with anatomically correct fingers, a few vegetables incidental. Warm side light from an off-frame window reveals faces and fabric beautifully. Left and center are a continuous charcoal kitchen wall and out-of-focus dark cabinetry with strong negative space, no handles or clutter in the central headline zone, a tiny warm practical light only at far left. Intimate cinematic environmental photograph, tactile everyday textures, shot from across the room with real depth, emotionally warm without looking staged. Main subjects remain comfortably visible, not underexposed.
