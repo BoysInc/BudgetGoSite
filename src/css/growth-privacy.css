@@ -1,0 +1,32 @@
+.privacy-first { margin:0 30px; padding:65px 0; border-radius:32px; background:#111; color:#fff; }
+.privacy-first__layout { display:grid; grid-template-columns:.9fr 1.3fr; gap:65px; align-items:center; }
+.privacy-first__eyebrow { display:inline-flex; padding:7px 13px; border-radius:999px; background:#7132f5; color:#fff; font-size:12px; margin-bottom:27px; }
+.privacy-first__intro h2 { font-size:clamp(36px,3.7vw,52px); line-height:1.12; letter-spacing:-.04em; }
+.privacy-first__intro h2 span { color:#a3ff62; }
+.privacy-first__intro>p:not(.privacy-first__eyebrow) { color:#bcbcbc; max-width:370px; font-size:16px; line-height:1.65; margin:25px 0 30px; }
+.privacy-first__intro .life-button { font-size:14px; gap:15px; }
+.privacy-first__cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.privacy-first__card { display:flex; flex-direction:column; align-items:flex-start; padding:25px; background:#1b1b1b; border-radius:24px; }
+.privacy-first__icon { display:grid; place-items:center; width:36px; height:40px; margin-bottom:23px; color:#f5f5f5; }
+.privacy-first__icon svg { width:32px; height:32px; fill:currentColor; }
+.privacy-first__card h3 { font-size:22px; line-height:1.2; letter-spacing:-.025em; }
+.privacy-first__card>p { font-size:14px; line-height:1.65; color:#bcbcbc; margin:13px 0 23px; }
+.privacy-first__tag { margin-top:auto; padding-top:15px; width:100%; color:#cbb5ff; font-size:11px; }
+@media(max-width:1100px) {
+  .privacy-first__layout { gap:35px; }
+  .privacy-first__card { padding:22px; }
+}
+@media(max-width:900px) {
+  .privacy-first__layout { grid-template-columns:1fr; gap:35px; }
+  .privacy-first__intro { max-width:580px; }
+  .privacy-first__intro>p:not(.privacy-first__eyebrow) { max-width:480px; }
+}
+@media(max-width:600px) {
+  .privacy-first { margin-inline:15px; padding:35px 0; border-radius:26px; }
+  .privacy-first__layout { width:calc(100% - 40px); }
+  .privacy-first__intro h2 { font-size:37px; }
+  .privacy-first__eyebrow { margin-bottom:22px; }
+  .privacy-first__cards { grid-template-columns:1fr; }
+  .privacy-first__card { padding:24px; }
+  .privacy-first__icon { margin-bottom:20px; }
+}

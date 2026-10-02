@@ -1,0 +1,495 @@
+.guide-hero {
+      position: relative;
+      overflow: clip;
+      padding: 8rem 0 4rem;
+      background: var(--bg);
+    }
+
+    .guide-hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .guide-hero h1 {
+      max-width: 13ch;
+      font-size: clamp(2.7rem, 5.4vw, 4.6rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .guide-hero .lead {
+      margin-inline: 0;
+      max-width: 36rem;
+    }
+
+    .guide-jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 2rem;
+    }
+
+    .guide-jump a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      min-height: 2.75rem;
+      padding: 0 1.1rem;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 0;
+      font-size: 0.92rem;
+      font-weight: 800;
+      transition: background-color 220ms var(--ease-smooth), transform 220ms var(--ease-smooth);
+    }
+
+    .guide-jump a:hover,
+    .guide-jump a:focus-visible {
+      background: var(--surface-high);
+      transform: translateY(-2px);
+    }
+
+    /* Three steps show the capture flow. */
+    .flow {
+      position: relative;
+      display: grid;
+      gap: 1.6rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .flow::before {
+      content: "";
+      position: absolute;
+      top: 2.5rem;
+      bottom: 2.5rem;
+      left: 2.45rem;
+      width: 2px;
+      background: repeating-linear-gradient(180deg, var(--accent-light) 0 6px, transparent 6px 12px);
+      background-size: 2px 24px;
+      opacity: 0.6;
+    }
+
+
+    .flow-node {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem 1rem 1rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+    }
+
+    .flow-node:nth-child(2) { margin-left: 1.5rem; }
+    .flow-node:nth-child(3) { margin-left: 3rem; }
+
+    .flow-node strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .flow-node small {
+      color: var(--text-soft);
+      font-size: 0.85rem;
+    }
+
+    .flow-icon,
+    .flow-logo {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 2.9rem;
+      height: 2.9rem;
+      border-radius: 0.9rem;
+    }
+
+    .flow-icon svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+
+    .flow-icon-wallet {
+      background: var(--surface-high);
+      color: var(--text);
+    }
+
+    .flow-icon-shortcuts {
+      background: var(--accent-soft);
+      color: var(--accent-light);
+    }
+
+    .flow-node-final {
+      background: var(--action);
+      color: var(--on-action);
+    }
+
+    .flow-node-final small {
+      color: rgba(16, 16, 16, 0.7);
+    }
+
+    /* ---------- Sections ---------- */
+
+    .guide-section {
+      padding: 5rem 0;
+    }
+
+    .guide-section:nth-of-type(even) {
+      background: var(--bg-soft);
+    }
+
+    .guide-section-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1.4rem;
+      align-items: start;
+      max-width: 50rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .guide-badge {
+      grid-row: span 3;
+      display: grid;
+      place-items: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1.2rem;
+    }
+
+    .guide-badge svg {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
+
+    .guide-badge-lime { background: var(--action); color: var(--on-action); }
+    .guide-badge-purple { background: var(--accent-soft); color: var(--accent-light); }
+    .guide-badge-gold { background: var(--surface-high); color: var(--text); }
+
+    .guide-section-head .section-label {
+      margin-bottom: 0.4rem;
+    }
+
+    .guide-section-head h2 {
+      font-size: clamp(2rem, 3.6vw, 3rem);
+    }
+
+    .guide-section-head p:not(.section-label) {
+      margin-top: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .guide-section-head strong,
+    .guide-step-copy strong {
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    /* Steps sit on a vertical timeline like the in-app guide's progress. */
+    .guide-steps {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      padding: 0 0 0 3.6rem;
+      list-style: none;
+    }
+
+    .guide-steps::before {
+      content: "";
+      position: absolute;
+      top: 1.6rem;
+      bottom: 1.6rem;
+      left: 1.25rem;
+      width: 2px;
+      border-radius: 999px;
+      background: var(--line-strong);
+    }
+
+    .guide-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 21rem);
+      gap: 1.5rem 2.5rem;
+      align-items: start;
+      padding: 1.8rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+    }
+
+    .guide-step .step-index {
+      position: absolute;
+      top: 1.6rem;
+      left: -3.6rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      margin: 0;
+      box-shadow: 0 0 0 0.4rem var(--bg);
+    }
+
+    .guide-section:nth-of-type(even) .guide-step .step-index {
+      box-shadow: 0 0 0 0.4rem var(--bg-soft);
+    }
+
+    .guide-step-solo {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .guide-step-copy h3 {
+      font-size: 1.3rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .guide-step-copy p,
+    .guide-step-copy li {
+      color: var(--text-soft);
+    }
+
+    .guide-step-copy > p {
+      margin-top: 0.6rem;
+      max-width: 40rem;
+    }
+
+    .guide-step-copy ol {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.9rem;
+      padding-left: 1.2rem;
+    }
+
+    .guide-step-copy li::marker {
+      color: var(--accent-light);
+      font-weight: 800;
+    }
+
+    .guide-shots {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .guide-shots img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .guide-device {
+      width: min(13rem, 100%);
+      justify-self: center;
+    }
+
+    /* Block layout keeps the bold lead-in and its sentence flowing as one line of text. */
+    .guide-note {
+      position: relative;
+      display: block;
+      margin-top: 1.1rem;
+      padding: 1rem 1.2rem 1rem 3.2rem;
+      border-radius: var(--radius-sm);
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+
+    .guide-note::before {
+      content: "i";
+      position: absolute;
+      top: 1.05rem;
+      left: 1.2rem;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-top: 0.1rem;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: #101010;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .guide-checklist {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .guide-checklist li {
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+      color: var(--text-soft);
+    }
+
+    .guide-checklist strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .guide-checklist .check {
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 999px;
+      background: var(--action);
+      color: var(--on-action);
+    }
+
+    .guide-checklist .check svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .guide-faq {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .guide-faq details {
+      padding: 1.3rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 0;
+    }
+
+    .guide-faq summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      list-style: none;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .guide-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .guide-faq summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      color: var(--accent-light);
+      font-size: 1.3rem;
+      line-height: 1;
+      transition: transform 200ms var(--ease-smooth);
+    }
+
+    .guide-faq details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .guide-faq p {
+      margin-top: 0.7rem;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 960px) {
+      .guide-hero-grid,
+      .guide-step,
+      .guide-faq,
+      .guide-checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-shots {
+        grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .guide-hero {
+        padding-top: 6.5rem;
+      }
+
+      .guide-section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-badge {
+        grid-row: auto;
+        margin-bottom: 1rem;
+      }
+
+      .guide-steps {
+        padding-left: 0;
+      }
+
+      .guide-steps::before {
+        display: none;
+      }
+
+      .guide-step {
+        padding: 1.4rem;
+      }
+
+      .guide-step .step-index {
+        position: static;
+        margin-bottom: 0.9rem;
+        box-shadow: none;
+      }
+
+      .flow-node:nth-child(2),
+      .flow-node:nth-child(3) {
+        margin-left: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flow::before,
+      .flow-node {
+        animation: none !important;
+      }
+    }
+
+.guide-hero { margin: 0 30px; padding: 76px 0; border-radius: 32px; background: var(--surface); }
+.guide-hero-grid { gap: 70px; }
+.guide-hero h1 { max-width: 13ch; line-height: 1.12; }
+.guide-hero .hl { color: var(--purple); }
+.guide-hero .lead { font-size: 18px; font-weight: 500; line-height: 1.7; }
+.guide-jump a { background: #fff; font-size: 14px; font-weight: 500; }
+.flow-node { background: #fff; padding: 24px; border-radius: 24px; }
+.flow-node strong { font-weight: 500; }
+.flow-node-final { background: #d9fabf; }
+.guide-section { padding-block: 76px; }
+.guide-section:nth-of-type(even) { background: #fff; }
+.guide-step, .guide-checklist li, .guide-faq details { border-radius: 24px; }
+.guide-section-head { max-width: 850px; }
+.guide-section-head h2 { font-weight: 500; }
+.guide-step-copy h3 { font-size: 26px; font-weight: 500; }
+.guide-checklist strong, .guide-faq summary { font-weight: 500; }
+.guide-step { padding: 32px; }
+.guide-step .step-index { background: #e9ddf9; color: var(--purple); font-weight: 500; }
+.guide-section:nth-of-type(even) .guide-step .step-index { box-shadow: 0 0 0 .4rem #fff; }
+.guide-note::before { color: #fff; }
+.guide-shots img { box-shadow: 0 8px 25px #17131f12; }
+@media (max-width: 960px) { .guide-hero-grid { gap: 38px; } }
+@media (max-width: 640px) {
+  .guide-hero { margin-inline: 16px; padding-block: 44px; border-radius: 28px; }
+  .guide-hero .container { width: calc(100% - 40px); }
+  .guide-hero .lead { font-size: 16px; }
+  .guide-hero h1 { max-width: none; }
+  .guide-section { padding-block: 50px; }
+  .guide-step { padding: 24px; }
+  .guide-step-copy h3 { font-size: 23px; }
+  .guide-jump a { width: 100%; }
+  .flow-node { padding: 20px; }
+}

@@ -85,10 +85,6 @@
 .life-motion-toggle .life-motion-play { display: none; }
 .life-motion-toggle[data-paused="true"] .life-motion-pause { display: none; }
 .life-motion-toggle[data-paused="true"] .life-motion-play { display: block; }
-.life-payment-sources { border-top: 1px solid var(--line); padding: 32px 0 12px; text-align: center; }
-.life-payment-sources h2 { color: var(--muted); font-size: 22px; line-height: 1.4; letter-spacing: -.025em; }
-.life-payment-sources ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; list-style: none; padding: 0; margin: 22px 0 0; }
-.life-payment-sources li { padding: 12px 20px; border: 1px solid #2d2d32; border-radius: 999px; background: var(--surface); color: #d6d3dc; font-size: 18px; line-height: 1.5; }
 
 @media (prefers-reduced-motion: no-preference) {
   .life-hero-copy { animation: none; }
@@ -155,10 +151,6 @@
   .life-orbit--shopping { width: 66px; height: 80px; }
   .life-orbit--plane { width: 88px; height: 58px; }
   .life-orbit--ticket { width: 74px; height: 48px; }
-  .life-payment-sources { padding: 28px 0 24px; }
-  .life-payment-sources h2 { max-width: 300px; margin-inline: auto; font-size: 20px; text-wrap: balance; }
-  .life-payment-sources ul { gap: 10px; margin-top: 20px; }
-  .life-payment-sources li { padding: 10px 16px; font-size: 14px; }
 }
 
 @media (max-width: 380px) {

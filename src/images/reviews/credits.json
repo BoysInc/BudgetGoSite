@@ -1,0 +1,38 @@
+[
+  {
+    "file": "person-1.jpg",
+    "source": "https://www.pexels.com/photo/smiling-woman-in-casual-outfit-portrait-31693555/",
+    "license": "Pexels",
+    "use": "Illustrative persona avatar"
+  },
+  {
+    "file": "person-2.jpg",
+    "source": "https://www.pexels.com/photo/close-up-portrait-of-a-young-man-smiling-17059392/",
+    "license": "Pexels",
+    "use": "Illustrative persona avatar"
+  },
+  {
+    "file": "person-3.jpg",
+    "source": "https://www.pexels.com/photo/portrait-of-smiling-young-man-3958799/",
+    "license": "Pexels",
+    "use": "Illustrative persona avatar"
+  },
+  {
+    "file": "person-4.jpg",
+    "source": "https://www.pexels.com/photo/casual-portrait-of-smiling-young-man-31585320/",
+    "license": "Pexels",
+    "use": "Fictional local preview avatar"
+  },
+  {
+    "file": "person-5.jpg",
+    "source": "https://www.pexels.com/photo/smiling-young-woman-in-casual-outfit-portrait-36346821/",
+    "license": "Pexels",
+    "use": "Fictional local preview avatar"
+  },
+  {
+    "file": "person-6.jpg",
+    "source": "https://www.pexels.com/photo/young-woman-smiling-in-natural-light-portrait-33179924/",
+    "license": "Pexels",
+    "use": "Fictional local preview avatar"
+  }
+]

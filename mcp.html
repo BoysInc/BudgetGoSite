@@ -16,562 +16,36 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://budgetgo.ai/mcp.html" />
   <link rel="canonical" href="https://budgetgo.ai/mcp.html" />
-  <meta name="theme-color" content="#101112" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;display=swap"
-    rel="stylesheet"
-  />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" type="image/png" href="src/images/favicon-rounded.png" />
   <link rel="apple-touch-icon" href="src/images/favicon-rounded.png" />
   <link rel="stylesheet" href="styles.css?v=20261001-rounded" />
-  <style>
-    .mcp-page {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 100svh;
-      overflow-x: clip;
-    }
 
-    /* ---------- Top bar ---------- */
-
-    .mcp-top {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 1rem;
-      padding-block: 1.4rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .mcp-top .brand {
-      justify-self: start;
-    }
-
-    .mcp-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      min-height: 2.6rem;
-      padding: 0 1.1rem;
-      border-radius: 999px;
-      background: var(--surface);
-      border: 0;
-      font-size: 0.88rem;
-    }
-
-    .mcp-status-dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: var(--button-radius);
-      background: var(--action);
-    }
-
-
-    .mcp-top-link {
-      justify-self: end;
-      display: inline-flex;
-      align-items: center;
-      min-height: 2.6rem;
-      padding: 0 1.1rem;
-      border-radius: 999px;
-      background: var(--surface-high);
-      font-size: 0.9rem;
-      font-weight: 800;
-      transition: background-color 200ms var(--ease-smooth);
-    }
-
-    .mcp-top-link:hover,
-    .mcp-top-link:focus-visible {
-      background: var(--surface-highest);
-    }
-
-    /* ---------- Heading ---------- */
-
-    .mcp-main {
-      position: relative;
-      z-index: 1;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-block: 4rem 4rem;
-      text-align: center;
-    }
-
-    .mcp-main h1 {
-      max-width: 16ch;
-      font-size: clamp(2.6rem, 6vw, 4.6rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-    }
-
-    .mcp-sub {
-      max-width: 36rem;
-      margin-top: 1rem;
-      color: var(--text-soft);
-      font-size: clamp(1.02rem, 1.4vw, 1.15rem);
-    }
-
-    /* ---------- Showcase ---------- */
-
-    .mcp-stage {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
-      align-items: start;
-      gap: 1.5rem;
-      width: min(100%, 64rem);
-      margin-top: 3rem;
-    }
-
-    .chat {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 0;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-      text-align: left;
-      overflow: hidden;
-    }
-
-    .chat-bar {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.85rem 1.1rem;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-faint);
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-
-    .chat-dots {
-      display: flex;
-      gap: 0.35rem;
-    }
-
-    .chat-dots span {
-      width: 0.65rem;
-      height: 0.65rem;
-      border-radius: 999px;
-      background: var(--surface-highest);
-    }
-
-    .chat-body {
-      display: grid;
-      gap: 0.9rem;
-      padding: 1.2rem 1.2rem 0.6rem;
-    }
-
-    .msg-user {
-      justify-self: end;
-      max-width: 80%;
-      padding: 0.7rem 1rem;
-      border-radius: 1.2rem 1.2rem 0.35rem 1.2rem;
-      background: var(--accent-soft);
-      color: var(--text);
-      font-size: 0.92rem;
-    }
-
-    .tool-call {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      justify-self: start;
-      padding: 0.4rem 0.75rem 0.4rem 0.4rem;
-      border-radius: 999px;
-      background: var(--surface-high);
-      color: var(--text-soft);
-      font-size: 0.78rem;
-    }
-
-    .tool-call img {
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 0.45rem;
-    }
-
-    .tool-call code {
-      color: var(--text);
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 0.76rem;
-      font-weight: 600;
-    }
-
-    .tool-call .ok {
-      color: var(--action);
-    }
-
-    .msg-ai {
-      color: var(--text);
-      font-size: 0.92rem;
-      line-height: 1.55;
-    }
-
-    .msg-ai strong {
-      font-weight: 800;
-    }
-
-    .bars {
-      display: grid;
-      gap: 0.55rem;
-      padding: 1rem;
-      border-radius: 1.1rem;
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .bars-legend {
-      display: flex;
-      gap: 1rem;
-      color: var(--text-faint);
-      font-size: 0.72rem;
-    }
-
-    .bars-legend span::before {
-      content: "";
-      display: inline-block;
-      width: 0.55rem;
-      height: 0.55rem;
-      margin-right: 0.35rem;
-      border-radius: 999px;
-      background: currentColor;
-      vertical-align: 0.02em;
-    }
-
-    .bars-legend .now { color: var(--text-soft); }
-    .bars-legend .now::before { background: var(--accent-light); }
-    .bars-legend .prev::before { background: var(--surface-highest); }
-
-    .bar-row {
-      display: grid;
-      grid-template-columns: 1.6rem 7.5rem 1fr auto;
-      gap: 0.6rem;
-      align-items: center;
-      font-size: 0.78rem;
-    }
-
-    .bar-icon {
-      display: grid;
-      place-items: center;
-      width: 1.6rem;
-      height: 1.6rem;
-      border-radius: 999px;
-      background: var(--c);
-    }
-
-    .bar-icon img {
-      width: 0.85rem;
-      height: 0.85rem;
-    }
-
-    .bar-track {
-      display: grid;
-      gap: 0.2rem;
-    }
-
-    .bar-track i {
-      display: block;
-      height: 0.42rem;
-      border-radius: 999px;
-    }
-
-    .bar-track i:first-child {
-      width: var(--now);
-      background: var(--c);
-    }
-
-    .bar-track i:last-child {
-      width: var(--prev);
-      background: var(--surface-highest);
-    }
-
-    .bar-row b {
-      font-weight: 800;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .bar-delta {
-      color: var(--text-faint);
-    }
-
-    .bar-delta.down { color: var(--action); }
-    .bar-delta.up { color: #fe6055; }
-
-    .chat-input {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin: 0.6rem 1.2rem 1.2rem;
-      padding: 0.45rem 0.45rem 0.45rem 1rem;
-      border-radius: 999px;
-      background: var(--surface-high);
-      color: var(--text-faint);
-      font-size: 0.88rem;
-    }
-
-    .chat-input > span:first-child {
-      flex: 1;
-    }
-
-    .chat-send {
-      display: grid;
-      place-items: center;
-      width: 2.1rem;
-      height: 2.1rem;
-      border-radius: var(--button-radius);
-      background: var(--action);
-      color: var(--on-action);
-    }
-
-    .chat-send svg {
-      width: 1rem;
-      height: 1rem;
-    }
-
-    /* Features sit alongside the conversation example. */
-    .mcp-features {
-      display: grid;
-      gap: 0.75rem;
-    }
-    .mcp-feature {
-      position: relative;
-      width: 100%;
-      padding: 1.1rem 1.2rem;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 0;
-      text-align: left;
-    }
-
-    .mcp-feature h2 {
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-      font-size: 1rem;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-    }
-
-    .mcp-feature h2 span {
-      display: grid;
-      place-items: center;
-      flex: 0 0 auto;
-      width: 1.9rem;
-      height: 1.9rem;
-      border-radius: 0.65rem;
-      background: color-mix(in srgb, var(--c) 18%, transparent);
-      color: var(--c);
-    }
-
-    .mcp-feature h2 svg {
-      width: 1rem;
-      height: 1rem;
-    }
-
-    .mcp-feature p {
-      margin-top: 0.5rem;
-      color: var(--text-soft);
-      font-size: 0.86rem;
-      line-height: 1.5;
-    }
-
-
-    /* ---------- Waitlist ---------- */
-
-    .waitlist {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      width: min(100%, 27rem);
-      margin-top: 2.6rem;
-      padding: 0.35rem;
-      border-radius: 14px;
-      background: var(--surface);
-      border: 1px solid var(--line-strong);
-    }
-
-    .waitlist input {
-      flex: 1;
-      min-width: 0;
-      height: 3rem;
-      padding: 0 0.6rem 0 1.1rem;
-      border: 0;
-      border-radius: 999px;
-      background: transparent;
-      color: var(--text);
-      font-size: 1rem;
-      font-weight: 700;
-      outline: none;
-    }
-
-    .waitlist input::placeholder {
-      color: var(--text-faint);
-    }
-
-    .waitlist:focus-within {
-      outline: 2px solid var(--accent-light);
-      outline-offset: 3px;
-    }
-
-    .waitlist button {
-      flex: 0 0 auto;
-      height: 3rem;
-      padding: 0 1.4rem;
-      border: 0;
-      border-radius: var(--button-radius);
-      background: var(--action);
-      color: var(--on-action);
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background-color 200ms var(--ease-smooth), transform 200ms var(--ease-smooth);
-    }
-
-    .waitlist button:hover,
-    .waitlist button:focus-visible {
-      background: var(--text);
-    }
-
-    .waitlist button:disabled {
-      opacity: 0.6;
-      cursor: default;
-    }
-
-    .waitlist-note {
-      max-width: 30rem;
-      margin-top: 0.9rem;
-      color: var(--text-faint);
-      font-size: 0.82rem;
-      line-height: 1.55;
-    }
-
-    .waitlist-note a {
-      color: var(--text-soft);
-      text-decoration: underline;
-      text-underline-offset: 0.15em;
-    }
-
-    .waitlist-status {
-      min-height: 1.4rem;
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-      font-weight: 800;
-    }
-
-    .waitlist-status.ok { color: var(--action); }
-    .waitlist-status.err { color: #fe6055; }
-
-    /* ---------- Footer ---------- */
-
-    .mcp-foot {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-block: 1.4rem;
-      color: var(--text-faint);
-      font-size: 0.88rem;
-    }
-
-    .mcp-foot-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-    }
-
-    .mcp-foot a {
-      color: var(--text-soft);
-      transition: color 200ms var(--ease-smooth);
-    }
-
-    .mcp-foot a:hover,
-    .mcp-foot a:focus-visible {
-      color: var(--text);
-    }
-
-    @media (max-width: 880px) {
-      .mcp-stage {
-        grid-template-columns: 1fr;
-        max-width: 36rem;
-      }
-
-      .mcp-features {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .mcp-top {
-        grid-template-columns: 1fr auto;
-      }
-
-      .mcp-status {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        justify-self: center;
-      }
-
-      .mcp-features {
-        grid-template-columns: 1fr;
-      }
-
-      .bar-row {
-        grid-template-columns: 1.6rem 5.5rem 1fr auto;
-      }
-
-      .bar-delta {
-        display: none;
-      }
-
-      .waitlist button {
-        padding: 0 1rem;
-      }
-
-      .mcp-foot {
-        justify-content: center;
-        text-align: center;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .mcp-status-dot,
-      .mcp-feature,
-      .mcp-stage,
-      .mcp-main h1,
-      .mcp-sub {
-        animation: none !important;
-      }
-    }
-  </style>
+  <link rel="preload" href="src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="src/css/site-shell.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/inner-pages.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/mcp.css?v=20261002" />
 </head>
-<body>
-  <div class="mcp-page">
+<body class="inner-page mcp-page" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="container mcp-top">
-      <a class="brand" href="index.html" aria-label="BudgetGo homepage">
-        <img src="src/images/logo.png" alt="BudgetGo logo" width="1024" height="1024" />
-        <span>BudgetGo</span>
-      </a>
-      <p class="mcp-status"><span class="mcp-status-dot" aria-hidden="true"></span>MCP · Coming soon</p>
-      <a class="mcp-top-link" href="index.html">Visit our website</a>
-    </header>
+    <header class="site-header">
+  <div class="life-wrap nav-row">
+    <a class="brand" href="index.html" aria-label="BudgetGo homepage"><img src="src/images/logo.png" alt="" width="33" height="33" /><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#showcase">The app</a><a href="index.html#how-it-works">How it works</a><a href="index.html#security">Your privacy</a><a href="automations.html">Guides</a>
+      <a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo <span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a>
+    </nav>
+  </div>
+</header>
 
-    <main class="container mcp-main">
+    <main id="main" class="container mcp-main">
+      <p class="page-pill">MCP · Coming soon</p>
       <h1>Ask your AI about your money.</h1>
       <p class="mcp-sub">
-        The BudgetGo MCP server connects your reconciled spending record to the AI assistant you
-        already use, so you can ask real questions and get answers from your own numbers.
+        The upcoming BudgetGo MCP server will connect your reconciled spending record to the AI assistant you
+        already use, so you’ll be able to ask real questions and get answers from your own numbers.
       </p>
 
       <div class="mcp-stage">
@@ -584,7 +58,7 @@
             <p class="msg-user">How did my spending in September compare with August?</p>
             <p class="tool-call">
               <img src="src/images/logo.png" alt="" width="24" height="24" />
-              <span>BudgetGo · <code>get_spending_summary</code> <span class="ok">✓</span></span>
+              <span>BudgetGo · Spending summary <span class="ok">✓</span></span>
             </p>
             <p class="msg-ai">
               September came in at <strong>€2,118</strong>, about <strong>9% lower</strong> than August.
@@ -593,25 +67,25 @@
             </p>
             <div class="bars" aria-hidden="true">
               <div class="bars-legend"><span class="now">September</span><span class="prev">August</span></div>
-              <div class="bar-row" style="--c: #f97316; --now: 52%; --prev: 74%">
+              <div class="bar-row" style="--c: #7132f5; --now: 52%; --prev: 74%">
                 <span class="bar-icon"><img src="src/images/categories/dining.svg" alt="" width="14" height="14" /></span>
                 <span>Dining &amp; takeout</span>
                 <span class="bar-track"><i></i><i></i></span>
                 <b>€312 <span class="bar-delta down">−€86</span></b>
               </div>
-              <div class="bar-row" style="--c: #84cc16; --now: 70%; --prev: 68%">
+              <div class="bar-row" style="--c: var(--lime-ink); --now: 70%; --prev: 68%">
                 <span class="bar-icon"><img src="src/images/categories/groceries.svg" alt="" width="14" height="14" /></span>
                 <span>Groceries</span>
                 <span class="bar-track"><i></i><i></i></span>
                 <b>€421 <span class="bar-delta">+€9</span></b>
               </div>
-              <div class="bar-row" style="--c: #2563eb; --now: 30%; --prev: 46%">
+              <div class="bar-row" style="--c: #8055a6; --now: 30%; --prev: 46%">
                 <span class="bar-icon"><img src="src/images/categories/transportation.svg" alt="" width="14" height="14" /></span>
                 <span>Transportation</span>
                 <span class="bar-track"><i></i><i></i></span>
                 <b>€138 <span class="bar-delta down">−€41</span></b>
               </div>
-              <div class="bar-row" style="--c: #06b6d4; --now: 22%; --prev: 17%">
+              <div class="bar-row" style="--c: #333333; --now: 22%; --prev: 17%">
                 <span class="bar-icon"><img src="src/images/categories/subscriptions.svg" alt="" width="14" height="14" /></span>
                 <span>Subscriptions</span>
                 <span class="bar-track"><i></i><i></i></span>
@@ -636,7 +110,7 @@
           </article>
           <article class="mcp-feature mcp-f3">
             <h2><span style="--c: var(--accent-light)"><svg viewBox="0 0 24 24"><path d="M12 3v9l6.5 3.8M21 12a9 9 0 1 1-9-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>Your categories and budget</h2>
-            <p>Answers use the categories, allocations, and budget period you've set in BudgetGo.</p>
+            <p>Use your categories and spending records, with allocations and a budget period when you have an active budget.</p>
           </article>
           <article class="mcp-feature mcp-f4">
             <h2><span style="--c: var(--accent-light)"><svg viewBox="0 0 24 24"><path d="M8 7h8m-8 5h8m-8 5h5M5 3h14v18H5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Works with your tools</h2>
@@ -657,69 +131,19 @@
       </p>
     </main>
 
-    <footer class="container mcp-foot">
-      <span>&copy; 2026 GraphLeaf LLC</span>
-      <nav class="mcp-foot-links" aria-label="Footer">
-        <a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Download BudgetGo</a>
-        <a href="automations.html">Guides</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </footer>
+    <footer class="life-footer">
+  <div class="life-wrap">
+    <div class="life-footer-grid">
+      <div class="life-footer-brand"><a class="brand" href="index.html"><img src="src/images/logo.png" alt="" width="33" height="33" /><span>BudgetGo</span></a></div>
+      <div><h3>App</h3><a href="index.html#showcase">Explore the app</a><a href="index.html#how-it-works">How it works</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a></div>
+      <div><h3>Help</h3><a href="automations.html">Automation guides</a><a href="support.html">Support</a><a href="index.html#faq">Common questions</a><a href="mcp.html">MCP · Coming soon</a></div>
+      <div><h3>Contact</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="life-footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="privacy_policy.html">Privacy Policy</a> &nbsp; / &nbsp; <a href="terms_of_service.html">Terms of Service</a></p></div>
   </div>
+</footer>
 
-  <script>
-    (function () {
-      const form = document.getElementById("waitlist");
-      const input = document.getElementById("waitlist-email");
-      const status = document.getElementById("waitlist-status");
-      if (!form || !input || !status) return;
-
-      // Set data-endpoint on the form to POST signups to a list provider.
-      // Without one, the form falls back to a prefilled email to support.
-      const endpoint = form.dataset.endpoint;
-
-      const show = function (message, ok) {
-        status.textContent = message;
-        status.className = "waitlist-status " + (ok ? "ok" : "err");
-      };
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const email = input.value.trim();
-        if (!input.checkValidity() || !email) {
-          show("Please enter a valid email address.", false);
-          input.focus();
-          return;
-        }
-
-        if (!endpoint) {
-          const subject = encodeURIComponent("BudgetGo MCP waitlist");
-          const body = encodeURIComponent("Please add " + email + " to the BudgetGo MCP waitlist.");
-          window.location.href = "mailto:support@budgetgo.ai?subject=" + subject + "&body=" + body;
-          show("Your email app should open with your request ready to send.", true);
-          return;
-        }
-
-        const button = form.querySelector("button");
-        button.disabled = true;
-        fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({ email: email, list: "mcp" })
-        })
-          .then(function (response) {
-            if (!response.ok) throw new Error(String(response.status));
-            form.reset();
-            show("You're on the list. We'll email you when the MCP is ready.", true);
-          })
-          .catch(function () {
-            show("Something went wrong. Please try again.", false);
-          })
-          .finally(function () {
-            button.disabled = false;
-          });
-      });
-    })();
-  </script>
+  <script src="src/js/home.js"></script>
+<script src="src/js/mcp-waitlist.js"></script>
 </body>
 </html>

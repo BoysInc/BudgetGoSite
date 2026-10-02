@@ -1,0 +1,9 @@
+{
+  "plaid-white.svg": {
+    "source": "https://plaid.com/assets/img/navbar/logo--is-white.svg",
+    "owner": "Plaid",
+    "use": "Identify the existing Plaid bank-connection integration.",
+    "coverageSource": "https://plaid.com/press/",
+    "coverageVerified": "2026-10-02"
+  }
+}

@@ -1,0 +1,162 @@
+600;700;800&display=swap');
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  img, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .legal-page {
+    --ink: var(--text);
+    --link: var(--accent-light);
+    --card: var(--surface);
+    --bg-1: var(--bg);
+    --radius-card: 28px;
+  }
+
+  body {
+    margin: 0;
+    font-family: Switzer, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg-1);
+    line-height: 1.7;
+  }
+
+  .legal-main {
+    padding: 40px 0 80px;
+  }
+
+  [data-custom-class='body'], [data-custom-class='body'] * {
+    background: transparent !important;
+  }
+
+  [data-custom-class='body'] {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 56px 64px;
+    border: 1px solid var(--line);
+    background: var(--card) !important;
+    border-radius: var(--radius-card);
+  }
+
+  [data-custom-class='body'] div,
+  [data-custom-class='body'] span,
+  [data-custom-class='body'] p,
+  [data-custom-class='body'] li {
+    color: var(--muted) !important;
+  }
+
+  [data-custom-class='body'] strong,
+  [data-custom-class='body'] b {
+    color: var(--ink) !important;
+  }
+
+  [data-custom-class='title'], [data-custom-class='title'] * {
+    font-family: Switzer, Arial, sans-serif !important;
+    font-size: 40px !important;
+    color: var(--ink) !important;
+    letter-spacing: -0.5px;
+    margin: 0;
+  }
+
+  [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+    font-family: Switzer, Arial, sans-serif !important;
+    color: var(--muted) !important;
+    font-size: 15px !important;
+    letter-spacing: 0;
+  }
+
+  [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
+    font-family: Switzer, Arial, sans-serif !important;
+    font-size: 24px !important;
+    color: var(--ink) !important;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
+    font-family: Switzer, Arial, sans-serif !important;
+    font-size: 20px !important;
+    color: var(--ink) !important;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+
+  [data-custom-class='body_text'], [data-custom-class='body_text'] * {
+    color: var(--muted) !important;
+    font-size: 16px !important;
+    font-family: Switzer, Arial, sans-serif !important;
+  }
+
+  [data-custom-class='link'], [data-custom-class='link'] * {
+    color: var(--link) !important;
+    font-size: 16px !important;
+    font-family: Switzer, Arial, sans-serif !important;
+    word-break: break-word !important;
+    text-decoration: none;
+  }
+
+  [data-custom-class='link']:hover, [data-custom-class='link'] *:hover {
+    text-decoration: underline;
+  }
+
+  .footer-attribution {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+  }
+
+  .footer-attribution a {
+    color: var(--muted);
+  }
+
+  .footer-attribution a:hover,
+  .footer-attribution a:focus-visible {
+    color: var(--ink);
+  }
+
+  ul {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  h1, h2, h3, p {
+    margin: 0 0 0.75rem;
+  }
+
+  @media (max-width: 720px) {
+    [data-custom-class='body'] {
+      margin: 0 16px;
+      padding: 28px 22px;
+      border-radius: var(--radius-card);
+    }
+
+    [data-custom-class='title'], [data-custom-class='title'] * {
+      font-size: 32px !important;
+    }
+
+    .legal-main {
+      padding-top: 20px;
+      padding-bottom: 4rem;
+    }
+  }
+
+/* Termly exports inline fonts and fixed-width tables; keep the document readable on phones. */
+.legal-main [data-custom-class='body'] { width: min(920px, calc(100% - 60px)); overflow-wrap: anywhere; }
+.legal-main [data-custom-class='body'] * { font-family: Switzer, Arial, sans-serif !important; }
+.legal-main [data-custom-class='body'] a,
+.legal-main [data-custom-class='body'] a * { color: var(--purple) !important; text-decoration: underline; text-underline-offset: 3px; }
+.legal-main [data-custom-class='body'] table { display: block; max-width: 100%; overflow-x: auto; }
+.legal-main [data-custom-class='body'] table td { min-width: 120px; }
+.legal-main [data-custom-class='title'] h1 { font-weight: 600; line-height: 1.15; }
+@media (max-width: 720px) {
+  .legal-main [data-custom-class='body'] { width: calc(100% - 32px); margin-inline: auto; padding: 28px 22px; }
+}

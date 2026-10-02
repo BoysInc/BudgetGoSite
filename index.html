@@ -10,16 +10,19 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://budgetgo.ai/" />
   <meta property="og:image" content="https://budgetgo.ai/src/images/life/friends.webp" />
-  <meta name="theme-color" content="#101010" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://budgetgo.ai/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" href="src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="icon" type="image/png" href="src/images/favicon-rounded.png" />
   <link rel="apple-touch-icon" href="src/images/favicon-rounded.png" />
   <link rel="stylesheet" href="src/css/life.css?v=20261002" />
-  <link rel="stylesheet" href="src/css/life-product.css?v=20261002" />
-  <link rel="stylesheet" href="src/css/life-hero.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/life-sources.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/growth-home.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/site-shell.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/growth-showcase.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/growth-reviews.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/growth-privacy.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/growth-insights.css?v=20261002" />
 </head>
 <body class="life-home" id="top">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,158 +32,211 @@
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
     <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
       <a href="#showcase">The app</a><a href="#how-it-works">How it works</a><a href="#security">Your privacy</a><a href="automations.html">Guides</a>
-      <a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo <span class="life-arrow" aria-hidden="true">→</span></a>
+      <a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo <span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a>
     </nav>
   </div>
 </header>
 <main id="main">
-<section class="life-hero" id="overview" aria-labelledby="hero-title" data-life-hero>
-  <div class="life-wrap">
-    <div class="life-hero-stage">
-    <div class="life-hero-copy">
-      <h1 id="hero-title">Your spending.<br /><em>Made clear.</em></h1>
-      <p class="life-hero-description">Bring everyday spending into one view.</p>
-      <div class="life-hero-actions"><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer"><svg class="life-apple-icon" viewBox="4 3 16 19" aria-hidden="true"><path d="M16.7 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7C8.1 8.1 6.8 9 6.1 10.2c-1.5 2.5-.4 6.3 1 8.3.7 1 1.5 2.1 2.6 2.1 1-.1 1.4-.7 2.7-.7s1.7.7 2.8.6c1.2 0 1.9-1 2.6-2 .8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.2ZM14.7 6.7c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.6 1.4-.6.7-1.2 1.8-1 2.8 1 .1 2-.6 2.6-1.4Z"/></svg>Get BudgetGo<span class="life-arrow" aria-hidden="true">→</span></a><a class="life-link" href="#showcase">See it in action <span aria-hidden="true">→</span></a></div>
-
-    </div>
-    <div class="life-orbit-layer">
-      <svg class="life-orbit-track" aria-hidden="true" data-orbit-svg viewBox="0 0 1240 800" fill="none" focusable="false">
-        <defs><linearGradient id="life-orbit-stroke" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="#b994f5" stop-opacity=".32" /><stop offset=".5" stop-color="#a09aa9" stop-opacity=".18" /><stop offset="1" stop-color="#b994f5" stop-opacity=".32" /></linearGradient></defs>
-        <path data-orbit-path d="M270 100 H970 A180 180 0 0 1 1150 280 V520 A180 180 0 0 1 970 700 H270 A180 180 0 0 1 90 520 V280 A180 180 0 0 1 270 100 Z" />
-      </svg>
-      <figure class="life-orbit life-orbit--coffee" data-hero-object data-price-label="Coffee" data-price-value="-€4.50" data-price-category="Dining &amp; Takeout" data-price-initials="CO" data-price-color="#8b5cf6" data-spin-duration="38" data-spin-direction="1" data-orbit-phase=".913333">
-        <button class="life-orbit-target" data-price-trigger type="button" aria-label="Show price for coffee" aria-controls="hero-price" aria-expanded="false" disabled><span class="life-orbit-visual"><img src="src/images/life/coffee-opaque-v2.webp" alt="" draggable="false" width="750" height="900" fetchpriority="high" /></span></button>
-      </figure>
-      <figure class="life-orbit life-orbit--tennis" data-hero-object data-price-label="Tennis" data-price-value="-€18.00" data-price-category="Entertainment &amp; Fun" data-price-initials="TE" data-price-color="#14b8a6" data-spin-duration="28" data-spin-direction="-1" data-orbit-phase=".246667">
-        <button class="life-orbit-target" data-price-trigger type="button" aria-label="Show price for tennis" aria-controls="hero-price" aria-expanded="false" disabled><span class="life-orbit-visual"><img src="src/images/life/tennis-ball.webp" alt="" draggable="false" width="800" height="800" decoding="async" /></span></button>
-      </figure>
-      <figure class="life-orbit life-orbit--shopping" data-hero-object data-price-label="Groceries" data-price-value="-€42.80" data-price-category="Groceries" data-price-initials="GR" data-price-color="#6366f1" data-spin-duration="44" data-spin-direction="1" data-orbit-phase=".746667">
-        <button class="life-orbit-target" data-price-trigger type="button" aria-label="Show price for groceries" aria-controls="hero-price" aria-expanded="false" disabled><span class="life-orbit-visual"><img src="src/images/life/groceries-v2.webp" alt="" draggable="false" width="750" height="900" decoding="async" /></span></button>
-      </figure>
-      <figure class="life-orbit life-orbit--burger" data-hero-object data-price-label="Burger" data-price-value="-€14.50" data-price-category="Dining &amp; Takeout" data-price-initials="BU" data-price-color="#f97316" data-spin-duration="34" data-spin-direction="-1" data-orbit-phase=".413333">
-        <button class="life-orbit-target" data-price-trigger type="button" aria-label="Show price for burger" aria-controls="hero-price" aria-expanded="false" disabled><span class="life-orbit-visual"><img src="src/images/life/burger-v2.webp" alt="" draggable="false" width="900" height="753" decoding="async" /></span></button>
-      </figure>
-      <figure class="life-orbit life-orbit--plane" data-hero-object data-price-label="Flight" data-price-value="-€240.00" data-price-category="Travel" data-price-initials="FL" data-price-color="#0ea5e9" data-spin-duration="42" data-spin-direction="1" data-orbit-phase=".08">
-        <button class="life-orbit-target" data-price-trigger type="button" aria-label="Show price for flight" aria-controls="hero-price" aria-expanded="false" disabled><span class="life-orbit-visual"><img src="src/images/life/plane-a380-v3.webp" alt="" draggable="false" width="900" height="600" decoding="async" /></span></button>
-      </figure>
-      <figure class="life-orbit life-orbit--ticket" data-hero-object data-price-label="Movie ticket" data-price-value="-€12.00" data-price-category="Entertainment &amp; Fun" data-price-initials="MT" data-price-color="#ec4899" data-spin-duration="32" data-spin-direction="-1" data-orbit-phase=".58">
-        <button class="life-orbit-target" data-price-trigger type="button" aria-label="Show price for movie ticket" aria-controls="hero-price" aria-expanded="false" disabled><span class="life-orbit-visual"><img src="src/images/life/movie-ticket-v1.webp" alt="" draggable="false" width="900" height="600" decoding="async" /></span></button>
-      </figure>
-    </div>
-    <div class="life-price-card" id="hero-price" data-hero-price role="tooltip" hidden>
-      <span class="life-price-avatar" data-price-initials-output aria-hidden="true"></span>
-      <span class="life-price-details">
-        <span class="life-price-label" data-price-label-output></span>
-        <span class="life-price-category" data-price-category-output></span>
-      </span>
-      <strong class="life-price-value" data-price-value-output></strong>
-    </div>
-    <button class="life-motion-toggle" data-orbit-toggle type="button" aria-label="Pause animation" title="Pause animation" aria-pressed="false" data-paused="false" hidden>
-      <svg class="life-motion-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" /></svg>
-      <svg class="life-motion-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z" /></svg>
-    </button>
-    </div>
-    <div class="life-payment-sources" aria-labelledby="payment-sources-title">
-      <h2 id="payment-sources-title">However you pay, it all comes together.</h2>
-      <ul aria-label="Spending sources">
-        <li>Apple Pay</li>
-        <li>Bank alerts</li>
-        <li>Linked accounts</li>
-        <li>Statements</li>
-        <li>Receipts</li>
-      </ul>
+<section class="growth-hero" aria-labelledby="hero-title">
+  <div class="growth-hero-copy">
+    <p class="growth-pill">Your money, made clear</p>
+    <h1 id="hero-title">What if every <span class="growth-money-mark"><img src="src/images/icons/money-flow.svg" alt="" width="129" height="56" /></span> dollar<br class="desktop-break" /> made a little more sense?</h1>
+    <p class="growth-hero-description"><mark>Everyday spending,</mark> <span>helpful insights,</span> and <strong>a clearer picture.</strong><br /> All together in BudgetGo. Built for real life.</p>
+    <div class="life-hero-actions"><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer"><svg class="life-apple-icon" viewBox="4 3 16 19" aria-hidden="true"><path d="M16.7 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7C8.1 8.1 6.8 9 6.1 10.2c-1.5 2.5-.4 6.3 1 8.3.7 1 1.5 2.1 2.6 2.1 1-.1 1.4-.7 2.7-.7s1.7.7 2.8.6c1.2 0 1.9-1 2.6-2 .8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.2ZM14.7 6.7c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.6 1.4-.6.7-1.2 1.8-1 2.8 1 .1 2-.6 2.6-1.4Z"/></svg>Get BudgetGo<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a><a class="life-link" href="#showcase">See it in action <span aria-hidden="true">→</span></a></div>
+  </div>
+  <div class="growth-hero-grid">
+    <figure class="growth-life-photo"><img src="src/images/life/editorial/friends-pizza.jpg" alt="Three young friends laughing and sharing pizza at home." width="1600" height="1067" fetchpriority="high" /><figcaption>The lunch. The coffee. The bigger picture.</figcaption></figure>
+    <div class="growth-spending-card">
+      <div class="growth-card-top"><span>Your everyday, organized.</span></div>
+      <div class="growth-card-total"><strong>$61.00</strong><span>Three little moments.<br />One clear view.</span></div>
+      <div class="growth-purchase"><img src="src/images/life/coffee-opaque-v2.webp" alt="" width="750" height="900" /><div><strong>Morning coffee</strong><span>Dining &amp; takeout</span></div><b>$4.50</b></div>
+      <div class="growth-purchase"><img src="src/images/life/burger-v2.webp" alt="" width="900" height="753" /><div><strong>Lunch with a friend</strong><span>Dining &amp; takeout</span></div><b>$14.50</b></div>
+      <div class="growth-purchase"><img src="src/images/life/groceries-v2.webp" alt="" width="750" height="900" /><div><strong>The weekly shop</strong><span>Groceries</span></div><b>$42.00</b></div>
+      <p class="growth-card-footer">A little less wondering where it went.</p>
     </div>
   </div>
 </section>
+<section class="growth-sources" aria-labelledby="payment-sources-title">
+  <div class="sources-panel" data-source-flow>
+    <div class="sources-copy">
+      <p class="sources-eyebrow">Your spending, connected</p>
+      <h2 id="payment-sources-title">However you pay,<br /><span>it all comes together.</span></h2>
+      <p class="sources-description">The coffee tap. The bank text. The receipt in your pocket. Bring the details into BudgetGo and see the bigger picture.</p>
+      <a class="life-button" href="automations.html">Find your setup<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a>
+      <p class="sources-footnote">Different sources.<br /><strong>One view of your spending.</strong></p>
+    </div>
+    <div class="source-flow">
+      <svg class="source-flow__connections" aria-hidden="true" focusable="false"></svg>
+      <ul class="source-flow__inputs" aria-label="Ways to bring spending into BudgetGo">
+        <li class="source-flow__item--cards"><a class="source-flow__source" href="automations.html#wallet" data-flow-source data-flow-amount="$4.50">
+          <span class="source-flow__number" aria-hidden="true">01</span>
+          <img src="src/images/life/sources/cards.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+          <span>Apple Pay</span>
+        </a></li>
+        <li class="source-flow__item--alert"><a class="source-flow__source source-flow__source--alert" href="automations.html#sms" data-flow-source data-flow-amount="$24.80">
+          <span class="source-flow__number" aria-hidden="true">02</span>
+          <span class="source-alert" aria-hidden="true"><span class="source-alert__heading">BANK · SMS <span>9:41</span></span><span class="source-alert__message">You paid <strong>$24.80</strong> at Green Market. Card ending 4821.</span></span>
+          <span>Bank alerts</span>
+        </a></li>
+        <li class="source-flow__item--bank"><a class="source-flow__source" href="#feature-automation" data-flow-source data-flow-amount="$42.00">
+          <span class="source-flow__number" aria-hidden="true">03</span>
+          <img src="src/images/life/sources/bank.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+          <span>Linked accounts</span>
+        </a></li>
+        <li class="source-flow__item--statement"><a class="source-flow__source" href="#feature-imports" data-flow-source data-flow-amount="$86.50">
+          <span class="source-flow__number" aria-hidden="true">04</span>
+          <img src="src/images/life/sources/statement.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+          <span>Statements</span>
+        </a></li>
+        <li class="source-flow__item--receipt"><a class="source-flow__source" href="#feature-imports" data-flow-source data-flow-amount="$12.00">
+          <span class="source-flow__number" aria-hidden="true">05</span>
+          <img src="src/images/life/sources/receipt.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+          <span>Receipts</span>
+        </a></li>
+      </ul>
+      <div class="source-flow__destination" data-flow-destination>
+        <img src="src/images/logo.png" alt="" width="96" height="96" />
+        <strong>BudgetGo</strong>
+      </div>
+    </div>
+  </div>
+  <div class="plaid-connection">
+    <div class="plaid-connection__copy"><p class="plaid-connection__eyebrow">BANK CONNECTIONS</p><h3>Your bank. Your bigger picture.</h3><p>Connect supported accounts to BudgetGo through Plaid. Find your bank in the app and choose the accounts you want to link.</p></div>
+    <div class="plaid-connection__network"><img src="src/images/brands/plaid-white.svg" alt="Plaid" width="126" height="48" loading="lazy" /><strong>12,000+</strong><span>financial institutions in Plaid’s network</span><a href="https://plaid.com/global/" target="_blank" rel="noopener noreferrer"><span>Explore Plaid’s coverage</span><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="18" height="18" /></a></div>
+  </div>
+</section>
+<section class="growth-showcase life-wrap" id="showcase" aria-labelledby="showcase-title">
+  <div class="growth-showcase__heading"><h2 id="showcase-title">Inside BudgetGo</h2><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get the app<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a></div>
+  <div class="growth-showcase__cards">
+    <article class="growth-case growth-case--overview" id="feature-home" aria-labelledby="overview-title">
+      <div class="growth-case__visual"><div class="feature-ui feature-ui--overview" data-insight-motion>
+        <div class="overview-balance">
+          <div class="overview-balance__top"><span class="overview-period">Last 30 days<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></span><button class="overview-visibility" type="button" aria-label="Hide amounts" aria-pressed="false" data-amount-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <strong data-private-amount>€1,173.21</strong>
+          <div class="overview-comparison"><b>↓ 67%</b><span>vs previous 30 days</span></div>
+        </div>
+        <div class="feature-ui__row-heading"><div><h4>Due soon</h4><span>Next 7 days · <span data-private-amount>€3.41</span></span></div><a href="#feature-recurring">See all</a></div>
+        <div class="overview-due-group"><div class="upcoming-payment"><span class="payment-avatar">NS</span><div><small>DUE TODAY</small><strong>Netflix Subscription</strong></div><b data-private-amount>€0.85</b></div><a class="overview-upcoming" href="#feature-recurring"><span class="overview-avatar-stack" aria-hidden="true"><i>NS</i><i>NS</i></span><span>3 more in the next 7 days</span><strong data-private-amount>€2.56</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></div>
+      </div></div>
+      <div class="growth-case__info">
+        <div class="growth-case__tags"><span>Overview</span><span>Everyday tracking</span></div>
+        <h3 id="overview-title">Your day-to-day.<br />All together.</h3>
+        <p>See your spending and upcoming bills in one place. Track with or without a budget.</p>
+        <div class="growth-case__bottom"><strong>One view.</strong><p>Your money, made clear.</p><a class="life-button" href="#how-it-works">See how it works<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a></div>
+      </div>
+    </article>
+    <article class="growth-case growth-case--categories" id="feature-categories" aria-labelledby="categories-title">
+      <div class="growth-case__visual"><div class="feature-ui feature-ui--categories" data-insight-motion>
+        <p class="feature-ui__label">Spending breakdown</p>
+        <div class="feature-ui__summary"><div><span>Spent</span><strong>€12,225.97</strong><small>Jun 7 – Oct 1</small></div><div class="category-donut" role="img" aria-label="Rent 45.6%, groceries 8.9%, travel 6.9%, utilities 5.1%, other 33.5%"></div></div>
+        <ul class="category-rows"><li><span class="category-dot"></span><div><strong>Rent</strong><small>45.6% of spending</small></div><b>€5,571.16</b></li><li><span class="category-dot"></span><div><strong>Groceries</strong><small>8.9% of spending</small></div><b>€1,093.23</b></li><li><span class="category-dot"></span><div><strong>Travel</strong><small>6.9% of spending</small></div><b>€847.86</b></li><li><span class="category-dot"></span><div><strong>Utilities</strong><small>5.1% of spending</small></div><b>€629.42</b></li></ul>
+      </div></div>
+      <div class="growth-case__info">
+        <div class="growth-case__tags"><span>Categories</span><span>AI-assisted sorting</span></div>
+        <h3 id="categories-title">Every purchase.<br />A place of its own.</h3>
+        <p>See how your spending adds up by category. Let AI help with the sorting, then review and adjust the details yourself.</p>
+        <div class="growth-case__bottom"><strong>Your categories.</strong><p>Always yours to adjust.</p><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Explore BudgetGo<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a></div>
+      </div>
+    </article>
+    <article class="growth-case growth-case--insights" id="feature-insights" aria-labelledby="insights-title">
+      <div class="growth-case__visual"><div class="feature-ui feature-ui--trend" data-insight-motion><p class="feature-ui__label">Spending trend · Aug 1 – 31</p><div class="trend-total"><span>Total so far</span><strong>€3,618.10 <small>↑ 10%</small></strong><p>€340.94 more than last month</p></div><svg class="feature-trend-chart" viewBox="0 0 600 210" role="img" aria-label="Spending rose steadily through August, finishing ten percent above July"><defs><linearGradient id="feature-trend-fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#7132f5" stop-opacity=".6"/><stop offset="1" stop-color="#7132f5" stop-opacity="0"/></linearGradient></defs><path fill="url(#feature-trend-fill)" d="M0 195 L20 130 L70 115 L110 110 L170 100 L205 77 L240 69 L290 57 L320 40 L365 37 L390 24 L440 20 L480 13 L525 10 L565 1 L600 0 V210 H0Z"/><path class="feature-trend-chart__prior" d="M0 198 L20 138 L70 125 L110 117 L170 110 L205 94 L240 88 L290 78 L320 70 L365 65 L390 58 L440 48 L480 40 L525 36 L565 31 L600 27"/><path class="feature-trend-chart__line" pathLength="1" d="M0 195 L20 130 L70 115 L110 110 L170 100 L205 77 L240 69 L290 57 L320 40 L365 37 L390 24 L440 20 L480 13 L525 10 L565 1 L600 0"/></svg><div class="trend-chart-labels"><span>1</span><span>11</span><span>22</span><span>31</span></div><p class="trend-takeaway">Shopping contributed most of the increase.</p></div></div>
+      <div class="growth-case__info">
+        <div class="growth-case__tags"><span>Insights</span><span>Spending trends</span></div>
+        <h3 id="insights-title">See the patterns.<br />Find your balance.</h3>
+        <p>Compare spending across periods and categories to see what’s changing.</p><p id="feature-reports">Look ahead with spending forecasts based on your recent activity.</p>
+        <div class="growth-case__bottom"><strong>Clear patterns.</strong><p>More informed decisions.</p><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Explore BudgetGo<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a></div>
+      </div>
+    </article>
+    <article class="growth-case growth-case--recurring" id="feature-recurring" aria-labelledby="recurring-title">
+      <div class="growth-case__visual"><div class="feature-ui feature-ui--recurring" data-insight-motion><p class="feature-ui__label">Bills &amp; subscriptions</p><h4>Coming up next.</h4><div class="recurring-summary"><span>Next 7 days</span><strong>€3.41</strong></div><div class="upcoming-payment"><span class="payment-avatar">NS</span><div><strong>Netflix Subscription</strong><small>Due today · Every 2 days</small></div><b>€0.85</b></div><div class="upcoming-payment"><span class="payment-avatar payment-avatar--purple">NS</span><div><strong>Netflix Subscription</strong><small>Due Oct 1 · Every 2 days</small></div><b>€0.85</b></div><div class="upcoming-payment"><span class="payment-avatar payment-avatar--white">NS</span><div><strong>Netflix Subscription</strong><small>Due Oct 3 · Every 2 days</small></div><b>€0.85</b></div></div></div>
+      <div class="growth-case__info">
+        <div class="growth-case__tags"><span>Recurring</span><span>Bills & subscriptions</span></div>
+        <h3 id="recurring-title">A little heads-up.<br />Fewer surprises.</h3>
+        <p>Keep upcoming subscriptions and bills in one place, so you can see what’s coming next.</p>
+        <div class="growth-case__bottom"><strong>Look ahead.</strong><p>Stay on top of the repeat payments.</p><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a></div>
+      </div>
+    </article>
+  </div>
+</section>
+  <section class="growth-insights life-wrap" id="insight-widgets" aria-labelledby="insight-widgets-title">
+    <div class="growth-insights__heading"><div><p class="growth-insights__eyebrow">A closer look at your spending</p><h2 id="insight-widgets-title">Your dashboard.<br /><span>Your kind of clarity.</span></h2></div><p>See where it went, what’s coming up, and how money in compares with money out. Make room for the widgets that matter to you.</p></div>
+    <div class="growth-insights__widgets" aria-label="BudgetGo insight widgets">
+      <article data-insight-motion class="insight-widget insight-widget--spending" aria-labelledby="widget-spending-title">
+        <h3 id="widget-spending-title">Where it went</h3>
+        <div class="spending-share" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <ul class="spending-legend">
+          <li><span>Food &amp; drinks</span><span>59%</span><strong>$520</strong></li>
+          <li><span>Shopping</span><span>26%</span><strong>$230</strong></li>
+          <li><span>Entertainment</span><span>9%</span><strong>$80</strong></li>
+          <li><span>Transport</span><span>6%</span><strong>$54</strong></li>
+        </ul>
+      </article>
+      <article data-insight-motion class="insight-widget insight-widget--cash" aria-labelledby="widget-cash-title">
+        <h3 id="widget-cash-title">Cash flow</h3>
+        <div class="cash-flow-bars" aria-hidden="true"><i></i><i></i></div>
+        <strong class="insight-widget__total" data-count="1916" data-count-prefix="+$">+$1,916</strong><p>In minus out</p>
+      </article>
+      <article data-insight-motion class="insight-widget insight-widget--forecast" aria-labelledby="widget-forecast-title">
+        <h3 id="widget-forecast-title">Forecast</h3>
+        <div class="forecast-widget__chart" aria-label="Projected spending increases toward the end of August"><i></i><i></i><i></i><i></i><i></i></div>
+        <strong class="insight-widget__total" data-count="1485.93" data-count-prefix="$" data-count-decimals="2">$1,485.93</strong><p>Estimated by Aug 31</p><span class="forecast-widget__note">Based on your recent spending</span>
+      </article>
+    </div>
+    <div class="growth-insights__stories-heading"><h3>The numbers tell a story.</h3><p>Spot the little patterns. Find a change that works for you.</p></div>
+    <div class="growth-insights__stories">
+      <article data-insight-motion class="insight-story insight-story--comparison"><div class="story-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><button class="story-close" type="button" aria-label="Close insight" data-story-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button class="story-reopen" type="button" data-story-open hidden>Open insight<span>Getting there cost more than eating there.</span></button>
+        <p class="insight-story__eyebrow">Head to head</p>
+        <h4>Getting there cost more than eating there.</h4>
+        <strong class="insight-story__number" data-count="51" data-count-prefix="$">$51</strong>
+        <p>More on rides than restaurants this quarter — the first time transport has taken the lead.</p>
+        <div class="story-comparison"><div><span>Transport</span><strong>$482</strong></div><div class="story-comparison__bar" aria-hidden="true"></div><div><span>Dining out</span><strong>$431</strong></div><div class="story-comparison__bar story-comparison__bar--second" aria-hidden="true"></div></div>
+
+<div class="story-actions"><button class="story-share" type="button" aria-label="Share insight" data-story-share><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"/></svg></button><button class="story-next" type="button" data-story-next>Next insight<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div><button class="story-hint" type="button" data-story-pause aria-pressed="false">Tap to continue · Hold to pause</button><span class="story-share-status" role="status"></span>
+      </article>
+      <article data-insight-motion class="insight-story insight-story--saving"><div class="story-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><button class="story-close" type="button" aria-label="Close insight" data-story-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button class="story-reopen" type="button" data-story-open hidden>Open insight<span>Small shifts. More possibilities.</span></button>
+        <p class="insight-story__eyebrow">Save more</p>
+        <h4>Small shifts.<br />More possibilities.</h4>
+        <strong class="insight-story__number" data-count="28" data-count-prefix="+€">+€28</strong>
+        <p>Dining out went €28 past your usual week — the highest in two months.</p>
+        <figure class="weekly-chart" aria-label="Dining out over eight weeks, with this week above the usual €67"><figcaption><span>Dining out, last 8 weeks</span><strong>This week</strong></figcaption><span class="weekly-chart__usual">Usual · €67</span><div class="weekly-chart__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="weekly-chart__labels"><span>Aug 3</span><span>Sep 21</span></div></figure>
+        <p class="insight-story__advice">Pulling two of those meals back to groceries would erase most of that gap.</p>
+<div class="story-actions"><button class="story-share" type="button" aria-label="Share insight" data-story-share><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"/></svg></button><button class="story-next" type="button" data-story-next>Next insight<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div><button class="story-hint" type="button" data-story-pause aria-pressed="false">Tap to continue · Hold to pause</button><span class="story-share-status" role="status"></span>
+      </article>
+      <article data-insight-motion class="insight-story insight-story--habit"><div class="story-progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><button class="story-close" type="button" aria-label="Close insight" data-story-close><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><button class="story-reopen" type="button" data-story-open hidden>Open insight<span>Coffee quietly beat your subscriptions.</span></button>
+        <p class="insight-story__eyebrow">Hidden habit</p>
+        <h4>Coffee quietly beat your subscriptions.</h4>
+        <div class="habit-comparison"><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h14v7a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm14 1h2a3 3 0 0 1 0 6h-2M6 2v3m5-3v3m5-3v3"/></svg><span>Coffee runs</span><strong>$214</strong><small>38 visits</small></div><div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="m10 9 5 3-5 3V9Z"/></svg><span>Subscriptions</span><strong>$96</strong><small>4 services</small></div></div>
+        <p>At about <strong>$5.60 a cup</strong>, those small stops added up to 2.2× your subscriptions combined.</p>
+        <p class="insight-story__source">From your Jul – Sep transactions · <button type="button" data-story-why>Why am I seeing this?</button></p><p class="insight-story__explanation" hidden>Coffee and subscription totals are compared over the same period to help you spot a recurring spending pattern.</p>
+<div class="story-actions"><button class="story-share" type="button" aria-label="Share insight" data-story-share><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"/></svg></button><button class="story-next" type="button" data-story-next>See my recap<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div><button class="story-hint" type="button" data-story-pause aria-pressed="false">Tap to continue · Hold to pause</button><span class="story-share-status" role="status"></span>
+      </article>
+    </div>
+  </section>
   <section class="life-everyday" aria-labelledby="everyday-title">
     <div class="life-wrap">
       <div class="life-section-head"><div><h2 id="everyday-title">It all adds up.<br />Now it all makes sense.</h2></div></div>
-      <div class="life-moments">
-        <article class="life-moment">
-          <div class="life-moment-photo"><img src="src/images/life/burger.webp" alt="A cheeseburger and fries, ready for lunch." width="1448" height="1086" loading="lazy" decoding="async" /></div>
-          <h3>The little treat.</h3><p>Organize purchases with AI-assisted categories.</p>
-        </article>
-        <article class="life-moment">
-          <div class="life-moment-photo"><img src="src/images/life/taxi.webp" alt="A yellow taxi taking a passenger through a sunlit neighborhood." width="1448" height="1086" loading="lazy" decoding="async" /></div>
-          <h3>The getting there.</h3><p>Bring spending from different sources into one view.</p>
-        </article>
-
+      <div class="life-mosaic">
+        <figure class="life-mosaic__tile life-mosaic__tile--coffee">
+          <img src="src/images/life/editorial/takeout-break.jpg" alt="A smiling young woman enjoying takeaway food outdoors." width="1400" height="2100" loading="lazy" decoding="async" />
+          <figcaption>The lunch break.</figcaption>
+        </figure>
+        <figure class="life-mosaic__tile life-mosaic__tile--shopping">
+          <img src="src/images/life/editorial/coffee.webp" alt="An iced coffee on a wooden café table." width="1200" height="1800" loading="lazy" decoding="async" />
+          <figcaption>The coffee run.</figcaption>
+        </figure>
+        <figure class="life-mosaic__tile life-mosaic__tile--groceries">
+          <img src="src/images/life/editorial/snack-run.jpg" alt="A smiling woman browsing snacks with a shopping basket." width="1200" height="857" loading="lazy" decoding="async" />
+          <figcaption>The essentials.</figcaption>
+        </figure>
+        <figure class="life-mosaic__tile life-mosaic__tile--city">
+          <img src="src/images/life/editorial/city.webp" alt="A yellow taxi on a New York City street." width="1200" height="800" loading="lazy" decoding="async" />
+          <figcaption>The getting there.</figcaption>
+        </figure>
       </div>
-
+      <p class="life-mosaic-caption">From your morning coffee to the ride home. See where it all goes.</p>
     </div>
   </section>
-<section id="showcase" class="product-tour life-product" aria-label="Explore the BudgetGo app">
 
-  <div class="tour-tabs life-product__tabs" role="tablist" aria-label="Explore BudgetGo features">
-    <button type="button" id="tour-tab-overview" data-tour-tab="overview" role="tab" aria-selected="true" aria-controls="tour-panel-overview" disabled>Overview</button>
-    <button type="button" id="tour-tab-categories" data-tour-tab="categories" role="tab" aria-selected="false" aria-controls="tour-panel-categories" disabled>Categories</button>
-    <button type="button" id="tour-tab-insights" data-tour-tab="insights" role="tab" aria-selected="false" aria-controls="tour-panel-insights" disabled>Insights</button>
-    <button type="button" id="tour-tab-bills" data-tour-tab="bills" role="tab" aria-selected="false" aria-controls="tour-panel-bills" disabled>Recurring</button>
-  </div>
-
-  <article id="tour-panel-overview" class="life-product__panel" data-tour-panel="overview" aria-labelledby="tour-tab-overview">
-    <div id="feature-home" class="life-product__copy">
-
-      <h2>Your day-to-day.<br /><span>All together.</span></h2>
-      <p>See your spending and upcoming bills in one place. Track with or without a budget.</p>
-      <a class="life-product__link" href="#how-it-works">See how it comes together <span aria-hidden="true">→</span></a>
-    </div>
-    <figure class="life-product__stage life-product__stage--lilac">
-
-      <div class="life-product__phone"><img src="src/images/app/01-home.webp" alt="BudgetGo home screen showing spending for the last 30 days, upcoming bills, and insights." width="720" height="1565" loading="lazy" decoding="async" /></div>
-      <figcaption>Actual app preview · Sample data</figcaption>
-    </figure>
-  </article>
-
-  <article id="tour-panel-categories" class="life-product__panel" data-tour-panel="categories" aria-labelledby="tour-tab-categories">
-    <div id="feature-categories" class="life-product__copy">
-
-      <h2>Every purchase.<br /><span>A place of its own.</span></h2>
-      <p>See how your spending adds up by category.</p>
-      <ul class="life-product__benefits">
-        <li>Let AI help with the sorting</li>
-        <li>Review and edit the details yourself</li>
-      </ul>
-      <a class="life-product__link" href="#feature-insights">Find the patterns <span aria-hidden="true">→</span></a>
-    </div>
-    <figure class="life-product__stage life-product__stage--sage">
-
-      <div class="life-product__phone"><img src="src/images/app/05-spending-breakdown.webp" alt="BudgetGo spending breakdown with a category chart and totals for rent, groceries, travel, and utilities." width="720" height="1565" loading="lazy" decoding="async" /></div>
-      <figcaption>Actual app preview · Sample data</figcaption>
-    </figure>
-  </article>
-
-  <article id="tour-panel-insights" class="life-product__panel" data-tour-panel="insights" aria-labelledby="tour-tab-insights">
-    <div id="feature-insights" class="life-product__copy">
-
-      <h2>See the patterns.<br /><span>Find your balance.</span></h2>
-      <p>Compare spending across periods and categories to see what’s changing.</p>
-      <p id="feature-reports">Look ahead with spending forecasts based on your recent activity.</p>
-      <a class="life-product__link" href="#feature-categories">Take a closer look <span aria-hidden="true">→</span></a>
-    </div>
-    <figure class="life-product__stage life-product__stage--lilac">
-
-      <div class="life-product__phone"><img src="src/images/app/07-spending-trend.webp" alt="BudgetGo spending trend screen displaying recorded spending over time." width="720" height="1565" loading="lazy" decoding="async" /></div>
-      <figcaption>Actual app preview · Sample data</figcaption>
-    </figure>
-  </article>
-
-  <article id="tour-panel-bills" class="life-product__panel" data-tour-panel="bills" aria-labelledby="tour-tab-bills">
-    <div id="feature-recurring" class="life-product__copy">
-
-      <h2>A little heads-up.<br /><span>Fewer surprises.</span></h2>
-      <p>See upcoming subscriptions and bills in one place.</p>
-      <a class="life-product__link" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo <span aria-hidden="true">→</span></a>
-    </div>
-    <figure class="life-product__stage life-product__stage--sage">
-
-      <div class="life-product__phone"><img src="src/images/app/15-recurring.webp" alt="BudgetGo recurring payments screen with upcoming bills and subscriptions." width="720" height="1565" loading="lazy" decoding="async" /></div>
-      <figcaption>Actual app preview · Sample data</figcaption>
-    </figure>
-  </article>
-</section>
-
-<section class="life-human" aria-labelledby="human-title"><div class="life-wrap"><div class="life-human-photo"><img src="src/images/life/friends.webp" alt="Two friends making time for a burger and a catch-up outside a café." width="1500" height="1000" loading="lazy" decoding="async" /><div class="life-human-copy"><h2 id="human-title">The moments matter.<br />Make room for them.</h2></div></div></div></section>
   <section class="life-setup" id="how-it-works" aria-labelledby="setup-title">
     <div class="life-wrap">
       <div class="life-setup-heading"><h2 id="setup-title">Less keeping track.<br />More being there.</h2></div>
@@ -192,16 +248,42 @@
       <p class="life-bank-note">Automations require setup. Bank connections depend on availability for your account.</p>
     </div>
   </section>
-  <section class="life-privacy" id="security" aria-labelledby="privacy-title">
-    <div class="life-wrap life-privacy-grid">
-      <div class="life-privacy-copy"><h2 id="privacy-title">A helping hand.<br />You’re still in charge.</h2><a class="life-link" href="privacy_policy.html">Our approach to privacy <span aria-hidden="true">→</span></a></div>
-      <div class="life-privacy-points">
-        <article class="life-privacy-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 4 4M4 20l5-1L20 8a3 3 0 0 0-4-4L5 15z"/></svg><div><h3>You have the final say.</h3><p>AI helps organize the details. You can review, edit, recategorize, or delete your transaction records.</p></div></article>
-        <article class="life-privacy-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg><div><h3>Your data isn’t for sale.</h3><p>We don’t sell your personal information. Our privacy policy explains how your data is used to run BudgetGo.</p></div></article>
-        <article class="life-privacy-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg><div><h3>Yours to take with you.</h3><p>Export your transaction records as CSV whenever you need a copy.</p></div></article>
+  <section class="privacy-first" id="security" aria-labelledby="privacy-title">
+    <div class="life-wrap privacy-first__layout">
+      <div class="privacy-first__intro">
+        <p class="privacy-first__eyebrow">Privacy first</p>
+        <h2 id="privacy-title">Your spending is personal.<br /><span>Keep it that way.</span></h2>
+        <p>Helpful AI. Thoughtful safeguards. You stay in control of your spending records and how you use them.</p>
+        <a class="life-button" href="privacy_policy.html">Our privacy policy<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a>
+      </div>
+      <div class="privacy-first__cards">
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M16 2 28 7v8c0 7-5.5 12-12 15C9.5 27 4 22 4 15V7Zm-5 10v3h10v-3Zm0 6v3h4v-3Zm7 0v3h3v-3Z"/></svg></span>
+          <h3>Personal details, filtered.</h3><p>PII filters help limit exposure of sensitive personal details during OpenAI-powered analysis.</p>
+          <span class="privacy-first__tag">AI privacy</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M3 11V6a3 3 0 0 1 3-3h5v3H6v5Zm18-8h5a3 3 0 0 1 3 3v5h-3V6h-5ZM3 21h3v5h5v3H6a3 3 0 0 1-3-3Zm23 0h3v5a3 3 0 0 1-3 3h-5v-3h5ZM16 8c-5 0-7 3-7 8s2 9 7 9 7-4 7-9-2-8-7-8Zm-5 6v3h2v-3Zm8 0v3h2v-3Zm-7 6a5 5 0 0 0 8 0l-2-1a3 3 0 0 1-4 0Z"/></svg></span>
+          <h3>An extra layer of access.</h3><p>Use biometric authentication to help protect access to BudgetGo.</p>
+          <span class="privacy-first__tag">Biometric protection</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M9 14V9a7 7 0 0 1 14 0v5h1a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4Zm3 0h8V9a4 4 0 0 0-8 0Zm4 5a2 2 0 0 0-1 3.73V26h2v-3.27A2 2 0 0 0 16 19Z"/></svg></span>
+          <h3>Your data isn’t for sale.</h3><p>We don’t sell your personal information. Your spending is personal, and we treat it that way.</p>
+          <span class="privacy-first__tag">No data selling</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3a6 6 0 0 0-5.65 4H3v4h3.35a6 6 0 0 0 11.3 0H29V7H17.65A6 6 0 0 0 12 3Zm8 14a6 6 0 0 0-5.65 4H3v4h11.35a6 6 0 0 0 11.3 0H29v-4h-3.35A6 6 0 0 0 20 17Z"/></svg></span>
+          <h3>You have the final say.</h3><p>Review, edit, or delete your transactions. Export your records as CSV whenever you need them.</p>
+          <span class="privacy-first__tag">Your records. Your control.</span>
+        </article>
       </div>
     </div>
   </section>
+<section class="growth-reviews" id="reviews" aria-labelledby="reviews-title" hidden>
+  <div class="growth-reviews__head"><h2 id="reviews-title">What people<br />are saying.</h2></div>
+  <div class="reviews-rows"></div>
+</section>
 <section class="life-faq" id="faq" aria-labelledby="faq-title">
   <div class="life-wrap">
     <div class="life-faq-intro">
@@ -211,28 +293,36 @@
     </div>
     <div class="life-faq-list">
       <details>
-        <summary>Does BudgetGo make payments for me?</summary>
-        <p>No. BudgetGo tracks spending. You still pay with your usual cards, wallets, or banking apps.</p>
+        <summary>Can I track spending without setting a budget?</summary>
+        <p>Yes. Use BudgetGo to track and understand your spending on its own. When you want a spending limit, set one active budget and allocate it across your categories.</p>
       </details>
       <details>
-        <summary>Do I need to connect my bank?</summary>
-        <p>No. You can add purchases yourself, import transaction files, or set up Apple Shortcuts automations. Supported bank connections are another option when they’re available for your account.</p>
+        <summary>How does my spending get into BudgetGo?</summary>
+        <p>Link a supported bank through Plaid, use Apple Shortcuts for Apple Pay or bank SMS alerts, import a file or receipt photo, or add a purchase yourself. You can combine the sources that fit your day. Our <a href="automations.html">setup guides</a> cover the Shortcuts options.</p>
       </details>
       <details>
-        <summary>Can I use BudgetGo on my phone?</summary>
-        <p>BudgetGo is available for iPhone. See the <a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">App Store listing</a> for current device and iOS requirements.</p>
+        <summary>Will my bank work with BudgetGo?</summary>
+        <p>Search for your bank when linking an account in BudgetGo. Connections use Plaid, and support depends on your institution, country, and account. If yours isn’t listed, you can still import statements or track purchases yourself.</p>
+      </details>
+      <details>
+        <summary>Can I change the categories AI chooses?</summary>
+        <p>Yes. AI helps sort your transactions, and you can review or change any category. Your records stay yours to adjust.</p>
+      </details>
+      <details>
+        <summary>Can I bring in my old transactions?</summary>
+        <p>Import a PDF bank statement, CSV or Excel export, or receipt photo. Review the transactions before confirming the import. Files can contain up to 500 transactions and be up to 5 MB.</p>
+      </details>
+      <details>
+        <summary>Can I see upcoming bills and subscriptions?</summary>
+        <p>Yes. BudgetGo detects recurring bills and subscriptions and shows upcoming charges together, so you can plan around them. It tracks the payments; you manage or cancel subscriptions with their providers.</p>
       </details>
       <details>
         <summary>How much does BudgetGo cost?</summary>
-        <p>An active subscription is required after the free trial. You’ll see current pricing and trial terms in the app before subscribing. Prices can vary by country or region.</p>
+        <p>BudgetGo offers a free trial followed by a subscription. Check the app for the current plans, pricing, and trial terms before subscribing.</p>
       </details>
       <details>
-        <summary>How do I set up automatic tracking?</summary>
-        <p>Use Apple Shortcuts to send supported Apple Pay transactions or bank messages to BudgetGo. Choose the cards or messages you want to track, then review the imported spending in the app. Our <a href="automations.html">step-by-step guides</a> walk you through setup.</p>
-      </details>
-      <details>
-        <summary>What control do I have over my data?</summary>
-        <p>You can review, edit, delete, and export your transaction records. We don’t sell your personal information. Our <a href="privacy_policy.html">privacy policy</a> explains what we collect, how it’s used, and your choices.</p>
+        <summary>Can I export or delete my spending records?</summary>
+        <p>Yes. You can edit or delete transaction records and export them as CSV. We don’t sell your personal information. Read our <a href="privacy_policy.html">privacy policy</a> for details about how your data is used.</p>
       </details>
     </div>
   </div>
@@ -240,7 +330,7 @@
 
   <section class="life-closing" aria-labelledby="closing-title">
     <img src="src/images/hero-people.webp" alt="" width="1942" height="809" loading="lazy" decoding="async" />
-    <h2 id="closing-title">More clarity.<br />More room for life.</h2><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer"><svg class="life-apple-icon" viewBox="4 3 16 19" aria-hidden="true"><path d="M16.7 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7C8.1 8.1 6.8 9 6.1 10.2c-1.5 2.5-.4 6.3 1 8.3.7 1 1.5 2.1 2.6 2.1 1-.1 1.4-.7 2.7-.7s1.7.7 2.8.6c1.2 0 1.9-1 2.6-2 .8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.2ZM14.7 6.7c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.6 1.4-.6.7-1.2 1.8-1 2.8 1 .1 2-.6 2.6-1.4Z"/></svg>Get BudgetGo for iPhone<span class="life-arrow" aria-hidden="true">→</span></a><small>Available on the App Store. Subscription required after trial.</small>
+    <h2 id="closing-title">Ready for a clearer<br />picture of your money?</h2><a class="life-button" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer"><svg class="life-apple-icon" viewBox="4 3 16 19" aria-hidden="true"><path d="M16.7 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7C8.1 8.1 6.8 9 6.1 10.2c-1.5 2.5-.4 6.3 1 8.3.7 1 1.5 2.1 2.6 2.1 1-.1 1.4-.7 2.7-.7s1.7.7 2.8.6c1.2 0 1.9-1 2.6-2 .8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.2ZM14.7 6.7c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.6 1.4-.6.7-1.2 1.8-1 2.8 1 .1 2-.6 2.6-1.4Z"/></svg>Get BudgetGo<span class="life-arrow" aria-hidden="true"><img src="src/images/icons/arrow-up-right-bold.svg" alt="" width="22" height="22" /></span></a>
   </section>
 </main>
 <footer class="life-footer">
@@ -254,8 +344,12 @@
     <div class="life-footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="privacy_policy.html">Privacy Policy</a> &nbsp; / &nbsp; <a href="terms_of_service.html">Terms of Service</a></p></div>
   </div>
 </footer>
-<script src="src/js/product-tour.js"></script>
+<script src="src/data/reviews.js"></script>
 <script src="src/js/home.js"></script>
-<script src="src/js/life-hero-motion.js"></script>
+<script src="src/data/review-preview.js"></script>
+<script src="src/js/home-reviews.js"></script>
+<script src="src/js/life-source-flow.js"></script>
+<script src="src/js/home-insights.js"></script>
+<script src="src/js/home-insight-stories.js"></script>
 </body>
 </html>

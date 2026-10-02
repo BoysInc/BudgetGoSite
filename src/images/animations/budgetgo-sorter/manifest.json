@@ -1,0 +1,29 @@
+{
+  "frameWidth": 650,
+  "frameHeight": 540,
+  "layout": "horizontal",
+  "loop": true,
+  "durationMs": 5600,
+  "frames": [
+    {
+      "file": "frame-01-push.png",
+      "durationMs": 900
+    },
+    {
+      "file": "frame-02-load.png",
+      "durationMs": 900
+    },
+    {
+      "file": "frame-03-sort.png",
+      "durationMs": 1200
+    },
+    {
+      "file": "frame-04-reveal.png",
+      "durationMs": 1200
+    },
+    {
+      "file": "frame-05-clear.png",
+      "durationMs": 1400
+    }
+  ]
+}

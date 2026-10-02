@@ -1,0 +1,50 @@
+[
+  {
+    "file": "cafe-payment.jpg",
+    "photographer": "Marcus Aurelius",
+    "source": "https://www.pexels.com/photo/a-woman-paying-using-smartphone-4064022/",
+    "license": "Pexels"
+  },
+  {
+    "file": "shopping.jpg",
+    "photographer": "Tim Douglas",
+    "source": "https://www.pexels.com/photo/crop-woman-with-shopping-bags-walking-on-street-6567744/",
+    "license": "Pexels"
+  },
+  {
+    "file": "groceries.jpg",
+    "photographer": "RDNE Stock project",
+    "source": "https://www.pexels.com/photo/overhead-shot-of-groceries-in-a-bag-7363077/",
+    "license": "Pexels"
+  },
+  {
+    "file": "coffee.webp",
+    "photographer": "Oak & Bond Coffee Co.",
+    "source": "https://unsplash.com/photos/npJqxZpPIN8",
+    "license": "Unsplash"
+  },
+  {
+    "file": "city.webp",
+    "photographer": "Redd Francisco",
+    "source": "https://unsplash.com/photos/Ra8VlGo0tyI",
+    "license": "Unsplash"
+  },
+  {
+    "file": "takeout-break.jpg",
+    "author": "Manuela González Piper",
+    "source": "https://www.pexels.com/photo/young-woman-enjoying-takeout-food-outdoors-30072979/",
+    "license": "Pexels"
+  },
+  {
+    "file": "snack-run.jpg",
+    "author": "RF._.studio _",
+    "source": "https://www.pexels.com/photo/happy-woman-buying-groceries-in-a-convenience-store-4177708/",
+    "license": "Pexels"
+  },
+  {
+    "file": "friends-pizza.jpg",
+    "author": "Mikhail Nilov",
+    "source": "https://www.pexels.com/photo/happy-friends-hanging-out-together-and-eating-pizza-7886606/",
+    "license": "Pexels"
+  }
+]

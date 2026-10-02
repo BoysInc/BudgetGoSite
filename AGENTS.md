@@ -65,6 +65,9 @@ as `feat`, `fix`, `docs`, `chore`, or `refactor`. Never use the `codex/` prefix.
 
 ## Code
 
+Never add outlines to objects or UI elements. Use a visible non-outline treatment
+for keyboard focus.
+
 Follow standard separation of concerns. Use HTML for semantic structure, CSS
 for presentation, and JavaScript for behavior. Keep rendering and event
 handling separate from calculations, data transformations, and state logic.
@@ -111,3 +114,14 @@ Write comments to explain **why** a decision, constraint, workaround, or
 non-obvious tradeoff exists. Do not use comments to restate what the code
 already clearly does. Keep comments accurate when changing the related code,
 and remove comments that no longer add useful context.
+
+## Marketing copy and imagery
+
+- Never add draft, sample, example, preview, placeholder, or implementation labels to the website UI. Keep development notes in project documentation and chat.
+- Do not add unsolicited trial/subscription disclaimers beneath marketing CTAs, including “Made for iPhone · Subscription required after trial.” Keep pricing answers accurate in the relevant FAQ or pricing content.
+- Use happy everyday-life photography. The homepage hero should show friends in their twenties spending time together. Avoid sad expressions, couples presented as lovers, and people making payments.
+- Generated review copy is for the local design preview only. Publish testimonials only when actual customer quotes are supplied; do not invent public endorsements or ratings.
+
+- BudgetGo’s palette is purple, lime, white and off-white variants, and black. Use purple as the main brand color and lime as the accent; do not introduce unrelated blue, pink, or yellow section backgrounds.
+
+- Build product widgets and insight stories with HTML, CSS, and vector charts. Read the matching BudgetGo Flutter components for layout, fonts, spacing, and grouping; use screenshots as references rather than enlarged UI images.

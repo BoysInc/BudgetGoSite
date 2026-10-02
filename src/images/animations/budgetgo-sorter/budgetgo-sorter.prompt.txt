@@ -1,0 +1,19 @@
+Tool: built-in image_gen
+
+Final edit prompt (single-color mascot):
+Use case: precise-object-edit
+Edit target: the latest five-frame BudgetGo sprite sheet showing a lime-green non-human blob creature pushing a trolley.
+Change ONLY the mascot coloring in all five frames: the entire creature must be ONE uniform lime-green color, including body, arms, hands, legs, and feet. Replace the purple feet with the exact same lime green as the body. No shoes, no clothing, no differently colored body parts, no purple on the creature, no red tongue. The only contrasting details allowed on the creature are its simple black eyes and small black smiling mouth. Soft shading of the same lime-green hue is allowed for 3D volume.
+Keep the exact same non-human blob shape, poses, expressions, size, and placement in all five frames. Keep the purple BudgetGo machine, lime circular door ring, trolley, receipts, icons, and tidy spending cards unchanged. Keep the exact "BudgetGo", "Groceries", "Bills", "Transport", and "Dining" text unchanged.
+Preserve five scenes in the same 3x2 layout with bottom-right cell empty. Preserve all composition and alpha transparency. No human features, no added objects, no borders, no frame numbers, no captions, no watermark.
+
+Character replacement prompt:
+Use case: precise-object-edit
+Edit target: the five-frame BudgetGo sprite sheet just generated.
+Replace the human person in EVERY one of the FIVE scenes with the SAME clearly NON-HUMAN mascot. The mascot is a cute squat lime-green squishy blob creature, a round pear-shaped body, two tiny black oval eyes, a cheerful small curved mouth, two stubby rounded little arms, and two small purple feet. No human head, no human body proportions, no skin, no hair, no clothes, no human hands, no humanoid adult or child. It should look like an imaginary friendly creature or animated jelly bean, unmistakably not a person. Keep the mascot squat and roughly 250 pixels tall within each 512-square cell, completely visible including feet.
+
+Preserve the existing polished matte 3D clay rendering, purple BudgetGo washing-machine-style sorting machine, lime ring, trolley, messy spending receipts and icons at the beginning, neat grouped spending categories at the end. Keep exact "BudgetGo" lettering and exact category labels "Groceries", "Bills", "Transport", "Dining".
+Preserve FIVE narrative scenes: 1 creature pushes trolley with messy spending; 2 creature loads spending into open machine; 3 creature watches spending swirl inside closed machine; 4 creature happily reveals tidy category cards on output tray; 5 creature pushes trolley with organized cards.
+
+CRITICAL ASSET LAYOUT: image exactly 1536x1024, 3 columns x 2 rows of equal 512x512 cells. Five scenes in reading order; sixth bottom-right cell COMPLETELY transparent. Each scene's entire character, trolley, machine and output tray must fit within its own cell with at least 28 pixels transparent margin on all four sides. No element may spill into a neighboring cell. Scale scenes down enough to fit. Machine must stay at the SAME coordinates and scale inside every cell, with its top at y=140, left x=280, right edge x=460, and floor baseline y=425. Character to its left. Use genuinely transparent alpha around the isolated objects with only a tiny subtle ground contact shadow; REMOVE ALL atmospheric background, gradients, colored glow clouds and vignette.
+No frame numbers, no labels except brand and spending categories, no borders, no captions, no watermark.

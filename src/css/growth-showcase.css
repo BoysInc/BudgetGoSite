@@ -1,0 +1,200 @@
+.growth-showcase { padding:30px 0 0; }
+.growth-showcase__heading { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-bottom:48px; }
+.growth-showcase__heading .life-button { box-shadow:0 10px 25px #0002; }
+.growth-showcase__cards { display:grid; gap:28px; }
+.growth-case { display:grid; grid-template-columns:minmax(0,1fr) 380px; min-height:610px; padding:10px; border-radius:30px; overflow:hidden; background:#e8def8; }
+.growth-case--categories { background:#d9fabf; }
+.growth-case--insights { background:#f0f0ef; }
+.growth-case--recurring { background:#dac8fc; }
+.growth-case__visual { display:grid; place-items:stretch; padding:0 10px 0 0; min-width:0; overflow:hidden; }
+
+.growth-case__info { display:flex; flex-direction:column; align-items:flex-start; padding:30px; border-radius:24px; background:#0b0b0c; color:#fff; }
+.growth-case__tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px; }
+.growth-case__tags>span { font-size:12px; padding:4px 9px; background:#202022; border-radius:30px; line-height:1.3; }
+.growth-case h3 { font-size:34px; line-height:1.13; letter-spacing:-.035em; }
+.growth-case__info>p { margin-top:17px; font-size:17px; line-height:1.5; color:#b7bcbc; }
+.growth-case__bottom { width:100%; margin-top:auto; padding-top:27px; border-top:1px solid #282829; }
+.growth-case__bottom>strong { font-size:36px; font-weight:500; color:#a3ff62; letter-spacing:-.04em; line-height:1.15; display:block; }
+.growth-case__bottom>p { margin-top:7px; color:#b7bcbc; font-size:14px; }
+.growth-case__bottom .life-button { display:flex; justify-content:space-between; background:#fff; color:#101010; margin-top:27px; width:100%; font-size:15px; }
+.growth-case__bottom .life-button:hover { background:#a3ff62; }
+.growth-case__bottom .life-arrow { background:#111; }
+.growth-case__bottom .life-arrow img { filter:invert(1); }
+@media(max-width:1100px) {
+  .growth-case { grid-template-columns:minmax(0,1fr) 350px; }
+  .growth-case__info { padding:26px; }
+  .growth-case h3 { font-size:31px; }
+  .growth-case__bottom>strong { font-size:33px; }
+}
+@media(max-width:760px) {
+  .growth-showcase { padding-top:10px; }
+  .growth-showcase__heading { margin-bottom:30px; align-items:flex-start; }
+  .growth-showcase__heading h2 { font-size:34px; }
+  .growth-showcase__heading>.life-button { font-size:12px; gap:10px; padding-left:15px; min-height:42px; white-space:nowrap; }
+  .growth-showcase__heading .life-arrow { width:28px; height:28px; }
+  .growth-showcase__heading .life-arrow img { width:18px; height:18px; }
+  .growth-case { grid-template-columns:1fr; padding:8px; border-radius:26px; }
+  .growth-case__visual { padding:0 0 8px; }
+  .growth-case__info { padding:26px; border-radius:21px; min-height:430px; }
+  .growth-case__tags { margin-bottom:23px; }
+  .growth-case__info>p { font-size:16px; }
+  .growth-case__bottom { margin-top:35px; }
+  .growth-case__bottom>strong { font-size:33px; }
+}
+@media(max-width:420px) {
+  .growth-showcase__heading { align-items:center; gap:12px; }
+  .growth-showcase__heading h2 { font-size:30px; max-width:150px; }
+  .growth-case__info { padding:23px; }
+  .growth-case h3 { font-size:29px; }
+}
+/* The cards share one scroll boundary, so each new feature covers the previous one. */
+@media(min-width:761px) and (min-height:730px) and (prefers-reduced-motion:no-preference) {
+  .growth-case { position:sticky; top:28px; }
+  .growth-case:nth-child(2) { top:40px; }
+  .growth-case:nth-child(3) { top:52px; }
+  .growth-case:nth-child(4) { top:64px; }
+}
+.feature-ui { height:590px; min-width:0; padding:38px; border-radius:24px; background:#0d0f12; color:#fff; display:flex; flex-direction:column; justify-content:center; }
+.feature-ui__label { font-size:13px; color:#cbb5ff; margin-bottom:26px; }
+.feature-ui__summary { display:flex; justify-content:space-between; align-items:center; gap:25px; margin-bottom:30px; }
+.feature-ui__summary>div:first-child { display:flex; flex-direction:column; min-width:0; }
+.feature-ui__summary span { color:#bbb; font-size:14px; }
+.feature-ui__summary strong { font-size:clamp(30px,3vw,44px); letter-spacing:-.05em; font-weight:600; margin:5px 0; }
+.feature-ui__summary small { font-size:12px; color:#aaa; }
+.category-donut { width:180px; aspect-ratio:1; flex:none; border-radius:50%; background:conic-gradient(var(--purple-on-dark) 0 45.6%,#a3ff62 45.6% 54.5%,#cbb5ff 54.5% 61.4%,#fff 61.4% 66.5%,#787380 66.5%); position:relative; }
+.category-donut:after { content:''; position:absolute; inset:23%; border-radius:50%; background:#0d0f12; }
+.category-rows { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.category-rows li { display:flex; align-items:center; gap:14px; background:#1b1d23; padding:15px 18px; border-radius:15px; }
+.category-dot { width:12px; height:12px; border-radius:4px; background:var(--purple-on-dark); flex:none; }
+.category-rows li:nth-child(2) .category-dot { background:#a3ff62; }
+.category-rows li:nth-child(3) .category-dot { background:#cbb5ff; }
+.category-rows li:nth-child(4) .category-dot { background:#fff; }
+.category-rows li>div { flex:1; }
+.category-rows strong { font-size:15px; font-weight:500; }
+.category-rows small { display:block; font-size:11px; color:#b5b4b9; margin-top:2px; }
+.category-rows b { font-size:14px; font-weight:500; }
+.upcoming-payment { display:flex; align-items:center; gap:14px; padding:20px; border-radius:18px; background:#1b1d23; }
+.upcoming-payment>div { flex:1; min-width:0; }
+.upcoming-payment strong { font-size:15px; font-weight:500; display:block; }
+.upcoming-payment small { color:#b5b4b9; font-size:11px; display:block; margin:3px 0; }
+.upcoming-payment>b { font-weight:500; font-size:14px; }
+.payment-avatar { display:grid; place-items:center; width:40px; height:40px; border-radius:50%; background:#a3ff62; color:#111; font-size:14px; flex:none; }
+.payment-avatar--purple { background:#7132f5; color:#fff; }
+.payment-avatar--white { background:#eee; }
+.trend-total>span { font-size:12px; text-transform:uppercase; color:#bbb; }
+.trend-total>strong { display:block; font-size:44px; font-weight:600; letter-spacing:-.05em; margin-top:8px; }
+.trend-total strong small { font-size:15px; background:#decaff; color:#21103e; padding:6px 10px; border-radius:20px; vertical-align:middle; letter-spacing:0; }
+.trend-total>p { font-size:13px; color:#bbb; margin-top:6px; }
+.feature-trend-chart { width:100%; height:auto; margin-top:40px; overflow:visible; }
+.feature-trend-chart__line { fill:none; stroke:#b48aff; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.feature-trend-chart__prior { fill:none; stroke:#787380; stroke-width:3; stroke-dasharray:7 8; }
+.trend-chart-labels { display:flex; justify-content:space-between; color:#aaa; font-size:12px; margin-top:12px; }
+.trend-takeaway { color:#a3ff62; font-size:14px; margin-top:28px; }
+.feature-ui--recurring h4 { font-size:36px; font-weight:500; line-height:1.2; letter-spacing:-.04em; }
+.recurring-summary { display:flex; justify-content:space-between; align-items:center; margin:22px 0; font-size:14px; color:#bbb; }
+.recurring-summary strong { font-size:36px; color:#cbb5ff; font-weight:500; }
+.feature-ui--recurring .upcoming-payment+.upcoming-payment { margin-top:14px; }
+@media(max-width:1100px) and (min-width:761px) {
+  .feature-ui { padding:26px; }
+  .category-donut { width:130px; }
+  .feature-ui__summary { gap:12px; }
+  .feature-ui__summary strong { font-size:28px; }
+  .category-rows li { padding:15px 12px; }
+}
+@media(max-width:760px) {
+  .feature-ui { height:auto; min-height:420px; padding:25px; }
+  .feature-ui__summary { gap:15px; }
+  .feature-ui__summary strong { font-size:28px; }
+  .category-donut { width:100px; }
+  .category-rows li { padding:14px 12px; gap:10px; }
+  .category-rows b { font-size:12px; }
+  .category-rows strong { font-size:14px; }
+  .upcoming-payment { padding:16px 12px; gap:10px; }
+  .upcoming-payment strong { font-size:13px; }
+  .payment-avatar { width:32px; height:32px; font-size:12px; }
+  .trend-total>strong { font-size:34px; }
+  .trend-total strong small { font-size:12px; padding:5px 7px; }
+  .feature-ui--recurring h4 { font-size:30px; }
+}
+@media(max-width:400px) {
+  .feature-ui { padding:20px; }
+  .feature-ui__summary strong { font-size:25px; }
+  .category-donut { width:88px; }
+}
+.feature-ui h4 { margin:0; }
+@font-face { font-family:Manrope; src:url('../fonts/manrope-variable.ttf') format('truetype'); font-weight:200 800; font-display:swap; }
+/* Ported from BudgetCard, DueSoonRecurringCards, and HomeVisualTheme. */
+.feature-ui--overview { font-family:Manrope,Arial,sans-serif; background:#101010; color:#f8f8f5; padding:28px; }
+.overview-balance { padding:26px; border-radius:32px; background:linear-gradient(135deg,#824fff 0%,#7132f5 55%,#5d2ce3 100%); }
+.overview-balance__top { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.overview-period { display:inline-flex; align-items:center; gap:12px; min-height:40px; padding:10px 16px; background:#0000003d; border-radius:100px; font-size:14px; font-weight:700; }
+.overview-period svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.overview-visibility { border:0; background:transparent; color:white; display:grid; place-items:center; padding:0; width:48px; height:48px; cursor:pointer; border-radius:50%; }
+.overview-visibility:hover { background:#ffffff15; }
+.overview-visibility svg { width:26px; height:26px; fill:none; stroke:currentColor; stroke-width:2; }
+.overview-visibility[aria-pressed=true] svg { opacity:.5; }
+.overview-visibility:focus-visible { outline:3px solid #98ef5a; outline-offset:2px; }
+.overview-balance>strong { font-family:Manrope,Arial,sans-serif; font-size:64px; font-weight:800; letter-spacing:-2px; line-height:1.2; margin:12px 0 8px; }
+.overview-comparison { display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:14px; font-weight:700; }
+.overview-comparison b { display:grid; place-items:center; min-height:28px; padding:2px 12px; background:#98ef5a; color:#101010; border-radius:100px; font-weight:800; margin:0; }
+.feature-ui--overview .feature-ui__row-heading { display:flex; justify-content:space-between; align-items:center; gap:8px; margin:24px 0 12px; }
+.feature-ui--overview .feature-ui__row-heading h4 { font-size:20px; font-weight:800; }
+.feature-ui--overview .feature-ui__row-heading span { color:#b9b9b5; font-size:12px; font-weight:700; }
+.feature-ui--overview .feature-ui__row-heading>div>span { display:block; margin-top:4px; }
+.feature-ui__row-heading>a { color:#b9b9b5; font-size:14px; font-weight:700; min-height:48px; display:flex; align-items:center; }
+.overview-due-group { background:#19191c; border-radius:24px; overflow:hidden; }
+.overview-due-group .upcoming-payment { padding:16px; background:transparent; border-radius:0; gap:12px; }
+.overview-due-group .payment-avatar { background:#98ef5a; color:#101010; font-size:15px; font-weight:700; width:40px; height:40px; }
+.overview-due-group .upcoming-payment strong { font-size:14px; font-weight:700; }
+.overview-due-group .upcoming-payment small { font-size:10px; font-weight:700; color:#b9b9b5; margin:0 0 2px; }
+.overview-due-group .upcoming-payment>b { font-size:14px; font-weight:700; }
+.overview-upcoming { display:flex; justify-content:initial; align-items:center; gap:10px; min-height:48px; padding:12px 16px; font-size:12px; font-weight:700; color:#f8f8f5; margin:0 16px; border-top:1px solid #ffffff0f; }
+.overview-upcoming>span:nth-child(2) { flex:1; }
+.overview-upcoming>strong { font-weight:800; }
+.overview-avatar-stack { display:flex; width:40px; flex:none; }
+.overview-avatar-stack i { display:grid; place-items:center; width:24px; height:24px; border-radius:50%; background:#7132f5; color:white; font-size:8px; font-style:normal; flex:none; }
+.overview-avatar-stack i+i { margin-left:-8px; background:#b994f5; color:#201330; }
+.overview-upcoming>svg { width:16px; height:16px; fill:none; stroke:#b9b9b5; stroke-width:2; flex:none; }
+.overview-upcoming:focus-visible,.feature-ui__row-heading>a:focus-visible { outline:3px solid #98ef5a; outline-offset:-3px; }
+@media(max-width:1100px) and (min-width:761px) {
+  .feature-ui--overview { padding:22px; }
+  .overview-balance { padding:22px; }
+  .overview-balance>strong { font-size:52px; }
+}
+@media(max-width:760px) {
+  .feature-ui--overview { padding:18px; min-height:0; }
+  .overview-balance { padding:20px; border-radius:28px; }
+  .overview-balance>strong { font-size:44px; }
+  .overview-period { font-size:12px; padding:8px 12px; gap:6px; }
+  .overview-visibility { width:36px; height:40px; }
+  .overview-visibility svg { width:22px; height:22px; }
+  .overview-comparison { font-size:11px; gap:8px; }
+  .overview-comparison b { font-size:12px; padding-inline:10px; }
+  .overview-due-group .upcoming-payment { flex-wrap:wrap; }
+  .overview-due-group .upcoming-payment>div { flex-basis:calc(100% - 52px); }
+  .overview-due-group .upcoming-payment>b { margin-left:52px; }
+  .overview-upcoming { flex-wrap:wrap; margin:0 12px; padding:12px 4px; }
+  .overview-upcoming>span:nth-child(2) { flex-basis:calc(100% - 55px); }
+  .overview-upcoming>strong { margin-left:50px; flex:1; }
+}
+/* Scale recurring content to the artwork area used by the reference case cards. */
+@media(min-width:761px) {
+  .feature-ui--recurring { padding:32px; justify-content:space-between; }
+  .feature-ui--recurring .feature-ui__label { margin-bottom:0; font-size:16px; }
+  .feature-ui--recurring h4 { font-size:44px; }
+  .feature-ui--recurring .recurring-summary { margin:10px 0; font-size:17px; }
+  .feature-ui--recurring .recurring-summary strong { font-size:45px; }
+  .feature-ui--recurring .upcoming-payment { min-height:95px; padding:20px; }
+  .feature-ui--recurring .upcoming-payment strong { font-size:20px; }
+  .feature-ui--recurring .upcoming-payment small { font-size:13px; }
+  .feature-ui--recurring .upcoming-payment>b { font-size:20px; }
+  .feature-ui--recurring .payment-avatar { width:54px; height:54px; font-size:18px; }
+  .feature-ui--recurring .upcoming-payment+.upcoming-payment { margin-top:0; }
+}
+@media(min-width:761px) and (max-width:1100px) {
+  .feature-ui--recurring { padding:24px; }
+  .feature-ui--recurring h4 { font-size:35px; }
+  .feature-ui--recurring .upcoming-payment strong { font-size:16px; }
+  .feature-ui--recurring .upcoming-payment>b { font-size:16px; }
+  .feature-ui--recurring .payment-avatar { width:42px; height:42px; }
+}

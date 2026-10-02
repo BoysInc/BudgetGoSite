@@ -1,0 +1,28 @@
+{
+  "widgets": {
+    "source": "/Users/timiafolabi/Documents/Projects/BudgetGo/ios/BudgetGoRecurringWidget/InsightsPreviews",
+    "catalog": "lib/ui/core/reports/presentation/report_widget_catalog.dart",
+    "files": [
+      "where_it_went.png",
+      "cash_flow.png",
+      "commitments.png"
+    ]
+  },
+  "stories": {
+    "insight-stories.png": "/Users/timiafolabi/Desktop/Screenshot 2026-10-02 at 15.10.14.png",
+    "saving-stories.png": "/Users/timiafolabi/Desktop/Screenshot 2026-10-02 at 15.10.07.png"
+  },
+  "implementation": "Widgets and stories are native HTML/CSS. PNGs are retained as source references only.",
+  "overview_sources": [
+    "lib/ui/core/home/widgets/budget_card.dart",
+    "lib/ui/core/home/widgets/due_soon_recurring_cards.dart",
+    "lib/ui/core/home/widgets/home_timeline_picker.dart",
+    "lib/ui/core/home/widgets/home_visual_theme.dart",
+    "lib/utils/app_gradients.dart"
+  ],
+  "forecast_sources": [
+    "lib/ui/core/reports/widgets/forecast_landing_card.dart",
+    "lib/ui/core/reports/widgets/forecast_running_total_chart.dart",
+    "ios/BudgetGoRecurringWidget/InsightsPreviews/outlook.png"
+  ]
+}
