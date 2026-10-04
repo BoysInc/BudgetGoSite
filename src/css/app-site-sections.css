@@ -406,7 +406,7 @@ html.motion .privacy__text .w { opacity: .18; }
   .step__icon { width: 40px; height: 40px; }
   .step h3 { font-size: 17px; }
   .overlay { font-size: 12px; padding: 10px 12px 10px 10px; }
-  .overlay--voice { left: 0; max-width: 220px; }
+  .overlay--voice { right: 0; left: auto; max-width: 220px; }
   .overlay--files { right: 0; }
   .file { padding: 8px 12px 8px 8px; }
   .file svg { width: 28px; height: 28px; padding: 6px; }
