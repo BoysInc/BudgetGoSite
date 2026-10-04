@@ -1,6 +1,6 @@
 # BudgetGo
 
-> BudgetGo is a personal-finance app for iPhone that keeps a complete, reconciled record of your spending. It combines transactions from Apple Pay, bank SMS alerts, linked accounts, bank statements, and manual entry, flags what is missing, categorizes everything with AI, and surfaces insights that help you save. Users can review and edit every transaction, category, and allocation.
+> BudgetGo is a personal-finance app for iPhone. Its tagline is "Let's make sense of all of it." It brings spending together from voice entry, Apple Pay, bank SMS alerts, Apple Wallet (FinanceKit), banks linked through Plaid, imported statements, and manual entry. AI categorizes every transaction, and personalized insights and analytics show where money goes and where to save. Users can review and edit every transaction, category, and allocation.
 
 BudgetGo is published by GraphLeaf LLC and is available on the App Store: https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917
 
@@ -8,18 +8,20 @@ Key facts:
 
 - Platform: iPhone (iOS). Automations use Apple's built-in Shortcuts app.
 - Modes: one active budget at a time (a spending limit for the period, allocated across categories), or tracking-only mode with no budget.
-- Transaction sources: Apple Pay payments (Shortcuts Wallet automation), bank SMS alerts (Shortcuts Message automation), Apple Wallet accounts, banks linked through Plaid where supported, imported files (PDF bank statements, CSV and Excel exports, receipt photos), and manual entry.
+- Transaction sources: voice entry (say what you spent, then review before saving), Apple Pay payments (Shortcuts Wallet automation), bank SMS alerts (Shortcuts Message automation), Apple Wallet accounts through FinanceKit, one or more banks linked through Plaid where supported, imported files (PDF bank statements, CSV and Excel exports, receipt photos), and manual entry.
 - Imports: PDF, Excel, or CSV up to 5 MB and 500 transactions per file. Duplicates already imported from the same file are skipped, nothing is added until the user confirms, and uploaded files are deleted after 24 hours.
 - SMS alerts are parsed on the device. Only recognized financial messages create transactions.
+- Privacy: PII filters limit sensitive details during AI analysis, biometric unlock is available, and BudgetGo does not sell personal information.
 - AI categorizes transactions automatically. Users can change any category.
-- Insights: pacing alerts, saving opportunities, and end-of-period reviews.
-- Recurring bills and subscriptions are detected and shown as upcoming charges.
-- Data export: transactions can be exported as CSV.
+- Insights: a playable recap of short stories covering pacing, saving opportunities, overspending, lifestyle creep, and period comparisons, plus end-of-period budget reviews with suggestions.
+- Analytics: spending trend (day, week, month), forecast and safe-to-spend, cash flow (money in vs out), top merchants, and payments.
+- Recurring bills and subscriptions are detected and shown as upcoming charges ("Due this week").
+- Data export: transactions can be exported as CSV, PDF, or Excel.
 - Support: support@budgetgo.ai
 
 ## Pages
 
-- [Home](https://budgetgo.ai/): Product overview, how BudgetGo reconciles multiple sources, and its features
+- [Home](https://budgetgo.ai/): Product overview: ways to add spending, connected banks, AI sorting, insight stories, analytics, upcoming bills, budget modes, privacy safeguards, and FAQ
 - [Automation setup guide](https://budgetgo.ai/automations.html): Step-by-step setup of Apple Shortcuts automations for Apple Pay payments and bank SMS alerts, plus troubleshooting
 - [BudgetGo MCP (coming soon)](https://budgetgo.ai/mcp.html): Waitlist for the upcoming BudgetGo Model Context Protocol server, which will let MCP-compatible AI assistants answer questions using a user's BudgetGo spending data
 - [Support](https://budgetgo.ai/support.html): Contact options for product, account, and billing help, and privacy requests

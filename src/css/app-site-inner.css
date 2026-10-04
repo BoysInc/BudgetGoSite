@@ -1,0 +1,74 @@
+/* Inner pages adopt the app's dark Home theme. Loaded last so it overrides the older light shell tokens. */
+.inner-page {
+  --bg: #101010; --bg-soft: #141416; --bg-muted: #19191c; --bg-deep: #19191c;
+  --surface: #19191c; --surface-strong: #222226; --surface-soft: #19191c; --surface-high: #303030; --surface-highest: #393939;
+  --text: #f8f8f5; --text-inverse: #f8f8f5; --text-soft: #b9b9b5; --text-faint: #b9b9b5;
+  --line: rgba(248, 248, 245, .08); --line-strong: rgba(248, 248, 245, .14); --control-line: #777773;
+  --accent: #b994f5; --accent-strong: #7132f5; --accent-light: #b994f5; --accent-soft: #291e43;
+  --paper: #101010; --ink: #f8f8f5; --muted: #b9b9b5; --raised: #303030;
+  --purple: #b994f5; --purple-on-dark: #b994f5;
+  background: var(--background); color: var(--ink);
+  font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 700;
+}
+html:has(.inner-page) { background: #101010; color-scheme: dark; }
+.inner-page main { padding-top: 92px; }
+.inner-page h1 { font-weight: 800; letter-spacing: -.05em; line-height: 1.04; }
+.inner-page h2, .inner-page h3 { font-weight: 800; }
+.inner-page h2 span { color: var(--muted); }
+.page-pill { background: #19191c; color: var(--secondary); }
+.page-pill::before { display: none; }
+.inner-page .section-label, .inner-page .hero-eyebrow { color: var(--secondary); font-weight: 800; letter-spacing: .16em; }
+
+/* Buttons follow the homepage: white primary, neutral secondary. */
+.inner-page .btn-primary, .inner-page .life-button { background: #fff; color: #101010; }
+.inner-page .btn-primary:hover, .inner-page .life-button:hover { background: #e4e4e0; color: #101010; }
+.inner-page .btn-secondary { background: var(--surface-high); color: var(--ink); border: 0; }
+.inner-page .btn-secondary:hover { background: #3a3a3e; }
+
+/* Shared header and footer come from app-site.css; undo the old shell's nav pills. */
+.inner-page .nav-links > a:first-child { background: transparent; padding: 0; color: var(--muted); }
+.inner-page .nav-links > a[aria-current="page"] { color: var(--ink); text-decoration: none; }
+
+/* Light tint cards from the old light theme become the app's dark surfaces. */
+.guide-jump a, .flow-node, .guide-section:nth-of-type(even), .bars, .chat-input, .waitlist, .support-form-field textarea { background: #19191c; color: var(--ink); }
+.guide-section:nth-of-type(even) { background: #141416; }
+.guide-section:nth-of-type(even) .guide-step .step-index { box-shadow: 0 0 0 .4rem #141416; }
+.flow-node-final { background: #291e43; }
+.guide-step .step-index { background: #291e43; color: var(--secondary); }
+.guide-note::before { color: #101010; }
+.support-contact { background: #19191c; }
+.support-route:nth-child(2) { background: #291e43; }
+.support-route:nth-child(3) { background: #222226; }
+.support-route-number { background: #303030; color: var(--ink); }
+.support-form-field textarea { border: 0; }
+.support-final { background: linear-gradient(135deg, #824fff 0%, #7132f5 55%, #5d2ce3 100%); }
+.support-final .btn:hover { background: #e4e4e0; }
+.chat { background: #141416; border: 0; }
+.msg-user { background: #291e43; }
+.mcp-feature:nth-child(2) { background: #291e43; }
+.mcp-feature:nth-child(3) { background: #222226; }
+.bar-delta.down { color: #98ef5a; }
+.waitlist button { background: #fff; color: #101010; }
+.waitlist button:hover, .waitlist button:focus-visible { background: #e4e4e0; }
+.waitlist-status.err { color: #ff8a80; }
+.legal-page a { color: var(--secondary); }
+
+/* Lime is reserved for meaning (money in, spending down); decorative accents on these pages are white. */
+.inner-page { --action: #ffffff; --on-action: #101010; --lime: #ffffff; }
+.inner-page .hero-eyebrow-dot, .inner-page .chip-dot { display: none; }
+.waitlist-status.ok { color: var(--ink); }
+
+/* The old shell made the header a white bar; restore the floating glass header from app-site.css. */
+.inner-page .site-header { position: fixed; inset: 14px 0 auto; z-index: 50; background: none; border: 0; backdrop-filter: none; pointer-events: none; }
+.inner-page .nav-row { width: min(var(--wrap), calc(100% - var(--gutter) * 2)); max-width: none; min-height: 66px; margin-inline: auto; padding: 0 10px 0 18px; border-radius: 999px; background: rgba(25, 25, 28, .72); backdrop-filter: blur(24px) saturate(1.4); -webkit-backdrop-filter: blur(24px) saturate(1.4); pointer-events: auto; }
+.inner-page .brand { font-size: 21px; font-weight: 800; letter-spacing: -.04em; }
+.inner-page .brand img { width: 34px; height: 34px; border-radius: 10px; }
+.inner-page .nav-links { gap: 28px; }
+.inner-page .nav-links > a:not(.btn) { font-size: 14px; font-weight: 700; color: var(--muted); }
+.inner-page .nav-links > a:not(.btn):hover, .inner-page .nav-links > a[aria-current="page"] { color: var(--ink); }
+.inner-page .nav-links > .btn { color: #101010; padding: 0 18px; min-height: 44px; }
+.inner-page .nav-links > .btn svg { width: 18px; height: 18px; }
+@media (max-width: 960px) {
+  .inner-page .nav-links { position: fixed; top: 92px; left: var(--gutter); right: var(--gutter); inset: 92px var(--gutter) auto; border-radius: 28px; background: rgba(25, 25, 28, .97); max-height: none; }
+  .inner-page .nav-links > a:not(.btn) { font-size: 18px; padding: 12px 8px; }
+}
