@@ -377,12 +377,10 @@ html.motion .privacy__text .w { opacity: .18; }
 .closing h2 { color: var(--on-lime); }
 .closing__chip { color: var(--ink); }
 
-/* Share sits at the foot of each story, like the app's story controls. */
+/* Decorative share control, drawn as in the app's story screen; not interactive on the site. */
 .story__actions { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 18px; }
-.story__share { display: grid; place-items: center; width: 46px; height: 46px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: #f8f8f5; cursor: pointer; transition: background .2s; }
-.story__share:hover { background: rgba(255, 255, 255, .22); }
+.story__share { display: grid; place-items: center; width: 46px; height: 46px; padding: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: #f8f8f5; }
 .story__share svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-.story__status { font-size: 12px; }
 
 /* Mobile pass — phones scale to the viewport, grids never exceed it, pinned scenes become stacked flows. */
 .inputs__grid, .banks__grid, .due__grid, .modes__grid, .sort__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }

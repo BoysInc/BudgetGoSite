@@ -13,7 +13,6 @@
   window.addEventListener('scroll', updateHeader, { passive: true });
 
   bindModeToggle();
-  bindStoryShare();
   if (reduceMotion || !finePointer) return;
   bindHeroPointer();
   bindMagnetic();
@@ -49,24 +48,6 @@
         button.style.transform = 'translate(' + x * 0.18 + 'px,' + y * 0.28 + 'px)';
       });
       button.addEventListener('pointerleave', function () { button.style.transform = ''; });
-    });
-  }
-
-  /** Shares a story's headline and the page link, falling back to copying the link. */
-  function bindStoryShare() {
-    document.querySelectorAll('[data-story-share]').forEach(function (button) {
-      button.addEventListener('click', async function () {
-        const story = button.closest('.story');
-        const status = story.querySelector('.story__status');
-        const title = story.querySelector('h3').textContent;
-        const url = location.origin + location.pathname + '#insights';
-        try {
-          if (navigator.share) await navigator.share({ title: 'BudgetGo', text: title, url: url });
-          else { await navigator.clipboard.writeText(url); status.textContent = 'Link copied'; }
-        } catch (error) {
-          if (error.name !== 'AbortError') status.textContent = 'Copy the page link from your browser.';
-        }
-      });
     });
   }
 
