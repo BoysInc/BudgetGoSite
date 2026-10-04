@@ -72,3 +72,9 @@ html:has(.inner-page) { background: #101010; color-scheme: dark; }
   .inner-page .nav-links { position: fixed; top: 92px; left: var(--gutter); right: var(--gutter); inset: 92px var(--gutter) auto; border-radius: 28px; background: rgba(25, 25, 28, .97); max-height: none; }
   .inner-page .nav-links > a:not(.btn) { font-size: 18px; padding: 12px 8px; }
 }
+
+/* Waitlist: one focus treatment on the pill itself — no border, no outline, no nested ring on the input. */
+.waitlist { border: 0; background: #19191c; transition: background .2s, box-shadow .2s; }
+.waitlist:focus-within { outline: none; background: #222226; box-shadow: 0 0 0 2px rgba(248, 248, 245, .9); }
+.waitlist input:focus-visible { box-shadow: none; outline: none; }
+.waitlist button:focus-visible { outline: none; box-shadow: 0 0 0 3px #222226, 0 0 0 5px #f8f8f5; }
