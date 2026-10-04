@@ -97,3 +97,5 @@ html:has(.inner-page) { background: #101010; color-scheme: dark; }
   .automations-page .guide-step { padding: 20px; }
   .automations-page .guide-shots img { max-height: 300px; }
 }
+/* BudgetGo screens on the guide use the same Shots iPhone 17 Pro mockups as the homepage. */
+.automations-page .guide-shots img.guide-mockup { width: 230px; max-width: 100%; max-height: none; border-radius: 0; box-shadow: none; filter: drop-shadow(0 24px 34px rgba(0, 0, 0, .55)); }
