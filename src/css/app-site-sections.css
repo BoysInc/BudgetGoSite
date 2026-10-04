@@ -447,3 +447,18 @@ html.motion .privacy__text .w { opacity: .18; }
   .closing__chip--b { right: 0; top: 230px; }
   .due-card { padding: 14px; }
 }
+
+/* Budget card — the app's Home card: financial gradient, translucent period pill, eye toggle, progress bar. */
+.budget-card { position: relative; padding: 22px; border-radius: var(--radius-hero); background: var(--financial); color: #fff; overflow: hidden; }
+.budget-card::after { content: ""; position: absolute; top: -40%; right: -20%; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, .16), transparent 65%); pointer-events: none; }
+.budget-card__top { display: flex; justify-content: space-between; align-items: center; }
+.app-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: rgba(0, 0, 0, .24); font-size: 15px; }
+.app-pill svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.budget-card .eye { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 1.8; }
+.budget-card__amount { display: block; margin-top: 22px; font-size: clamp(48px, 5.5vw, 72px); font-weight: 800; letter-spacing: -.045em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.budget-card__label { display: block; margin-top: 4px; font-size: 15px; opacity: .9; }
+.progress { display: block; height: 8px; margin: 18px 0 12px; border-radius: 9px; background: rgba(255, 255, 255, .14); overflow: hidden; }
+.progress__fill { display: block; height: 100%; border-radius: inherit; background: #fff; }
+.budget-card__foot { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+.budget-card__foot em { font-style: normal; opacity: .85; }
+.trend-line i { font-style: normal; color: var(--lime); }
