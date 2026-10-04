@@ -80,9 +80,6 @@ html:not(.motion) .sort-row .c { opacity: 1; transform: none; }
 .reel-intro { flex: none; width: min(520px, 82vw); margin-right: 48px; }
 .reel-intro .lead { margin-top: 24px; }
 .recap { display: flex; align-items: center; gap: 14px; margin-top: 36px; padding: 12px; border-radius: var(--radius-data); background: var(--recap); color: var(--on-recap); max-width: 460px; }
-.recap__mini { flex: none; display: grid; align-content: space-between; width: 70px; height: 90px; padding: 8px; border-radius: 14px; background: #291d50; color: #d8c5ef; font-size: 8px; transform: rotate(-4deg); }
-.recap__mini em { font-style: normal; }
-.recap__mini b { color: #f8f8f5; font-size: 12px; line-height: 1.1; }
 .recap__copy { flex: 1; display: grid; gap: 4px; }
 .recap__copy span { color: #6a350a; font-size: 10px; letter-spacing: 1.1px; text-transform: uppercase; }
 .recap__copy b { font-size: 18px; line-height: 1.2; letter-spacing: -.02em; }
@@ -425,8 +422,7 @@ html.motion .privacy__text .w { opacity: .18; }
   .story__number { font-size: 52px; }
   .reel-intro { width: 82vw; }
   .recap { gap: 10px; }
-  .recap__mini { display: none; }
-  .bento { grid-auto-rows: auto; }
+    .bento { grid-auto-rows: auto; }
   .widget { min-height: 220px; padding: 22px; }
   .widget__chart { width: calc(100% + 44px); max-width: none; margin: auto -22px -22px; }
   .cbars { margin: auto -22px 0; }
@@ -462,3 +458,13 @@ html.motion .privacy__text .w { opacity: .18; }
 .budget-card__foot { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
 .budget-card__foot em { font-style: normal; opacity: .85; }
 .trend-line i { font-style: normal; color: var(--lime); }
+
+/* Recap card — the app's fanned mini stories: Pacing and Overspending behind, Savings in front. */
+.recap__stack { position: relative; flex: none; width: 108px; height: 104px; }
+.recap__card { position: absolute; top: 6px; display: flex; flex-direction: column; width: 62px; height: 88px; padding: 7px; border-radius: 12px; color: #f8f8f5; overflow: hidden; box-shadow: 0 8px 18px rgba(50, 22, 0, .35); }
+.recap__card em { font-style: normal; font-size: 9px; opacity: .85; }
+.recap__card svg { width: 100%; height: auto; margin-top: auto; }
+.recap__card b { margin-top: 4px; font-size: 18px; letter-spacing: -.03em; line-height: 1; }
+.recap__card--pace { left: 0; background: #17313a; transform: rotate(-12deg); }
+.recap__card--over { right: 0; background: #401e25; transform: rotate(10deg); }
+.recap__card--save { left: 22px; top: 0; z-index: 1; width: 66px; height: 96px; background: #153b2d; }
