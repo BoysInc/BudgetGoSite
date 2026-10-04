@@ -46,7 +46,6 @@ html.motion .step.is-active { opacity: 1; background: var(--surface); }
 .iphone--story { --w: 360px; }
 .state { opacity: 0; visibility: hidden; transition: opacity .6s var(--ease), visibility .6s, transform .6s var(--ease); transform: scale(1.04); }
 .inputs__stage[data-active="0"] [data-overlay="0"], .inputs__stage[data-active="1"] [data-overlay="1"], .inputs__stage[data-active="2"] [data-overlay="2"], .inputs__stage[data-active="3"] [data-overlay="3"] { opacity: 1; visibility: visible; transform: none; transition-delay: .25s; }
-.inputs__stage[data-active="2"] .overlay--sms { transform: translate(-50%, 0); }
 .inputs__stage:not([data-active]) .state[data-state="0"], .inputs__stage[data-active="0"] .state[data-state="0"], .inputs__stage[data-active="1"] .state[data-state="1"], .inputs__stage[data-active="2"] .state[data-state="2"], .inputs__stage[data-active="3"] .state[data-state="3"] { opacity: 1; visibility: visible; transform: none; }
 .inputs__progress { display: flex; gap: 6px; }
 .inputs__progress span { width: 28px; height: 4px; border-radius: 4px; background: var(--surface-high); transition: background .4s, width .4s; }
@@ -411,7 +410,7 @@ html.motion .privacy__text .w { opacity: .18; }
   .file { padding: 8px 12px 8px 8px; }
   .file svg { width: 28px; height: 28px; padding: 6px; }
   .file:nth-child(2) { margin-left: 0; }
-  .overlay--sms { width: 100%; }
+  .overlay--sms { left: 0; max-width: 230px; }
   .overlay--hub { left: 0; }
   .sort-row { padding: 12px 14px 12px 12px; gap: 10px; }
   .sort-row .logo { width: 38px; height: 38px; }
