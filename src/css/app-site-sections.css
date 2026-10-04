@@ -141,7 +141,7 @@ html:not(.motion) .sort-row .c { opacity: 1; transform: none; }
 .widget--merchants { grid-column: span 2; grid-row: span 2; }
 .widget--payments { grid-column: span 4; }
 .widget--trend { grid-column: span 4; }
-.widget__chart { width: calc(100% + 52px); height: auto; margin: auto -26px -26px; }
+.widget__chart { width: calc(100% + 52px); max-width: none; height: auto; margin: auto -26px -26px; }
 .fbars { display: flex; align-items: flex-end; gap: 10px; height: 110px; margin-top: auto; }
 .fbars span { flex: 1; height: var(--h); border-radius: 12px 12px 4px 4px; background: var(--c); transform-origin: bottom; }
 .cbars { display: grid; gap: 10px; margin: auto -26px 0; }
@@ -428,7 +428,7 @@ html.motion .privacy__text .w { opacity: .18; }
   .recap__mini { display: none; }
   .bento { grid-auto-rows: auto; }
   .widget { min-height: 220px; padding: 22px; }
-  .widget__chart { width: calc(100% + 44px); margin: auto -22px -22px; }
+  .widget__chart { width: calc(100% + 44px); max-width: none; margin: auto -22px -22px; }
   .cbars { margin: auto -22px 0; }
   .podium { min-height: 220px; }
   .tbars { gap: 6px; }
