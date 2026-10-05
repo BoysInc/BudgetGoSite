@@ -207,12 +207,14 @@ html.motion .widget:not(.is-in) .cbar { transform: scaleX(0); }
   .widget--spending { min-height: 360px; }
 }
 @media (max-width: 900px) {
-  .hero { padding-top: 130px; }
+  /* Clear the three reel rows behind the title; a fixed value lets them run into the headline. */
+  .hero { padding-top: calc(96px + var(--reel) * 3.2 + 24px); }
   .fan--left { transform: translateX(-112%) rotate(-9deg); }
   .fan--right { transform: translateX(12%) rotate(9deg); }
   .inputs__grid, .sort__grid, .modes__grid { grid-template-columns: 1fr; }
     .insights__pin { min-height: 0; }
-  .insights__track { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px; scrollbar-width: none; }
+  /* scroll-padding keeps the gutter: without it, snapping the first panel flush left drops the page margin. */
+  .insights__track { align-items: stretch; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); padding-bottom: 20px; scrollbar-width: none; }
   .insights__track > * { scroll-snap-align: start; }
   .reel-intro { margin-right: 8px; }
 }
@@ -253,7 +255,7 @@ html.motion .widget:not(.is-in) .cbar { transform: scaleX(0); }
 .sticker--2 { background: #9db8ff; color: #1a2540; }
 
 /* Banks */
-.banks { padding: clamp(80px, 10vw, 140px) 0; }
+.banks { padding: clamp(80px, 10vw, 140px) 0; overflow-x: clip; }
 .banks__grid, .due__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; }
 .banks__stage, .due__stage { position: relative; display: grid; justify-items: center; }
 .iphone--banks, .iphone--due { --w: 360px; }
@@ -276,7 +278,7 @@ html.motion .widget:not(.is-in) .cbar { transform: scaleX(0); }
 .banks__plaid img { height: 22px; width: auto; opacity: .9; }
 
 /* Due soon */
-.due { padding: clamp(80px, 10vw, 140px) 0; }
+.due { padding: clamp(80px, 10vw, 140px) 0; overflow-x: clip; }
 .due-card { max-width: 440px; margin-top: 34px; padding: 18px; border-radius: var(--radius-card); background: var(--surface); }
 .due-card__head { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 16px; }
 .due-card__head span { color: var(--muted); font-size: 14px; }
@@ -425,7 +427,9 @@ html.motion .privacy__text .w { opacity: .18; }
   .widget { min-height: 220px; padding: 22px; }
   .widget__chart { width: calc(100% + 44px); max-width: none; margin: auto -22px -22px; }
   .cbars { margin: auto -22px 0; }
-  .podium { min-height: 220px; }
+  .podium { min-height: 250px; }
+  /* Shortest bar must still hold its avatar offset, rank and amount. */
+  .podium div { min-height: 112px; }
   .tbars { gap: 6px; }
   .tbars div > span { height: 100px; }
   .tbars b { font-size: 11px; }
@@ -439,7 +443,7 @@ html.motion .privacy__text .w { opacity: .18; }
   .closing__copy { padding-top: 44px; }
   .closing h2 { font-size: 34px; }
   .closing__chip--a { left: 0; top: 70px; }
-  .closing__chip--b { right: 0; top: 230px; }
+  .closing__chip--b { right: 0; top: 310px; }
   .due-card { padding: 14px; }
 }
 
