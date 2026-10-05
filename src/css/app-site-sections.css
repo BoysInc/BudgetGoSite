@@ -27,7 +27,7 @@
 .marquee:hover .marquee__track { animation-play-state: paused; }
 .marquee ul { display: flex; gap: 44px; padding-right: 44px; }
 .marquee li { display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: clamp(15px, 1.4vw, 18px); font-weight: 800; letter-spacing: -.01em; white-space: nowrap; }
-.marquee li img { width: 30px; height: 30px; border-radius: 9px; }
+.marquee .tile { width: 40px; height: 40px; border-radius: 12px; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* Inputs — pinned four-step story */
@@ -37,11 +37,15 @@
 .step { display: flex; gap: 18px; padding: 20px; border-radius: var(--radius-card); transition: background .4s, opacity .4s; }
 .step h3 { font-size: 21px; letter-spacing: -.02em; }
 .step p { margin-top: 6px; color: var(--muted); font-size: 15px; line-height: 1.6; }
-.step__icon { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border-radius: 50%; background: var(--surface); color: var(--muted); transition: background .4s, color .4s; }
-.step__icon svg { width: 20px; height: 20px; }
+/* Data Hub icon tile: each icon sits on a dark tint of its own color. */
+.tile { --tile: #28282d; display: grid; place-items: center; flex: none; background: var(--tile); }
+.tile img { width: 76%; height: 76%; }
+.tile--voice { --tile: #2a2048; }
+.tile--import, .tile--bank { --tile: #17304f; }
+.tile--sms, .tile--spreadsheet { --tile: #173a2b; }
+.step__icon { width: 56px; height: 56px; border-radius: 17px; }
 html.motion .step { opacity: .42; }
 html.motion .step.is-active { opacity: 1; background: var(--surface); }
-.step.is-active .step__icon { background: #fff; color: #101010; }
 .inputs__stage { position: relative; display: grid; justify-items: center; gap: 22px; }
 .iphone--story { --w: 360px; }
 .state { opacity: 0; visibility: hidden; transition: opacity .6s var(--ease), visibility .6s, transform .6s var(--ease); transform: scale(1.04); }
@@ -404,7 +408,7 @@ html.motion .privacy__text .w { opacity: .18; }
   .fan--right { transform: translateX(18%) rotate(9deg); }
   h2 { font-size: clamp(32px, 9vw, 42px); }
   .step { padding: 14px; gap: 14px; }
-  .step__icon { width: 40px; height: 40px; }
+  .step__icon { width: 44px; height: 44px; border-radius: 14px; }
   .step h3 { font-size: 17px; }
   .overlay { font-size: 12px; padding: 10px 12px 10px 10px; }
   .overlay--voice { right: 0; left: auto; max-width: 220px; }
