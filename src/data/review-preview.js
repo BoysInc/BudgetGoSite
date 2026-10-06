@@ -1,9 +1,9 @@
 // Fictional copy requested for the local design preview; never public endorsements.
 window.BUDGETGO_REVIEW_PREVIEW = [
-  { quote: 'I used to wonder where all the little purchases went. Seeing my coffee runs, groceries, and subscriptions together makes it much easier to keep track.', name: 'Maya A.', avatar: 'src/images/reviews/person-1.jpg' },
-  { quote: 'I like that I can just track my spending without setting up a budget first. It feels like a small habit I could actually stick with.', name: 'Jordan W.', avatar: 'src/images/reviews/person-2.jpg' },
-  { quote: 'The category view is the part I keep coming back to. It makes the details easy to understand, and I can change anything that doesn’t look right.', name: 'Daniel M.', avatar: 'src/images/reviews/person-3.jpg' },
-  { quote: 'Coffee, lunch, a ride home. It’s the small things that add up. Having them in one place gives me a much clearer picture of my week.', name: 'Alex R.', avatar: 'src/images/reviews/person-4.jpg' },
-  { quote: 'The upcoming bills view is such a useful little check-in. I can see what’s coming before I make plans for the weekend.', name: 'Nina K.', avatar: 'src/images/reviews/person-5.jpg' },
-  { quote: 'I want to understand my money without making a spreadsheet every Sunday. The spending breakdown makes the whole thing feel easier.', name: 'Sophie T.', avatar: 'src/images/reviews/person-6.jpg' }
+  { quote: 'Logged my lunch by just saying it out loud and it picked the right category. Took about five seconds. I’ve stuck with it way longer than any other app I’ve tried.', rating: 5, name: 'Maya A.', avatar: 'src/images/reviews/person-1.jpg' },
+  { quote: 'I never wanted a full budget, I just wanted to see where my money goes. Being able to skip the budget and only track is the main reason I downloaded it.', rating: 4, name: 'Jordan W.', avatar: 'src/images/reviews/person-2.jpg' },
+  { quote: 'Imported my bank statement and almost everything was sorted already. I changed a couple of categories and it remembered them the next time. Saved me a whole evening.', rating: 5, name: 'Daniel M.', avatar: 'src/images/reviews/person-3.jpg' },
+  { quote: 'Found a subscription I forgot I was paying for. Cancelled it the same day. The insights alone paid for the app for me.', rating: 5, name: 'Alex R.', avatar: 'src/images/reviews/person-4.jpg' },
+  { quote: 'The upcoming bills screen is what I open most. Rent, phone, gym, I can see what’s due this week before I decide what to spend on.', rating: 4, name: 'Nina K.', avatar: 'src/images/reviews/person-5.jpg' },
+  { quote: 'Clean and simple. I check it for a minute after dinner and I know where I stand for the month. Wish it had a widget, but otherwise no complaints.', rating: 5, name: 'Sophie T.', avatar: 'src/images/reviews/person-6.jpg' }
 ];

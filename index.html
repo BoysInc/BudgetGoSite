@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="src/images/favicon-rounded.png" />
   <link rel="stylesheet" href="src/css/app-site.css?v=20261004" />
   <link rel="stylesheet" href="src/css/app-site-phone.css?v=20261004" />
-  <link rel="stylesheet" href="src/css/app-site-sections.css?v=20261004" />
+  <link rel="stylesheet" href="src/css/app-site-sections.css?v=20261010" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"BudgetGo","operatingSystem":"iOS","applicationCategory":"FinanceApplication","description":"Track spending from voice, bank statements, bank SMS alerts, Apple Wallet and banks connected through Plaid. AI sorts every purchase, and insights show where to save.","url":"https://budgetgo.ai/","installUrl":"https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917","publisher":{"@type":"Organization","name":"GraphLeaf LLC","email":"support@budgetgo.ai"}}</script>
 </head>
 <body class="app-site" id="top">
@@ -316,34 +316,15 @@
   </div>
 </section>
 
-<!-- One budget, or none. Interactive. -->
-<section class="modes" aria-labelledby="modes-title">
-  <div class="wrap modes__grid">
-    <div>
-      <p class="eyebrow">Your call</p>
-      <h2 id="modes-title" data-split>One budget,<br /><span>or none at all.</span></h2>
-      <p class="lead">Set one budget across your categories, or just track what you spend.</p>
-      <div class="mode-toggle" role="group" aria-label="Choose a mode">
-        <button type="button" aria-pressed="true" data-mode="budget">With a budget</button>
-        <button type="button" aria-pressed="false" data-mode="track">Just tracking</button>
-        <span class="mode-toggle__thumb" aria-hidden="true"></span>
-      </div>
-    </div>
-    <div class="modes__stage">
-      <div class="budget-card budget-card--xl" data-mode-card data-mode-state="budget" aria-live="polite">
-        <div class="budget-card__top"><span class="app-pill"><span data-mode-pill>Budget period</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span><svg class="eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <strong class="budget-card__amount" data-mode-amount>$1,284.50</strong>
-        <span class="budget-card__label" data-mode-label>Remaining</span>
-        <div class="mode-budget"><span class="progress"><span class="progress__fill" style="width:68%"></span></span><span class="budget-card__foot">Spent $2,715.50 of $4.00k<em>Day 21 of 30</em></span></div>
-        <div class="mode-track"><span class="trend-line"><i>▼</i> <b>12% less</b> than last week</span></div>
-      </div>
-      <div class="suggest">
-        <p><svg aria-hidden="true"><use href="#i-play"/></svg>Suggestion for next period</p>
-        <b>Raise Food delivery to $190 and lower Groceries to $211.</b>
-        <em>Your total stays the same.</em>
-      </div>
+<!-- Reviews: hidden until real reviews exist (see src/data/reviews.js). -->
+<section class="reviews" id="reviews" aria-labelledby="reviews-title" hidden>
+  <div class="wrap">
+    <div class="reviews__head">
+      <p class="eyebrow">Reviews</p>
+      <h2 id="reviews-title" data-split>People love BudgetGo</h2>
     </div>
   </div>
+  <div class="reviews-rows"></div>
 </section>
 
 <!-- Privacy: words light up as you read. -->
@@ -430,6 +411,9 @@
 </footer>
 
 <script src="src/js/home.js"></script>
+<script src="src/data/reviews.js"></script>
+<script src="src/data/review-preview.js"></script>
+<script src="src/js/home-reviews.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
