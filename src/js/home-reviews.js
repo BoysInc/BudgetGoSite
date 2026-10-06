@@ -1,9 +1,7 @@
 (() => {
   const section = document.getElementById('reviews');
   if (!section) return;
-  const MIN_RATING = 4;
-  // Rated reviews below the minimum are left out; unrated ones (social posts, emails) have no stars to compare.
-  const realReviews = (window.BUDGETGO_REVIEWS || []).filter(review => review && review.quote && review.name && !(Number.isFinite(review.rating) && review.rating < MIN_RATING));
+  const realReviews = (window.BUDGETGO_REVIEWS || []).filter(review => review && review.quote && review.name);
   const localPreview = ['127.0.0.1', 'localhost', '[::1]'].includes(window.location.hostname);
   const reviews = realReviews.length ? realReviews : localPreview ? window.BUDGETGO_REVIEW_PREVIEW || [] : [];
   if (!reviews.length) return;
@@ -16,13 +14,7 @@
     if (Number.isFinite(review.rating) && review.rating >= 1 && review.rating <= 5) {
       const rating = document.createElement('p');
       rating.className = 'review-stars';
-      rating.setAttribute('role', 'img');
-      rating.setAttribute('aria-label', review.rating + ' out of 5 stars');
-      for (let i = 1; i <= 5; i++) {
-        const star = document.createElement('span');
-        star.className = i <= review.rating ? 'review-star is-on' : 'review-star';
-        rating.appendChild(star);
-      }
+      rating.textContent = review.rating + ' / 5 · ' + review.source;
       card.appendChild(rating);
     }
     const quote = document.createElement('blockquote');

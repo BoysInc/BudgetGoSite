@@ -68,7 +68,7 @@
       const split = new window.SplitText(heading, { type: 'lines' });
       gsap.from(split.lines, { yPercent: 40, opacity: 0, filter: 'blur(8px)', duration: 1.1, stagger: 0.1, ease: 'expo.out', scrollTrigger: { trigger: heading, start: 'top 85%' } });
     });
-    document.querySelectorAll('.section-head .lead, .sort__copy .lead, .reel-intro .lead').forEach(function (el) {
+    document.querySelectorAll('.section-head .lead, .sort__copy .lead, .modes .lead, .reel-intro .lead').forEach(function (el) {
       gsap.from(el, { y: 24, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
     });
   }

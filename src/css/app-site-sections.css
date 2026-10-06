@@ -180,33 +180,32 @@ html.motion .widget:not(.is-in) .cbar { transform: scaleX(0); }
 .fbars span:nth-child(4) { transition-delay: .24s; }
 .fbars span:nth-child(5) { transition-delay: .32s; }
 
-/* Reviews */
-.reviews { padding: clamp(80px, 10vw, 140px) 0; overflow: hidden; }
-.reviews__head { margin-bottom: clamp(36px, 5vw, 64px); }
-.reviews-rows { overflow: hidden; }
-.review-track { display: flex; width: max-content; }
-.reviews-grid { display: flex; gap: 16px; padding-right: 16px; flex: none; }
-.review-card { display: flex; flex-direction: column; flex: 0 0 360px; width: 360px; min-height: 300px; padding: 28px; border-radius: var(--radius-card); background: var(--surface); }
-.review-card:nth-child(3n + 2) { background: #291e43; }
-.review-card blockquote { margin: 0 0 32px; font-size: 19px; line-height: 1.5; letter-spacing: -.01em; }
-.review-card footer { display: flex; align-items: center; gap: 12px; margin-top: auto; }
-.review-avatar { width: 48px; height: 48px; flex: none; border-radius: 50%; object-fit: cover; object-position: 50% 35%; }
-.review-identity { display: grid; gap: 4px; }
-.review-name { font-size: 15px; font-weight: 800; }
-.review-meta { font-size: 12px; color: var(--muted); }
-.review-stars { display: flex; gap: 4px; margin-bottom: 16px; }
-.review-star { width: 18px; height: 18px; background: var(--surface-highest); clip-path: polygon(50% 0, 62% 35%, 98% 36%, 69% 57%, 80% 91%, 50% 70%, 20% 91%, 31% 57%, 2% 36%, 38% 35%); }
-.review-star.is-on { background: #ffc531; }
-[data-scrolling-reviews] .review-track { animation: reviews-scroll 70s linear infinite; }
-.reviews-rows:hover .review-track, .reviews-rows:focus-within .review-track { animation-play-state: paused; }
-.reviews-rows:focus-visible { box-shadow: inset 0 0 0 3px var(--secondary); }
-@keyframes reviews-scroll { to { transform: translateX(-50%); } }
-@media (max-width: 600px) { .review-card { flex-basis: 290px; width: 290px; min-height: 280px; } }
-@media (prefers-reduced-motion: reduce) {
-  [data-scrolling-reviews] .review-track { animation: none; }
-  .reviews-rows { overflow-x: auto; }
-  .reviews-grid--duplicate { display: none !important; }
-}
+/* Budget modes */
+.modes { padding: clamp(80px, 10vw, 140px) 0; }
+.modes__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; }
+.modes .lead { margin-top: 24px; }
+.mode-toggle { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; margin-top: 36px; padding: 5px; border-radius: 999px; background: var(--surface); }
+.mode-toggle button { position: relative; z-index: 1; min-height: 48px; padding: 0 22px; border: 0; border-radius: 999px; background: none; color: var(--muted); font-size: 15px; font-weight: 800; cursor: pointer; transition: color .3s; }
+.mode-toggle button[aria-pressed="true"] { color: #101010; }
+.mode-toggle__thumb { position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px); border-radius: 999px; background: #fff; transition: transform .45s var(--ease); }
+.mode-toggle[data-mode="track"] .mode-toggle__thumb { transform: translateX(100%); }
+.modes__stage { position: relative; display: grid; gap: 16px; }
+.budget-card--xl { padding: 30px; border-radius: var(--radius-hero); box-shadow: 0 50px 100px -40px rgba(113, 50, 245, .6); }
+.budget-card--xl .app-pill { padding: 10px 16px; font-size: 15px; }
+.budget-card--xl .eye { width: 26px; height: 16px; }
+.budget-card--xl .budget-card__amount { margin-top: 22px; font-size: clamp(48px, 5.5vw, 72px); letter-spacing: -.045em; }
+.budget-card--xl .budget-card__label { font-size: 15px; }
+.budget-card--xl .progress { height: 8px; margin: 18px 0 12px; }
+.budget-card--xl .budget-card__foot { font-size: 14px; }
+.mode-track { display: none; margin-top: 14px; font-size: 16px; }
+.mode-track i { font-style: normal; color: var(--lime); }
+[data-mode-state="track"] .mode-budget { display: none; }
+[data-mode-state="track"] .mode-track { display: block; }
+.suggest { display: grid; gap: 8px; padding: 22px; border-radius: var(--radius-card); background: #291e43; }
+.suggest p { display: flex; align-items: center; gap: 8px; color: var(--secondary); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.suggest p svg { width: 14px; height: 14px; }
+.suggest b { font-size: 18px; line-height: 1.35; }
+.suggest em { font-style: normal; color: var(--muted); font-size: 14px; }
 
 @media (max-width: 1100px) {
   .bento { grid-template-columns: repeat(2, 1fr); }
@@ -219,7 +218,7 @@ html.motion .widget:not(.is-in) .cbar { transform: scaleX(0); }
   .hero { padding-top: calc(96px + var(--reel) * 3.2 + 24px); }
   .fan--left { transform: translateX(-112%) rotate(-9deg); }
   .fan--right { transform: translateX(12%) rotate(9deg); }
-  .inputs__grid, .sort__grid { grid-template-columns: 1fr; }
+  .inputs__grid, .sort__grid, .modes__grid { grid-template-columns: 1fr; }
     .insights__pin { min-height: 0; }
   /* scroll-padding keeps the gutter: without it, snapping the first panel flush left drops the page margin. */
   .insights__track { align-items: stretch; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); padding-bottom: 20px; scrollbar-width: none; }
@@ -389,9 +388,9 @@ html.motion .privacy__text .w { opacity: .18; }
 .story__share svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Mobile pass — phones scale to the viewport, grids never exceed it, pinned scenes become stacked flows. */
-.inputs__grid, .banks__grid, .due__grid, .sort__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.inputs__grid, .banks__grid, .due__grid, .modes__grid, .sort__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 @media (max-width: 900px) {
-  .inputs__grid, .banks__grid, .due__grid, .sort__grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  .inputs__grid, .banks__grid, .due__grid, .modes__grid, .sort__grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
   .iphone--story, .iphone--banks, .iphone--due { --w: min(300px, 74vw); }
   .inputs { padding: 80px 0; }
   .inputs__stage, .banks__stage, .due__stage { justify-self: center; width: 100%; }
@@ -443,6 +442,9 @@ html.motion .privacy__text .w { opacity: .18; }
   .tbars b { font-size: 11px; }
   .stats div { padding: 14px; }
   .stats b { font-size: 20px; }
+  .budget-card--xl { padding: 22px; }
+  .mode-toggle { display: grid; width: 100%; }
+  .mode-toggle button { padding: 0 12px; font-size: 14px; }
   .privacy__box { padding: 28px 18px; }
   .privacy__text { font-size: clamp(28px, 8vw, 36px); }
   .closing__copy { padding-top: 44px; }

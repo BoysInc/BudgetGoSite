@@ -12,6 +12,7 @@
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
 
+  bindModeToggle();
   if (reduceMotion || !finePointer) return;
   bindHeroPointer();
   bindMagnetic();
@@ -47,6 +48,29 @@
         button.style.transform = 'translate(' + x * 0.18 + 'px,' + y * 0.28 + 'px)';
       });
       button.addEventListener('pointerleave', function () { button.style.transform = ''; });
+    });
+  }
+
+  /** Switches the demo card between budget mode and spend-only tracking, mirroring the app's two Home states. */
+  function bindModeToggle() {
+    const toggle = document.querySelector('.mode-toggle');
+    const card = document.querySelector('[data-mode-card]');
+    if (!toggle || !card) return;
+    const copy = {
+      budget: { pill: 'Budget period', amount: '$1,284.50', label: 'Remaining' },
+      track: { pill: 'All spending', amount: '$2,715.50', label: 'Spent' }
+    };
+    toggle.addEventListener('click', function (event) {
+      const button = event.target instanceof Element && event.target.closest('button[data-mode]');
+      if (!button) return;
+      const mode = button.dataset.mode;
+      toggle.dataset.mode = mode;
+      toggle.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b === button)); });
+      card.dataset.modeState = mode;
+      card.querySelector('[data-mode-pill]').textContent = copy[mode].pill;
+      card.querySelector('[data-mode-amount]').textContent = copy[mode].amount;
+      card.querySelector('[data-mode-label]').textContent = copy[mode].label;
+      if (window.gsap && !reduceMotion) window.gsap.fromTo(card, { scale: 0.97, rotate: mode === 'track' ? -1.5 : 1.5 }, { scale: 1, rotate: 0, duration: 0.7, ease: 'elastic.out(1, 0.6)' });
     });
   }
 })();
