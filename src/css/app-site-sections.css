@@ -71,7 +71,7 @@ html.motion .step.is-active > div, html.motion .step.is-active .step__icon { opa
 .sort-row .tx__t b { font-size: 16px; }
 .sort-row__cat { position: relative; display: block; height: 22px; font-style: normal; font-size: 13px; }
 .sort-row__cat i { position: absolute; left: 0; display: inline-flex; align-items: center; gap: 6px; font-style: normal; transition: opacity .45s var(--ease), transform .45s var(--ease); }
-.sort-row__cat .u { color: #77777a; }
+.sort-row__cat .u { color: #8a8a8e; }
 .sort-row__cat .c { padding: 2px 9px 2px 6px; border-radius: 999px; background: color-mix(in srgb, var(--soft) 14%, var(--surface)); color: var(--soft); opacity: 0; transform: translateY(8px); }
 .sort-row__cat .c svg { width: 13px; height: 13px; fill: currentColor; }
 .sort-row.is-sorted .u { opacity: 0; transform: translateY(-8px); }

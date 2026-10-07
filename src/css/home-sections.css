@@ -223,7 +223,7 @@
 .home .download-panel h2 span { color: #655276; }
 .home .download-panel > p:not(.section-label) { grid-column: 1 / 3; grid-row: 3; max-width: 32rem; margin: .4rem 0 0; color: #51445e; font-size: .88rem; font-weight: 500; }
 .home .download-panel .app-store-badge-link { --button-height: 3.6rem; grid-column: 3; grid-row: 2 / 4; margin: 0 0 0 2rem; align-self: center; }
-.home .download-panel .app-store-badge-link:focus-visible { outline-color: #392349; }
+.home .download-panel .app-store-badge-link:focus-visible { box-shadow: 0 0 0 2px #392349; }
 
 .home .site-footer { padding: 4.5rem 0 1.8rem; background: #101112; border-color: #2a292e; }
 .home .footer-grid { grid-template-columns: 1.5fr .75fr 1fr 1fr; gap: 3rem; }
@@ -239,8 +239,8 @@
 .home .product-tour :is(a, button, [role="tabpanel"]):focus-visible,
 .home .home-section :is(a, button, summary):focus-visible,
 .home .site-footer a:focus-visible {
-  outline: 2px solid #d6baff;
-  outline-offset: 5px;
+  outline: none;
+  box-shadow: 0 0 0 2px #d6baff;
 }
 
 @media (max-width: 1100px) {

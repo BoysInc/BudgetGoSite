@@ -155,7 +155,7 @@
 .insight-story--habit .story-share { border:0; background:#29282d; }
 .story-hint { border:0; background:transparent; color:inherit; font:500 11px Manrope,Arial,sans-serif; margin:14px auto 0; padding:0; cursor:pointer; }
 .story-share-status { font-size:11px; text-align:center; }
-.insight-story button:focus-visible { outline:3px solid currentColor; outline-offset:3px; }
+.insight-story button:focus-visible { outline: none; box-shadow: 0 0 0 3px currentColor; }
 .insight-story button:hover { filter:brightness(1.08); }
 .story-reopen { display:flex; flex-direction:column; gap:24px; margin:auto; border:0; background:transparent; color:inherit; font:500 14px Manrope,Arial,sans-serif; text-align:left; cursor:pointer; }
 .story-reopen span { font-size:30px; font-weight:800; line-height:1.15; }

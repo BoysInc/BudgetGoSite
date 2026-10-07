@@ -29,7 +29,7 @@
 .review-identity { display:grid; gap:4px; }
 
 .reviews-rows { overflow:hidden; margin-inline:-50px; }
-.reviews-rows:focus-visible { outline:2px solid white; outline-offset:8px; border-radius:12px; }
+.reviews-rows:focus-visible { outline: none; box-shadow: 0 0 0 2px white; border-radius:12px; }
 .review-track { display:flex; width:max-content; }
 [data-scrolling-reviews] .review-track { animation:reviews-scroll 65s linear infinite; }
 .reviews-rows:hover .review-track,.reviews-rows:focus-within .review-track { animation-play-state:paused; }

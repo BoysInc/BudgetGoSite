@@ -67,7 +67,7 @@
 @font-face { font-family: Switzer; src: url('../fonts/switzer-600.woff2') format('woff2'); font-weight: 600 900; font-style: normal; font-display: swap; }
 :root { --paper:#fff; --ink:#0b0b0b; --muted:#595c59; --surface:#f0f0ef; --raised:#e7e7e5; --line:#dededb; --control-line:#80807a; --lime:#a3ff62; --lime-ink:#48752e; --purple:#7132f5; --purple-on-dark:#b48aff; }
 /* Both rings stay visible when a control crosses light and dark brand surfaces. */
-:where(a,button,input,select,textarea,summary):focus-visible { outline:3px solid #17131f; outline-offset:3px; box-shadow:0 0 0 3px #fff; }
+:where(a,button,input,select,textarea,summary):focus-visible { outline: none; box-shadow: 0 0 0 2px #fff, 0 0 0 5px #17131f; }
 html { color-scheme:light; }
 body { font-family:Switzer,Arial,sans-serif; font-weight:500; line-height:1.5; }
 h1,h2,h3 { font-weight:500; letter-spacing:-.035em; line-height:1.12; }

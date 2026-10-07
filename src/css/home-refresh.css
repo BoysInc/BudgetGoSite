@@ -29,7 +29,7 @@
 .home .tour-section-intro h2 { font-size: clamp(2rem, 3.9vw, 3.45rem); line-height: 1.15; font-weight: 700; letter-spacing: -.055em; }
 .home .tour-section-intro h2 > span { color: #89868f; }
 .home .tour-section-intro > p { font-weight: 500; font-size: .88rem; }
-.home a:focus-visible, .home button:focus-visible, .home summary:focus-visible { outline: 2px solid #d2c0f6; outline-offset: 5px; }
+.home a:focus-visible, .home button:focus-visible, .home summary:focus-visible { outline: none; box-shadow: 0 0 0 2px #d2c0f6; }
 .home .motion-reveal.is-visible { animation: section-enter 650ms cubic-bezier(.2,.65,.3,1) both; }
 @keyframes section-enter { from { transform: translateY(18px); } to { transform: translateY(0); } }
 @media (min-width: 901px) and (prefers-reduced-motion: no-preference) {

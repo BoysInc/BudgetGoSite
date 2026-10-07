@@ -212,7 +212,7 @@
 .trend-context { display: flex; gap: .7rem; align-items: center; color: #b9b2c5; border-radius: 20px; padding: .8rem 1rem; background: #232026; margin-top: 1.25rem; min-height: 62px; font-size: .7rem; line-height: 1.7; }
 .trend-context-icon { color: var(--chart-accent); font-size: 1.4rem; }
 .trend-visual .visual-caption { margin-top: auto; padding-top: 1rem; }
-.category-choice:focus-visible, .category-reset:focus-visible, .hero-categories a:focus-visible { outline: 2px solid #ddd2f9; outline-offset: 3px; }
+.category-choice:focus-visible, .category-reset:focus-visible, .hero-categories a:focus-visible { outline: none; box-shadow: 0 0 0 2px #ddd2f9; }
 
 @media (prefers-reduced-motion: no-preference) {
   .breakdown-visual.is-visible .donut-segment { animation: segment-arrive 700ms cubic-bezier(.16,1,.3,1) both; animation-delay: var(--slice-delay); }

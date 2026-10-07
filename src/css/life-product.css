@@ -73,7 +73,7 @@
 .life-product .tour-tabs button:hover:not([aria-selected="true"]) { background: #303030; color: var(--lp-ink); }
 .life-product .tour-tabs button:focus-visible,
 .life-product .life-product__link:focus-visible,
-.life-product .life-product__panel:focus-visible { outline: 2px solid var(--lp-purple); outline-offset: 5px; }
+.life-product .life-product__panel:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--lp-purple); }
 .life-product .life-product__panel {
   display: grid;
   grid-template-columns: 1fr 1fr;

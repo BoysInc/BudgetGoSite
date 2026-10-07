@@ -56,7 +56,7 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button, input, select, textarea { font: inherit; }
 :where(a, button, input, select, textarea, summary) { touch-action: manipulation; }
-:where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--accent-light); outline-offset: 5px; }
+:where(a, button, input, select, textarea, summary):focus-visible { outline: none; box-shadow: 0 0 0 2px var(--accent-light); }
 h1, h2, h3 { margin: 0; font-weight: 800; line-height: 1.12; letter-spacing: -0.035em; text-wrap: balance; }
 p, ul, figure { margin: 0; }
 ul { padding-left: 1.15rem; }

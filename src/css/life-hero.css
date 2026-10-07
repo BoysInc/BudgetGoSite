@@ -46,7 +46,7 @@
   cursor: pointer; border-radius: 16px; -webkit-user-select: none; user-select: none;
 }
 .life-orbit-target:disabled { cursor: default; }
-.life-orbit-target:focus-visible { outline: 2px solid var(--purple); outline-offset: 6px; }
+.life-orbit-target:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--purple); }
 .life-orbit[data-price-active="true"] img { filter: drop-shadow(0 0 12px #b994f54d) drop-shadow(0 12px 16px #0003); }
 .life-price-card {
   position: absolute; left: var(--price-x, 0px); top: var(--price-y, 0px); z-index: 6;
@@ -80,7 +80,7 @@
   transition: color .2s, border-color .2s;
 }
 .life-motion-toggle:hover { color: var(--ink); border-color: var(--muted); }
-.life-motion-toggle:focus-visible { outline: 2px solid var(--purple); outline-offset: 4px; }
+.life-motion-toggle:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--purple); }
 .life-motion-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .life-motion-toggle .life-motion-play { display: none; }
 .life-motion-toggle[data-paused="true"] .life-motion-pause { display: none; }

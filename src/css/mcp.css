@@ -336,8 +336,8 @@
     }
 
     .waitlist:focus-within {
-      outline: 2px solid var(--accent-light);
-      outline-offset: 3px;
+      outline: none;
+      box-shadow: 0 0 0 2px var(--accent-light);
     }
 
     .waitlist button {
