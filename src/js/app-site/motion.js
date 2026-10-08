@@ -129,11 +129,11 @@
           gsap.delayedCall(0.3 + i * 0.6, function () { row.classList.add('is-scanning'); });
           gsap.delayedCall(0.65 + i * 0.6, function () {
             row.classList.add('is-sorted');
-            if (i === rows.length - 1) { ai.classList.remove('is-working'); ai.classList.add('is-done'); status.textContent = 'Sorted by AI'; }
+            if (i === rows.length - 1) { ai.classList.remove('is-working'); ai.classList.add('is-done'); status.textContent = window.BudgetGoI18n.t('Sorted by AI'); }
             gsap.fromTo(row, { scale: 1 }, { scale: 1.03, duration: 0.18, yoyo: true, repeat: 1, ease: 'power2.out' });
             const left = rows.length - i - 1;
             count.textContent = left === 0 ? '✓' : String(left);
-            if (left === 0) label.textContent = 'All sorted';
+            if (left === 0) label.textContent = window.BudgetGoI18n.t('All sorted');
           });
         });
       }

@@ -9,7 +9,7 @@
       const endpoint = form.dataset.endpoint;
 
       const show = function (message, ok) {
-        status.textContent = message;
+        status.textContent = window.BudgetGoI18n.t(message);
         status.className = "waitlist-status " + (ok ? "ok" : "err");
       };
 

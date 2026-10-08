@@ -1,5 +1,6 @@
 /* Small, progressive enhancements. The page stays readable without JavaScript. */
 (function () {
+  const translate = function (text) { return window.BudgetGoI18n ? window.BudgetGoI18n.t(text) : text; };
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-links');
   const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
@@ -12,7 +13,7 @@
     if (!toggle || !nav) return;
     const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open navigation');
+    toggle.setAttribute('aria-label', translate('Open navigation'));
     nav.classList.remove('open');
     document.body.classList.remove('menu-open');
     closeDropdowns();
@@ -23,7 +24,7 @@
     toggle.addEventListener('click', function () {
       const open = toggle.getAttribute('aria-expanded') !== 'true';
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      toggle.setAttribute('aria-label', translate(open ? 'Close navigation' : 'Open navigation'));
       nav.classList.toggle('open', open);
       document.body.classList.toggle('menu-open', open);
       if (!open) closeDropdowns();

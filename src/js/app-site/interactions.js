@@ -56,9 +56,10 @@
     const toggle = document.querySelector('.mode-toggle');
     const card = document.querySelector('[data-mode-card]');
     if (!toggle || !card) return;
+    const t = window.BudgetGoI18n.t;
     const copy = {
-      budget: { pill: 'Budget period', amount: '$1,284.50', label: 'Remaining' },
-      track: { pill: 'All spending', amount: '$2,715.50', label: 'Spent' }
+      budget: { pill: t('Budget period'), amount: '$1,284.50', label: t('Remaining') },
+      track: { pill: t('All spending'), amount: '$2,715.50', label: t('Spent') }
     };
     toggle.addEventListener('click', function (event) {
       const button = event.target instanceof Element && event.target.closest('button[data-mode]');

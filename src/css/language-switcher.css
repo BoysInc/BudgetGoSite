@@ -1,0 +1,19 @@
+/* Footer language picker, injected by src/js/i18n.js. */
+.lang-switch { display: inline-flex; align-items: center; gap: .5rem; color: inherit; font: inherit; }
+.lang-switch select {
+  appearance: none;
+  padding: .35rem 1.7rem .35rem .75rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%23b994f5' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='m1 1 4 4 4-4'/%3E%3C/svg%3E") no-repeat right .65rem center;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+.lang-switch select:focus-visible { outline: none; box-shadow: 0 0 0 3px #b994f5; }
+.lang-switch option { color: #101010; background: #fff; }
+[dir="rtl"] .lang-switch select { padding: .35rem .75rem .35rem 1.7rem; background-position: left .65rem center; }
+
+/* Right-to-left pages: mirror the arrow glyphs that point along the reading direction. */
+[dir="rtl"] .support-link-arrow { transform: scaleX(-1); }
+@media (max-width: 760px) { .footer-bottom .lang-switch { margin-top: .4rem; } }
