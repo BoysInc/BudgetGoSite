@@ -35,3 +35,7 @@ Key facts:
 
 - [Privacy Policy](https://budgetgo.ai/privacy_policy.html)
 - [Terms of Service](https://budgetgo.ai/terms_of_service.html)
+
+MCP account setup: /oauth/consent.html provides sign-in and per-client consent;
+/oauth/connections.html lets signed-in users disconnect their AI apps. These
+private account pages are intentionally not included in the public sitemap.

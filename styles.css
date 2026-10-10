@@ -318,3 +318,5 @@ ul { padding-left: 1.15rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+.mcp-connections-link { text-align: center; padding: 1rem; }

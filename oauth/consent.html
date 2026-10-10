@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+  <title>Connect your AI app | BudgetGo</title>
+  <link rel="icon" href="/src/images/favicon-rounded.png"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/src/css/mcp-consent.css">
+  <script type="module" src="/src/js/mcp-consent.js"></script>
+</head>
+<body class="oauth-page" data-page="consent">
+  <main class="oauth-card">
+    <a href="/index.html">BudgetGo</a><h1>Connect your AI app</h1>
+    <p id="account" class="small"></p><button id="sign-out" type="button" class="secondary" hidden>Sign out</button>
+    <form id="login">
+      <p>Sign in with your existing BudgetGo account.</p>
+      <label>Email<input name="email" type="email" autocomplete="username" maxlength="254" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" maxlength="1024"></label>
+      <button type="submit">Sign in</button><button id="send-code" type="button" class="secondary">Email a sign-in code</button>
+      <div id="code-sign-in" hidden><label>Sign-in code<input id="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" maxlength="10"></label><button id="verify-code" type="button">Verify code</button></div>
+    </form>
+    <section id="access" hidden>
+      <h2><span id="client-name"></span> wants to connect</h2>
+      <p>This app can read your transactions, categories, and budget. Choose whether it can also change your transactions.</p>
+      <fieldset><legend>Transaction permissions</legend>
+        <p>Read your transactions and spending summaries</p>
+        <label><input id="allow-write" type="checkbox">Create and edit transactions</label>
+        <label><input id="allow-delete" type="checkbox">Delete transactions</label>
+      </fieldset>
+      <p class="small">Profile information requested: <span id="identity-scopes"></span></p>
+      <p class="small">Return to: <span id="client-callback"></span></p>
+      <p>You can disconnect this app at any time. It will only have access to your own records.</p>
+      <button id="approve" type="button">Allow access</button><button id="deny" type="button" class="secondary">Deny</button>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <p class="small"><a href="/oauth/connections.html">Manage connected AI apps</a> · <a href="/privacy_policy.html">Privacy policy</a></p>
+  </main>
+</body>
+</html>
