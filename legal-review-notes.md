@@ -20,9 +20,10 @@ settings are currently deployed. No app, backend or provider settings changed.
   user ID, email and name where supplied. Import analytics exclude file/audio
   content and account details (`BudgetGo/docs/analytics-tracking.md` and
   `BudgetGo/lib/services/analytics/analytics_service.dart`).
-- Sentry is configured for screenshots, view hierarchy and error-triggered
-  replays; replay text and image masking are enabled. Default PII collection
-  is disabled, but an account ID is explicitly attached (`BudgetGo/lib/main.dart`).
+- The owner confirmed production diagnostics capture neither screenshots nor
+  session replay. The consolidated privacy policy reflects that confirmation.
+  Diagnostic identifiers, request metadata, errors, performance details and view
+  hierarchy remain disclosed. No app or provider configuration changed here.
 - The engine routes model requests through OpenRouter, has an OpenRouter audio
   transcription path, and exports AI traces to storage and Langfuse. Credential
   filters are not evidence of complete financial-data anonymization
@@ -59,8 +60,8 @@ settings are currently deployed. No app, backend or provider settings changed.
    processing can be stopped while retaining every feature. Confirm the lawful
    basis for each purpose, consent requirements and the process for honoring
    objections/withdrawals. Do not treat accepting Terms or device permissions
-   as blanket consent. The existing general legal-bases section remains;
-   purpose-specific legal decisions cannot be established from source code.
+   as blanket consent. The consolidated policy describes bases by purpose;
+   deployment-specific legal decisions cannot be established from source code.
 5. **Provider settings and locations:** production deployments, hosting regions,
    model routing recipients, provider retention/training settings, data-processing
    agreements and international-transfer safeguards cannot be verified from these
@@ -80,3 +81,20 @@ https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-r
 Reviewed the changed content, section headings and internal anchor destinations;
 checked the local pages in the browser and ran `git diff --check`. No tests were
 added or run. Both legal pages now consistently require users to be at least 18; app age enforcement remains unverified.
+
+## Consolidation into privacy PR #2
+
+- Integrated the terms/privacy update already on main with the privacy PR's
+  semantic sections, navigation, category table and fuller processing disclosures.
+- Retained strict 18+ eligibility, the October 22 revision date, the one-active-
+  budget limit, 24-hour import-file expiry with cleanup retries, and the distinction
+  between record deletion, account deletion, provider cleanup and cancellation.
+- Kept the owner's confirmation that production collects neither screenshots nor
+  session replay; earlier source observations are not a statement of production
+  capture behavior.
+- Removed unverified Modal and separate document-redaction-service claims. Their
+  use was not established in the checked app/backend/engine source; add specific
+  recipient disclosures if such a processing path is confirmed.
+- Kept voice-provider wording broad enough to cover direct and routed processing.
+- Moved the PR's table and anchor presentation rules into the shared legal CSS.
+- The existing main-branch Terms of Service remains unchanged by consolidation.
