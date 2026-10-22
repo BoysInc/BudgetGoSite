@@ -12,16 +12,9 @@
   <link rel="preload" href="src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="src/css/site-shell.css?v=20261002" />
   <link rel="stylesheet" href="src/css/inner-pages.css?v=20261002" />
-  <link rel="stylesheet" href="src/css/legal.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/legal.css?v=20261022" />
   <link rel="stylesheet" href="src/css/app-site.css?v=20261004" />
   <link rel="stylesheet" href="src/css/app-site-inner.css?v=20261004" />
-  <style>
-    #main section, #toc, #main h3 { scroll-margin-top: 112px; }
-    #main th, #main td { padding: 12px; text-align: left; vertical-align: top; }
-    #main table th { min-width: 150px; }
-    #main table td:nth-child(2) { min-width: 240px; }
-    #main address { font-style: normal; color: var(--muted); }
-  </style>
 </head>
 <body class="inner-page legal-page" id="top">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -40,9 +33,9 @@
 
 <article data-custom-class="body" aria-labelledby="privacy-title">
       <h1 id="privacy-title" data-custom-class="title">PRIVACY POLICY</h1>
-      <p data-custom-class="subtitle">Last updated October 18, 2026</p>
+      <p data-custom-class="subtitle">Last updated October 22, 2026</p>
       <p>This Privacy Notice explains how GraphLeaf LLC ("we", "us", or "our") collects, uses, stores, and discloses personal information when you use BudgetGo, visit our website, or contact us (the "Services"). GraphLeaf LLC is responsible for decisions about how your personal information is processed.</p>
-      <p>BudgetGo helps you track spending, manage a budget or use expense-tracking mode, import financial records, and receive AI-assisted categories and insights. The information processed depends on the features you use and the permissions you grant. Questions or privacy requests can be sent to <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>.</p>
+      <p>BudgetGo helps you track spending, manage one active budget or track expenses without a budget, import financial records, and receive AI-assisted categories and insights. The information processed depends on the features you use and the permissions you grant. Questions or privacy requests can be sent to <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>.</p>
 
       <section aria-labelledby="summary-title">
         <h2 id="summary-title" data-custom-class="heading_1">SUMMARY OF KEY POINTS</h2>
@@ -96,7 +89,7 @@
           <li><strong>Subscriptions:</strong> Apple or another supported app store and RevenueCat provide purchase, transaction, entitlement, trial, renewal, and subscription-status information associated with app or account identifiers. Store payments are handled by the store; BudgetGo does not collect your full payment-card details through its subscription purchase flow.</li>
         </ul>
         <h3 data-custom-class="heading_2">Usage, diagnostics, and device information</h3>
-        <p>We and our service providers process IP addresses, device and operating-system information, app version, timestamps, feature and screen interactions, performance information, errors, and service logs. Analytics and diagnostics can be associated with account or device identifiers. PostHog also receives account identifiers and, where provided, email address and name for analytics and feature availability. Some analytics properties are filtered to limit raw financial content, but analytics should not be treated as anonymous.</p>
+        <p>We and our service providers process IP addresses, device and operating-system information, app version, timestamps, feature and screen interactions, performance information, errors, and service logs. Analytics and diagnostics can be associated with account or device identifiers. PostHog also receives account identifiers and, where provided, email address and name for analytics and feature availability. Current import analytics exclude filenames, file contents, audio, transcripts, account details, and exception messages. These limits apply to analytics events; processing an import or AI request requires the relevant content described above. Analytics can still identify an account and should not be treated as anonymous.</p>
         <p>Production diagnostics exclude screenshots and session replay recordings. Diagnostics may still include identifiers, error and performance details, request metadata, and view hierarchy information. Diagnostic and AI traces are discussed in <a href="#whoshare">section 4</a>.</p>
         <p>We do not request GPS or continuous device-location access for the described features. Service providers may infer an approximate location from an IP address. Biometric unlock uses your device's authentication system; BudgetGo does not receive your fingerprint or Face ID template. Motion used for privacy gestures stays on your device.</p>
         <p>If you enable notifications, we process a push token, account identifier, platform, token activity, and last-seen information to deliver messages and manage token registration.</p>
@@ -137,7 +130,7 @@
         <ul>
           <li><strong>Hosting, accounts, and storage:</strong> Supabase provides authentication, cloud financial-record storage and sync, and file storage. Railway hosts backend and AI-engine services and related infrastructure. The AI engine also uses PostgreSQL storage for AI context, messages, memory, and traces. Netlify hosts our website. These systems process data in server-readable form.</li>
           <li><strong>AI and transcription:</strong> OpenAI processes voice transcription and supported AI or receipt-analysis requests. OpenRouter routes model requests to model providers, including OpenAI models. Categorisation, financial analysis, document extraction, and presentation requests may include the relevant financial content and context. See <a href="#ai">section 5</a>.</li>
-          <li><strong>Documents, redaction, and execution:</strong> online document processing can involve our redaction service, Modal for sensitive-text detection, and E2B for temporary document parsing and extraction workspaces. OCR and receipt processing can also use AWS Textract or OpenAI, depending on the processing path. Originals reach our upload and processing infrastructure before filtering; extracted text can reach the detection service before redaction.</li>
+          <li><strong>Document processing and execution:</strong> online extraction uploads selected files to our infrastructure and can use E2B for temporary document parsing and extraction workspaces. OCR and receipt processing can also use AWS Textract or OpenAI, depending on the processing path. Document content and extracted text may be processed by these services and the AI providers described above. Do not assume uploaded files have been anonymised before processing.</li>
           <li><strong>Analytics, diagnostics, and AI tracing:</strong> PostHog processes usage analytics, identity properties, and feature flags. Sentry processes app and backend errors and performance diagnostics. Langfuse and AI-engine storage process AI request and tool traces, inputs or outputs where captured, timing, model usage and cost information, and session or account-related context. Filtering reduces some exposure but does not guarantee removal of all personal or financial information. Production diagnostics exclude screenshots and session replay recordings.</li>
           <li><strong>Financial connections:</strong> Plaid processes connection and financial-data requests when you link or refresh a supported bank. Apple provides Wallet access through FinanceKit and account sign-in where selected; Google provides sign-in where selected.</li>
           <li><strong>Subscriptions:</strong> RevenueCat and the relevant app store process identifiers, purchases, entitlements, and subscription information to manage access and restore purchases.</li>
@@ -145,16 +138,16 @@
           <li><strong>Supporting services:</strong> merchant-domain and logo requests can involve Brandfetch and Cloudflare R2 caching; exchange-rate services provide currency data. Support and waitlist requests can involve email providers, Google Forms, or Google Sheets, depending on the channel used.</li>
         </ul>
         <p>We may also disclose information where required by law, to protect rights or safety, or in connection with a merger, financing, asset sale, or acquisition. We do not sell personal information or share it for cross-context behavioural advertising. Disclosures to operational providers are distinct from those activities.</p>
-        <p>Providers and infrastructure may process information outside your country. Where applicable law requires safeguards for international transfers, we rely on the safeguards required for the relevant transfer. Contact us for information about a transfer involving your data.</p>
+        <p>Providers and infrastructure may process information outside your country. The locations and transfer arrangements depend on the provider and service involved. Contact us for information about the arrangements applicable to your data. Accepting our Terms or continuing to use BudgetGo is not blanket explicit consent to international transfers.</p>
       </section>
 
       <section id="ai">
         <h2 data-custom-class="heading_1">5. HOW DO OUR AI FEATURES PROCESS INFORMATION?</h2>
         <p>BudgetGo uses AI to help categorise transactions, transcribe voice entry, extract financial records from selected documents, analyse spending, maintain relevant context, and generate insights and their presentation. Depending on the feature, inputs can include audio, transcripts, document content or images, merchant and transaction descriptions, amounts, dates, currencies, account references, category names, budgets, relevant financial history, and your instructions or corrections. AI services return transcripts, suggested records or categories, analyses, and presentation content.</p>
-        <p>Voice entry sends audio for OpenAI transcription and uses the transcript and relevant context for AI-assisted transaction drafts. On-device captions may be used while a connection is established, but voice entry is not an entirely on-device feature. Review before saving controls which drafts become financial records; it does not mean processing waits until you save.</p>
-        <p>For online document extraction, selected files are uploaded to our infrastructure. Supported PDFs and images can pass through OCR and sensitive-content detection and redaction before further extraction. Detection can involve Modal; parsing and extraction can involve E2B and OpenRouter model providers. Filtering can miss details, and not every file format or AI feature follows the same filtering path. We do not promise that all AI inputs are anonymised or free of sensitive information.</p>
+        <p>Voice entry sends audio to our servers and transcription providers, including OpenAI and requests routed through OpenRouter, and uses the transcript and relevant context for AI-assisted transaction drafts. On-device captions may be used while a connection is established, but voice entry is not an entirely on-device feature. Review before saving controls which drafts become financial records; it does not mean processing waits until you save.</p>
+        <p>For online document extraction, selected files are uploaded to our infrastructure. Processing can include OCR, parsing in temporary E2B workspaces, and extraction using OpenAI or model providers reached through OpenRouter. Credential and sensitive-data filters help reduce exposure in some processing and diagnostic paths. They can miss details, and not every file format or AI feature follows the same filtering path. We do not promise that all AI inputs are anonymised or free of sensitive information.</p>
         <p>Categories and insights may use relevant stored financial records, including records derived from connected banks, Wallet, SMS, or imports. Some analysis runs automatically as records change. AI context, messages, remembered topics, outputs, and tracing information can be stored separately from your financial-record database to support continuity, avoid repeated insights, and diagnose failures. Removing a visible financial record does not necessarily remove every related trace or backup immediately.</p>
-        <p>Generated insight presentations may use validated HTML displayed within the app. This does not make the underlying analysis local: relevant evidence can be processed by AI services before presentation.</p>
+        <p>Generated insight presentations may use HTML displayed within the app. This does not make the underlying analysis local: relevant evidence can be processed by AI services before presentation.</p>
         <p>You can choose not to use voice or online file extraction and can contact <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a> about AI processing or an objection or withdrawal request. Avoiding those features does not by itself stop categorisation or insights based on saved records. We will explain available options and any effect on the Services when handling your request. Permissions and legal rights are described in <a href="#privacyrights">section 10</a>.</p>
       </section>
 
@@ -169,7 +162,7 @@
         <p>We retain information for as long as needed for the purposes described in this notice, considering the feature, your account and requests, the sensitivity of the data, security and troubleshooting needs, and applicable legal, accounting, or dispute requirements.</p>
         <ul>
           <li><strong>Financial and account records:</strong> records are retained to provide account access, sync, history, reports, and insights. Some deletions use deletion markers or source and reconciliation records so that devices can sync correctly and avoid restoring deleted items.</li>
-          <li><strong>Uploaded originals and extraction workspaces:</strong> originals are retained for processing, retries, and cleanup. Temporary execution workspaces have their own lifecycle. File cleanup is separate from retention of saved transactions, extracted records, job metadata, and related diagnostics.</li>
+          <li><strong>Uploaded originals and extraction workspaces:</strong> uploaded import files expire 24 hours after their import batch is created and are scheduled for automated deletion. Failed cleanup attempts are retried, so expiry does not guarantee that every copy is erased at exactly 24 hours. Temporary execution workspaces have their own lifecycle. File cleanup is separate from retention of saved transactions, extracted records, job metadata, and related diagnostics.</li>
           <li><strong>Voice and AI context:</strong> transient audio sessions and unsaved drafts have a different lifecycle from saved transactions, transcripts or other content captured in AI context, remembered topics, messages, and traces. Stored AI context and traces are retained according to their operational purpose, separately from transient sessions.</li>
           <li><strong>Operational and purchase information:</strong> analytics, errors, security logs, support records, and purchase or subscription records may be retained for their operational purpose or applicable obligations, including in provider systems.</li>
         </ul>
@@ -184,7 +177,9 @@
 
       <section id="infominors">
         <h2 data-custom-class="heading_1">9. DO WE COLLECT INFORMATION FROM MINORS?</h2>
-        <p>We do not knowingly collect, solicit data from, or market to children under 18 years of age or the equivalent age as specified by law in your jurisdiction, nor do we knowingly sell such personal information. By using the Services, you represent that you are at least 18 or the equivalent age as specified by law in your jurisdiction or that you are the parent or guardian of such a minor and consent to such minor dependent's use of the Services. If we learn that personal information from users less than 18 years of age or the equivalent age as specified by law in your jurisdiction has been collected, we will deactivate the account and take reasonable measures to promptly delete such data from our records. If you become aware of any data we may have collected from children under age 18 or the equivalent age as specified by law in your jurisdiction, please contact us at <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>.</p>
+        <p>BudgetGo is available only to users who are at least 18 years of age. By using the Services, you represent that you are at least 18. Users under 18 may not use the Services, even with permission from a parent or guardian.</p>
+        <p>We do not knowingly collect or solicit personal information from, or market to, anyone under 18. If we learn that we have collected personal information from someone under 18, we will deactivate the account and take reasonable measures to promptly delete that information from our records.</p>
+        <p>If you believe we have collected personal information from someone under 18, contact <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>.</p>
       </section>
 
       <section id="privacyrights">
@@ -261,7 +256,7 @@
         <h2 data-custom-class="heading_1">15. HOW CAN YOU ACCESS, UPDATE, EXPORT, OR DELETE DATA?</h2>
         <p>Use supported app controls to review or edit records, export transactions as CSV, Excel, or PDF, or request account deletion. Exports are generated on your device and shared to the destination you choose. Transaction exports do not necessarily include all information held in authentication, analytics, AI-context, diagnostic, purchase, or support systems.</p>
         <p>For access, correction, deletion, withdrawal, objection, or other rights requests, email <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>, write to the address above, or use our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUy2x4PREIZswT7UxxJtwDpBnU8uByq0vRzWzu3dnMg1YAdg/viewform?usp=dialog">privacy request form</a>. We will consider and act on requests under applicable law, subject to identity verification and lawful exceptions.</p>
-        <p>Account deletion starts removal of account and associated data; it does not promise immediate removal from every processor, sync record, or backup. Some information may remain for the retention purposes in <a href="#inforetain">section 7</a>. Removing the app or disconnecting a source does not itself delete previously imported records.</p>
+        <p>Account deletion starts removal of account and associated data. After a successful deletion response, the app removes user-owned records and connection credentials stored on that device and signs out. This does not promise immediate removal from every processor, sync record, backup, or other device. Some information may remain for the retention purposes in <a href="#inforetain">section 7</a>. Removing the app or disconnecting a source does not itself delete previously imported records.</p>
         <p><strong>Subscriptions are separate:</strong> deleting your BudgetGo account or app does not itself cancel a subscription. Manage or cancel it through the store that bills you. Store purchase records and obligations can outlast an app account.</p>
       </section>
     </article>
