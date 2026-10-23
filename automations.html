@@ -23,7 +23,7 @@
   <link rel="preload" href="src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="src/css/site-shell.css?v=20261002" />
   <link rel="stylesheet" href="src/css/inner-pages.css?v=20261002" />
-  <link rel="stylesheet" href="src/css/automations.css?v=20261002" />
+  <link rel="stylesheet" href="src/css/automations.css?v=20261023" />
   <link rel="stylesheet" href="src/css/app-site.css?v=20261004" />
   <link rel="stylesheet" href="src/css/app-site-inner.css?v=20261004" />
   <link rel="stylesheet" href="src/css/language-switcher.css?v=20261008" />
@@ -57,8 +57,8 @@
             on your iPhone.
           </p>
           <nav class="guide-jump" aria-label="Guide sections">
-            <a href="#wallet"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
-            <a href="#sms"><span class="chip-dot" style="--c: #b994f5"></span>Bank SMS alerts</a>
+            <a href="#wallet-video"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
+            <a href="#sms-video"><span class="chip-dot" style="--c: #b994f5"></span>Bank SMS alerts</a>
             <a href="#troubleshooting"><span class="chip-dot" style="--c: #7132f5"></span>Troubleshooting</a>
           </nav>
         </div>
@@ -115,7 +115,25 @@
           </p>
         </div>
 
-        <ol class="guide-steps">
+        <figure id="wallet-video" class="guide-video" aria-labelledby="wallet-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 28 sec</p>
+            <h3 id="wallet-video-title">Set up Apple Pay in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p id="wallet-video-note">Keep <strong>Automation</strong> enabled on your phone. The recording turns it off at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#wallet-steps">Read the steps below</a>
+            <a class="support-inline-link" href="src/videos/automation/apple-pay-setup.mp4">Open the Apple Pay video</a>
+          </figcaption>
+          <video controls playsinline preload="metadata" width="628" height="1480"
+            poster="src/images/automation/apple-pay-video-poster.jpg"
+            aria-label="Apple Pay automation setup in Apple Shortcuts"
+            aria-describedby="wallet-video-note">
+            <source src="src/videos/automation/apple-pay-setup.mp4" type="video/mp4" />
+            <p><a href="src/videos/automation/apple-pay-setup.mp4">Watch the Apple Pay setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="wallet-steps" class="guide-steps">
           <li class="guide-step">
             <div class="guide-step-copy">
               <span class="step-index">1</span>
@@ -134,8 +152,8 @@
               <p>Open the <strong>Automation</strong> tab, then tap <strong>+</strong> to create a new personal automation.</p>
             </div>
             <div class="guide-shots">
-              <img src="src/images/automation/step2_a.jpg" alt="The Automation tab in the Shortcuts app" loading="lazy" decoding="async" />
-              <img src="src/images/automation/step2_b.jpg" alt="The plus button for creating a personal automation" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step2_a.jpg" alt="The Automation tab in the Shortcuts app" width="900" height="433" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step2_b.jpg" alt="The plus button for creating a personal automation" width="900" height="383" loading="lazy" decoding="async" />
             </div>
           </li>
 
@@ -150,9 +168,9 @@
               </ol>
             </div>
             <div class="guide-shots">
-              <img src="src/images/automation/step3_a.jpg" alt="Searching for the Transaction trigger, described as When I tap a Wallet Card or Pass" loading="lazy" decoding="async" />
-              <img src="src/images/automation/step3_b.jpg" alt="Selecting the Wallet cards to track" loading="lazy" decoding="async" />
-              <img src="src/images/automation/step3_d.jpg" alt="The Run Immediately option selected" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step3_a.jpg" alt="Searching for the Transaction trigger, described as When I tap a Wallet Card or Pass" width="900" height="500" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step3_b.jpg" alt="Selecting the Wallet cards to track" width="900" height="900" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step3_d.jpg" alt="The Run Immediately option selected" width="900" height="562" loading="lazy" decoding="async" />
             </div>
           </li>
 
@@ -166,8 +184,8 @@
               </p>
             </div>
             <div class="guide-shots">
-              <img src="src/images/automation/step4.jpg" alt="Creating a new blank shortcut for the automation" loading="lazy" decoding="async" />
-              <img src="src/images/automation/step4_b.jpg" alt="Searching for the Add Transaction to Budget Go action" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step4.jpg" alt="Creating a new blank shortcut for the automation" width="900" height="796" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step4_b.jpg" alt="Searching for the Add Transaction to Budget Go action" width="726" height="900" loading="lazy" decoding="async" />
             </div>
           </li>
 
@@ -187,9 +205,9 @@
               </p>
             </div>
             <div class="guide-shots">
-              <img src="src/images/automation/step5_a.jpg" alt="Choosing Select Variable on the Amount field" loading="lazy" decoding="async" />
-              <img src="src/images/automation/step5_c.jpg" alt="Choosing Amount from the Shortcut Input" loading="lazy" decoding="async" />
-              <img src="src/images/automation/step5_d.jpg" alt="The completed automation with the play button for testing" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step5_a.jpg" alt="Choosing Select Variable on the Amount field" width="900" height="827" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step5_c.jpg" alt="Choosing Amount from the Shortcut Input" width="541" height="900" loading="lazy" decoding="async" />
+              <img src="src/images/automation/step5_d.jpg" alt="The completed automation with the play button for testing" width="900" height="370" loading="lazy" decoding="async" />
             </div>
           </li>
           <li class="guide-step">
@@ -225,7 +243,26 @@
           </p>
         </div>
 
-        <ol class="guide-steps">
+        <figure id="sms-video" class="guide-video" aria-labelledby="sms-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 58 sec</p>
+            <h3 id="sms-video-title">Set up bank SMS in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p>Use your bank's sender or a bank-specific message keyword in place of <strong>BUDGETGO_DEMO</strong>.</p>
+            <p id="sms-video-note">Keep <strong>Automation</strong> enabled and <strong>Confirm Before Run</strong> off. The recording disables its automation at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#sms-steps">Read the steps below</a>
+            <a class="support-inline-link" href="src/videos/automation/bank-sms-setup.mp4">Open the bank SMS video</a>
+          </figcaption>
+          <video controls playsinline preload="metadata" width="628" height="1480"
+            poster="src/images/automation/bank-sms-video-poster.jpg"
+            aria-label="Bank SMS automation setup in Apple Shortcuts"
+            aria-describedby="sms-video-note">
+            <source src="src/videos/automation/bank-sms-setup.mp4" type="video/mp4" />
+            <p><a href="src/videos/automation/bank-sms-setup.mp4">Watch the bank SMS setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="sms-steps" class="guide-steps">
           <li class="guide-step guide-step-solo">
             <div class="guide-step-copy">
               <span class="step-index">1</span>

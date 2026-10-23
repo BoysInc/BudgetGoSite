@@ -22,7 +22,9 @@ Key facts:
 ## Pages
 
 - [Home](https://budgetgo.ai/): Product overview: ways to add spending, connected banks, AI sorting, insight stories, analytics, upcoming bills, budget modes, privacy safeguards, and FAQ
-- [Automation setup guide](https://budgetgo.ai/automations.html): Step-by-step setup of Apple Shortcuts automations for Apple Pay payments and bank SMS alerts, plus troubleshooting
+- [Automation setup guide](https://budgetgo.ai/automations.html): Separate iPhone video walkthroughs and written steps for Apple Pay and bank SMS automations in Apple Shortcuts, plus troubleshooting
+- [Apple Pay setup video](https://budgetgo.ai/automations.html#wallet-video): 1 minute 28 seconds, with highlighted taps and pause/full-screen controls
+- [Bank SMS setup video](https://budgetgo.ai/automations.html#sms-video): 1 minute 58 seconds, with highlighted taps and pause/full-screen controls; use a filter specific to your bank
 - [BudgetGo MCP (coming soon)](https://budgetgo.ai/mcp.html): Waitlist for the upcoming BudgetGo Model Context Protocol server, which will let MCP-compatible AI assistants answer questions using a user's BudgetGo spending data
 - [Support](https://budgetgo.ai/support.html): Contact options for product, account, and billing help, and privacy requests
 
