@@ -1,0 +1,19 @@
+[hidden] { display: none !important; }
+.oauth-page { min-height: 100svh; padding: 2rem 1rem; background: var(--bg, #101112); color: var(--text, #fff); }
+.oauth-card { max-width: 34rem; margin: 2rem auto; padding: clamp(1.5rem, 5vw, 2.5rem); border-radius: 1.5rem; background: var(--surface, #1b1c1e); }
+.oauth-card h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); margin: 1.5rem 0 1rem; }
+.oauth-card p { margin: 1rem 0; }
+.oauth-card label { display: block; margin: 1rem 0; }
+.oauth-card input:not([type=checkbox]) { display: block; width: 100%; margin-top: .5rem; padding: .9rem; border: 0; border-radius: .7rem; background: var(--surface-high, #29282d); color: inherit; font: inherit; }
+.oauth-card input[type=checkbox] { accent-color: #a78bfa; margin-right: .5rem; }
+.oauth-card button { padding: .9rem 1.2rem; margin: .5rem .4rem .5rem 0; border: 0; border-radius: .7rem; background: var(--action, #c4f470); color: #101112; font: inherit; font-weight: 700; cursor: pointer; }
+.oauth-card button.secondary { background: var(--surface-high, #29282d); color: inherit; }
+.oauth-card button:disabled { opacity: .5; cursor: wait; }
+.oauth-card :focus-visible { outline: none; box-shadow: 0 0 0 4px #9f7aea; }
+.oauth-card a { color: #c4b5fd; text-decoration: underline; }
+.oauth-card fieldset { border: 0; padding: 0; margin: 1.5rem 0; }
+.oauth-card legend { font-weight: 700; }
+.oauth-card #status { min-height: 1.5rem; overflow-wrap: anywhere; }
+.oauth-card #connections { padding: 0; list-style: none; }
+.oauth-card #connections li { padding: 1rem 0; }
+.oauth-card .small { font-size: .9rem; color: var(--text-soft, #c5c2ce); overflow-wrap: anywhere; }
