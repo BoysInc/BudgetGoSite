@@ -5,6 +5,7 @@ BudgetGoI18n.register({
  "Insights": "洞察",
  "Analytics": "分析",
  "Privacy": "隐私",
+ "Blog": "博客",
  "Guides": "指南",
  "Let’s make sense<br> <em>of all of it.</em>": "把一切<br> <em>都理清楚。</em>",
  "Enjoy your day. Know where your money goes.": "好好享受今天。清楚钱花到了哪里。",

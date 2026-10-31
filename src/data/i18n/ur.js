@@ -5,6 +5,7 @@ BudgetGoI18n.register({
  "Insights": "بصیرتیں",
  "Analytics": "تجزیات",
  "Privacy": "رازداری",
+ "Blog": "بلاگ",
  "Guides": "گائیڈز",
  "Let’s make sense<br> <em>of all of it.</em>": "آئیے سب کچھ<br> <em>سمجھ لیں۔</em>",
  "Enjoy your day. Know where your money goes.": "اپنے دن کا لطف اٹھائیں۔ جانیں کہ آپ کا پیسہ کہاں جاتا ہے۔",

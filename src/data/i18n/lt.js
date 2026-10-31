@@ -5,6 +5,7 @@ BudgetGoI18n.register({
  "Insights": "Įžvalgos",
  "Analytics": "Analitika",
  "Privacy": "Privatumas",
+ "Blog": "Tinklaraštis",
  "Guides": "Vadovai",
  "Let’s make sense<br> <em>of all of it.</em>": "Suprasime<br> <em>viską.</em>",
  "Enjoy your day. Know where your money goes.": "Mėgaukitės diena. Žinokite, kur keliauja jūsų pinigai.",

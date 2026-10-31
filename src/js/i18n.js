@@ -185,6 +185,9 @@
   if (current === 'en') {
     buildSwitcher('en', null);
   } else {
-    document.write('<script src="src/data/i18n/' + current + '.js"><\/script>');
+    // Resolve dictionaries next to this script so pages in subfolders (blog/) load them too.
+    const self = document.currentScript && document.currentScript.src;
+    const base = self ? self.replace(/js\/i18n\.js(\?.*)?$/, '') : 'src/';
+    document.write('<script src="' + base + 'data/i18n/' + current + '.js"><\/script>');
   }
 })();

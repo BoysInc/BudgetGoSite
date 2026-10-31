@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>BudgetGo Blog</title>
+    <link>https://budgetgo.ai/blog/</link>
+    <description>Practical guides on budgeting, tracking spending, and getting the most out of BudgetGo.</description>
+    <language>en</language>
+    <item><title>How to Track Your Spending Without a Spreadsheet</title><link>https://budgetgo.ai/blog/how-to-track-spending.html</link><guid>https://budgetgo.ai/blog/how-to-track-spending.html</guid><pubDate>Sat, 31 Oct 2026 09:00:00 +0000</pubDate><description>A simple 4-step system to track your spending automatically, sort it into categories, and spot where your money goes, no spreadsheet needed.</description></item>
+    <item><title>How to Find and Cancel Subscriptions You Forgot About</title><link>https://budgetgo.ai/blog/find-and-cancel-subscriptions.html</link><guid>https://budgetgo.ai/blog/find-and-cancel-subscriptions.html</guid><pubDate>Sat, 31 Oct 2026 09:00:00 +0000</pubDate><description>A quick subscription audit: how to find every recurring charge, check App Store subscriptions, decide what to cancel, and stop surprise renewals.</description></item>
+    <item><title>The 50/30/20 Budget Rule, Explained With a Real Example</title><link>https://budgetgo.ai/blog/50-30-20-rule.html</link><guid>https://budgetgo.ai/blog/50-30-20-rule.html</guid><pubDate>Sat, 31 Oct 2026 09:00:00 +0000</pubDate><description>What the 50/30/20 budget rule is, how to split your take-home pay into needs, wants, and savings, and how to adjust it when rent is high.</description></item>
+  </channel>
+</rss>

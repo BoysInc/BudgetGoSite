@@ -5,6 +5,7 @@ BudgetGoI18n.register({
  "Insights": "Perspectivas",
  "Analytics": "Analíticas",
  "Privacy": "Privacidad",
+ "Blog": "Blog",
  "Guides": "Guías",
  "Let’s make sense<br> <em>of all of it.</em>": "Entendamos<br> <em>todo esto.</em>",
  "Enjoy your day. Know where your money goes.": "Disfruta tu día. Sabe a dónde va tu dinero.",
