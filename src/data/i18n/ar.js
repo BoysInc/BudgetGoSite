@@ -2,6 +2,7 @@
 BudgetGoI18n.register({
  "Skip to content": "انتقل إلى المحتوى",
  "Add spending": "إضافة المصروفات",
+ "Track spending": "إضافة المصروفات",
  "Insights": "رؤى",
  "Analytics": "التحليلات",
  "Privacy": "الخصوصية",

@@ -74,7 +74,7 @@
 .article-cta { display: flex; justify-content: space-between; align-items: center; gap: 28px; width: min(1080px, calc(100% - var(--gutter) * 2)); margin: 72px auto 0; padding: 44px; border-radius: 32px; background: linear-gradient(135deg, #824fff 0%, #7132f5 55%, #5d2ce3 100%); color: #fff; }
 .article-cta h2 { font-size: clamp(28px, 3.2vw, 40px); }
 .article-cta p { margin-top: 12px; max-width: 460px; color: #e9ddf9; font-weight: 500; }
-.article-cta .btn { flex-shrink: 0; background: #fff; color: #101010; }
+.article-cta .btn { flex-shrink: 0; background: #fff; color: #101010; -webkit-text-stroke: .5px currentColor; }
 .article-cta .btn:hover { background: #e4e4e0; }
 .article-cta .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px #7132f5, 0 0 0 5px #fff; }
 
@@ -146,11 +146,12 @@
 .article-callout { padding: 22px 26px; border-left: 3px solid #b994f5; border-radius: 0 18px 18px 0; background: #19191c; font-size: 17px; }
 .article-callout strong { display: block; margin-bottom: 6px; }
 
+/* Switzer ships no weight above 600, so the stroke thickens CTA button text. */
 /* Inline CTA placed with <!-- cta --> */
 .inline-cta { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 26px; border-radius: 22px; background: #291e43; }
 .inline-cta-title { color: var(--ink); font-size: 18px; font-weight: 800; letter-spacing: -.02em; }
 .inline-cta p + p { margin-top: 4px; color: var(--muted); font-size: 15px; line-height: 1.5; }
-.inline-cta .btn { flex-shrink: 0; background: #fff; color: #101010; }
+.inline-cta .btn { flex-shrink: 0; background: #fff; color: #101010; -webkit-text-stroke: .5px currentColor; }
 .inline-cta .btn:hover { background: #e4e4e0; }
 .inline-cta .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px #291e43, 0 0 0 5px #fff; }
 .article-body .inline-cta a { text-decoration: none; }
@@ -184,3 +185,10 @@
 .sort-demo-cat { padding: 4px 10px; border-radius: 999px; background: #291e43; color: #d8c6fb; font-size: 12px; }
 .sort-demo li span:last-child { color: var(--muted); font-variant-numeric: tabular-nums; }
 @media (max-width: 420px) { .sort-demo li { grid-template-columns: 1fr auto; } .sort-demo li span:last-child { display: none; } }
+
+/* Keeps the last blog section from resting on the footer's top border. */
+main#main { padding-bottom: 96px; }
+@media (max-width: 640px) { main#main { padding-bottom: 64px; } }
+
+/* Same Switzer 600 ceiling as the CTA buttons: stroke the header button text. */
+.site-header .btn { -webkit-text-stroke: .5px currentColor; }

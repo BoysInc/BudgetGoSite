@@ -40,7 +40,6 @@ AUTHORS = {
     },
 }
 
-ARROW_SVG = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 CURRENT = ' aria-current="page"'
 
 
@@ -154,8 +153,8 @@ def header(p):
     <a class="brand" href="{p}index.html" aria-label="BudgetGo homepage"><img src="{p}src/images/logo.png" alt="" width="34" height="34" /><span>BudgetGo</span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
     <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
-      <a href="{p}index.html#inputs">Add spending</a><a href="{p}index.html#insights">Insights</a><a href="{p}index.html#analytics">Analytics</a><a href="{p}index.html#privacy">Privacy</a><a href="{p}automations.html">Guides</a><a href="{p}blog/"{CURRENT}>Blog</a>
-      <a class="btn btn--light btn--sm" href="{APP}" target="_blank" rel="noopener noreferrer">Get the app{ARROW_SVG}</a>
+      <a href="{p}index.html#inputs">Track spending</a><a href="{p}index.html#insights">Insights</a><a href="{p}index.html#analytics">Analytics</a><a href="{p}index.html#privacy">Privacy</a><a href="{p}automations.html">Guides</a><a href="{p}blog/"{CURRENT}>Blog</a>
+      <a class="btn btn--light btn--sm" href="{APP}" target="_blank" rel="noopener noreferrer">Get the app</a>
     </nav>
   </div>
 </header>
@@ -168,7 +167,7 @@ def footer(p):
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand"><a class="brand" href="{p}index.html"><img src="{p}src/images/logo.png" alt="" width="34" height="34" /><span>BudgetGo</span></a><p>Let’s make sense of all of it.</p></div>
-      <div><h3>App</h3><a href="{p}index.html#inputs">Add spending</a><a href="{p}index.html#insights">Insights</a><a href="{p}index.html#analytics">Analytics</a><a href="{APP}" target="_blank" rel="noopener noreferrer">Get BudgetGo</a></div>
+      <div><h3>App</h3><a href="{p}index.html#inputs">Track spending</a><a href="{p}index.html#insights">Insights</a><a href="{p}index.html#analytics">Analytics</a><a href="{APP}" target="_blank" rel="noopener noreferrer">Get BudgetGo</a></div>
       <div><h3>Help</h3><a href="{p}automations.html">Automation guides</a><a href="{p}blog/">Blog</a><a href="{p}support.html">Support</a><a href="{p}index.html#faq">Common questions</a><a href="{p}mcp.html">MCP · Coming soon</a></div>
       <div><h3>Contact</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
     </div>

@@ -2,6 +2,7 @@
 BudgetGoI18n.register({
  "Skip to content": "跳到主要内容",
  "Add spending": "添加支出",
+ "Track spending": "添加支出",
  "Insights": "洞察",
  "Analytics": "分析",
  "Privacy": "隐私",

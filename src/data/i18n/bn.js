@@ -2,6 +2,7 @@
 BudgetGoI18n.register({
  "Skip to content": "মূল বিষয়বস্তুতে যান",
  "Add spending": "খরচ যোগ করুন",
+ "Track spending": "খরচ যোগ করুন",
  "Insights": "ইনসাইট",
  "Analytics": "অ্যানালিটিক্স",
  "Privacy": "গোপনীয়তা",

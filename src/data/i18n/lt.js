@@ -2,6 +2,7 @@
 BudgetGoI18n.register({
  "Skip to content": "Pereiti prie turinio",
  "Add spending": "Pridėti išlaidas",
+ "Track spending": "Pridėti išlaidas",
  "Insights": "Įžvalgos",
  "Analytics": "Analitika",
  "Privacy": "Privatumas",

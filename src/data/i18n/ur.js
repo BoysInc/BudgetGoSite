@@ -2,6 +2,7 @@
 BudgetGoI18n.register({
  "Skip to content": "مرکزی مواد پر جائیں",
  "Add spending": "اخراجات شامل کریں",
+ "Track spending": "اخراجات شامل کریں",
  "Insights": "بصیرتیں",
  "Analytics": "تجزیات",
  "Privacy": "رازداری",
