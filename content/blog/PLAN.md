@@ -34,6 +34,20 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
   and a 2–4 question FAQ at the end. Aim for 900–1,600 words.
 - **Show the product.** Use BudgetGo phone mockups from `src/images/app-live/mockup-*.webp`
   in `<figure class="article-figure">` blocks. Competitors rarely show their app.
+- **Cover images: free licence, premium look.** Every cover must match the post's topic and season (a
+  Christmas post gets gifts or a festive scene, not a generic shopping shot). Use only photos that are free
+  for commercial use with no attribution required: Pexels, Unsplash (not Unsplash+), or Pixabay.
+  Check the licence on the photo's own page before downloading, and never use Unsplash+, Shutterstock
+  or Getty previews.
+  - *Search:* use specific phrases ("wrapped christmas gifts warm table", "budget planner notebook coffee",
+    "grocery receipt kitchen counter") and sort by most downloaded or newest.
+  - *Pick:* landscape orientation, at least 1600px wide, one clear subject, natural light, soft muted or
+    warm colours, space around the subject so it crops well to a wide cover. Skip logos, readable brand
+    names, "SALE" signs, watermarks, stock-looking smiles at cameras, and cluttered scenes.
+  - *Save:* compress to about 150-300 KB (JPG or WebP, around 1600px wide) into `src/images/life/editorial/`,
+    use a descriptive filename, and add an entry (file, photographer, source URL, licence) to
+    `src/images/life/editorial/credits.json`.
+  - *Front matter:* set `cover` and write a plain, specific `cover_alt` that describes the photo.
 - **Link internally.** Link each post to 2+ other posts, plus the relevant guide or homepage section.
 - **One `<!-- cta -->`** after the second or third H2. The template adds the end CTA, author box and related posts.
 - **Accurate claims only.** Check every product claim against `llms.txt`, `index.html` and `AGENTS.md`.

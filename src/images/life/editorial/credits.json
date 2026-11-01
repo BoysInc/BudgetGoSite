@@ -31,7 +31,7 @@
   },
   {
     "file": "takeout-break.jpg",
-    "author": "Manuela González Piper",
+    "author": "Manuela Gonz\u00e1lez Piper",
     "source": "https://www.pexels.com/photo/young-woman-enjoying-takeout-food-outdoors-30072979/",
     "license": "Pexels"
   },
@@ -46,5 +46,12 @@
     "author": "Mikhail Nilov",
     "source": "https://www.pexels.com/photo/happy-friends-hanging-out-together-and-eating-pizza-7886606/",
     "license": "Pexels"
+  },
+  {
+    "file": "christmas-gifts.jpg",
+    "photographer": "Jill Wellington",
+    "source": "https://www.pexels.com/photo/christmas-gifts-and-ornaments-3309878/",
+    "license": "Pexels",
+    "note": "cropped to 1600x1200"
   }
 ]
