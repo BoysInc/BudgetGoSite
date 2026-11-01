@@ -16,6 +16,11 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 
 ## Standards (what top budgeting-app blogs do)
 
+- **Pick topics from live search demand.** Before each post, check what people are searching
+  right now: Google autocomplete for budgeting seed terms (e.g. "how to budget", "how much to spend on",
+  "budgeting app", "how to save money on"), seasonal and news-driven money searches, and what ranks on
+  page one. Prefer a timely, high-intent keyword the backlog doesn't cover yet; otherwise use the backlog.
+  Note the target keyword and the evidence for it when sending a draft for review.
 - **Search intent first.** One clear target keyword per post, in the H1, the SEO title,
   the description and the first paragraph. Titles promise something concrete:
   "(With the Math)", "(With a 2026 Example)", "Explained", "Step by Step".
@@ -63,6 +68,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] budget-for-couples: "How to Budget as a Couple Without Fighting About Money"
 - [ ] monthly-budget-categories: "The Budget Categories You Actually Need (and the Ones You Don't)"
 - [ ] holiday-budget: "How to Make a Holiday Budget (With an Example)"
+- [ ] how-much-to-spend-on-christmas: "How Much Should You Spend on Christmas Gifts? (With the Math)" (drafted; trending in November)
 
 ### Spending
 - [x] how-to-track-spending

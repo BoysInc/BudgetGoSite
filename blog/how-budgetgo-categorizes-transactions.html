@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automatic Transaction Categorization: How BudgetGo&#x27;s AI Sorts Spending</title>
+  <meta name="description" content="How BudgetGo uses AI to categorize every transaction automatically, from bank feeds, Apple Pay, SMS alerts and statements, and how you can review or change any category." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://budgetgo.ai/blog/how-budgetgo-categorizes-transactions.html" />
+  <meta property="og:title" content="Automatic Transaction Categorization: How BudgetGo&#x27;s AI Sorts Spending" />
+  <meta property="og:description" content="How BudgetGo uses AI to categorize every transaction automatically, from bank feeds, Apple Pay, SMS alerts and statements, and how you can review or change any category." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://budgetgo.ai/blog/how-budgetgo-categorizes-transactions.html" />
+  <meta property="og:image" content="https://budgetgo.ai/src/images/app-live/mockup-home.webp" />
+  <meta property="og:site_name" content="BudgetGo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#101010" />
+  <link rel="icon" type="image/png" href="../src/images/favicon-rounded.png" />
+  <link rel="apple-touch-icon" href="../src/images/favicon-rounded.png" />
+  <link rel="alternate" type="application/rss+xml" title="BudgetGo Blog" href="https://budgetgo.ai/blog/feed.xml" />
+  <link rel="stylesheet" href="../styles.css?v=20261001-rounded" />
+  <link rel="preload" href="../src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../src/css/site-shell.css?v=20261002" />
+  <link rel="stylesheet" href="../src/css/inner-pages.css?v=20261002" />
+  <link rel="stylesheet" href="../src/css/app-site.css?v=20261004" />
+  <link rel="stylesheet" href="../src/css/app-site-inner.css?v=20261004" />
+  <link rel="stylesheet" href="../src/css/language-switcher.css?v=20261008" />
+  <link rel="stylesheet" href="../src/css/blog.css?v=20261101" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "How BudgetGo's AI Categorizes Your Transactions (and Keeps You in Control)", "description": "How BudgetGo uses AI to categorize every transaction automatically, from bank feeds, Apple Pay, SMS alerts and statements, and how you can review or change any category.", "image": "https://budgetgo.ai/src/images/app-live/mockup-home.webp", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "author": {"@type": "Organization", "name": "The BudgetGo Team", "url": "https://budgetgo.ai/"}, "publisher": {"@type": "Organization", "name": "BudgetGo", "url": "https://budgetgo.ai/", "logo": {"@type": "ImageObject", "url": "https://budgetgo.ai/src/images/logo.png"}}, "mainEntityOfPage": "https://budgetgo.ai/blog/how-budgetgo-categorizes-transactions.html", "articleSection": "Inside BudgetGo", "wordCount": 710, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budgetgo.ai/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://budgetgo.ai/blog/"}, {"@type": "ListItem", "position": 3, "name": "Inside BudgetGo", "item": "https://budgetgo.ai/blog/category/inside-budgetgo.html"}, {"@type": "ListItem", "position": 4, "name": "How BudgetGo's AI Categorizes Your Transactions (and Keeps You in Control)", "item": "https://budgetgo.ai/blog/how-budgetgo-categorizes-transactions.html"}]}]}</script>
+</head>
+<body class="inner-page blog-page" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="../index.html" aria-label="BudgetGo homepage"><img src="../src/images/logo.png" alt="" width="34" height="34" /><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+      <a href="../index.html#inputs">Track spending</a><a href="../index.html#insights">Insights</a><a href="../index.html#analytics">Analytics</a><a href="../index.html#privacy">Privacy</a><a href="../automations.html">Guides</a><a href="../blog/" aria-current="page">Blog</a>
+      <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+  <article class="article">
+    <header class="article-head">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="./">Blog</a></li><li><a href="category/inside-budgetgo.html">Inside BudgetGo</a></li></ol></nav>
+      <h1>How BudgetGo's AI Categorizes Your Transactions (and Keeps You in Control)</h1>
+      <p class="article-dek">Every purchase gets a category the moment it arrives. Here's how that works, and why you always get the final say.</p>
+      <div class="article-byline">
+        <img src="../src/images/logo.png" alt="" width="44" height="44" />
+        <div><p class="article-author">The BudgetGo Team</p><p class="blog-meta"><time datetime="2026-11-01">November 1, 2026</time><span aria-hidden="true">·</span><span>3 min read</span></p></div>
+      </div>
+    </header>
+    <figure class="article-cover article-cover--product"><img src="../src/images/app-live/mockup-home.webp" alt="BudgetGo home screen showing budget remaining and upcoming bills" fetchpriority="high" decoding="async" /></figure>
+    <div class="article-layout">
+      <nav class="article-toc" aria-labelledby="toc-title"><p id="toc-title">In this article</p><ol><li><a href="#why-categorization-matters-more-than-you-think">Why categorization matters more than you think</a></li><li><a href="#how-budgetgo-s-auto-categorization-works">How BudgetGo&#x27;s auto-categorization works</a></li><li><a href="#you-keep-the-final-say">You keep the final say</a></li><li><a href="#tricky-transactions-worth-a-quick-check">Tricky transactions worth a quick check</a></li><li><a href="#what-good-categories-unlock">What good categories unlock</a></li><li><a href="#privacy-and-ai">Privacy and AI</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ol></nav>
+      <div class="article-body">
+<aside class="takeaways" aria-labelledby="takeaways-title">
+  <h2 id="takeaways-title" data-toc="false">Key takeaways</h2>
+  <ul>
+    <li>BudgetGo's AI gives every transaction a category as soon as it arrives, whatever the source.</li>
+    <li>You can review and change any category. Your records stay yours to adjust.</li>
+    <li>Accurate categories power everything else: budgets, insight stories and analytics.</li>
+  </ul>
+</aside>
+
+<h2 id="why-categorization-matters-more-than-you-think">Why categorization matters more than you think</h2>
+<p>A list of transactions doesn't tell you much. <em>“UBER *TRIP 4821”</em>, <em>“AMZN Mktp US”</em> and <em>“SQ *BLUE BOTTLE”</em> only become useful once they're grouped into transport, shopping and coffee. Categories are what turn raw payments into answers: how much went on eating out this month, whether groceries are creeping up, which habits cost the most.</p>
+<p>The problem is that sorting transactions by hand is tedious, and it's the main reason people give up on tracking. So in BudgetGo, it happens automatically.</p>
+
+<h2 id="how-budgetgo-s-auto-categorization-works">How BudgetGo's auto-categorization works</h2>
+<p>Whenever a new transaction lands in BudgetGo, AI reads its details, such as the merchant name and description, and assigns the most likely category. You don't need to tap anything for that to happen.</p>
+
+<figure class="article-figure">
+  <div class="sort-demo" role="img" aria-label="Example: Walmart sorted into Groceries, Uber into Transportation, Spotify into Subscriptions, McDonald's into Dining and takeout, Amazon into Shopping">
+    <p class="sort-demo-head">AI is sorting…</p>
+    <ul>
+      <li><span>Walmart</span><span class="sort-demo-cat">Groceries</span><span>−$52.80</span></li>
+      <li><span>Uber</span><span class="sort-demo-cat">Transportation</span><span>−$25.40</span></li>
+      <li><span>Spotify</span><span class="sort-demo-cat">Subscriptions</span><span>−$11.99</span></li>
+      <li><span>McDonald’s</span><span class="sort-demo-cat">Dining &amp; takeout</span><span>−$9.85</span></li>
+      <li><span>Amazon</span><span class="sort-demo-cat">Shopping</span><span>−$32.00</span></li>
+    </ul>
+  </div>
+  <figcaption>New transactions arrive uncategorized and are sorted automatically.</figcaption>
+</figure>
+
+<h3>It works the same for every source</h3>
+<p>BudgetGo brings in spending from many places, and all of it goes through the same sorting:</p>
+<ul>
+  <li><strong>Connected banks</strong> linked through Plaid, and Apple Wallet accounts through FinanceKit</li>
+  <li><strong>Apple Pay</strong> payments and <strong>bank SMS alerts</strong>, captured with <a href="../automations.html">Apple Shortcuts automations</a></li>
+  <li><strong>Imported files:</strong> PDF bank statements, CSV and Excel exports, and receipt photos</li>
+  <li><strong>Voice entry:</strong> say “Uber home twenty five forty, Spotify and Netflix”, then review the items before saving</li>
+  <li><strong>Manual entry</strong> for anything else</li>
+</ul>
+<p>That means a statement you imported from three months ago is categorized the same way as a coffee you paid for with Apple Pay this morning, so your history and your latest spending line up.</p>
+
+<aside class="inline-cta" aria-label="Get BudgetGo">
+  <div><p class="inline-cta-title">Try it with your own spending</p><p>BudgetGo sorts every purchase and turns it into short, clear insights.</p></div>
+  <a class="btn" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a>
+</aside>
+
+<h2 id="you-keep-the-final-say">You keep the final say</h2>
+<p>AI is good at the obvious cases and makes the work fast, but it can't know everything about your life. A purchase at a big-box store might be groceries for you and electronics for someone else. That's why every category in BudgetGo is editable. Open the transaction, pick a different category, and you're done.</p>
+<div class="article-callout"><strong>Our principle</strong>AI does the sorting. You keep the say. BudgetGo never locks you into its choices, and you can review, edit, delete or export your transactions whenever you like.</div>
+
+<h2 id="tricky-transactions-worth-a-quick-check">Tricky transactions worth a quick check</h2>
+<p>No categorization system, human or AI, gets every transaction right on the first try. These are the ones worth glancing at during your weekly review:</p>
+<ul>
+  <li><strong>Superstores and marketplaces.</strong> One shop can sell groceries, household items and gadgets in the same basket.</li>
+  <li><strong>Payment apps and transfers.</strong> A transfer to a friend might be rent, a shared dinner or paying back a loan.</li>
+  <li><strong>Cryptic merchant names.</strong> Some card descriptors use a parent company or payment processor name rather than the shop you visited.</li>
+  <li><strong>One-off big purchases.</strong> A flight, a deposit or an annual plan can skew a category if it's sorted somewhere unexpected.</li>
+</ul>
+
+<h2 id="what-good-categories-unlock">What good categories unlock</h2>
+<p>Once your spending is sorted, the rest of BudgetGo has something solid to work with:</p>
+<ul>
+  <li><strong>Budgets.</strong> Allocate your one active budget across categories and see how each is doing.</li>
+  <li><strong>Insight stories.</strong> Spot overspending, lifestyle creep and saving opportunities in a <a href="how-budgetgo-insight-stories-work.html">one-minute recap</a>.</li>
+  <li><strong>Analytics.</strong> See your spending trend, top merchants, cash flow and forecast.</li>
+  <li><strong>Recurring bills.</strong> Subscriptions and regular charges are detected and shown under Due this week.</li>
+</ul>
+
+<h2 id="privacy-and-ai">Privacy and AI</h2>
+<p>Categorization uses AI analysis of your transaction details. PII filters help limit exposure of sensitive personal details during that analysis, and BudgetGo doesn't sell your personal information. You can find the full details in our <a href="../privacy_policy.html">privacy policy</a>.</p>
+
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3>Do I have to set up categories before I start?</h3>
+<p>No. Transactions are categorized automatically from the start, so you can begin tracking straight away and adjust anything that doesn't fit.</p>
+<h3>Can I change a category the AI chose?</h3>
+<p>Yes. Every category is editable, and changes are yours to make at any time.</p>
+<h3>Does categorization work on imported statements?</h3>
+<p>Yes. Transactions from PDF statements, CSV or Excel files, and receipt photos are categorized just like transactions from connected accounts. You review an import before anything is added.</p>
+        <aside class="author-box" aria-label="About the author">
+          <img src="../src/images/logo.png" alt="" width="56" height="56" />
+          <div><p class="author-box-name">The BudgetGo Team</p><p class="author-box-role">Product & money writers</p><p>We build BudgetGo, the app that brings all your spending together and turns it into clear insights. We write about budgeting, spending habits, and how to get the most out of the app.</p></div>
+        </aside>
+      </div>
+    </div>
+  </article>
+  <section class="article-cta" aria-labelledby="cta-title">
+    <div><h2 id="cta-title">See where your money goes.</h2><p>BudgetGo brings your spending together, sorts it automatically, and shows where you can save.</p></div>
+    <a class="btn" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a>
+  </section>
+  <section class="related" aria-labelledby="related-title">
+    <h2 id="related-title">Keep reading</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-media"><img src="../src/images/life/editorial/groceries.jpg" alt="Overhead view of fresh groceries in a shopping bag" loading="lazy" decoding="async" /></div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Spending</span><span>2 min read</span></div>
+            <h3><a href="how-to-track-spending.html">How to Track Your Spending Without a Spreadsheet</a></h3>
+            <p>A simple 4-step system to track your spending automatically, sort it into categories, and spot where your money goes, no spreadsheet needed.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-media"><img src="../src/images/life/editorial/city.webp" alt="City street in the evening" loading="lazy" decoding="async" /></div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Saving</span><span>2 min read</span></div>
+            <h3><a href="find-and-cancel-subscriptions.html">How to Find and Cancel Subscriptions You Forgot About</a></h3>
+            <p>A quick subscription audit: how to find every recurring charge, check App Store subscriptions, decide what to cancel, and stop surprise renewals.</p>
+          </div>
+        </article>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="../index.html"><img src="../src/images/logo.png" alt="" width="34" height="34" /><span>BudgetGo</span></a><p>Let’s make sense of all of it.</p></div>
+      <div><h3>App</h3><a href="../index.html#inputs">Track spending</a><a href="../index.html#insights">Insights</a><a href="../index.html#analytics">Analytics</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a></div>
+      <div><h3>Help</h3><a href="../automations.html">Automation guides</a><a href="../blog/">Blog</a><a href="../support.html">Support</a><a href="../index.html#faq">Common questions</a><a href="../mcp.html">MCP · Coming soon</a></div>
+      <div><h3>Contact</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="../privacy_policy.html">Privacy Policy</a> &nbsp;/&nbsp; <a href="../terms_of_service.html">Terms of Service</a></p></div>
+  </div>
+</footer>
+
+  <script src="../src/js/i18n.js"></script>
+  <script src="../src/js/home.js"></script>
+</body>
+</html>

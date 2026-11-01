@@ -1,0 +1,80 @@
+<!--
+title: 7 Ways to Get Your Spending Into BudgetGo (and Which Ones to Use)
+seo_title: 7 Ways to Track Your Spending Automatically With BudgetGo
+description: Voice, Apple Pay, bank SMS alerts, Apple Wallet, connected banks, statement imports and manual entry: every way to add spending to BudgetGo, and the best setup for you.
+dek: The best tracker is the one you never have to think about. Here's every way spending gets into BudgetGo, and how to combine them.
+category: inside-budgetgo
+cover: src/images/app-live/mockup-data-hub.webp
+cover_alt: BudgetGo Data Hub with imports, iOS automations and financial connections
+author: budgetgo-team
+published: 2026-11-01
+status: draft
+-->
+<aside class="takeaways" aria-labelledby="takeaways-title">
+  <h2 id="takeaways-title" data-toc="false">Key takeaways</h2>
+  <ul>
+    <li>BudgetGo can capture spending from seven sources, and you can combine as many as you like.</li>
+    <li>Automatic sources (banks, Apple Pay, SMS alerts, Apple Wallet) cover most day-to-day spending.</li>
+    <li>Voice, imports and manual entry fill the gaps: cash, older history and unsupported banks.</li>
+  </ul>
+</aside>
+
+<h2>Why more than one source?</h2>
+<p>Spending happens in a lot of places: a card tap at a café, a bank transfer, cash at a market, a subscription renewing at 3am. No single connection catches all of it everywhere in the world. So BudgetGo brings it all into one place from several sources, and you pick the mix that fits how you pay. Everything you add, whatever the source, is <a href="how-budgetgo-categorizes-transactions.html">categorized automatically</a>.</p>
+
+<figure class="article-figure">
+  <img src="../src/images/app-live/mockup-data-hub.webp" alt="BudgetGo Data Hub showing import, export, SMS and Wallet automations, FinanceKit and bank connections" loading="lazy" decoding="async" />
+  <figcaption>The Data Hub is where you manage imports, iOS automations and financial connections.</figcaption>
+</figure>
+
+<h2>1. Connected banks</h2>
+<p>Link one or more banks through Plaid and your balances and transactions stay up to date on their own. It's the most hands-off option when your bank is supported. Support depends on your institution, country and account type, so search for your bank when you link an account.</p>
+<p><strong>Best for:</strong> your main checking and credit card accounts, where most spending happens.</p>
+
+<h2>2. Apple Wallet (FinanceKit)</h2>
+<p>Where available, BudgetGo can read Apple Wallet accounts through Apple's FinanceKit, such as Apple Card, without a separate bank login.</p>
+<p><strong>Best for:</strong> Apple Card and other Wallet accounts that FinanceKit supports.</p>
+
+<h2>3. Apple Pay automation</h2>
+<p>An Apple Shortcuts automation can log each Apple Pay payment in BudgetGo as it happens, with the amount and merchant. It takes about a minute and a half to set up with our <a href="../automations.html#wallet">Apple Pay video guide</a>.</p>
+<p><strong>Best for:</strong> seeing tap-to-pay purchases instantly, even before your bank shows them.</p>
+
+<!-- cta -->
+
+<h2>4. Bank SMS alerts</h2>
+<p>If your bank texts you after card payments, a Messages automation in Shortcuts can pass those alerts to BudgetGo. Messages are parsed on your device, and only recognized financial messages create transactions. Follow the <a href="../automations.html#sms">bank SMS setup guide</a> and use a filter specific to your bank.</p>
+<p><strong>Best for:</strong> banks that aren't available through Plaid but do send payment alerts.</p>
+
+<h2>5. Statement and file imports</h2>
+<p>Import a PDF bank statement, a CSV or Excel export, or a photo of a receipt. Files can be up to 5 MB with up to 500 transactions. You review everything before it's added, transactions you've already imported from the same file are skipped, and uploaded files are deleted after 24 hours.</p>
+<p><strong>Best for:</strong> bringing in past months so your insights have history from day one, and banks with no other option.</p>
+
+<h2>6. Voice entry</h2>
+<p>Tap the mic and say what you spent, for example <em>“Uber home twenty five forty, Spotify and Netflix”</em>. BudgetGo turns it into transactions and you review them before saving.</p>
+<p><strong>Best for:</strong> cash, splitting a bill with friends, or anything you want logged in seconds.</p>
+
+<h2>7. Manual entry</h2>
+<p>For anything else, add a purchase yourself. It's always there as a fallback.</p>
+<p><strong>Best for:</strong> rare one-off expenses that no other source catches.</p>
+
+<h2>Which setup should you use?</h2>
+<table class="article-table">
+  <caption class="visually-hidden">Recommended BudgetGo setups by situation</caption>
+  <thead><tr><th scope="col">Your situation</th><th scope="col">Recommended mix</th></tr></thead>
+  <tbody>
+    <tr><td>Your bank is supported by Plaid</td><td>Connected bank + voice for cash</td></tr>
+    <tr><td>You pay mostly with Apple Pay</td><td>Apple Pay automation + Apple Wallet</td></tr>
+    <tr><td>Your bank isn't supported but texts alerts</td><td>Bank SMS automation + monthly statement import</td></tr>
+    <tr><td>You want history from day one</td><td>Import the last few months of statements</td></tr>
+    <tr><td>You use a lot of cash</td><td>Voice entry, every time you pay</td></tr>
+  </tbody>
+</table>
+<p>Whatever mix you choose, the goal is the same: every purchase lands in one place without you having to remember it. That's what makes your <a href="how-budgetgo-insight-stories-work.html">insight stories</a> and analytics trustworthy.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Can I use several sources at once?</h3>
+<p>Yes. Combine as many as you like. Most people use one automatic source for cards and voice or manual entry for cash.</p>
+<h3>What if my bank isn't supported?</h3>
+<p>You can still use BudgetGo fully: set up the bank SMS automation if your bank sends alerts, import statements, or add spending with voice.</p>
+<h3>Can I get my data back out?</h3>
+<p>Yes. You can export your transactions as CSV, PDF or Excel at any time.</p>
