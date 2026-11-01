@@ -38,6 +38,23 @@ Key facts:
 - [Add Transaction to Budget Go](https://budgetgo.ai/automations.html#wallet): Inputs are Amount (required), Merchant (required), and Currency (optional ISO code, which defaults to the user's currency). Used by the Wallet "Transaction" automation.
 - [Import SMS Transaction](https://budgetgo.ai/automations.html#sms): Inputs are Message (required, the SMS content) and Sender (optional). Used by the Messages automation.
 
+<!-- locales:start -->
+## Languages
+
+The site is also published in other languages, each page with its own URL:
+
+- [中文](https://budgetgo.ai/zh/)
+- [हिन्दी](https://budgetgo.ai/hi/)
+- [Español](https://budgetgo.ai/es/)
+- [Français](https://budgetgo.ai/fr/)
+- [العربية](https://budgetgo.ai/ar/)
+- [বাংলা](https://budgetgo.ai/bn/)
+- [Português](https://budgetgo.ai/pt/)
+- [Русский](https://budgetgo.ai/ru/)
+- [اردو](https://budgetgo.ai/ur/)
+- [Lietuvių](https://budgetgo.ai/lt/)
+- [Nederlands](https://budgetgo.ai/nl/)
+<!-- locales:end -->
 ## Legal
 
 - [Privacy Policy](https://budgetgo.ai/privacy_policy.html)

@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="bn" dir="ltr" data-locale="bn"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple শর্টকাট অটোমেশন সেট আপ করুন | BudgetGo</title>
+  <meta name="description" content="Apple শর্টকাট অটোমেশন দিয়ে Apple Wallet পেমেন্ট ও ব্যাংক SMS অ্যালার্ট স্বয়ংক্রিয়ভাবে BudgetGo-তে ইমপোর্ট করার ধাপে ধাপে গাইড।">
+  <meta property="og:title" content="Apple শর্টকাট অটোমেশন সেট আপ করুন | BudgetGo">
+  <meta property="og:description" content="Apple শর্টকাট দিয়ে Apple Wallet পেমেন্ট ও ব্যাংক SMS অ্যালার্ট স্বয়ংক্রিয়ভাবে BudgetGo-তে ইমপোর্ট করুন।">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://budgetgo.ai/bn/automations.html">
+  <meta name="theme-color" content="#101010">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/styles.css?v=20261001-rounded">
+
+  <link rel="preload" href="/src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="/src/css/site-shell.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/inner-pages.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/automations.css?v=20261023">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-inner.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/automations.html">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/automations.html">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/automations.html">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/automations.html">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/automations.html">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/automations.html">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/automations.html">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/automations.html">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/automations.html">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/automations.html">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/automations.html">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/automations.html">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/automations.html">
+  <!-- locale-alternates:end -->
+</head>
+<body class="inner-page automations-page" id="top">
+<a class="skip-link" href="#main">মূল বিষয়বস্তুতে যান</a>
+  <header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="/bn/" aria-label="BudgetGo হোমপেজ"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="নেভিগেশন খুলুন" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="প্রধান নেভিগেশন">
+      <a href="/bn/#inputs">খরচ যোগ করুন</a><a href="/bn/#insights">ইনসাইট</a><a href="/bn/#analytics">অ্যানালিটিক্স</a><a href="/bn/#privacy">গোপনীয়তা</a><a href="/bn/automations.html" aria-current="page">গাইড</a><a href="/blog/">ব্লগ</a>
+      <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">অ্যাপ নিন</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container guide-hero-grid">
+        <div>
+          <p class="hero-eyebrow"><span class="hero-eyebrow-dot" aria-hidden="true"></span> সেটআপ গাইড · প্রতিটি প্রায় ২ মিনিট</p>
+          <h1>খরচ <span class="hl">ঘটার মুহূর্তেই লিখে রাখুন।</span></h1>
+          <p class="lead">Apple শর্টকাট অটোমেশন Apple Pay পেমেন্ট ও ব্যাংক SMS অ্যালার্ট সরাসরি BudgetGo-তে পাঠাতে পারে, ফলে কিছু টাইপ না করেই লেনদেন আপনার রেকর্ডে চলে আসে। সবকিছু আপনার iPhone-এ চলে।</p>
+          <nav class="guide-jump" aria-label="গাইডের অংশসমূহ">
+            <a href="#wallet-video"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
+            <a href="#sms-video"><span class="chip-dot" style="--c: #b994f5"></span>ব্যাংক SMS অ্যালার্ট</a>
+            <a href="#troubleshooting"><span class="chip-dot" style="--c: #7132f5"></span>সমস্যা সমাধান</a>
+          </nav>
+        </div>
+
+        <ol class="flow" aria-label="অটোমেশন কীভাবে কাজ করে">
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-wallet" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M3 10h18" stroke="currentColor" stroke-width="2"></path></svg>
+            </span>
+            <span><strong>আপনি পেমেন্ট করেন বা ব্যাংকের টেক্সট পান</strong><small>Apple Pay ট্যাপ বা SMS অ্যালার্ট</small></span>
+          </li>
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-shortcuts" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 4h8l4 4v8l-4 4H8l-4-4V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M10 9l4 3-4 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span><strong>শর্টকাট সঙ্গে সঙ্গে চলে</strong><small>আপনার ব্যক্তিগত অটোমেশন</small></span>
+          </li>
+          <li class="flow-node flow-node-final">
+            <img class="flow-logo" src="/src/images/logo.png" alt="" width="40" height="40">
+            <span><strong>BudgetGo লিখে রাখে</strong><small>পরিমাণ, দোকান ও ক্যাটাগরি</small></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="before-you-start" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </span>
+          <p class="section-label">শুরু করার আগে</p>
+          <h2>তিনটি দ্রুত যাচাই।</h2>
+        </div>
+        <ul class="guide-checklist">
+          <li><span class="check" aria-hidden="true"></span><strong>BudgetGo ইনস্টল করা আছে</strong>App Store থেকে ডাউনলোড করে একবার সাইন ইন করুন, যাতে এর অ্যাকশন শর্টকাটে দেখা যায়।</li>
+          <li><span class="check" aria-hidden="true"></span><strong>শর্টকাট আপনার iPhone-এ আছে</strong>Apple-এর শর্টকাট অ্যাপ iOS 17 ও পরবর্তী সংস্করণে আগে থেকেই ইনস্টল করা থাকে।</li>
+          <li><span class="check" aria-hidden="true"></span><strong>ইমপোর্ট চালু আছে</strong>BudgetGo-তে Data Hub খুলে Wallet বা SMS ইমপোর্ট চালু করুন। বন্ধ থাকলে অটোমেশনের পাঠানো কিছুই BudgetGo গ্রহণ করে না।</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wallet" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-lime" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"></rect><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Apple Wallet</p>
+          <h2>Apple Pay পেমেন্ট স্বয়ংক্রিয়ভাবে লিখে রাখুন।</h2>
+          <p>Wallet কার্ড ট্যাপ করে পেমেন্ট করলেই এই অটোমেশন চলে এবং পরিমাণ ও দোকানের নাম BudgetGo-র <strong>Add Transaction to Budget Go</strong> অ্যাকশনে পাঠায়।</p>
+        </div>
+
+        <figure id="wallet-video" class="guide-video" aria-labelledby="wallet-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 28 sec</p>
+            <h3 id="wallet-video-title">Set up Apple Pay in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p id="wallet-video-note">Keep <strong>Automation</strong> enabled on your phone. The recording turns it off at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#wallet-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/apple-pay-setup.mp4">Open the Apple Pay video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/apple-pay-video-poster.jpg" aria-label="Apple Pay automation setup in Apple Shortcuts" aria-describedby="wallet-video-note">
+            <source src="/src/videos/automation/apple-pay-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/apple-pay-setup.mp4">Watch the Apple Pay setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="wallet-steps" class="guide-steps">
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>শর্টকাট খুলুন</h3>
+              <p>আপনার iPhone-এ শর্টকাট অ্যাপটি খুঁজে খুলুন।</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step1.jpg" alt="iPhone-এর হোম স্ক্রিনে শর্টকাট অ্যাপের আইকন" width="900" height="509" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>একটি ব্যক্তিগত অটোমেশন তৈরি করুন</h3>
+              <p><strong>Automation</strong> ট্যাব খুলুন, তারপর নতুন ব্যক্তিগত অটোমেশন তৈরি করতে <strong>+</strong> ট্যাপ করুন।</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step2_a.jpg" alt="শর্টকাট অ্যাপে Automation ট্যাব" width="900" height="433" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step2_b.jpg" alt="ব্যক্তিগত অটোমেশন তৈরির প্লাস বোতাম" width="900" height="383" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Wallet ট্রিগার বেছে নিন</h3>
+              <ol>
+                <li><strong>Transaction</strong> খুঁজুন (কিছু iOS সংস্করণে <strong>Wallet</strong> হিসেবে দেখায়) এবং সেটি নির্বাচন করুন।</li>
+                <li>BudgetGo যে কার্ডগুলো ট্র্যাক করবে সেগুলো সব নির্বাচন করুন।</li>
+                <li><strong>Run Immediately</strong> বেছে নিন যাতে অটোমেশন নিশ্চিতকরণের জন্য অপেক্ষা না করে, তারপর <strong>Next</strong> ট্যাপ করুন।</li>
+              </ol>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step3_a.jpg" alt="Transaction ট্রিগার খোঁজা, যার বর্ণনা: আমি যখন Wallet কার্ড বা পাস ট্যাপ করি" width="900" height="500" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_b.jpg" alt="ট্র্যাক করার জন্য Wallet কার্ড নির্বাচন" width="900" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_d.jpg" alt="Run Immediately বিকল্প নির্বাচিত" width="900" height="562" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>BudgetGo অ্যাকশন যোগ করুন</h3>
+              <p><strong>New Blank Automation</strong> ট্যাপ করুন, <strong>BudgetGo</strong> খুঁজুন এবং <strong>Add Transaction to Budget Go</strong> বেছে নিন।</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step4.jpg" alt="অটোমেশনের জন্য নতুন ফাঁকা শর্টকাট তৈরি" width="900" height="796" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step4_b.jpg" alt="Add Transaction to Budget Go অ্যাকশন খোঁজা" width="726" height="900" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>পেমেন্টের বিবরণ যুক্ত করুন</h3>
+              <ol>
+                <li><strong>Amount</strong> ফিল্ডে ট্যাপ করুন, <strong>Select Variable</strong> বেছে নিন, তারপর <strong>Shortcut Input</strong> নিন।</li>
+                <li>যুক্ত হওয়া <strong>Shortcut Input</strong>-এ ট্যাপ করে সেটিকে <strong>Amount</strong>-এ বদলান।</li>
+                <li><strong>Merchant</strong>-এর জন্য একই করুন, Shortcut Input থেকে <strong>Merchant</strong> বেছে নিন।</li>
+                <li>পরীক্ষা করতে প্লে বোতামে ট্যাপ করুন, তারপর <strong>Done</strong> ট্যাপ করুন।</li>
+              </ol>
+              <p class="guide-note"><strong>মুদ্রা ঐচ্ছিক।</strong> BudgetGo-র ডিফল্ট মুদ্রার জন্য ফাঁকা রাখুন, অথবা USD, EUR বা NGN-এর মতো কোড দিন।</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step5_a.jpg" alt="Amount ফিল্ডে Select Variable বেছে নেওয়া" width="900" height="827" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_c.jpg" alt="Shortcut Input থেকে Amount বেছে নেওয়া" width="541" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_d.jpg" alt="পরীক্ষার প্লে বোতামসহ সম্পন্ন অটোমেশন" width="900" height="370" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">6</span>
+              <h3>BudgetGo-তে যাচাই করুন</h3>
+              <p>BudgetGo-তে <strong>Data Hub</strong> খুলে <strong>Wallet Automation</strong> ট্যাপ করুন। <strong>Apple Wallet tracking</strong> চালু আছে কি না দেখে নিন, তারপর <strong>Run test shortcut</strong> ট্যাপ করুন। BudgetGo আপনার অটোমেশন থেকে একটি পেমেন্ট পেলে স্ট্যাটাস যাচাইকৃত হয়ে যায়।</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-wallet-automation.webp" alt="BudgetGo Wallet Automation স্ক্রিন, Apple Wallet ট্র্যাকিং চালু এবং Run test shortcut বোতামসহ" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sms" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">বার্তা</p>
+          <h2>ব্যাংক SMS অ্যালার্টকে লেনদেনে পরিণত করুন।</h2>
+          <p>আপনার ব্যাংক কার্ড পেমেন্ট ও ট্রান্সফার নিয়ে টেক্সট পাঠালে, একটি মেসেজ অটোমেশন প্রতিটি অ্যালার্ট BudgetGo-র <strong>Import SMS Transaction</strong> অ্যাকশনে পাঠাতে পারে। BudgetGo বার্তাটি আপনার ডিভাইসেই পড়ে এবং আর্থিক অ্যালার্ট চিনতে পারলে তবেই লেনদেন তৈরি করে।</p>
+        </div>
+
+        <figure id="sms-video" class="guide-video" aria-labelledby="sms-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 58 sec</p>
+            <h3 id="sms-video-title">Set up bank SMS in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p>Choose your bank's sender or words from its payment alerts. This walkthrough uses <strong>debited</strong>.</p>
+            <p id="sms-video-note">Keep <strong>Automation</strong> enabled and <strong>Confirm Before Run</strong> off. The recording disables its automation at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#sms-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/bank-sms-setup.mp4">Open the bank SMS video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/bank-sms-video-poster.jpg" aria-label="Bank SMS automation setup in Apple Shortcuts" aria-describedby="sms-video-note">
+            <source src="/src/videos/automation/bank-sms-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/bank-sms-setup.mp4">Watch the bank SMS setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="sms-steps" class="guide-steps">
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>একটি বার্তা অটোমেশন তৈরি করুন</h3>
+              <p>শর্টকাটে <strong>Automation</strong> ট্যাব খুলুন, <strong>+</strong> ট্যাপ করুন এবং <strong>Message</strong> বেছে নিন।</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>শুধু আপনার ব্যাংকের বার্তায় সীমিত রাখুন</h3>
+              <ol>
+                <li><strong>Sender</strong> ট্যাপ করে আপনার ব্যাংকের কন্টাক্ট বা নম্বর বেছে নিন, অথবা প্রতিটি অ্যালার্টে থাকা কোনো শব্দ, যেমন ব্যাংকের নাম, দিয়ে <strong>Message Contains</strong> ব্যবহার করুন।</li>
+                <li><strong>Run Immediately</strong> বেছে নিন, তারপর <strong>Next</strong> ট্যাপ করুন।</li>
+              </ol>
+              <p class="guide-note"><strong>ফিল্টার সংকীর্ণ রাখুন।</strong> শুধু আপনার ব্যাংকের সঙ্গে মেলালে ব্যক্তিগত কথোপকথন BudgetGo-র বাইরে থাকে।</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>BudgetGo অ্যাকশন যোগ করুন</h3>
+              <p><strong>New Blank Automation</strong> ট্যাপ করুন, <strong>BudgetGo</strong> খুঁজুন এবং <strong>Import SMS Transaction</strong> বেছে নিন।</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>বার্তাটি পাঠিয়ে দিন</h3>
+              <ol>
+                <li><strong>Message</strong> ফিল্ডে ট্যাপ করুন, <strong>Select Variable</strong> বেছে নিন, <strong>Shortcut Input</strong> নিন এবং সেটি <strong>Content</strong>-এ সেট করুন।</li>
+                <li><strong>Sender</strong> ফিল্ডে ট্যাপ করুন এবং <strong>Sender</strong>-এ সেট করা <strong>Shortcut Input</strong> বেছে নিন। এটি ঐচ্ছিক, তবে BudgetGo-কে আপনার ব্যাংক চিনতে সাহায্য করে।</li>
+                <li><strong>Done</strong> ট্যাপ করুন।</li>
+              </ol>
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>পরীক্ষা করুন</h3>
+              <p>আপনার পরবর্তী ব্যাংক অ্যালার্টের জন্য অপেক্ষা করুন, অথবা BudgetGo-র <strong>Data Hub</strong>-এ অটোমেশনের বিবরণ খুলে <strong>Test connection</strong> ট্যাপ করুন। তারপর ইমপোর্ট হওয়া লেনদেন দেখতে BudgetGo-তে ফিরুন।</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-sms-guide.webp" alt="BudgetGo SMS Automation স্ক্রিন, ফরওয়ার্ডিং টগল, স্ট্যাটাস ও Test connection বোতামসহ" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"></circle><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17.2v.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">সমস্যা সমাধান</p>
+          <h2>কোনো লেনদেন না দেখা গেলে।</h2>
+        </div>
+
+        <div class="guide-faq">
+          <details>
+            <summary>শর্টকাটে BudgetGo-র অ্যাকশন খুঁজে পাচ্ছি না</summary>
+            <p>ইনস্টল বা আপডেটের পর BudgetGo একবার খুলুন যাতে iOS এর অ্যাকশন নিবন্ধন করে, তারপর শর্টকাটে আবার "BudgetGo" খুঁজুন।</p>
+          </details>
+          <details>
+            <summary>আমি "Transaction Import Failed" নোটিফিকেশন পেয়েছি</summary>
+            <p>Wallet অটোমেশন খালি পরিমাণ বা দোকান পাঠিয়েছে। অটোমেশন আবার খুলে নিশ্চিত করুন দুটি ফিল্ডই Shortcut Input ব্যবহার করছে এবং Amount ও Merchant নির্বাচিত আছে।</p>
+          </details>
+          <details>
+            <summary>অটোমেশন চালানোর আগে জিজ্ঞেস করে</summary>
+            <p>শর্টকাটে অটোমেশন সম্পাদনা করে Run After Confirmation থেকে <strong>Run Immediately</strong>-এ বদলান।</p>
+          </details>
+          <details>
+            <summary>একটি SMS অ্যালার্ট লেনদেন তৈরি করেনি</summary>
+            <p>শুধু সমর্থিত আর্থিক বার্তা থেকে লেনদেন তৈরি হয়। Data Hub-এ ইমপোর্ট চালু আছে কি না এবং Message ফিল্ড বার্তার Content ব্যবহার করছে কি না দেখুন।</p>
+          </details>
+        </div>
+
+        <p class="guide-note">এখনও আটকে আছেন? <a class="support-inline-link" href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>-এ ইমেল করুন বা <a class="support-inline-link" href="/bn/support.html">সাপোর্ট পেজ</a> ব্যবহার করুন।</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="/bn/"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>চলুন সবকিছু বুঝে নিই।</p></div>
+      <div><h3>অ্যাপ</h3><a href="/bn/#inputs">খরচ যোগ করুন</a><a href="/bn/#insights">ইনসাইট</a><a href="/bn/#analytics">অ্যানালিটিক্স</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">BudgetGo নিন</a></div>
+      <div><h3>সহায়তা</h3><a href="/bn/automations.html">অটোমেশন গাইড</a><a href="/blog/">ব্লগ</a><a href="/bn/support.html">সাপোর্ট</a><a href="/bn/#faq">সাধারণ প্রশ্ন</a><a href="/bn/mcp.html">MCP · শিগগিরই আসছে</a></div>
+      <div><h3>যোগাযোগ</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">গোপনীয়তা নীতি</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">সেবার শর্তাবলি</a></p></div>
+  </div>
+</footer>
+
+  <script src="/src/js/i18n.js"></script>
+  <script src="/src/js/home.js"></script>
+
+
+</body></html>

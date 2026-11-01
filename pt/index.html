@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="pt" dir="ltr" data-locale="pt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BudgetGo: controle de gastos e app de orçamento</title>
+  <meta name="description" content="O BudgetGo é um app para iPhone de controle de gastos e orçamento. Adicione gastos por voz, extratos, SMS do banco ou bancos conectados e deixe a IA mostrar onde economizar.">
+  <meta property="og:title" content="BudgetGo: controle de gastos e app de orçamento">
+  <meta property="og:description" content="Fale, importe ou deixe chegar. O BudgetGo organiza seus gastos e mostra onde economizar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://budgetgo.ai/pt/">
+  <meta property="og:image" content="https://budgetgo.ai/src/images/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://budgetgo.ai/pt/">
+  <link rel="preload" href="/src/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-phone.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-sections.css?v=20261004">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"BudgetGo","operatingSystem":"iOS","applicationCategory":"FinanceApplication","description":"Track spending from voice, bank statements, bank SMS alerts, Apple Wallet and banks connected through Plaid. AI sorts every purchase, and insights show where to save.","url":"https://budgetgo.ai/","installUrl":"https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917","publisher":{"@type":"Organization","name":"GraphLeaf LLC","email":"support@budgetgo.ai"}}</script>
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/">
+  <!-- locale-alternates:end -->
+</head>
+<body class="app-site" id="top">
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-housing" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 10.8Q2 10 2.85 9.26L9.33 3.59Q10 3 10.8 2.6l.4-.2q.8-.4 1.6 0l.4.2q.8.4 1.47.99l6.48 5.67Q22 10 21.2 10.8l-.8.8q-.4.4-.8 0l-.2-.2q-.4-.4-.4.17v8.13q0 1.3-1.3 1.3h-2.4Q14 21 14 19.7v-3.4q0-1.3-1.3-1.3h-1.4Q10 15 10 16.3v3.4Q10 21 8.7 21H6.3Q5 21 5 19.7v-8.13q0-.57-.4-.17l-.2.2q-.4.4-.8 0Z"></path></symbol>
+  <symbol id="i-groceries" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 4q0-1 1-1h1.8q1.2 0 1.49 1.16l.42 1.68Q7 7 8.2 7h12.6q1.2 0 .82 1.14l-2.24 6.72Q19 16 17.8 16H9.2q-1.2 0-1.58-1.14L4.82 6.45Q4.5 5.5 3.5 5.5H3q-1 0-1-1ZM6.8 20a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Zm9 0a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Z"></path></symbol>
+  <symbol id="i-dining" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v6q0 3-2.5 4v7.5a1.5 1.5 0 0 1-3 0V13Q2 12 2 9ZM20 2q2 0 2 2v16.5a1.5 1.5 0 0 1-3 0V14h-3q-2 0-2-2 0-7 6-10Z"></path></symbol>
+  <symbol id="i-shopping" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 7V6a5 5 0 0 1 10 0v1h1q2 0 2.2 2L21 19q.2 3-3 3H6q-3.2 0-3-3l.8-10Q4 7 6 7Zm2.5 0h5V6a2.5 2.5 0 0 0-5 0Z"></path></symbol>
+  <symbol id="i-transport" viewBox="0 0 24 24"><path fill-rule="evenodd" d="m6 9 1.3-4Q8 3 10 3h4q2 0 2.7 2L18 9q4 0 4 4v4q0 1-1 1v2a2 2 0 0 1-4 0v-2H7v2a2 2 0 0 1-4 0v-2q-1 0-1-1v-4q0-4 4-4Zm2.8 0q-.8 0-.58-.77l.56-1.96Q9 5.5 9.8 5.5h4.4q.8 0 1.02.77l.56 1.96Q16 9 15.2 9ZM6 12h1q1 0 1 1t-1 1H6q-1 0-1-1t1-1Zm11 0h1q1 0 1 1t-1 1h-1q-1 0-1-1t1-1Z"></path></symbol>
+  <symbol id="i-fun" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5 3h14q3 0 3 3v3q0 1-1 1a2 2 0 0 0 0 4q1 0 1 1v3q0 3-3 3H5q-3 0-3-3v-3q0-1 1-1a2 2 0 0 0 0-4q-1 0-1-1V6q0-3 3-3Zm11 2q1 0 1 1v1q0 1-1 1t-1-1V6q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Z"></path></symbol>
+  <symbol id="i-subs" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3q0-2 1.5-.5L6 4a9 9 0 0 1 15 4q.5 2-1 2-1.5 0-2-1.5A6 6 0 0 0 8 6l2 2q1 1.5-1 1.5H4q-1 0-1-1Zm18 18q0 2-1.5.5L18 20A9 9 0 0 1 3 16q-.5-2 1-2 1.5 0 2 1.5A6 6 0 0 0 16 18l-2-2q-1-1.5 1-1.5h5q1 0 1 1Z"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"></path></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"></rect><path d="M3 10h18M16 14h2"></path></g></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9 12 4l9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10-6.5a1 1 0 0 0 0-1.7l-10-6.6A1 1 0 0 0 8 5.5z" fill="currentColor"></path></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></g></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="Página inicial do BudgetGo"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir navegação" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Navegação principal">
+      <a href="#inputs">Adicionar gastos</a><a href="#insights">Insights</a><a href="#analytics">Análises</a><a href="#privacy">Privacidade</a><a href="/pt/automations.html">Guias</a><a href="/blog/">Blog</a>
+      <a class="btn btn--light btn--sm" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Baixar o app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero: the onboarding headline over a fan of real app screens rising from the fold. -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- The onboarding's slot reels, faded into the backdrop. -->
+  <div class="hero__reels" aria-hidden="true"><div class="reel"><ul><li>Café<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>Aluguel</li><li>Academia<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>Táxi</li><li>Vinho<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>Contas</li><li>Almoço</li><li>Tacos<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul><ul aria-hidden="true"><li>Café<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>Aluguel</li><li>Academia<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>Táxi</li><li>Vinho<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>Contas</li><li>Almoço</li><li>Tacos<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul></div><div class="reel reel--rev"><ul><li>Livros<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>Voos</li><li>Cinema<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>Presentes</li><li>Pizza<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>Hotéis</li><li>Gasolina</li><li>Shows<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul><ul aria-hidden="true"><li>Livros<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>Voos</li><li>Cinema<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>Presentes</li><li>Pizza<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>Hotéis</li><li>Gasolina</li><li>Shows<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul></div><div class="reel"><ul><li>Plantas<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>Lanches<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>Corte de cabelo<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>Mercado</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>Brunch<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>Shows</li></ul><ul aria-hidden="true"><li>Plantas<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>Lanches<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>Corte de cabelo<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>Mercado</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>Brunch<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>Shows</li></ul></div></div>
+  <div class="wrap hero__copy">
+    <h1 id="hero-title" class="hero__title" data-split="">Vamos dar sentido<br> <em>a tudo isso.</em></h1>
+    <p class="hero__lead" data-reveal="">Aproveite o seu dia. Saiba para onde vai o seu dinheiro.</p>
+    <div class="hero__actions" data-reveal="">
+      <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Baixar o BudgetGo</a>
+      <a class="btn btn--ghost" href="#inputs">Veja como funciona</a>
+    </div>
+  </div>
+  <div class="hero__stage" data-tilt="">
+    <div class="hero__fan">
+      <img class="fan fan--left" decoding="async" src="/src/images/app-live/mockup-analytics.webp" alt="BudgetGo Análises: gastos, previsão, fluxo de caixa e principais estabelecimentos de setembro" width="754" height="1639">
+      <img class="fan fan--right" decoding="async" src="/src/images/app-live/mockup-story.webp" alt="Uma história de progresso de meta do BudgetGo: Veja como você avançou, faltam 85 para a meta Novo notebook" width="754" height="1639">
+      <img class="fan fan--center" fetchpriority="high" decoding="async" src="/src/images/app-live/mockup-home.webp" alt="BudgetGo Início: US$ 2.800,00 restantes de um orçamento de US$ 4.000 no dia 2 de 30, Apple TV+ vence hoje e o resumo dos seus insights" width="754" height="1639">
+    </div>
+  </div>
+</section>
+
+
+<!-- Ways spending arrives. -->
+<section class="marquee" aria-label="Formas de adicionar gastos">
+  <div class="marquee__track">
+    <ul><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>Fale</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>Extratos bancários</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>Alertas SMS do banco</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>Bancos conectados</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV e Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>Fotos de recibos</li></ul>
+    <ul aria-hidden="true"><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>Fale</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>Extratos bancários</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>Alertas SMS do banco</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>Bancos conectados</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV e Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>Fotos de recibos</li></ul>
+  </div>
+</section>
+
+<!-- Pinned story: four ways in, one phone. -->
+<section class="inputs" id="inputs" aria-labelledby="inputs-title">
+  <div class="wrap inputs__grid">
+    <div class="inputs__copy">
+      <p class="eyebrow">Todas as formas de pagar</p>
+      <h2 id="inputs-title" data-split="">Seja como for,<br><span>tudo chega aqui.</span></h2>
+      <ol class="steps">
+        <li class="step is-active" data-step="0"><span class="step__icon tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span><div><h3>É só falar</h3><p>Toque no microfone e diga o que você gastou.</p></div></li>
+        <li class="step" data-step="1"><span class="step__icon tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span><div><h3>Importe um extrato</h3><p>PDF, CSV ou Excel, até fotos de recibos.</p></div></li>
+        <li class="step" data-step="2"><span class="step__icon tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span><div><h3>Deixe os alertas do banco fazerem isso</h3><p>Alertas SMS do banco, lidos no seu dispositivo.</p></div></li>
+        <li class="step" data-step="3"><span class="step__icon tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span><div><h3>Conecte o que você usa</h3><p>Apple Wallet e seus bancos, via Plaid.</p></div></li>
+      </ol>
+    </div>
+    <div class="inputs__stage">
+      <div class="iphone iphone--story">
+        
+          <img class="state" data-state="0" src="/src/images/app-live/mockup-voice.webp" alt="Entrada por voz do BudgetGo: Uber para casa vinte e cinco quarenta, Spotify oito noventa e nove e Netflix nove noventa e nove, transformados em três transações" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="1" src="/src/images/app-live/mockup-import.webp" alt="Importação de dados do BudgetGo: um extrato lendo transações e um extrato do Chase concluído com 142 transações adicionadas e 3 ignoradas" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="2" src="/src/images/app-live/mockup-sms-automation.webp" alt="Automação de SMS do BudgetGo: encaminhamento de SMS ativado, criar automação e testar conexão" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="3" src="/src/images/app-live/mockup-data-hub.webp" alt="Central de dados do BudgetGo: importações e exportações, automação do iOS, FinanceKit e conexões bancárias" width="754" height="1639" loading="lazy">
+        
+      </div>
+      <div class="overlay overlay--voice" data-overlay="0" aria-hidden="true"><span class="overlay__mic"><svg><use href="#i-mic"></use></svg></span>“Uber para casa vinte e cinco quarenta, Spotify e Netflix”</div>
+      <div class="overlay overlay--files" data-overlay="1" aria-hidden="true">
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg><b>Statement.pdf</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5v11zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2zM3 19c0 1.1.9 2 2 2h3V10H3v9z" opacity=".9"></path></svg><b>September.csv</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M12 9a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM20 5h-3.2L15 3H9L7.2 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 14H4V7h4.05l1.83-2h4.24l1.83 2H20v12z"></path></svg><b>Foto de recibo</b></span>
+      </div>
+      <div class="overlay overlay--sms" data-overlay="2" aria-hidden="true"><span class="overlay__app"><svg><use href="#i-chat"></use></svg></span><span><b>Banco · agora</b>Seu cartão final 4821 foi usado para US$ 45,00 na Talabat.</span></div>
+      <div class="overlay overlay--hub" data-overlay="3" aria-hidden="true"><span class="overlay__pulse"></span>Novas transações chegam sozinhas</div>
+      <div class="inputs__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Banks through Plaid. -->
+<section class="banks" aria-labelledby="banks-title">
+  <div class="wrap banks__grid">
+    <div class="banks__stage">
+      <div class="iphone iphone--banks">
+        <img src="/src/images/app-live/mockup-accounts.webp" alt="Contas do BudgetGo: Chase e Monzo conectados e sincronizados, com saldos de Conta corrente e Poupança" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="bank-stack" aria-hidden="true">
+        <div class="bank-card"><span class="bank-card__icon"><svg><use href="#i-bank"></use></svg></span><span><b>Conta corrente</b><em>Corrente ··4821</em></span><b class="bank-card__bal">$3,240.18</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--b"><svg><use href="#i-wallet"></use></svg></span><span><b>Cartão de recompensas</b><em>Crédito ··1093</em></span><b class="bank-card__bal">$612.40</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--c"><svg><use href="#i-bank"></use></svg></span><span><b>Poupança</b><em>Poupança ··7720</em></span><b class="bank-card__bal">$8,905.00</b></div>
+      </div>
+    </div>
+    <div class="banks__copy">
+      <p class="eyebrow">Bancos conectados</p>
+      <h2 id="banks-title" data-split="">Todos os seus bancos.<br><span>Uma visão clara.</span></h2>
+      <p class="lead">Conecte seus bancos pela Plaid. Todas as contas em um só lugar.</p>
+      <ul class="banks__points">
+        <li>Conecte mais de um banco<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>Saldos e transações sempre atualizados<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>Seu banco não aparece? Importe extratos<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+      </ul>
+      <p class="banks__plaid">Conexões bancárias por <img src="/src/images/brands/plaid-white.svg" alt="Plaid" width="64" height="24"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Automatic sorting. -->
+<section class="sort" id="sort" aria-labelledby="sort-title">
+  <div class="wrap sort__grid">
+    <div class="sort__copy">
+      <p class="eyebrow">Organizado automaticamente</p>
+      <h2 id="sort-title" data-split="">A IA organiza.<br><span>Você decide.</span></h2>
+      <p class="lead">Cada compra ganha uma categoria assim que chega. Altere qualquer uma.</p>
+      <div class="sort__meter"><span class="sort__count" data-sort-count="">5</span><span class="sort__label">para revisar</span></div>
+      <p class="sort__ai" aria-hidden="true"><span class="sort__spark"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></span><span data-sort-status="">A IA está organizando…</span></p>
+    </div>
+    <div class="sort__list" data-sort-list="">
+      <div class="sort-row" style="--cat:#84cc16"><span class="logo logo--walmart"><img src="/src/images/merchants/walmart.svg" alt=""></span><span class="tx__t"><b>Walmart</b><em class="sort-row__cat"><i class="u">Sem categoria</i><i class="c">Mercado<svg><use href="#i-groceries"></use></svg></i></em></span><b>-$52.80</b></div>
+      <div class="sort-row" style="--cat:#2563eb"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><span class="tx__t"><b>Uber</b><em class="sort-row__cat"><i class="u">Sem categoria</i><i class="c">Transporte<svg><use href="#i-transport"></use></svg></i></em></span><b>-$25.40</b></div>
+      <div class="sort-row" style="--cat:#06b6d4"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em class="sort-row__cat"><i class="u">Sem categoria</i><i class="c">Assinaturas<svg><use href="#i-subs"></use></svg></i></em></span><b>-$11.99</b></div>
+      <div class="sort-row" style="--cat:#f97316"><span class="logo logo--mcd"><img src="/src/images/merchants/mcdonalds.svg" alt=""></span><span class="tx__t"><b>McDonald’s</b><em class="sort-row__cat"><i class="u">Sem categoria</i><i class="c"><svg><use href="#i-dining"></use></svg>Restaurantes e delivery</i></em></span><b>-$9.85</b></div>
+      <div class="sort-row" style="--cat:#c0841a"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon</b><em class="sort-row__cat"><i class="u">Sem categoria</i><i class="c">Compras<svg><use href="#i-shopping"></use></svg></i></em></span><b>-$32.00</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- Insight stories: a horizontal, pinned reel. -->
+<section class="insights" id="insights" aria-labelledby="insights-title">
+  <div class="insights__pin">
+    <div class="insights__track" data-reel="">
+      <div class="reel-intro">
+        <p class="eyebrow">Insights personalizados</p>
+        <h2 id="insights-title" data-split="">Seus gastos,<br><span>contados como uma história.</span></h2>
+        <p class="lead">Histórias curtas sobre o seu dinheiro: o que está no ritmo e onde economizar.</p>
+        <div class="recap">
+          <div class="recap__stack" aria-hidden="true">
+            <span class="recap__card recap__card--pace"><em>Ritmo</em><svg viewBox="0 0 80 48"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="7" stroke-linecap="round"></path><path d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="7" stroke-linecap="round"></path></svg><b>$</b></span>
+            <span class="recap__card recap__card--over"><em>Acima</em><svg viewBox="0 0 80 36"><path d="M4 8h72M4 20h60" stroke="#FFB3AA" stroke-width="6" stroke-linecap="round"></path></svg></span>
+            <span class="recap__card recap__card--save"><em>Poupança</em><svg viewBox="0 0 80 32"><path d="M5 27 18 22 30 24 42 14 54 14 66 9 75 3" fill="none" stroke="#9CE5B9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path></svg><b>$28</b></span>
+          </div>
+          <div class="recap__copy"><span>Seu resumo</span><b>Pequenas mudanças. Mais possibilidades.</b><em>4 histórias · &lt;1 min</em></div>
+          <span class="recap__play"><svg aria-hidden="true"><use href="#i-play"></use></svg></span>
+        </div>
+      </div>
+      <article class="story" style="--bg:#291d50;--fg:#d8c5ef;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Frente a frente</p>
+        <h3>Ir custou mais que comer lá.</h3>
+        <strong class="story__number">$51</strong>
+        <p class="story__lead">Mais em corridas do que em restaurantes neste trimestre, a primeira vez que o transporte liderou.</p>
+        <div class="story__compare"><div><span>Transporte</span><b>$482</b></div><i class="bar" style="--w:100%"></i><div><span>Restaurantes</span><b>$431</b></div><i class="bar bar--b" style="--w:89%"></i></div>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Toque para continuar · Segure para pausar</p>
+      </article>
+      <article class="story" style="--bg:#153b2d;--fg:#b4d7c1;--accent:#9ce5b9">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Economize mais</p>
+        <h3>Pequenas mudanças. Mais possibilidades.</h3>
+        <strong class="story__number">+$28</strong>
+        <p class="story__lead">Os restaurantes passaram US$ 28 da sua semana habitual, o maior valor em dois meses.</p>
+        <figure class="story__weeks" aria-label="Restaurantes ao longo de oito semanas, esta semana acima dos US$ 67 habituais"><figcaption><span>Restaurantes, últimas 8 semanas</span><b>Esta semana</b></figcaption><div class="story__bars"><i style="--h:62%"></i><i style="--h:69%"></i><i style="--h:59%"></i><i style="--h:67%"></i><i style="--h:71%"></i><i style="--h:65%"></i><i style="--h:69%"></i><i class="now" style="--h:100%"></i></div></figure>
+        <p class="story__advice">Troque duas dessas refeições por compras de mercado e quase toda essa diferença some.</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Toque para continuar · Segure para pausar</p>
+      </article>
+      <article class="story" style="--bg:#30203e;--fg:#d8c5ef;--accent:#b48aff">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Hábito oculto</p>
+        <h3>O café superou suas assinaturas em silêncio.</h3>
+        <strong class="story__number">$96</strong>
+        <p class="story__lead">A cerca de US$ 5,60 por xícara, o café ultrapassou todas as assinaturas que você paga.</p>
+        <div class="story__compare"><div><span>Café</span><b>$96</b></div><i class="bar" style="--w:100%"></i><div><span>Assinaturas</span><b>$74</b></div><i class="bar bar--b" style="--w:77%"></i></div>
+        <p class="story__source">Das suas transações de jul – set</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Toque para continuar · Segure para pausar</p>
+      </article>
+      <article class="story" style="--bg:#17313a;--fg:#b7d2d9;--accent:#90deed">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Ritmo</p>
+        <h3>No caminho para terminar abaixo do orçamento.</h3>
+        <strong class="story__number">$143<small>/dia</small></strong>
+        <p class="story__lead">Gaste até este valor e o orçamento se mantém até o dia 30.</p>
+        <svg class="story__art" viewBox="0 0 80 48" aria-hidden="true"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="6" stroke-linecap="round"></path><path class="draw" d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="6" stroke-linecap="round"></path><path d="M40 41 59 21" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><circle cx="40" cy="41" r="3" fill="#fff"></circle></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Toque para continuar · Segure para pausar</p>
+      </article>
+      <article class="story" style="--bg:#161618;--fg:#b9b9b5;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Comparação de períodos</p>
+        <h3>Um novo período. Uma nova perspectiva.</h3>
+        <strong class="story__number">12%<small> menos</small></strong>
+        <p class="story__lead">Do que nos mesmos dias do período anterior.</p>
+        <svg class="story__art story__art--wide" viewBox="0 0 160 60" aria-hidden="true"><path d="M-4 48C24 36 44 44 68 50s36-2 52-22 24-20 44-20" fill="none" stroke="#d8c5ef" stroke-width="7" stroke-linecap="round" opacity=".6"></path><path class="draw" d="M-4 28C24 16 52 28 76 40s36 0 52-20 22-16 36-16" fill="none" stroke="#7132f5" stroke-width="11" stroke-linecap="round"></path></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Toque para continuar · Segure para pausar</p>
+      </article>
+      <div class="reel-end"><p>Toque para continuar<br><span>Segure para pausar</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Analytics bento. -->
+<section class="analytics" id="analytics" aria-labelledby="analytics-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Análises avançadas</p><h2 id="analytics-title" data-split="">Cada número,<br><span>um toque mais fundo.</span></h2></div>
+      <p class="lead">Gastos, previsão, fluxo de caixa, estabelecimentos e pagamentos. Toque em qualquer um para ir mais fundo.</p>
+    </div>
+    <div class="bento">
+      <article class="widget widget--spending">
+        <header><h3>Gastos</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value"><span data-count="4237.73">$4,237.73</span> <small><i class="up">▲</i> 64%</small></strong><p class="widget__meta">1 set – 30 set</p>
+        <svg class="widget__chart" viewBox="0 0 360 140" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g-spend" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b994f5" stop-opacity=".35"></stop><stop offset="1" stop-color="#b994f5" stop-opacity="0"></stop></linearGradient></defs><path class="area" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14V140H0Z" fill="url(#g-spend)"></path><path class="draw" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14" fill="none" stroke="#b994f5" stroke-width="3.5" stroke-linecap="round"></path><path class="draw draw--dash" d="M0 134C60 132 100 126 160 118S270 100 360 88" fill="none" stroke="#b9b9b5" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" opacity=".5"></path></svg>
+      </article>
+      <article class="widget widget--forecast">
+        <header><h3>Previsão</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--orange" data-count="991.44">$991.44</strong><p class="widget__meta">Até 1 nov</p>
+        <div class="fbars" aria-hidden="true"><span style="--h:14%;--c:#945922"></span><span style="--h:32%;--c:#a7672c"></span><span style="--h:52%;--c:#bd7735"></span><span style="--h:76%;--c:#d4893f"></span><span style="--h:100%;--c:#eb9b4b"></span></div>
+      </article>
+      <article class="widget widget--cash">
+        <header><h3>Fluxo de caixa</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--lime">+<span data-count="2925.74">$2,925.74</span></strong><p class="widget__meta">Você ficou com 40,8% da renda</p>
+        <div class="cbars" aria-hidden="true"><span class="cbar cbar--in" style="--w:96%"><b>Entradas</b><b>$7,163.48</b></span><span class="cbar cbar--out" style="--w:58%"><b>Saídas</b><b>$4,237.73</b></span></div>
+      </article>
+      <article class="widget widget--merchants">
+        <header><h3>Principais estabelecimentos</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <p class="widget__meta">US$ 1.128,40 de US$ 2.987,96</p>
+        <div class="podium" aria-hidden="true">
+          <div style="--h:62%;--c:#1ca9de"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><b>2</b><em>$312.60</em></div>
+          <div style="--h:100%;--c:#eb3d96"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><b>1</b><em>$642.30</em></div>
+          <div style="--h:44%;--c:#7060f2"><span class="logo logo--full"><img src="/src/images/merchants/starbucks.svg" alt=""></span><b>3</b><em>$173.50</em></div>
+        </div>
+      </article>
+      <article class="widget widget--payments">
+        <header><h3>Pagamentos</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <div class="stats">
+          <div><span>Contas mensais</span><b class="purple">$32.81</b><em>2 acompanhadas</em></div>
+          <div><span>Por ano</span><b>$393.76</b><em>se nada mudar</em></div>
+          <div><span>Próximo vencimento</span><b>Hoje</b><em>Netflix</em></div>
+        </div>
+      </article>
+      <article class="widget widget--trend">
+        <header><h3>Tendência de gastos</h3><span class="seg"><i>D</i><i class="on">S</i><i>M</i></span></header>
+        <div class="tbars" aria-hidden="true">
+          <div><span style="--h:100%"><b>$4k</b></span><em>30 ago</em></div><div><span style="--h:4%"><b>$36</b></span><em>6 set</em></div><div><span style="--h:4%"><b>$34</b></span><em>13 set</em></div><div><span style="--h:0%"></span><em>20 set</em></div><div><span style="--h:16%"><b>$598</b></span><em>27 set</em></div><div><span style="--h:0%"><b>$0</b></span><em>4 out</em></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Due soon: recurring payments. -->
+<section class="due" id="due" aria-labelledby="due-title">
+  <div class="wrap due__grid">
+    <div class="due__copy">
+      <p class="eyebrow">Vencimentos próximos</p>
+      <h2 id="due-title" data-split="">Veja o que vem aí<br><span>antes de chegar.</span></h2>
+      <p class="lead">Contas recorrentes e assinaturas, identificadas e organizadas.</p>
+      <div class="due-card">
+        <p class="due-card__head"><b>Vence esta semana</b><span>Ver tudo</span></p>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span class="tx__t"><b>Assinatura da Netflix</b><em>Hoje</em></span><b>$1.00</b></div>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em>qui, 8 out</em></span><b>$11.99</b></div>
+        <div class="due-row"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon Prime</b><em>sáb, 10 out</em></span><b>$14.99</b></div>
+      </div>
+    </div>
+    <div class="due__stage">
+      <div class="iphone iphone--due">
+        <img src="/src/images/app-live/mockup-recurring.webp" alt="Recorrentes do BudgetGo: US$ 128,97 no total para outubro, com Apple TV+, Netflix, Spotify e ChatGPT Plus vencendo hoje" width="754" height="1639" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- One budget, or none. Interactive. -->
+<section class="modes" aria-labelledby="modes-title">
+  <div class="wrap modes__grid">
+    <div>
+      <p class="eyebrow">Você decide</p>
+      <h2 id="modes-title" data-split="">Um orçamento,<br><span>ou nenhum.</span></h2>
+      <p class="lead">Defina um orçamento entre as suas categorias, ou apenas acompanhe o que gasta.</p>
+      <div class="mode-toggle" role="group" aria-label="Escolha um modo">
+        <button type="button" aria-pressed="true" data-mode="budget">Com orçamento</button>
+        <button type="button" aria-pressed="false" data-mode="track">Só acompanhando</button>
+        <span class="mode-toggle__thumb" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="modes__stage">
+      <div class="budget-card budget-card--xl" data-mode-card="" data-mode-state="budget" aria-live="polite">
+        <div class="budget-card__top"><span class="app-pill"><span data-mode-pill="">Período do orçamento</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><svg class="eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+        <strong class="budget-card__amount" data-mode-amount="">$1,284.50</strong>
+        <span class="budget-card__label" data-mode-label="">Restante</span>
+        <div class="mode-budget"><span class="progress"><span class="progress__fill" style="width:68%"></span></span><span class="budget-card__foot">Gasto US$ 2.715,50 de US$ 4,00 mil<em>Dia 21 de 30</em></span></div>
+        <div class="mode-track"><span class="trend-line"><i>▼</i> <b>12% menos</b> que na semana passada</span></div>
+      </div>
+      <div class="suggest">
+        <p>Sugestão para o próximo período<svg aria-hidden="true"><use href="#i-play"></use></svg></p>
+        <b>Aumente Delivery de comida para US$ 190 e reduza Mercado para US$ 211.</b>
+        <em>Seu total continua o mesmo.</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy: words light up as you read. -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="privacy__box">
+      <p class="eyebrow">Sua privacidade</p>
+      <h2 id="privacy-title" class="privacy__text" data-words="">Seus gastos são pessoais. Mantenha assim.</h2>
+      <div class="privacy-first__cards">
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M16 2 28 7v8c0 7-5.5 12-12 15C9.5 27 4 22 4 15V7Zm-5 10v3h10v-3Zm0 6v3h4v-3Zm7 0v3h3v-3Z"></path></svg></span>
+          <h3>Dados pessoais, filtrados.</h3><p>Os filtros de dados pessoais ajudam a limitar a exposição de informações sensíveis durante a análise feita com OpenAI.</p>
+          <span class="privacy-first__tag">Privacidade da IA</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M3 11V6a3 3 0 0 1 3-3h5v3H6v5Zm18-8h5a3 3 0 0 1 3 3v5h-3V6h-5ZM3 21h3v5h5v3H6a3 3 0 0 1-3-3Zm23 0h3v5a3 3 0 0 1-3 3h-5v-3h5ZM16 8c-5 0-7 3-7 8s2 9 7 9 7-4 7-9-2-8-7-8Zm-5 6v3h2v-3Zm8 0v3h2v-3Zm-7 6a5 5 0 0 0 8 0l-2-1a3 3 0 0 1-4 0Z"></path></svg></span>
+          <h3>Uma camada extra de acesso.</h3><p>Use autenticação biométrica para ajudar a proteger o acesso ao BudgetGo.</p>
+          <span class="privacy-first__tag">Proteção biométrica</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M9 14V9a7 7 0 0 1 14 0v5h1a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4Zm3 0h8V9a4 4 0 0 0-8 0Zm4 5a2 2 0 0 0-1 3.73V26h2v-3.27A2 2 0 0 0 16 19Z"></path></svg></span>
+          <h3>Seus dados não estão à venda.</h3><p>Não vendemos suas informações pessoais. Seus gastos são pessoais, e nós os tratamos assim.</p>
+          <span class="privacy-first__tag">Sem venda de dados</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3a6 6 0 0 0-5.65 4H3v4h3.35a6 6 0 0 0 11.3 0H29V7H17.65A6 6 0 0 0 12 3Zm8 14a6 6 0 0 0-5.65 4H3v4h11.35a6 6 0 0 0 11.3 0H29v-4h-3.35A6 6 0 0 0 20 17Z"></path></svg></span>
+          <h3>Você tem a palavra final.</h3><p>Revise, edite ou exclua suas transações. Exporte seus registros em CSV, PDF ou Excel sempre que precisar.</p>
+          <span class="privacy-first__tag">Seus registros. Seu controle.</span>
+        </article>
+      </div>
+      <a class="text-link privacy__link" href="/privacy_policy.html">Ler a política de privacidade<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ. -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq__grid">
+    <div><p class="eyebrow">Perguntas frequentes</p><h2 id="faq-title">Boas perguntas.<br><span>Respostas claras.</span></h2><p class="faq__help">Precisa de ajuda? <a href="/pt/support.html">Fale com o suporte</a>.</p></div>
+    <div class="faq__list">
+      <details><summary>Posso acompanhar gastos sem definir um orçamento?</summary><p>Sim. Use o BudgetGo para acompanhar e entender seus gastos por conta própria. Quando quiser um limite de gastos, defina um orçamento ativo e distribua entre as suas categorias.</p></details>
+      <details><summary>Como meus gastos chegam ao BudgetGo?</summary><p>Fale por voz, conecte um banco compatível pela Plaid, conecte a Apple Wallet, use os Atalhos da Apple para alertas SMS do banco, importe um arquivo ou foto de recibo, ou adicione uma compra manualmente. Combine as fontes que combinam com o seu dia. Nossos <a href="/pt/automations.html">guias de configuração</a> cobrem as opções de Atalhos.</p></details>
+      <details><summary>Meu banco funciona com o BudgetGo?</summary><p>Procure o seu banco ao vincular uma conta no BudgetGo. As conexões usam a Plaid, e o suporte depende da sua instituição, país e conta. Se o seu não estiver na lista, você ainda pode importar extratos ou registrar compras manualmente.</p></details>
+      <details><summary>Posso mudar as categorias escolhidas pela IA?</summary><p>Sim. A IA ajuda a organizar suas transações, e você pode revisar ou alterar qualquer categoria. Seus registros continuam sendo seus.</p></details>
+      <details><summary>Posso trazer minhas transações antigas?</summary><p>Importe um extrato bancário em PDF, uma exportação CSV ou Excel, ou uma foto de recibo. Revise as transações antes de confirmar a importação. Os arquivos podem ter até 500 transações e 5 MB.</p></details>
+      <details><summary>Posso ver as contas e assinaturas que vão vencer?</summary><p>Sim. O BudgetGo detecta contas e assinaturas recorrentes e mostra as próximas cobranças juntas, para você se planejar. Ele acompanha os pagamentos; você gerencia ou cancela as assinaturas com os provedores.</p></details>
+      <details><summary>Quanto custa o BudgetGo?</summary><p>O BudgetGo oferece um teste gratuito seguido de uma assinatura. Confira no app os planos, preços e condições do teste antes de assinar.</p></details>
+      <details><summary>Posso exportar ou excluir meus registros de gastos?</summary><p>Sim. Você pode editar ou excluir registros de transações e exportá-los em CSV, PDF ou Excel. Não vendemos suas informações pessoais. Leia nossa <a href="/privacy_policy.html">política de privacidade</a> para saber como seus dados são usados.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Closing. -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="closing__card">
+    <div class="closing__copy">
+      <h2 id="closing-title" data-split="">Pronto para ver seu dinheiro com mais clareza?</h2>
+      <p>Acompanhe com ou sem orçamento. Cada compra organizada, cada conta no seu radar.</p>
+      <div class="closing__actions">
+        <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Baixar o BudgetGo</a>
+      </div>
+    </div>
+    <div class="closing__stage" aria-hidden="true">
+      <div class="iphone iphone--closing">
+        <img src="/src/images/app-live/mockup-home.webp" alt="" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="closing__chip closing__chip--a"><span class="trend-arrow">▼</span><span><b>12% menos</b><em>que na semana passada</em></span></div>
+      <div class="closing__chip closing__chip--b"><span class="logo logo--sm logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span><b>Netflix</b><em>Vence hoje</em></span><b>$1.00</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>Vamos dar sentido a tudo isso.</p><a class="footer-badge" href="https://www.producthunt.com/products/budgetgo/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-budgetgo" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1291781&amp;theme=dark" alt="Expense Tracker - BudgetGo - Know where your money goes. | Product Hunt" width="250" height="54" loading="lazy"></a></div>
+      <div><h3>App</h3><a href="#inputs">Adicionar gastos</a><a href="#insights">Insights</a><a href="#analytics">Análises</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Baixar o BudgetGo</a></div>
+      <div><h3>Ajuda</h3><a href="/pt/automations.html">Guias de automação</a><a href="/blog/">Blog</a><a href="/pt/support.html">Suporte</a><a href="#faq">Perguntas frequentes</a><a href="/pt/mcp.html">MCP · Em breve</a></div>
+      <div><h3>Contato</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">Política de Privacidade</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">Termos de Serviço</a></p></div>
+  </div>
+</footer>
+
+<script src="/src/js/i18n.js"></script>
+<script src="/src/js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer=""></script>
+<script src="/src/js/app-site/money.js" defer=""></script>
+<script src="/src/js/app-site/interactions.js" defer=""></script>
+<script src="/src/js/app-site/motion.js" defer=""></script>
+
+
+</body></html>

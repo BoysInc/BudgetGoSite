@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BudgetGo | Let’s make sense of all of it.</title>
-  <meta name="description" content="BudgetGo brings every purchase together from voice, statements, bank SMS, Apple Wallet and connected banks, sorts it automatically and shows you where to save. Made for iPhone." />
-  <meta property="og:title" content="BudgetGo | Let’s make sense of all of it." />
+  <title>BudgetGo: Expense Tracker &amp; Budgeting App</title>
+  <meta name="description" content="BudgetGo is an expense tracker and budgeting app for iPhone. Add spending by voice, statements, bank SMS or connected banks, and let AI show where to save." />
+  <meta property="og:title" content="BudgetGo: Expense Tracker &amp; Budgeting App" />
   <meta property="og:description" content="Say it, import it, or let it arrive. BudgetGo sorts your spending and shows you where to save." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BudgetGo" />
@@ -32,6 +32,21 @@
   <link rel="stylesheet" href="src/css/app-site-sections.css?v=20261004" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"BudgetGo","operatingSystem":"iOS","applicationCategory":"FinanceApplication","description":"Track spending from voice, bank statements, bank SMS alerts, Apple Wallet and banks connected through Plaid. AI sorts every purchase, and insights show where to save.","url":"https://budgetgo.ai/","installUrl":"https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917","publisher":{"@type":"Organization","name":"GraphLeaf LLC","email":"support@budgetgo.ai"}}</script>
   <link rel="stylesheet" href="src/css/language-switcher.css?v=20261008" />
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/" />
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/" />
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/" />
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/" />
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/" />
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/" />
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/" />
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/" />
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/" />
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/" />
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/" />
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/" />
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/" />
+  <!-- locale-alternates:end -->
 </head>
 <body class="app-site" id="top">
 <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -160,7 +175,7 @@
 </section>
 
 <!-- Automatic sorting. -->
-<section class="sort" aria-labelledby="sort-title">
+<section class="sort" id="sort" aria-labelledby="sort-title">
   <div class="wrap sort__grid">
     <div class="sort__copy">
       <p class="eyebrow">Sorted automatically</p>
@@ -305,7 +320,7 @@
 </section>
 
 <!-- Due soon: recurring payments. -->
-<section class="due" aria-labelledby="due-title">
+<section class="due" id="due" aria-labelledby="due-title">
   <div class="wrap due__grid">
     <div class="due__copy">
       <p class="eyebrow">Due soon</p>

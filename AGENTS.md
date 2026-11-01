@@ -115,6 +115,16 @@ non-obvious tradeoff exists. Do not use comments to restate what the code
 already clearly does. Keep comments accurate when changing the related code,
 and remove comments that no longer add useful context.
 
+## Languages
+
+Each language has its own URL (`/es/`, `/nl/`, ...) so search engines can index it.
+Dictionaries live in `src/data/i18n/`, keyed by the English markup. After changing
+English copy on `index.html`, `automations.html`, `mcp.html` or `support.html`, or a
+dictionary, update the matching dictionary keys and run
+`npm install --no-save jsdom && node scripts/build_locales.mjs`. It regenerates the
+translated pages, hreflang links, and the localized `sitemap.xml` and `llms.txt` entries.
+Add a language by adding it to `LANGUAGES` in `src/js/i18n.js` and a dictionary file.
+
 ## Marketing copy and imagery
 
 - Never add draft, sample, example, preview, placeholder, or implementation labels to the website UI. Keep development notes in project documentation and chat.

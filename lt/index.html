@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="lt" dir="ltr" data-locale="lt"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BudgetGo: išlaidų sekimo ir biudžeto programėlė</title>
+  <meta name="description" content="BudgetGo – „iPhone“ išlaidų sekimo ir biudžeto programėlė. Pridėkite išlaidas balsu, iš išrašų, banko SMS ar prijungtų bankų, o dirbtinis intelektas parodys, kur sutaupyti.">
+  <meta property="og:title" content="BudgetGo: išlaidų sekimo ir biudžeto programėlė">
+  <meta property="og:description" content="Pasakykite, importuokite arba leiskite jam ateiti pačiam. BudgetGo išrūšiuoja išlaidas ir parodo, kur sutaupyti.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://budgetgo.ai/lt/">
+  <meta property="og:image" content="https://budgetgo.ai/src/images/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://budgetgo.ai/lt/">
+  <link rel="preload" href="/src/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-phone.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-sections.css?v=20261004">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"BudgetGo","operatingSystem":"iOS","applicationCategory":"FinanceApplication","description":"Track spending from voice, bank statements, bank SMS alerts, Apple Wallet and banks connected through Plaid. AI sorts every purchase, and insights show where to save.","url":"https://budgetgo.ai/","installUrl":"https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917","publisher":{"@type":"Organization","name":"GraphLeaf LLC","email":"support@budgetgo.ai"}}</script>
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/">
+  <!-- locale-alternates:end -->
+</head>
+<body class="app-site" id="top">
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-housing" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 10.8Q2 10 2.85 9.26L9.33 3.59Q10 3 10.8 2.6l.4-.2q.8-.4 1.6 0l.4.2q.8.4 1.47.99l6.48 5.67Q22 10 21.2 10.8l-.8.8q-.4.4-.8 0l-.2-.2q-.4-.4-.4.17v8.13q0 1.3-1.3 1.3h-2.4Q14 21 14 19.7v-3.4q0-1.3-1.3-1.3h-1.4Q10 15 10 16.3v3.4Q10 21 8.7 21H6.3Q5 21 5 19.7v-8.13q0-.57-.4-.17l-.2.2q-.4.4-.8 0Z"></path></symbol>
+  <symbol id="i-groceries" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 4q0-1 1-1h1.8q1.2 0 1.49 1.16l.42 1.68Q7 7 8.2 7h12.6q1.2 0 .82 1.14l-2.24 6.72Q19 16 17.8 16H9.2q-1.2 0-1.58-1.14L4.82 6.45Q4.5 5.5 3.5 5.5H3q-1 0-1-1ZM6.8 20a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Zm9 0a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Z"></path></symbol>
+  <symbol id="i-dining" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v6q0 3-2.5 4v7.5a1.5 1.5 0 0 1-3 0V13Q2 12 2 9ZM20 2q2 0 2 2v16.5a1.5 1.5 0 0 1-3 0V14h-3q-2 0-2-2 0-7 6-10Z"></path></symbol>
+  <symbol id="i-shopping" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 7V6a5 5 0 0 1 10 0v1h1q2 0 2.2 2L21 19q.2 3-3 3H6q-3.2 0-3-3l.8-10Q4 7 6 7Zm2.5 0h5V6a2.5 2.5 0 0 0-5 0Z"></path></symbol>
+  <symbol id="i-transport" viewBox="0 0 24 24"><path fill-rule="evenodd" d="m6 9 1.3-4Q8 3 10 3h4q2 0 2.7 2L18 9q4 0 4 4v4q0 1-1 1v2a2 2 0 0 1-4 0v-2H7v2a2 2 0 0 1-4 0v-2q-1 0-1-1v-4q0-4 4-4Zm2.8 0q-.8 0-.58-.77l.56-1.96Q9 5.5 9.8 5.5h4.4q.8 0 1.02.77l.56 1.96Q16 9 15.2 9ZM6 12h1q1 0 1 1t-1 1H6q-1 0-1-1t1-1Zm11 0h1q1 0 1 1t-1 1h-1q-1 0-1-1t1-1Z"></path></symbol>
+  <symbol id="i-fun" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5 3h14q3 0 3 3v3q0 1-1 1a2 2 0 0 0 0 4q1 0 1 1v3q0 3-3 3H5q-3 0-3-3v-3q0-1 1-1a2 2 0 0 0 0-4q-1 0-1-1V6q0-3 3-3Zm11 2q1 0 1 1v1q0 1-1 1t-1-1V6q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Z"></path></symbol>
+  <symbol id="i-subs" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3q0-2 1.5-.5L6 4a9 9 0 0 1 15 4q.5 2-1 2-1.5 0-2-1.5A6 6 0 0 0 8 6l2 2q1 1.5-1 1.5H4q-1 0-1-1Zm18 18q0 2-1.5.5L18 20A9 9 0 0 1 3 16q-.5-2 1-2 1.5 0 2 1.5A6 6 0 0 0 16 18l-2-2q-1-1.5 1-1.5h5q1 0 1 1Z"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"></path></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"></rect><path d="M3 10h18M16 14h2"></path></g></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9 12 4l9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10-6.5a1 1 0 0 0 0-1.7l-10-6.6A1 1 0 0 0 8 5.5z" fill="currentColor"></path></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></g></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Pereiti prie turinio</a>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="BudgetGo pagrindinis puslapis"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Atidaryti naršymą" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Pagrindinė naršymo juosta">
+      <a href="#inputs">Pridėti išlaidas</a><a href="#insights">Įžvalgos</a><a href="#analytics">Analitika</a><a href="#privacy">Privatumas</a><a href="/lt/automations.html">Vadovai</a><a href="/blog/">Tinklaraštis</a>
+      <a class="btn btn--light btn--sm" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Gauti programą</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero: the onboarding headline over a fan of real app screens rising from the fold. -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- The onboarding's slot reels, faded into the backdrop. -->
+  <div class="hero__reels" aria-hidden="true"><div class="reel"><ul><li>Kava<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>Nuoma</li><li>Sporto salė<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>Taksi</li><li>Vynas<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>Sąskaitos</li><li>Pietūs</li><li>Tako<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul><ul aria-hidden="true"><li>Kava<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>Nuoma</li><li>Sporto salė<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>Taksi</li><li>Vynas<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>Sąskaitos</li><li>Pietūs</li><li>Tako<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul></div><div class="reel reel--rev"><ul><li>Knygos<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>Skrydžiai</li><li>Kinas<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>Dovanos</li><li>Pica<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>Viešbučiai</li><li>Degalai</li><li>Renginiai<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul><ul aria-hidden="true"><li>Knygos<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>Skrydžiai</li><li>Kinas<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>Dovanos</li><li>Pica<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>Viešbučiai</li><li>Degalai</li><li>Renginiai<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul></div><div class="reel"><ul><li>Augalai<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>Užkandžiai<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>Kirpykla<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>Maisto prekės</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>Vėlyvieji pusryčiai<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>Koncertai</li></ul><ul aria-hidden="true"><li>Augalai<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>Užkandžiai<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>Kirpykla<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>Maisto prekės</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>Vėlyvieji pusryčiai<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>Koncertai</li></ul></div></div>
+  <div class="wrap hero__copy">
+    <h1 id="hero-title" class="hero__title" data-split="">Suprasime<br> <em>viską.</em></h1>
+    <p class="hero__lead" data-reveal="">Mėgaukitės diena. Žinokite, kur keliauja jūsų pinigai.</p>
+    <div class="hero__actions" data-reveal="">
+      <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Gauti BudgetGo</a>
+      <a class="btn btn--ghost" href="#inputs">Pažiūrėkite, kaip tai veikia</a>
+    </div>
+  </div>
+  <div class="hero__stage" data-tilt="">
+    <div class="hero__fan">
+      <img class="fan fan--left" decoding="async" src="/src/images/app-live/mockup-analytics.webp" alt="BudgetGo analitika: rugsėjo išlaidos, prognozė, pinigų srautai ir didžiausi pardavėjai" width="754" height="1639">
+      <img class="fan fan--right" decoding="async" src="/src/images/app-live/mockup-story.webp" alt="BudgetGo tikslo eigos istorija: Pažiūrėkite, kiek nuėjote, dar 85 iki tikslo „Naujas nešiojamasis kompiuteris“" width="754" height="1639">
+      <img class="fan fan--center" fetchpriority="high" decoding="async" src="/src/images/app-live/mockup-home.webp" alt="BudgetGo pagrindinis: liko 2 800,00 $ iš 4 000 $ biudžeto 2 dieną iš 30, Apple TV+ mokėtinas šiandien ir jūsų įžvalgų santrauka" width="754" height="1639">
+    </div>
+  </div>
+</section>
+
+
+<!-- Ways spending arrives. -->
+<section class="marquee" aria-label="Išlaidų pridėjimo būdai">
+  <div class="marquee__track">
+    <ul><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>Tiesiog pasakykite</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>Banko išrašai</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>Banko SMS pranešimai</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>Prijungti bankai</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV ir Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>Kvitų nuotraukos</li></ul>
+    <ul aria-hidden="true"><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>Tiesiog pasakykite</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>Banko išrašai</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>Banko SMS pranešimai</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>Prijungti bankai</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV ir Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>Kvitų nuotraukos</li></ul>
+  </div>
+</section>
+
+<!-- Pinned story: four ways in, one phone. -->
+<section class="inputs" id="inputs" aria-labelledby="inputs-title">
+  <div class="wrap inputs__grid">
+    <div class="inputs__copy">
+      <p class="eyebrow">Kiekvienas mokėjimo būdas</p>
+      <h2 id="inputs-title" data-split="">Kad ir kaip nutiktų,<br><span>viskas atkeliauja čia.</span></h2>
+      <ol class="steps">
+        <li class="step is-active" data-step="0"><span class="step__icon tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span><div><h3>Tiesiog pasakykite</h3><p>Palieskite mikrofoną ir pasakykite, ką išleidote.</p></div></li>
+        <li class="step" data-step="1"><span class="step__icon tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span><div><h3>Importuokite išrašą</h3><p>PDF, CSV ar Excel, net kvitų nuotraukos.</p></div></li>
+        <li class="step" data-step="2"><span class="step__icon tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span><div><h3>Leiskite banko pranešimams padaryti tai už jus</h3><p>Banko SMS pranešimai, perskaitomi jūsų įrenginyje.</p></div></li>
+        <li class="step" data-step="3"><span class="step__icon tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span><div><h3>Prijunkite tai, ką naudojate</h3><p>Apple Wallet ir jūsų bankai per Plaid.</p></div></li>
+      </ol>
+    </div>
+    <div class="inputs__stage">
+      <div class="iphone iphone--story">
+        
+          <img class="state" data-state="0" src="/src/images/app-live/mockup-voice.webp" alt="BudgetGo balso įvestis: Uber namo dvidešimt penki keturiasdešimt, Spotify aštuoni devyniasdešimt devyni ir Netflix devyni devyniasdešimt devyni, paversta trimis operacijomis" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="1" src="/src/images/app-live/mockup-import.webp" alt="BudgetGo duomenų importas: vienas išrašas skaito operacijas, o Chase išrašas baigtas – pridėta 142 operacijos, praleistos 3" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="2" src="/src/images/app-live/mockup-sms-automation.webp" alt="BudgetGo SMS automatizavimas: SMS peradresavimas įjungtas, sukurti automatizavimą ir išbandyti ryšį" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="3" src="/src/images/app-live/mockup-data-hub.webp" alt="BudgetGo duomenų centras: importas ir eksportas, iOS automatizavimas, FinanceKit ir banko ryšiai" width="754" height="1639" loading="lazy">
+        
+      </div>
+      <div class="overlay overlay--voice" data-overlay="0" aria-hidden="true"><span class="overlay__mic"><svg><use href="#i-mic"></use></svg></span>„Uber namo dvidešimt penki keturiasdešimt, Spotify ir Netflix“</div>
+      <div class="overlay overlay--files" data-overlay="1" aria-hidden="true">
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg><b>Statement.pdf</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5v11zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2zM3 19c0 1.1.9 2 2 2h3V10H3v9z" opacity=".9"></path></svg><b>September.csv</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M12 9a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM20 5h-3.2L15 3H9L7.2 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 14H4V7h4.05l1.83-2h4.24l1.83 2H20v12z"></path></svg><b>Kvito nuotrauka</b></span>
+      </div>
+      <div class="overlay overlay--sms" data-overlay="2" aria-hidden="true"><span class="overlay__app"><svg><use href="#i-chat"></use></svg></span><span><b>Bankas · dabar</b>Jūsų kortele, besibaigiančia 4821, sumokėta 45,00 $ Talabat.</span></div>
+      <div class="overlay overlay--hub" data-overlay="3" aria-hidden="true"><span class="overlay__pulse"></span>Naujos operacijos atkeliauja pačios</div>
+      <div class="inputs__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Banks through Plaid. -->
+<section class="banks" aria-labelledby="banks-title">
+  <div class="wrap banks__grid">
+    <div class="banks__stage">
+      <div class="iphone iphone--banks">
+        <img src="/src/images/app-live/mockup-accounts.webp" alt="BudgetGo sąskaitos: Chase ir Monzo prijungti ir sinchronizuoti, rodomi einamosios ir taupomosios sąskaitų likučiai" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="bank-stack" aria-hidden="true">
+        <div class="bank-card"><span class="bank-card__icon"><svg><use href="#i-bank"></use></svg></span><span><b>Einamoji sąskaita</b><em>Einamoji ··4821</em></span><b class="bank-card__bal">$3,240.18</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--b"><svg><use href="#i-wallet"></use></svg></span><span><b>Premijų kortelė</b><em>Kreditas ··1093</em></span><b class="bank-card__bal">$612.40</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--c"><svg><use href="#i-bank"></use></svg></span><span><b>Santaupos</b><em>Santaupos ··7720</em></span><b class="bank-card__bal">$8,905.00</b></div>
+      </div>
+    </div>
+    <div class="banks__copy">
+      <p class="eyebrow">Prijungti bankai</p>
+      <h2 id="banks-title" data-split="">Visi jūsų bankai.<br><span>Vienas aiškus vaizdas.</span></h2>
+      <p class="lead">Susiekite bankus per Plaid. Visos sąskaitos vienoje vietoje.</p>
+      <ul class="banks__points">
+        <li>Prijunkite daugiau nei vieną banką<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>Likučiai ir operacijos visada naujausi<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>Nėra jūsų banko? Importuokite išrašus<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+      </ul>
+      <p class="banks__plaid">Banko ryšius teikia <img src="/src/images/brands/plaid-white.svg" alt="Plaid" width="64" height="24"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Automatic sorting. -->
+<section class="sort" id="sort" aria-labelledby="sort-title">
+  <div class="wrap sort__grid">
+    <div class="sort__copy">
+      <p class="eyebrow">Rūšiuojama automatiškai</p>
+      <h2 id="sort-title" data-split="">DI rūšiuoja.<br><span>Sprendžiate jūs.</span></h2>
+      <p class="lead">Kiekviena pirkinio kategorija priskiriama iškart. Pakeiskite bet kurią.</p>
+      <div class="sort__meter"><span class="sort__count" data-sort-count="">5</span><span class="sort__label">peržiūrėti</span></div>
+      <p class="sort__ai" aria-hidden="true"><span class="sort__spark"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></span><span data-sort-status="">DI rūšiuoja…</span></p>
+    </div>
+    <div class="sort__list" data-sort-list="">
+      <div class="sort-row" style="--cat:#84cc16"><span class="logo logo--walmart"><img src="/src/images/merchants/walmart.svg" alt=""></span><span class="tx__t"><b>Walmart</b><em class="sort-row__cat"><i class="u">Be kategorijos</i><i class="c">Maisto prekės<svg><use href="#i-groceries"></use></svg></i></em></span><b>-$52.80</b></div>
+      <div class="sort-row" style="--cat:#2563eb"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><span class="tx__t"><b>Uber</b><em class="sort-row__cat"><i class="u">Be kategorijos</i><i class="c">Transportas<svg><use href="#i-transport"></use></svg></i></em></span><b>-$25.40</b></div>
+      <div class="sort-row" style="--cat:#06b6d4"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em class="sort-row__cat"><i class="u">Be kategorijos</i><i class="c">Prenumeratos<svg><use href="#i-subs"></use></svg></i></em></span><b>-$11.99</b></div>
+      <div class="sort-row" style="--cat:#f97316"><span class="logo logo--mcd"><img src="/src/images/merchants/mcdonalds.svg" alt=""></span><span class="tx__t"><b>McDonald’s</b><em class="sort-row__cat"><i class="u">Be kategorijos</i><i class="c"><svg><use href="#i-dining"></use></svg>Maistas ir išsinešimas</i></em></span><b>-$9.85</b></div>
+      <div class="sort-row" style="--cat:#c0841a"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon</b><em class="sort-row__cat"><i class="u">Be kategorijos</i><i class="c">Apsipirkimas<svg><use href="#i-shopping"></use></svg></i></em></span><b>-$32.00</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- Insight stories: a horizontal, pinned reel. -->
+<section class="insights" id="insights" aria-labelledby="insights-title">
+  <div class="insights__pin">
+    <div class="insights__track" data-reel="">
+      <div class="reel-intro">
+        <p class="eyebrow">Asmeninės įžvalgos</p>
+        <h2 id="insights-title" data-split="">Jūsų išlaidos,<br><span>papasakotos kaip istorija.</span></h2>
+        <p class="lead">Trumpos istorijos apie jūsų pinigus: kas laikosi plano ir kur galima sutaupyti.</p>
+        <div class="recap">
+          <div class="recap__stack" aria-hidden="true">
+            <span class="recap__card recap__card--pace"><em>Tempas</em><svg viewBox="0 0 80 48"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="7" stroke-linecap="round"></path><path d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="7" stroke-linecap="round"></path></svg><b>$</b></span>
+            <span class="recap__card recap__card--over"><em>Viršyta</em><svg viewBox="0 0 80 36"><path d="M4 8h72M4 20h60" stroke="#FFB3AA" stroke-width="6" stroke-linecap="round"></path></svg></span>
+            <span class="recap__card recap__card--save"><em>Santaupos</em><svg viewBox="0 0 80 32"><path d="M5 27 18 22 30 24 42 14 54 14 66 9 75 3" fill="none" stroke="#9CE5B9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path></svg><b>$28</b></span>
+          </div>
+          <div class="recap__copy"><span>Jūsų santrauka</span><b>Maži pokyčiai. Daugiau galimybių.</b><em>4 istorijos · &lt;1 min.</em></div>
+          <span class="recap__play"><svg aria-hidden="true"><use href="#i-play"></use></svg></span>
+        </div>
+      </div>
+      <article class="story" style="--bg:#291d50;--fg:#d8c5ef;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Akis į akį</p>
+        <h3>Nuvykti kainavo daugiau nei pavalgyti.</h3>
+        <strong class="story__number">$51</strong>
+        <p class="story__lead">Šį ketvirtį daugiau išleista kelionėms nei restoranams – pirmą kartą transportas pirmavo.</p>
+        <div class="story__compare"><div><span>Transportas</span><b>$482</b></div><i class="bar" style="--w:100%"></i><div><span>Valgymas ne namuose</span><b>$431</b></div><i class="bar bar--b" style="--w:89%"></i></div>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Palieskite, kad tęstumėte · Palaikykite, kad sustabdytumėte</p>
+      </article>
+      <article class="story" style="--bg:#153b2d;--fg:#b4d7c1;--accent:#9ce5b9">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Taupykite daugiau</p>
+        <h3>Maži pokyčiai. Daugiau galimybių.</h3>
+        <strong class="story__number">+$28</strong>
+        <p class="story__lead">Valgymas ne namuose viršijo jūsų įprastą savaitę 28 $, daugiausia per du mėnesius.</p>
+        <figure class="story__weeks" aria-label="Valgymas ne namuose aštuonias savaites, šią savaitę virš įprastų 67 $"><figcaption><span>Valgymas ne namuose, paskutinės 8 savaitės</span><b>Ši savaitė</b></figcaption><div class="story__bars"><i style="--h:62%"></i><i style="--h:69%"></i><i style="--h:59%"></i><i style="--h:67%"></i><i style="--h:71%"></i><i style="--h:65%"></i><i style="--h:69%"></i><i class="now" style="--h:100%"></i></div></figure>
+        <p class="story__advice">Dviejų tokių valgių vietoje pirkite maisto prekių ir didžioji dalis skirtumo išnyks.</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Palieskite, kad tęstumėte · Palaikykite, kad sustabdytumėte</p>
+      </article>
+      <article class="story" style="--bg:#30203e;--fg:#d8c5ef;--accent:#b48aff">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Paslėptas įprotis</p>
+        <h3>Kava tyliai aplenkė jūsų prenumeratas.</h3>
+        <strong class="story__number">$96</strong>
+        <p class="story__lead">Maždaug 5,60 $ už puodelį kava aplenkė kiekvieną jūsų mokamą prenumeratą.</p>
+        <div class="story__compare"><div><span>Kava</span><b>$96</b></div><i class="bar" style="--w:100%"></i><div><span>Prenumeratos</span><b>$74</b></div><i class="bar bar--b" style="--w:77%"></i></div>
+        <p class="story__source">Iš jūsų liepos – rugsėjo operacijų</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Palieskite, kad tęstumėte · Palaikykite, kad sustabdytumėte</p>
+      </article>
+      <article class="story" style="--bg:#17313a;--fg:#b7d2d9;--accent:#90deed">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Tempas</p>
+        <h3>Esate kelyje baigti biudžeto ribose.</h3>
+        <strong class="story__number">$143<small>/dieną</small></strong>
+        <p class="story__lead">Išleiskite iki šios sumos ir biudžeto užteks iki 30 dienos.</p>
+        <svg class="story__art" viewBox="0 0 80 48" aria-hidden="true"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="6" stroke-linecap="round"></path><path class="draw" d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="6" stroke-linecap="round"></path><path d="M40 41 59 21" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><circle cx="40" cy="41" r="3" fill="#fff"></circle></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Palieskite, kad tęstumėte · Palaikykite, kad sustabdytumėte</p>
+      </article>
+      <article class="story" style="--bg:#161618;--fg:#b9b9b5;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">Laikotarpių palyginimas</p>
+        <h3>Naujas laikotarpis. Naujas požiūris.</h3>
+        <strong class="story__number">12%<small> mažiau</small></strong>
+        <p class="story__lead">Nei tomis pačiomis praėjusio laikotarpio dienomis.</p>
+        <svg class="story__art story__art--wide" viewBox="0 0 160 60" aria-hidden="true"><path d="M-4 48C24 36 44 44 68 50s36-2 52-22 24-20 44-20" fill="none" stroke="#d8c5ef" stroke-width="7" stroke-linecap="round" opacity=".6"></path><path class="draw" d="M-4 28C24 16 52 28 76 40s36 0 52-20 22-16 36-16" fill="none" stroke="#7132f5" stroke-width="11" stroke-linecap="round"></path></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">Palieskite, kad tęstumėte · Palaikykite, kad sustabdytumėte</p>
+      </article>
+      <div class="reel-end"><p>Palieskite, kad tęstumėte<br><span>Palaikykite, kad sustabdytumėte</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Analytics bento. -->
+<section class="analytics" id="analytics" aria-labelledby="analytics-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Išplėstinė analitika</p><h2 id="analytics-title" data-split="">Kiekvienas skaičius,<br><span>vienu paspaudimu giliau.</span></h2></div>
+      <p class="lead">Išlaidos, prognozė, pinigų srautai, pardavėjai ir mokėjimai. Palieskite bet kurį, kad pasinertumėte giliau.</p>
+    </div>
+    <div class="bento">
+      <article class="widget widget--spending">
+        <header><h3>Išlaidos</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value"><span data-count="4237.73">$4,237.73</span> <small><i class="up">▲</i> 64%</small></strong><p class="widget__meta">Rgs. 1 – rgs. 30</p>
+        <svg class="widget__chart" viewBox="0 0 360 140" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g-spend" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b994f5" stop-opacity=".35"></stop><stop offset="1" stop-color="#b994f5" stop-opacity="0"></stop></linearGradient></defs><path class="area" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14V140H0Z" fill="url(#g-spend)"></path><path class="draw" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14" fill="none" stroke="#b994f5" stroke-width="3.5" stroke-linecap="round"></path><path class="draw draw--dash" d="M0 134C60 132 100 126 160 118S270 100 360 88" fill="none" stroke="#b9b9b5" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" opacity=".5"></path></svg>
+      </article>
+      <article class="widget widget--forecast">
+        <header><h3>Prognozė</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--orange" data-count="991.44">$991.44</strong><p class="widget__meta">Iki lapkr. 1</p>
+        <div class="fbars" aria-hidden="true"><span style="--h:14%;--c:#945922"></span><span style="--h:32%;--c:#a7672c"></span><span style="--h:52%;--c:#bd7735"></span><span style="--h:76%;--c:#d4893f"></span><span style="--h:100%;--c:#eb9b4b"></span></div>
+      </article>
+      <article class="widget widget--cash">
+        <header><h3>Pinigų srautai</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--lime">+<span data-count="2925.74">$2,925.74</span></strong><p class="widget__meta">Pasilikote 40,8 % pajamų</p>
+        <div class="cbars" aria-hidden="true"><span class="cbar cbar--in" style="--w:96%"><b>Įplaukos</b><b>$7,163.48</b></span><span class="cbar cbar--out" style="--w:58%"><b>Išlaidos</b><b>$4,237.73</b></span></div>
+      </article>
+      <article class="widget widget--merchants">
+        <header><h3>Didžiausi pardavėjai</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <p class="widget__meta">1 128,40 $ iš 2 987,96 $</p>
+        <div class="podium" aria-hidden="true">
+          <div style="--h:62%;--c:#1ca9de"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><b>2</b><em>$312.60</em></div>
+          <div style="--h:100%;--c:#eb3d96"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><b>1</b><em>$642.30</em></div>
+          <div style="--h:44%;--c:#7060f2"><span class="logo logo--full"><img src="/src/images/merchants/starbucks.svg" alt=""></span><b>3</b><em>$173.50</em></div>
+        </div>
+      </article>
+      <article class="widget widget--payments">
+        <header><h3>Mokėjimai</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <div class="stats">
+          <div><span>Mėnesio sąskaitos</span><b class="purple">$32.81</b><em>2 sekamos</em></div>
+          <div><span>Per metus</span><b>$393.76</b><em>jei niekas nepasikeis</em></div>
+          <div><span>Kitas mokėjimas</span><b>Šiandien</b><em>Netflix</em></div>
+        </div>
+      </article>
+      <article class="widget widget--trend">
+        <header><h3>Išlaidų tendencija</h3><span class="seg"><i>D</i><i class="on">S</i><i>M</i></span></header>
+        <div class="tbars" aria-hidden="true">
+          <div><span style="--h:100%"><b>$4k</b></span><em>Rgp. 30</em></div><div><span style="--h:4%"><b>$36</b></span><em>Rgs. 6</em></div><div><span style="--h:4%"><b>$34</b></span><em>Rgs. 13</em></div><div><span style="--h:0%"></span><em>Rgs. 20</em></div><div><span style="--h:16%"><b>$598</b></span><em>Rgs. 27</em></div><div><span style="--h:0%"><b>$0</b></span><em>Spal. 4</em></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Due soon: recurring payments. -->
+<section class="due" id="due" aria-labelledby="due-title">
+  <div class="wrap due__grid">
+    <div class="due__copy">
+      <p class="eyebrow">Netrukus mokėti</p>
+      <h2 id="due-title" data-split="">Pamatykite, kas laukia,<br><span>prieš tai įvykstant.</span></h2>
+      <p class="lead">Pasikartojančios sąskaitos ir prenumeratos, atpažintos ir sudėliotos.</p>
+      <div class="due-card">
+        <p class="due-card__head"><b>Mokėtina šią savaitę</b><span>Rodyti viską</span></p>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span class="tx__t"><b>Netflix prenumerata</b><em>Šiandien</em></span><b>$1.00</b></div>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em>kt., spal. 8</em></span><b>$11.99</b></div>
+        <div class="due-row"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon Prime</b><em>št., spal. 10</em></span><b>$14.99</b></div>
+      </div>
+    </div>
+    <div class="due__stage">
+      <div class="iphone iphone--due">
+        <img src="/src/images/app-live/mockup-recurring.webp" alt="BudgetGo pasikartojantys: iš viso 128,97 $ spaliui, Apple TV+, Netflix, Spotify ir ChatGPT Plus mokėtini šiandien" width="754" height="1639" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- One budget, or none. Interactive. -->
+<section class="modes" aria-labelledby="modes-title">
+  <div class="wrap modes__grid">
+    <div>
+      <p class="eyebrow">Jūsų pasirinkimas</p>
+      <h2 id="modes-title" data-split="">Vienas biudžetas<br><span>arba jokio.</span></h2>
+      <p class="lead">Nustatykite vieną biudžetą savo kategorijoms arba tiesiog sekite išlaidas.</p>
+      <div class="mode-toggle" role="group" aria-label="Pasirinkite režimą">
+        <button type="button" aria-pressed="true" data-mode="budget">Su biudžetu</button>
+        <button type="button" aria-pressed="false" data-mode="track">Tik sekimas</button>
+        <span class="mode-toggle__thumb" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="modes__stage">
+      <div class="budget-card budget-card--xl" data-mode-card="" data-mode-state="budget" aria-live="polite">
+        <div class="budget-card__top"><span class="app-pill"><span data-mode-pill="">Biudžeto laikotarpis</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><svg class="eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+        <strong class="budget-card__amount" data-mode-amount="">$1,284.50</strong>
+        <span class="budget-card__label" data-mode-label="">Liko</span>
+        <div class="mode-budget"><span class="progress"><span class="progress__fill" style="width:68%"></span></span><span class="budget-card__foot">Išleista 2 715,50 $ iš 4,00 tūkst. $<em>21 diena iš 30</em></span></div>
+        <div class="mode-track"><span class="trend-line"><i>▼</i> <b>12 % mažiau</b> nei praėjusią savaitę</span></div>
+      </div>
+      <div class="suggest">
+        <p>Pasiūlymas kitam laikotarpiui<svg aria-hidden="true"><use href="#i-play"></use></svg></p>
+        <b>Padidinkite maisto pristatymą iki 190 $ ir sumažinkite maisto prekes iki 211 $.</b>
+        <em>Jūsų bendra suma lieka ta pati.</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy: words light up as you read. -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="privacy__box">
+      <p class="eyebrow">Jūsų privatumas</p>
+      <h2 id="privacy-title" class="privacy__text" data-words="">Jūsų išlaidos yra asmeniškos. Tegul tokios ir lieka.</h2>
+      <div class="privacy-first__cards">
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M16 2 28 7v8c0 7-5.5 12-12 15C9.5 27 4 22 4 15V7Zm-5 10v3h10v-3Zm0 6v3h4v-3Zm7 0v3h3v-3Z"></path></svg></span>
+          <h3>Asmeniniai duomenys, išfiltruoti.</h3><p>Asmens duomenų filtrai padeda riboti jautrios asmeninės informacijos atskleidimą atliekant „OpenAI“ analizę.</p>
+          <span class="privacy-first__tag">DI privatumas</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M3 11V6a3 3 0 0 1 3-3h5v3H6v5Zm18-8h5a3 3 0 0 1 3 3v5h-3V6h-5ZM3 21h3v5h5v3H6a3 3 0 0 1-3-3Zm23 0h3v5a3 3 0 0 1-3 3h-5v-3h5ZM16 8c-5 0-7 3-7 8s2 9 7 9 7-4 7-9-2-8-7-8Zm-5 6v3h2v-3Zm8 0v3h2v-3Zm-7 6a5 5 0 0 0 8 0l-2-1a3 3 0 0 1-4 0Z"></path></svg></span>
+          <h3>Papildomas prieigos sluoksnis.</h3><p>Naudokite biometrinį autentifikavimą, kad apsaugotumėte prieigą prie BudgetGo.</p>
+          <span class="privacy-first__tag">Biometrinė apsauga</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M9 14V9a7 7 0 0 1 14 0v5h1a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4Zm3 0h8V9a4 4 0 0 0-8 0Zm4 5a2 2 0 0 0-1 3.73V26h2v-3.27A2 2 0 0 0 16 19Z"></path></svg></span>
+          <h3>Jūsų duomenys neparduodami.</h3><p>Neparduodame jūsų asmeninės informacijos. Jūsų išlaidos yra asmeniškos, ir taip į jas žiūrime.</p>
+          <span class="privacy-first__tag">Duomenų neparduodame</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3a6 6 0 0 0-5.65 4H3v4h3.35a6 6 0 0 0 11.3 0H29V7H17.65A6 6 0 0 0 12 3Zm8 14a6 6 0 0 0-5.65 4H3v4h11.35a6 6 0 0 0 11.3 0H29v-4h-3.35A6 6 0 0 0 20 17Z"></path></svg></span>
+          <h3>Paskutinis žodis jūsų.</h3><p>Peržiūrėkite, redaguokite ar ištrinkite operacijas. Eksportuokite įrašus į CSV, PDF ar Excel, kai tik reikia.</p>
+          <span class="privacy-first__tag">Jūsų įrašai. Jūsų kontrolė.</span>
+        </article>
+      </div>
+      <a class="text-link privacy__link" href="/privacy_policy.html">Skaityti privatumo politiką<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ. -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq__grid">
+    <div><p class="eyebrow">DUK</p><h2 id="faq-title">Geri klausimai.<br><span>Aiškūs atsakymai.</span></h2><p class="faq__help">Reikia pagalbos? <a href="/lt/support.html">Susisiekite su palaikymu</a>.</p></div>
+    <div class="faq__list">
+      <details><summary>Ar galiu sekti išlaidas nenustatęs biudžeto?</summary><p>Taip. Naudokite BudgetGo savo išlaidoms sekti ir suprasti. Kai norėsite išlaidų ribos, nustatykite vieną aktyvų biudžetą ir paskirstykite jį tarp kategorijų.</p></details>
+      <details><summary>Kaip mano išlaidos patenka į BudgetGo?</summary><p>Pasakykite balsu, susiekite palaikomą banką per Plaid, prijunkite Apple Wallet, naudokite Apple Shortcuts banko SMS pranešimams, importuokite failą ar kvito nuotrauką arba pridėkite pirkinį patys. Derinkite šaltinius, tinkančius jūsų dienai. Mūsų <a href="/lt/automations.html">nustatymo vadovuose</a> aprašytos Shortcuts parinktys.</p></details>
+      <details><summary>Ar mano bankas veiks su BudgetGo?</summary><p>Ieškokite savo banko susiedami sąskaitą BudgetGo programoje. Ryšys naudoja Plaid, o palaikymas priklauso nuo jūsų įstaigos, šalies ir sąskaitos. Jei jūsų banko nėra sąraše, vis tiek galite importuoti išrašus ar sekti pirkinius patys.</p></details>
+      <details><summary>Ar galiu pakeisti DI parinktas kategorijas?</summary><p>Taip. DI padeda rūšiuoti operacijas, o jūs galite peržiūrėti ar pakeisti bet kurią kategoriją. Jūsų įrašai lieka jūsų.</p></details>
+      <details><summary>Ar galiu perkelti senas operacijas?</summary><p>Importuokite PDF banko išrašą, CSV ar Excel eksportą arba kvito nuotrauką. Prieš patvirtindami importą peržiūrėkite operacijas. Faile gali būti iki 500 operacijų, jo dydis – iki 5 MB.</p></details>
+      <details><summary>Ar galiu matyti artėjančias sąskaitas ir prenumeratas?</summary><p>Taip. BudgetGo atpažįsta pasikartojančias sąskaitas ir prenumeratas ir parodo artėjančius mokėjimus kartu, kad galėtumėte planuoti. Jis seka mokėjimus; prenumeratas valdote ar atšaukiate pas jų teikėjus.</p></details>
+      <details><summary>Kiek kainuoja BudgetGo?</summary><p>BudgetGo siūlo nemokamą bandomąjį laikotarpį, o po jo – prenumeratą. Prieš prenumeruodami programoje peržiūrėkite galiojančius planus, kainas ir bandomojo laikotarpio sąlygas.</p></details>
+      <details><summary>Ar galiu eksportuoti arba ištrinti savo išlaidų įrašus?</summary><p>Taip. Galite redaguoti ar ištrinti operacijų įrašus ir eksportuoti juos į CSV, PDF ar Excel. Neparduodame jūsų asmeninės informacijos. Apie tai, kaip naudojami jūsų duomenys, skaitykite mūsų <a href="/privacy_policy.html">privatumo politikoje</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Closing. -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="closing__card">
+    <div class="closing__copy">
+      <h2 id="closing-title" data-split="">Pasiruošę aiškesniam savo pinigų vaizdui?</h2>
+      <p>Sekite su biudžetu ar be jo. Kiekvienas pirkinys išrūšiuotas, kiekviena sąskaita matoma.</p>
+      <div class="closing__actions">
+        <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Gauti BudgetGo</a>
+      </div>
+    </div>
+    <div class="closing__stage" aria-hidden="true">
+      <div class="iphone iphone--closing">
+        <img src="/src/images/app-live/mockup-home.webp" alt="" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="closing__chip closing__chip--a"><span class="trend-arrow">▼</span><span><b>12 % mažiau</b><em>nei praėjusią savaitę</em></span></div>
+      <div class="closing__chip closing__chip--b"><span class="logo logo--sm logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span><b>Netflix</b><em>Mokėtina šiandien</em></span><b>$1.00</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>Suprasime viską.</p><a class="footer-badge" href="https://www.producthunt.com/products/budgetgo/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-budgetgo" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1291781&amp;theme=dark" alt="Expense Tracker - BudgetGo - Know where your money goes. | Product Hunt" width="250" height="54" loading="lazy"></a></div>
+      <div><h3>Programa</h3><a href="#inputs">Pridėti išlaidas</a><a href="#insights">Įžvalgos</a><a href="#analytics">Analitika</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Gauti BudgetGo</a></div>
+      <div><h3>Pagalba</h3><a href="/lt/automations.html">Automatizavimo vadovai</a><a href="/blog/">Tinklaraštis</a><a href="/lt/support.html">Palaikymas</a><a href="#faq">Dažni klausimai</a><a href="/lt/mcp.html">MCP · Netrukus</a></div>
+      <div><h3>Kontaktai</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">Privatumo politika</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">Paslaugų teikimo sąlygos</a></p></div>
+  </div>
+</footer>
+
+<script src="/src/js/i18n.js"></script>
+<script src="/src/js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer=""></script>
+<script src="/src/js/app-site/money.js" defer=""></script>
+<script src="/src/js/app-site/interactions.js" defer=""></script>
+<script src="/src/js/app-site/motion.js" defer=""></script>
+
+
+</body></html>

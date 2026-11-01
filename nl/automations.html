@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="nl" dir="ltr" data-locale="nl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple Opdrachten-automatiseringen instellen | BudgetGo</title>
+  <meta name="description" content="Stapsgewijze gids om Apple Wallet-betalingen en sms-meldingen van je bank automatisch in BudgetGo te importeren met Apple Opdrachten-automatiseringen.">
+  <meta property="og:title" content="Apple Opdrachten-automatiseringen instellen | BudgetGo">
+  <meta property="og:description" content="Importeer Apple Wallet-betalingen en sms-meldingen van je bank automatisch in BudgetGo met Apple Opdrachten.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://budgetgo.ai/nl/automations.html">
+  <meta name="theme-color" content="#101010">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/styles.css?v=20261001-rounded">
+
+  <link rel="preload" href="/src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="/src/css/site-shell.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/inner-pages.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/automations.css?v=20261023">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-inner.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/automations.html">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/automations.html">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/automations.html">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/automations.html">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/automations.html">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/automations.html">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/automations.html">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/automations.html">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/automations.html">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/automations.html">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/automations.html">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/automations.html">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/automations.html">
+  <!-- locale-alternates:end -->
+</head>
+<body class="inner-page automations-page" id="top">
+<a class="skip-link" href="#main">Naar de inhoud springen</a>
+  <header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="/nl/" aria-label="BudgetGo-startpagina"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Navigatie openen" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Hoofdnavigatie">
+      <a href="/nl/#inputs">Bijhouden</a><a href="/nl/#insights">Inzichten</a><a href="/nl/#analytics">Analyses</a><a href="/nl/#privacy">Privacy</a><a href="/nl/automations.html" aria-current="page">Handleidingen</a><a href="/blog/">Blog</a>
+      <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Download de app</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container guide-hero-grid">
+        <div>
+          <p class="hero-eyebrow"><span class="hero-eyebrow-dot" aria-hidden="true"></span> Installatiegids · ongeveer 2 minuten per stuk</p>
+          <h1>Leg uitgaven vast <span class="hl">op het moment dat ze gebeuren.</span></h1>
+          <p class="lead">Met Apple Opdrachten-automatiseringen kun je Apple Pay-betalingen en sms-meldingen van je bank rechtstreeks naar BudgetGo sturen, zodat transacties in je gegevens verschijnen zonder dat je iets typt. Alles draait op je iPhone.</p>
+          <nav class="guide-jump" aria-label="Onderdelen van de gids">
+            <a href="#wallet-video"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
+            <a href="#sms-video"><span class="chip-dot" style="--c: #b994f5"></span>Sms-meldingen van de bank</a>
+            <a href="#troubleshooting"><span class="chip-dot" style="--c: #7132f5"></span>Problemen oplossen</a>
+          </nav>
+        </div>
+
+        <ol class="flow" aria-label="Hoe een automatisering werkt">
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-wallet" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M3 10h18" stroke="currentColor" stroke-width="2"></path></svg>
+            </span>
+            <span><strong>Je betaalt of krijgt een sms van je bank</strong><small>Apple Pay-tik of sms-melding</small></span>
+          </li>
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-shortcuts" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 4h8l4 4v8l-4 4H8l-4-4V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M10 9l4 3-4 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span><strong>Opdrachten draait direct</strong><small>Jouw persoonlijke automatisering</small></span>
+          </li>
+          <li class="flow-node flow-node-final">
+            <img class="flow-logo" src="/src/images/logo.png" alt="" width="40" height="40">
+            <span><strong>BudgetGo legt het vast</strong><small>Bedrag, winkel en categorie</small></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="before-you-start" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </span>
+          <p class="section-label">Voordat je begint</p>
+          <h2>Drie snelle controles.</h2>
+        </div>
+        <ul class="guide-checklist">
+          <li><span class="check" aria-hidden="true"></span><strong>BudgetGo is geïnstalleerd</strong>Download de app uit de App Store en meld je één keer aan, zodat de acties verschijnen in Opdrachten.</li>
+          <li><span class="check" aria-hidden="true"></span><strong>Opdrachten staat op je iPhone</strong>De Opdrachten-app van Apple is vooraf geïnstalleerd op iOS 17 en nieuwer.</li>
+          <li><span class="check" aria-hidden="true"></span><strong>Imports staan aan</strong>Open in BudgetGo de Data Hub en zet Wallet- of sms-imports aan. Staan ze uit, dan negeert BudgetGo alles wat de automatisering verstuurt.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wallet" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-lime" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"></rect><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Apple Wallet</p>
+          <h2>Log Apple Pay-betalingen automatisch.</h2>
+          <p>Deze automatisering draait elke keer dat je met een Wallet-kaart betaalt en stuurt het bedrag en de winkel naar de actie <strong>Add Transaction to Budget Go</strong> van BudgetGo.</p>
+        </div>
+
+        <figure id="wallet-video" class="guide-video" aria-labelledby="wallet-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 28 sec</p>
+            <h3 id="wallet-video-title">Set up Apple Pay in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p id="wallet-video-note">Keep <strong>Automation</strong> enabled on your phone. The recording turns it off at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#wallet-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/apple-pay-setup.mp4">Open the Apple Pay video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/apple-pay-video-poster.jpg" aria-label="Apple Pay automation setup in Apple Shortcuts" aria-describedby="wallet-video-note">
+            <source src="/src/videos/automation/apple-pay-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/apple-pay-setup.mp4">Watch the Apple Pay setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="wallet-steps" class="guide-steps">
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>Open Opdrachten</h3>
+              <p>Zoek de Opdrachten-app op je iPhone en open die.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step1.jpg" alt="Het pictogram van de Opdrachten-app op het beginscherm van de iPhone" width="900" height="509" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>Maak een persoonlijke automatisering</h3>
+              <p>Open het tabblad <strong>Automatisering</strong> en tik op <strong>+</strong> om een nieuwe persoonlijke automatisering te maken.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step2_a.jpg" alt="Het tabblad Automatisering in de Opdrachten-app" width="900" height="433" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step2_b.jpg" alt="De plusknop om een persoonlijke automatisering te maken" width="900" height="383" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Kies de Wallet-trigger</h3>
+              <ol>
+                <li>Zoek naar <strong>Transactie</strong> (op sommige iOS-versies getoond als <strong>Wallet</strong>) en selecteer die.</li>
+                <li>Selecteer elke kaart die BudgetGo moet bijhouden.</li>
+                <li>Kies <strong>Direct uitvoeren</strong> zodat de automatisering nooit op bevestiging wacht en tik op <strong>Volgende</strong>.</li>
+              </ol>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step3_a.jpg" alt="Zoeken naar de Transactie-trigger, beschreven als Wanneer ik een Wallet-kaart of pas gebruik" width="900" height="500" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_b.jpg" alt="De Wallet-kaarten selecteren die je wilt bijhouden" width="900" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_d.jpg" alt="De optie Direct uitvoeren is geselecteerd" width="900" height="562" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>Voeg de BudgetGo-actie toe</h3>
+              <p>Tik op <strong>Nieuwe lege automatisering</strong>, zoek naar <strong>BudgetGo</strong> en kies <strong>Add Transaction to Budget Go</strong>.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step4.jpg" alt="Een nieuwe lege opdracht voor de automatisering maken" width="900" height="796" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step4_b.jpg" alt="Zoeken naar de actie Add Transaction to Budget Go" width="726" height="900" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>Koppel de betaalgegevens</h3>
+              <ol>
+                <li>Tik op het veld <strong>Bedrag</strong>, kies <strong>Selecteer variabele</strong> en kies dan <strong>Opdrachtinvoer</strong>.</li>
+                <li>Tik op de ingevoegde <strong>Opdrachtinvoer</strong> en wijzig die in <strong>Bedrag</strong>.</li>
+                <li>Herhaal dit voor <strong>Winkel</strong> en kies <strong>Winkel</strong> uit de Opdrachtinvoer.</li>
+                <li>Tik op de afspeelknop om het te testen en tik dan op <strong>Gereed</strong>.</li>
+              </ol>
+              <p class="guide-note"><strong>Valuta is optioneel.</strong> Laat het leeg om je standaardvaluta in BudgetGo te gebruiken, of vul een code in zoals USD, EUR of NGN.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step5_a.jpg" alt="Selecteer variabele kiezen in het veld Bedrag" width="900" height="827" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_c.jpg" alt="Bedrag kiezen uit de Opdrachtinvoer" width="541" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_d.jpg" alt="De voltooide automatisering met de afspeelknop om te testen" width="900" height="370" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">6</span>
+              <h3>Controleer het in BudgetGo</h3>
+              <p>Open in BudgetGo de <strong>Data Hub</strong> en tik op <strong>Wallet-automatisering</strong>. Zorg dat <strong>Apple Wallet-tracking</strong> aanstaat en tik op <strong>Testopdracht uitvoeren</strong>. De status verandert in geverifieerd zodra BudgetGo een betaling van je automatisering ontvangt.</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-wallet-automation.webp" alt="BudgetGo Wallet-automatiseringsscherm met Apple Wallet-tracking ingeschakeld en een knop Testopdracht uitvoeren" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sms" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Berichten</p>
+          <h2>Verander sms-meldingen van je bank in transacties.</h2>
+          <p>Stuurt je bank je een sms over kaartbetalingen en overboekingen, dan kan een Berichten-automatisering elke melding doorgeven aan de actie <strong>Import SMS Transaction</strong> van BudgetGo. BudgetGo leest het bericht op je toestel en maakt alleen een transactie aan als het een financiële melding herkent.</p>
+        </div>
+
+        <figure id="sms-video" class="guide-video" aria-labelledby="sms-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 58 sec</p>
+            <h3 id="sms-video-title">Set up bank SMS in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p>Choose your bank's sender or words from its payment alerts. This walkthrough uses <strong>debited</strong>.</p>
+            <p id="sms-video-note">Keep <strong>Automation</strong> enabled and <strong>Confirm Before Run</strong> off. The recording disables its automation at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#sms-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/bank-sms-setup.mp4">Open the bank SMS video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/bank-sms-video-poster.jpg" aria-label="Bank SMS automation setup in Apple Shortcuts" aria-describedby="sms-video-note">
+            <source src="/src/videos/automation/bank-sms-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/bank-sms-setup.mp4">Watch the bank SMS setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="sms-steps" class="guide-steps">
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>Maak een Berichten-automatisering</h3>
+              <p>Open in Opdrachten het tabblad <strong>Automatisering</strong>, tik op <strong>+</strong> en kies <strong>Bericht</strong>.</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>Beperk het tot de berichten van je bank</h3>
+              <ol>
+                <li>Tik op <strong>Afzender</strong> en kies het contact of nummer van je bank, of gebruik <strong>Bericht bevat</strong> met een woord dat in elke melding voorkomt, zoals de naam van je bank.</li>
+                <li>Kies <strong>Direct uitvoeren</strong> en tik op <strong>Volgende</strong>.</li>
+              </ol>
+              <p class="guide-note"><strong>Houd het filter smal.</strong> Door alleen je bank te filteren blijven persoonlijke gesprekken uit BudgetGo.</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Voeg de BudgetGo-actie toe</h3>
+              <p>Tik op <strong>Nieuwe lege automatisering</strong>, zoek naar <strong>BudgetGo</strong> en kies <strong>Import SMS Transaction</strong>.</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>Geef het bericht door</h3>
+              <ol>
+                <li>Tik op het veld <strong>Bericht</strong>, kies <strong>Selecteer variabele</strong>, kies <strong>Opdrachtinvoer</strong> en stel die in op <strong>Inhoud</strong>.</li>
+                <li>Tik op het veld <strong>Afzender</strong> en kies <strong>Opdrachtinvoer</strong> ingesteld op <strong>Afzender</strong>. Dit is optioneel, maar helpt BudgetGo je bank te herkennen.</li>
+                <li>Tik op <strong>Gereed</strong>.</li>
+              </ol>
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>Test het</h3>
+              <p>Wacht op je volgende bankmelding, of open de details van de automatisering in de <strong>Data Hub</strong> van BudgetGo en tik op <strong>Verbinding testen</strong>. Ga daarna terug naar BudgetGo om de geïmporteerde transactie te bekijken.</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-sms-guide.webp" alt="BudgetGo sms-automatiseringsscherm met de doorstuurschakelaar, status en de knop Verbinding testen" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"></circle><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17.2v.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Problemen oplossen</p>
+          <h2>Als een transactie niet verschijnt.</h2>
+        </div>
+
+        <div class="guide-faq">
+          <details>
+            <summary>Ik kan de BudgetGo-acties niet vinden in Opdrachten</summary>
+            <p>Open BudgetGo één keer na het installeren of bijwerken zodat iOS de acties registreert, en zoek daarna opnieuw in Opdrachten naar "BudgetGo".</p>
+          </details>
+          <details>
+            <summary>Ik kreeg de melding "Transaction Import Failed"</summary>
+            <p>De Wallet-automatisering stuurde een leeg bedrag of een lege winkel. Open de automatisering opnieuw en zorg dat beide velden Opdrachtinvoer gebruiken met Bedrag en Winkel geselecteerd.</p>
+          </details>
+          <details>
+            <summary>De automatisering vraagt om bevestiging voordat die draait</summary>
+            <p>Bewerk de automatisering in Opdrachten en zet die van Uitvoeren na bevestiging op <strong>Direct uitvoeren</strong>.</p>
+          </details>
+          <details>
+            <summary>Een sms-melding maakte geen transactie aan</summary>
+            <p>Alleen ondersteunde financiële berichten leveren transacties op. Controleer of imports aanstaan in de Data Hub en of het veld Bericht de berichtinhoud gebruikt.</p>
+          </details>
+        </div>
+
+        <p class="guide-note">Kom je er nog niet uit? Mail <a class="support-inline-link" href="mailto:support@budgetgo.ai">support@budgetgo.ai</a> of gebruik de <a class="support-inline-link" href="/nl/support.html">supportpagina</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="/nl/"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>Laten we er wijs uit worden.</p></div>
+      <div><h3>App</h3><a href="/nl/#inputs">Bijhouden</a><a href="/nl/#insights">Inzichten</a><a href="/nl/#analytics">Analyses</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Download BudgetGo</a></div>
+      <div><h3>Hulp</h3><a href="/nl/automations.html">Automatiseringshandleidingen</a><a href="/blog/">Blog</a><a href="/nl/support.html">Support</a><a href="/nl/#faq">Veelgestelde vragen</a><a href="/nl/mcp.html">MCP · Binnenkort beschikbaar</a></div>
+      <div><h3>Contact</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">Privacybeleid</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">Algemene voorwaarden</a></p></div>
+  </div>
+</footer>
+
+  <script src="/src/js/i18n.js"></script>
+  <script src="/src/js/home.js"></script>
+
+
+</body></html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="zh" dir="ltr" data-locale="zh"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BudgetGo:支出记录与预算应用</title>
+  <meta name="description" content="BudgetGo 是一款 iPhone 支出记录与预算应用。通过语音、对账单、银行短信或已连接的银行添加支出,让 AI 告诉你哪里可以省钱。">
+  <meta property="og:title" content="BudgetGo:支出记录与预算应用">
+  <meta property="og:description" content="说出来、导入，或让它自动到来。BudgetGo 为你整理支出，并告诉你在哪里省钱。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://budgetgo.ai/zh/">
+  <meta property="og:image" content="https://budgetgo.ai/src/images/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://budgetgo.ai/zh/">
+  <link rel="preload" href="/src/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-phone.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-sections.css?v=20261004">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"BudgetGo","operatingSystem":"iOS","applicationCategory":"FinanceApplication","description":"Track spending from voice, bank statements, bank SMS alerts, Apple Wallet and banks connected through Plaid. AI sorts every purchase, and insights show where to save.","url":"https://budgetgo.ai/","installUrl":"https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917","publisher":{"@type":"Organization","name":"GraphLeaf LLC","email":"support@budgetgo.ai"}}</script>
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/">
+  <!-- locale-alternates:end -->
+</head>
+<body class="app-site" id="top">
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-housing" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 10.8Q2 10 2.85 9.26L9.33 3.59Q10 3 10.8 2.6l.4-.2q.8-.4 1.6 0l.4.2q.8.4 1.47.99l6.48 5.67Q22 10 21.2 10.8l-.8.8q-.4.4-.8 0l-.2-.2q-.4-.4-.4.17v8.13q0 1.3-1.3 1.3h-2.4Q14 21 14 19.7v-3.4q0-1.3-1.3-1.3h-1.4Q10 15 10 16.3v3.4Q10 21 8.7 21H6.3Q5 21 5 19.7v-8.13q0-.57-.4-.17l-.2.2q-.4.4-.8 0Z"></path></symbol>
+  <symbol id="i-groceries" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 4q0-1 1-1h1.8q1.2 0 1.49 1.16l.42 1.68Q7 7 8.2 7h12.6q1.2 0 .82 1.14l-2.24 6.72Q19 16 17.8 16H9.2q-1.2 0-1.58-1.14L4.82 6.45Q4.5 5.5 3.5 5.5H3q-1 0-1-1ZM6.8 20a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Zm9 0a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Z"></path></symbol>
+  <symbol id="i-dining" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v6q0 3-2.5 4v7.5a1.5 1.5 0 0 1-3 0V13Q2 12 2 9ZM20 2q2 0 2 2v16.5a1.5 1.5 0 0 1-3 0V14h-3q-2 0-2-2 0-7 6-10Z"></path></symbol>
+  <symbol id="i-shopping" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 7V6a5 5 0 0 1 10 0v1h1q2 0 2.2 2L21 19q.2 3-3 3H6q-3.2 0-3-3l.8-10Q4 7 6 7Zm2.5 0h5V6a2.5 2.5 0 0 0-5 0Z"></path></symbol>
+  <symbol id="i-transport" viewBox="0 0 24 24"><path fill-rule="evenodd" d="m6 9 1.3-4Q8 3 10 3h4q2 0 2.7 2L18 9q4 0 4 4v4q0 1-1 1v2a2 2 0 0 1-4 0v-2H7v2a2 2 0 0 1-4 0v-2q-1 0-1-1v-4q0-4 4-4Zm2.8 0q-.8 0-.58-.77l.56-1.96Q9 5.5 9.8 5.5h4.4q.8 0 1.02.77l.56 1.96Q16 9 15.2 9ZM6 12h1q1 0 1 1t-1 1H6q-1 0-1-1t1-1Zm11 0h1q1 0 1 1t-1 1h-1q-1 0-1-1t1-1Z"></path></symbol>
+  <symbol id="i-fun" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5 3h14q3 0 3 3v3q0 1-1 1a2 2 0 0 0 0 4q1 0 1 1v3q0 3-3 3H5q-3 0-3-3v-3q0-1 1-1a2 2 0 0 0 0-4q-1 0-1-1V6q0-3 3-3Zm11 2q1 0 1 1v1q0 1-1 1t-1-1V6q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Z"></path></symbol>
+  <symbol id="i-subs" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3q0-2 1.5-.5L6 4a9 9 0 0 1 15 4q.5 2-1 2-1.5 0-2-1.5A6 6 0 0 0 8 6l2 2q1 1.5-1 1.5H4q-1 0-1-1Zm18 18q0 2-1.5.5L18 20A9 9 0 0 1 3 16q-.5-2 1-2 1.5 0 2 1.5A6 6 0 0 0 16 18l-2-2q-1-1.5 1-1.5h5q1 0 1 1Z"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"></path></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"></rect><path d="M3 10h18M16 14h2"></path></g></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9 12 4l9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10-6.5a1 1 0 0 0 0-1.7l-10-6.6A1 1 0 0 0 8 5.5z" fill="currentColor"></path></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></g></symbol>
+</svg>
+
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="BudgetGo 首页"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="主导航">
+      <a href="#inputs">添加支出</a><a href="#insights">洞察</a><a href="#analytics">分析</a><a href="#privacy">隐私</a><a href="/zh/automations.html">指南</a><a href="/blog/">博客</a>
+      <a class="btn btn--light btn--sm" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">获取应用</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero: the onboarding headline over a fan of real app screens rising from the fold. -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- The onboarding's slot reels, faded into the backdrop. -->
+  <div class="hero__reels" aria-hidden="true"><div class="reel"><ul><li>咖啡<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>房租</li><li>健身房<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>出租车</li><li>红酒<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>账单</li><li>午餐</li><li>塔可<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul><ul aria-hidden="true"><li>咖啡<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>房租</li><li>健身房<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>出租车</li><li>红酒<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>账单</li><li>午餐</li><li>塔可<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul></div><div class="reel reel--rev"><ul><li>书籍<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>机票</li><li>电影<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>礼物</li><li>披萨<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>酒店</li><li>汽油</li><li>演出<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul><ul aria-hidden="true"><li>书籍<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>机票</li><li>电影<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>礼物</li><li>披萨<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>酒店</li><li>汽油</li><li>演出<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul></div><div class="reel"><ul><li>植物<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>零食<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>理发<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>买菜</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>早午餐<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>演唱会</li></ul><ul aria-hidden="true"><li>植物<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>零食<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>理发<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>买菜</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>早午餐<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>演唱会</li></ul></div></div>
+  <div class="wrap hero__copy">
+    <h1 id="hero-title" class="hero__title" data-split="">把一切<br> <em>都理清楚。</em></h1>
+    <p class="hero__lead" data-reveal="">好好享受今天。清楚钱花到了哪里。</p>
+    <div class="hero__actions" data-reveal="">
+      <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">获取 BudgetGo</a>
+      <a class="btn btn--ghost" href="#inputs">看看它如何运作</a>
+    </div>
+  </div>
+  <div class="hero__stage" data-tilt="">
+    <div class="hero__fan">
+      <img class="fan fan--left" decoding="async" src="/src/images/app-live/mockup-analytics.webp" alt="BudgetGo 分析：9 月的支出、预测、现金流和主要商家" width="754" height="1639">
+      <img class="fan fan--right" decoding="async" src="/src/images/app-live/mockup-story.webp" alt="BudgetGo 目标进度故事：看看你走了多远，距离“新笔记本电脑”目标还差 85" width="754" height="1639">
+      <img class="fan fan--center" fetchpriority="high" decoding="async" src="/src/images/app-live/mockup-home.webp" alt="BudgetGo 首页：4,000 美元预算在第 2 天（共 30 天）剩余 2,800.00 美元，Apple TV+ 今日到期，以及你的洞察回顾" width="754" height="1639">
+    </div>
+  </div>
+</section>
+
+
+<!-- Ways spending arrives. -->
+<section class="marquee" aria-label="添加支出的方式">
+  <div class="marquee__track">
+    <ul><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>开口说</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>银行对账单</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>银行短信提醒</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>已连接的银行</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV 和 Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>收据照片</li></ul>
+    <ul aria-hidden="true"><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>开口说</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>银行对账单</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>银行短信提醒</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>已连接的银行</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV 和 Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>收据照片</li></ul>
+  </div>
+</section>
+
+<!-- Pinned story: four ways in, one phone. -->
+<section class="inputs" id="inputs" aria-labelledby="inputs-title">
+  <div class="wrap inputs__grid">
+    <div class="inputs__copy">
+      <p class="eyebrow">每一种付款方式</p>
+      <h2 id="inputs-title" data-split="">无论怎么付，<br><span>都会汇聚到这里。</span></h2>
+      <ol class="steps">
+        <li class="step is-active" data-step="0"><span class="step__icon tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span><div><h3>开口说就行</h3><p>点按麦克风，说出你花了多少。</p></div></li>
+        <li class="step" data-step="1"><span class="step__icon tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span><div><h3>导入对账单</h3><p>PDF、CSV 或 Excel，甚至是收据照片。</p></div></li>
+        <li class="step" data-step="2"><span class="step__icon tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span><div><h3>让银行提醒自动记账</h3><p>银行短信提醒，在你的设备上读取。</p></div></li>
+        <li class="step" data-step="3"><span class="step__icon tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span><div><h3>连接你常用的服务</h3><p>通过 Plaid 连接 Apple Wallet 和你的银行。</p></div></li>
+      </ol>
+    </div>
+    <div class="inputs__stage">
+      <div class="iphone iphone--story">
+        
+          <img class="state" data-state="0" src="/src/images/app-live/mockup-voice.webp" alt="BudgetGo 语音输入：回家 Uber 二十五块四，Spotify 八块九十九，Netflix 九块九十九，被转换为三笔交易" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="1" src="/src/images/app-live/mockup-import.webp" alt="BudgetGo 导入数据：一份对账单正在读取交易，一份 Chase 对账单已完成，添加了 142 笔交易，跳过 3 笔" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="2" src="/src/images/app-live/mockup-sms-automation.webp" alt="BudgetGo 短信自动化：短信转发已开启，创建自动化并测试连接" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="3" src="/src/images/app-live/mockup-data-hub.webp" alt="BudgetGo 数据中心：导入与导出、iOS 自动化、FinanceKit 和银行连接" width="754" height="1639" loading="lazy">
+        
+      </div>
+      <div class="overlay overlay--voice" data-overlay="0" aria-hidden="true"><span class="overlay__mic"><svg><use href="#i-mic"></use></svg></span>“回家 Uber 二十五块四，Spotify 和 Netflix”</div>
+      <div class="overlay overlay--files" data-overlay="1" aria-hidden="true">
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg><b>Statement.pdf</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5v11zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2zM3 19c0 1.1.9 2 2 2h3V10H3v9z" opacity=".9"></path></svg><b>September.csv</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M12 9a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM20 5h-3.2L15 3H9L7.2 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 14H4V7h4.05l1.83-2h4.24l1.83 2H20v12z"></path></svg><b>收据照片</b></span>
+      </div>
+      <div class="overlay overlay--sms" data-overlay="2" aria-hidden="true"><span class="overlay__app"><svg><use href="#i-chat"></use></svg></span><span><b>银行 · 刚刚</b>你尾号 4821 的卡在 Talabat 消费了 45.00 美元。</span></div>
+      <div class="overlay overlay--hub" data-overlay="3" aria-hidden="true"><span class="overlay__pulse"></span>新交易自动到来</div>
+      <div class="inputs__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Banks through Plaid. -->
+<section class="banks" aria-labelledby="banks-title">
+  <div class="wrap banks__grid">
+    <div class="banks__stage">
+      <div class="iphone iphone--banks">
+        <img src="/src/images/app-live/mockup-accounts.webp" alt="BudgetGo 账户：Chase 和 Monzo 已连接并同步，显示日常支票账户和储蓄账户余额" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="bank-stack" aria-hidden="true">
+        <div class="bank-card"><span class="bank-card__icon"><svg><use href="#i-bank"></use></svg></span><span><b>日常支票</b><em>支票 ··4821</em></span><b class="bank-card__bal">$3,240.18</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--b"><svg><use href="#i-wallet"></use></svg></span><span><b>奖励信用卡</b><em>信用 ··1093</em></span><b class="bank-card__bal">$612.40</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--c"><svg><use href="#i-bank"></use></svg></span><span><b>储蓄</b><em>储蓄 ··7720</em></span><b class="bank-card__bal">$8,905.00</b></div>
+      </div>
+    </div>
+    <div class="banks__copy">
+      <p class="eyebrow">已连接的银行</p>
+      <h2 id="banks-title" data-split="">你的所有银行。<br><span>一目了然。</span></h2>
+      <p class="lead">通过 Plaid 关联银行。所有账户集中在一处。</p>
+      <ul class="banks__points">
+        <li>连接多家银行<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>余额和交易保持最新<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>没有你的银行？改为导入对账单<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+      </ul>
+      <p class="banks__plaid">银行连接由 <img src="/src/images/brands/plaid-white.svg" alt="Plaid" width="64" height="24"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Automatic sorting. -->
+<section class="sort" id="sort" aria-labelledby="sort-title">
+  <div class="wrap sort__grid">
+    <div class="sort__copy">
+      <p class="eyebrow">自动分类</p>
+      <h2 id="sort-title" data-split="">AI 负责分类，<br><span>决定权在你。</span></h2>
+      <p class="lead">每笔消费一到账就会分配类别。你可以随时更改。</p>
+      <div class="sort__meter"><span class="sort__count" data-sort-count="">5</span><span class="sort__label">待查看</span></div>
+      <p class="sort__ai" aria-hidden="true"><span class="sort__spark"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></span><span data-sort-status="">AI 正在分类…</span></p>
+    </div>
+    <div class="sort__list" data-sort-list="">
+      <div class="sort-row" style="--cat:#84cc16"><span class="logo logo--walmart"><img src="/src/images/merchants/walmart.svg" alt=""></span><span class="tx__t"><b>Walmart</b><em class="sort-row__cat"><i class="u">未分类</i><i class="c">买菜<svg><use href="#i-groceries"></use></svg></i></em></span><b>-$52.80</b></div>
+      <div class="sort-row" style="--cat:#2563eb"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><span class="tx__t"><b>Uber</b><em class="sort-row__cat"><i class="u">未分类</i><i class="c">交通<svg><use href="#i-transport"></use></svg></i></em></span><b>-$25.40</b></div>
+      <div class="sort-row" style="--cat:#06b6d4"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em class="sort-row__cat"><i class="u">未分类</i><i class="c">订阅<svg><use href="#i-subs"></use></svg></i></em></span><b>-$11.99</b></div>
+      <div class="sort-row" style="--cat:#f97316"><span class="logo logo--mcd"><img src="/src/images/merchants/mcdonalds.svg" alt=""></span><span class="tx__t"><b>McDonald’s</b><em class="sort-row__cat"><i class="u">未分类</i><i class="c"><svg><use href="#i-dining"></use></svg>餐饮外卖</i></em></span><b>-$9.85</b></div>
+      <div class="sort-row" style="--cat:#c0841a"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon</b><em class="sort-row__cat"><i class="u">未分类</i><i class="c">购物<svg><use href="#i-shopping"></use></svg></i></em></span><b>-$32.00</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- Insight stories: a horizontal, pinned reel. -->
+<section class="insights" id="insights" aria-labelledby="insights-title">
+  <div class="insights__pin">
+    <div class="insights__track" data-reel="">
+      <div class="reel-intro">
+        <p class="eyebrow">个性化洞察</p>
+        <h2 id="insights-title" data-split="">你的支出，<br><span>像故事一样讲述。</span></h2>
+        <p class="lead">关于你的钱的小故事：哪些在计划内，哪里可以省钱。</p>
+        <div class="recap">
+          <div class="recap__stack" aria-hidden="true">
+            <span class="recap__card recap__card--pace"><em>进度</em><svg viewBox="0 0 80 48"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="7" stroke-linecap="round"></path><path d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="7" stroke-linecap="round"></path></svg><b>$</b></span>
+            <span class="recap__card recap__card--over"><em>超支</em><svg viewBox="0 0 80 36"><path d="M4 8h72M4 20h60" stroke="#FFB3AA" stroke-width="6" stroke-linecap="round"></path></svg></span>
+            <span class="recap__card recap__card--save"><em>储蓄</em><svg viewBox="0 0 80 32"><path d="M5 27 18 22 30 24 42 14 54 14 66 9 75 3" fill="none" stroke="#9CE5B9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path></svg><b>$28</b></span>
+          </div>
+          <div class="recap__copy"><span>你的回顾</span><b>小小改变，更多可能。</b><em>4 个故事 · 不到 1 分钟</em></div>
+          <span class="recap__play"><svg aria-hidden="true"><use href="#i-play"></use></svg></span>
+        </div>
+      </div>
+      <article class="story" style="--bg:#291d50;--fg:#d8c5ef;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">正面对比</p>
+        <h3>路上花的比在那里吃的还多。</h3>
+        <strong class="story__number">$51</strong>
+        <p class="story__lead">本季度打车花费超过餐厅，交通首次领先。</p>
+        <div class="story__compare"><div><span>交通</span><b>$482</b></div><i class="bar" style="--w:100%"></i><div><span>外出就餐</span><b>$431</b></div><i class="bar bar--b" style="--w:89%"></i></div>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">点按继续 · 按住暂停</p>
+      </article>
+      <article class="story" style="--bg:#153b2d;--fg:#b4d7c1;--accent:#9ce5b9">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">多存一点</p>
+        <h3>小小改变，更多可能。</h3>
+        <strong class="story__number">+$28</strong>
+        <p class="story__lead">外出就餐比你平时的一周多出 28 美元，为两个月来最高。</p>
+        <figure class="story__weeks" aria-label="八周来的外出就餐，本周高于平时的 67 美元"><figcaption><span>外出就餐，最近 8 周</span><b>本周</b></figcaption><div class="story__bars"><i style="--h:62%"></i><i style="--h:69%"></i><i style="--h:59%"></i><i style="--h:67%"></i><i style="--h:71%"></i><i style="--h:65%"></i><i style="--h:69%"></i><i class="now" style="--h:100%"></i></div></figure>
+        <p class="story__advice">把其中两餐换成自己买菜，这个差距大部分就消失了。</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">点按继续 · 按住暂停</p>
+      </article>
+      <article class="story" style="--bg:#30203e;--fg:#d8c5ef;--accent:#b48aff">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">隐藏的习惯</p>
+        <h3>咖啡悄悄超过了你的订阅。</h3>
+        <strong class="story__number">$96</strong>
+        <p class="story__lead">每杯约 5.60 美元，咖啡超过了你付费的每一项订阅。</p>
+        <div class="story__compare"><div><span>咖啡</span><b>$96</b></div><i class="bar" style="--w:100%"></i><div><span>订阅</span><b>$74</b></div><i class="bar bar--b" style="--w:77%"></i></div>
+        <p class="story__source">来自你 7 月至 9 月的交易</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">点按继续 · 按住暂停</p>
+      </article>
+      <article class="story" style="--bg:#17313a;--fg:#b7d2d9;--accent:#90deed">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">进度</p>
+        <h3>有望在预算内结束。</h3>
+        <strong class="story__number">$143<small>/天</small></strong>
+        <p class="story__lead">每天花到这个数，预算就能撑到第 30 天。</p>
+        <svg class="story__art" viewBox="0 0 80 48" aria-hidden="true"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="6" stroke-linecap="round"></path><path class="draw" d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="6" stroke-linecap="round"></path><path d="M40 41 59 21" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><circle cx="40" cy="41" r="3" fill="#fff"></circle></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">点按继续 · 按住暂停</p>
+      </article>
+      <article class="story" style="--bg:#161618;--fg:#b9b9b5;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">周期对比</p>
+        <h3>新的周期，新的视角。</h3>
+        <strong class="story__number">12%<small> 更少</small></strong>
+        <p class="story__lead">相比上一周期的同样天数。</p>
+        <svg class="story__art story__art--wide" viewBox="0 0 160 60" aria-hidden="true"><path d="M-4 48C24 36 44 44 68 50s36-2 52-22 24-20 44-20" fill="none" stroke="#d8c5ef" stroke-width="7" stroke-linecap="round" opacity=".6"></path><path class="draw" d="M-4 28C24 16 52 28 76 40s36 0 52-20 22-16 36-16" fill="none" stroke="#7132f5" stroke-width="11" stroke-linecap="round"></path></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">点按继续 · 按住暂停</p>
+      </article>
+      <div class="reel-end"><p>点按继续<br><span>按住暂停</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Analytics bento. -->
+<section class="analytics" id="analytics" aria-labelledby="analytics-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">高级分析</p><h2 id="analytics-title" data-split="">每个数字，<br><span>再点一下就能深入。</span></h2></div>
+      <p class="lead">支出、预测、现金流、商家和付款。点按任意一项即可深入查看。</p>
+    </div>
+    <div class="bento">
+      <article class="widget widget--spending">
+        <header><h3>支出</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value"><span data-count="4237.73">$4,237.73</span> <small><i class="up">▲</i> 64%</small></strong><p class="widget__meta">9 月 1 日 – 9 月 30 日</p>
+        <svg class="widget__chart" viewBox="0 0 360 140" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g-spend" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b994f5" stop-opacity=".35"></stop><stop offset="1" stop-color="#b994f5" stop-opacity="0"></stop></linearGradient></defs><path class="area" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14V140H0Z" fill="url(#g-spend)"></path><path class="draw" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14" fill="none" stroke="#b994f5" stroke-width="3.5" stroke-linecap="round"></path><path class="draw draw--dash" d="M0 134C60 132 100 126 160 118S270 100 360 88" fill="none" stroke="#b9b9b5" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" opacity=".5"></path></svg>
+      </article>
+      <article class="widget widget--forecast">
+        <header><h3>预测</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--orange" data-count="991.44">$991.44</strong><p class="widget__meta">截至 11 月 1 日</p>
+        <div class="fbars" aria-hidden="true"><span style="--h:14%;--c:#945922"></span><span style="--h:32%;--c:#a7672c"></span><span style="--h:52%;--c:#bd7735"></span><span style="--h:76%;--c:#d4893f"></span><span style="--h:100%;--c:#eb9b4b"></span></div>
+      </article>
+      <article class="widget widget--cash">
+        <header><h3>现金流</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--lime">+<span data-count="2925.74">$2,925.74</span></strong><p class="widget__meta">你留住了 40.8% 的收入</p>
+        <div class="cbars" aria-hidden="true"><span class="cbar cbar--in" style="--w:96%"><b>流入</b><b>$7,163.48</b></span><span class="cbar cbar--out" style="--w:58%"><b>流出</b><b>$4,237.73</b></span></div>
+      </article>
+      <article class="widget widget--merchants">
+        <header><h3>主要商家</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <p class="widget__meta">$2,987.96 中的 $1,128.40</p>
+        <div class="podium" aria-hidden="true">
+          <div style="--h:62%;--c:#1ca9de"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><b>2</b><em>$312.60</em></div>
+          <div style="--h:100%;--c:#eb3d96"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><b>1</b><em>$642.30</em></div>
+          <div style="--h:44%;--c:#7060f2"><span class="logo logo--full"><img src="/src/images/merchants/starbucks.svg" alt=""></span><b>3</b><em>$173.50</em></div>
+        </div>
+      </article>
+      <article class="widget widget--payments">
+        <header><h3>付款</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <div class="stats">
+          <div><span>每月账单</span><b class="purple">$32.81</b><em>已追踪 2 项</em></div>
+          <div><span>每年</span><b>$393.76</b><em>如果一切不变</em></div>
+          <div><span>下次到期</span><b>今天</b><em>Netflix</em></div>
+        </div>
+      </article>
+      <article class="widget widget--trend">
+        <header><h3>支出趋势</h3><span class="seg"><i>日</i><i class="on">周</i><i>月</i></span></header>
+        <div class="tbars" aria-hidden="true">
+          <div><span style="--h:100%"><b>$4k</b></span><em>8月30日</em></div><div><span style="--h:4%"><b>$36</b></span><em>9月6日</em></div><div><span style="--h:4%"><b>$34</b></span><em>9月13日</em></div><div><span style="--h:0%"></span><em>9月20日</em></div><div><span style="--h:16%"><b>$598</b></span><em>9月27日</em></div><div><span style="--h:0%"><b>$0</b></span><em>10月4日</em></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Due soon: recurring payments. -->
+<section class="due" id="due" aria-labelledby="due-title">
+  <div class="wrap due__grid">
+    <div class="due__copy">
+      <p class="eyebrow">即将到期</p>
+      <h2 id="due-title" data-split="">提前看到<br><span>接下来的账单。</span></h2>
+      <p class="lead">定期账单和订阅，自动识别并排列好。</p>
+      <div class="due-card">
+        <p class="due-card__head"><b>本周到期</b><span>查看全部</span></p>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span class="tx__t"><b>Netflix 订阅</b><em>今天</em></span><b>$1.00</b></div>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em>周四，10月8日</em></span><b>$11.99</b></div>
+        <div class="due-row"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon Prime</b><em>周六，10月10日</em></span><b>$14.99</b></div>
+      </div>
+    </div>
+    <div class="due__stage">
+      <div class="iphone iphone--due">
+        <img src="/src/images/app-live/mockup-recurring.webp" alt="BudgetGo 定期账单：10 月共 128.97 美元，Apple TV+、Netflix、Spotify 和 ChatGPT Plus 今日到期" width="754" height="1639" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- One budget, or none. Interactive. -->
+<section class="modes" aria-labelledby="modes-title">
+  <div class="wrap modes__grid">
+    <div>
+      <p class="eyebrow">由你决定</p>
+      <h2 id="modes-title" data-split="">设一个预算，<br><span>或者不设。</span></h2>
+      <p class="lead">为各个类别设置一个预算，也可以只记录你的支出。</p>
+      <div class="mode-toggle" role="group" aria-label="选择模式">
+        <button type="button" aria-pressed="true" data-mode="budget">有预算</button>
+        <button type="button" aria-pressed="false" data-mode="track">仅记录</button>
+        <span class="mode-toggle__thumb" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="modes__stage">
+      <div class="budget-card budget-card--xl" data-mode-card="" data-mode-state="budget" aria-live="polite">
+        <div class="budget-card__top"><span class="app-pill"><span data-mode-pill="">预算周期</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><svg class="eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+        <strong class="budget-card__amount" data-mode-amount="">$1,284.50</strong>
+        <span class="budget-card__label" data-mode-label="">剩余</span>
+        <div class="mode-budget"><span class="progress"><span class="progress__fill" style="width:68%"></span></span><span class="budget-card__foot">已花费 $2,715.50，共 $4.00k<em>第 21 天，共 30 天</em></span></div>
+        <div class="mode-track"><span class="trend-line"><i>▼</i> <b>少 12%</b> 相比上周</span></div>
+      </div>
+      <div class="suggest">
+        <p>下一周期的建议<svg aria-hidden="true"><use href="#i-play"></use></svg></p>
+        <b>把外卖提高到 $190，把买菜降到 $211。</b>
+        <em>你的总额保持不变。</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy: words light up as you read. -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="privacy__box">
+      <p class="eyebrow">你的隐私</p>
+      <h2 id="privacy-title" class="privacy__text" data-words="">你的支出属于个人隐私，就让它保持如此。</h2>
+      <div class="privacy-first__cards">
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M16 2 28 7v8c0 7-5.5 12-12 15C9.5 27 4 22 4 15V7Zm-5 10v3h10v-3Zm0 6v3h4v-3Zm7 0v3h3v-3Z"></path></svg></span>
+          <h3>个人信息，已过滤。</h3><p>个人信息过滤有助于在 OpenAI 驱动的分析过程中减少敏感个人信息的暴露。</p>
+          <span class="privacy-first__tag">AI 隐私</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M3 11V6a3 3 0 0 1 3-3h5v3H6v5Zm18-8h5a3 3 0 0 1 3 3v5h-3V6h-5ZM3 21h3v5h5v3H6a3 3 0 0 1-3-3Zm23 0h3v5a3 3 0 0 1-3 3h-5v-3h5ZM16 8c-5 0-7 3-7 8s2 9 7 9 7-4 7-9-2-8-7-8Zm-5 6v3h2v-3Zm8 0v3h2v-3Zm-7 6a5 5 0 0 0 8 0l-2-1a3 3 0 0 1-4 0Z"></path></svg></span>
+          <h3>多一层访问保护。</h3><p>使用生物识别验证，帮助保护对 BudgetGo 的访问。</p>
+          <span class="privacy-first__tag">生物识别保护</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M9 14V9a7 7 0 0 1 14 0v5h1a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4Zm3 0h8V9a4 4 0 0 0-8 0Zm4 5a2 2 0 0 0-1 3.73V26h2v-3.27A2 2 0 0 0 16 19Z"></path></svg></span>
+          <h3>你的数据不出售。</h3><p>我们不会出售你的个人信息。你的支出属于个人隐私，我们也如此对待。</p>
+          <span class="privacy-first__tag">绝不出售数据</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3a6 6 0 0 0-5.65 4H3v4h3.35a6 6 0 0 0 11.3 0H29V7H17.65A6 6 0 0 0 12 3Zm8 14a6 6 0 0 0-5.65 4H3v4h11.35a6 6 0 0 0 11.3 0H29v-4h-3.35A6 6 0 0 0 20 17Z"></path></svg></span>
+          <h3>最终由你说了算。</h3><p>查看、编辑或删除你的交易。需要时可将记录导出为 CSV、PDF 或 Excel。</p>
+          <span class="privacy-first__tag">你的记录，你来掌控。</span>
+        </article>
+      </div>
+      <a class="text-link privacy__link" href="/privacy_policy.html">阅读隐私政策<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ. -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq__grid">
+    <div><p class="eyebrow">常见问题</p><h2 id="faq-title">好问题，<br><span>清晰的答案。</span></h2><p class="faq__help">需要帮助？<a href="/zh/support.html">联系支持</a>。</p></div>
+    <div class="faq__list">
+      <details><summary>不设预算也可以记录支出吗？</summary><p>可以。你可以单独使用 BudgetGo 来记录和了解支出。需要消费上限时，设置一个生效中的预算，并分配到各个类别。</p></details>
+      <details><summary>我的支出是如何进入 BudgetGo 的？</summary><p>用语音输入、通过 Plaid 关联支持的银行、连接 Apple Wallet、用“快捷指令”处理银行短信提醒、导入文件或收据照片，或者自己手动添加。把适合你日常的来源组合起来使用。我们的<a href="/zh/automations.html">设置指南</a>介绍了快捷指令的各种方式。</p></details>
+      <details><summary>我的银行能用于 BudgetGo 吗？</summary><p>在 BudgetGo 中关联账户时搜索你的银行。连接通过 Plaid 完成，支持情况取决于你的金融机构、所在国家或地区和账户。如果没有找到你的银行，仍可导入对账单或手动记录消费。</p></details>
+      <details><summary>我可以更改 AI 选择的类别吗？</summary><p>可以。AI 帮助整理你的交易，你可以查看或更改任何类别。你的记录由你说了算。</p></details>
+      <details><summary>我可以导入以前的交易吗？</summary><p>可以导入 PDF 银行对账单、CSV 或 Excel 导出文件，或收据照片。确认导入前请先检查交易。文件最多包含 500 笔交易，大小不超过 5 MB。</p></details>
+      <details><summary>我能看到即将到期的账单和订阅吗？</summary><p>可以。BudgetGo 会识别定期账单和订阅，并集中显示即将扣款的项目，方便你提前安排。它负责追踪付款；订阅的管理或取消需在相应服务商处完成。</p></details>
+      <details><summary>BudgetGo 多少钱？</summary><p>BudgetGo 提供免费试用，之后为订阅制。订阅前请在应用中查看当前的方案、价格和试用条款。</p></details>
+      <details><summary>我可以导出或删除我的支出记录吗？</summary><p>可以。你可以编辑或删除交易记录，并导出为 CSV、PDF 或 Excel。我们不会出售你的个人信息。有关数据如何使用，请阅读我们的<a href="/privacy_policy.html">隐私政策</a>。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Closing. -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="closing__card">
+    <div class="closing__copy">
+      <h2 id="closing-title" data-split="">想更清楚地了解你的钱吗？</h2>
+      <p>有预算或无预算都能记录。每笔消费分好类，每张账单都在掌握中。</p>
+      <div class="closing__actions">
+        <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">获取 BudgetGo</a>
+      </div>
+    </div>
+    <div class="closing__stage" aria-hidden="true">
+      <div class="iphone iphone--closing">
+        <img src="/src/images/app-live/mockup-home.webp" alt="" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="closing__chip closing__chip--a"><span class="trend-arrow">▼</span><span><b>少 12%</b><em>相比上周</em></span></div>
+      <div class="closing__chip closing__chip--b"><span class="logo logo--sm logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span><b>Netflix</b><em>今日到期</em></span><b>$1.00</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>把一切都理清楚。</p><a class="footer-badge" href="https://www.producthunt.com/products/budgetgo/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-budgetgo" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1291781&amp;theme=dark" alt="Expense Tracker - BudgetGo - Know where your money goes. | Product Hunt" width="250" height="54" loading="lazy"></a></div>
+      <div><h3>应用</h3><a href="#inputs">添加支出</a><a href="#insights">洞察</a><a href="#analytics">分析</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">获取 BudgetGo</a></div>
+      <div><h3>帮助</h3><a href="/zh/automations.html">自动化指南</a><a href="/blog/">博客</a><a href="/zh/support.html">支持</a><a href="#faq">常见问题</a><a href="/zh/mcp.html">MCP · 即将推出</a></div>
+      <div><h3>联系我们</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">隐私政策</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">服务条款</a></p></div>
+  </div>
+</footer>
+
+<script src="/src/js/i18n.js"></script>
+<script src="/src/js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer=""></script>
+<script src="/src/js/app-site/money.js" defer=""></script>
+<script src="/src/js/app-site/interactions.js" defer=""></script>
+<script src="/src/js/app-site/motion.js" defer=""></script>
+
+
+</body></html>

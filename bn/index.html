@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="bn" dir="ltr" data-locale="bn"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BudgetGo: খরচ ট্র্যাকার ও বাজেট অ্যাপ</title>
+  <meta name="description" content="BudgetGo হলো iPhone-এর জন্য খরচ ট্র্যাকার ও বাজেট অ্যাপ। ভয়েস, স্টেটমেন্ট, ব্যাংক এসএমএস বা সংযুক্ত ব্যাংক থেকে খরচ যোগ করুন, আর AI দেখিয়ে দেবে কোথায় সাশ্রয় করা যায়।">
+  <meta property="og:title" content="BudgetGo: খরচ ট্র্যাকার ও বাজেট অ্যাপ">
+  <meta property="og:description" content="বলুন, ইমপোর্ট করুন, বা আসতে দিন। BudgetGo আপনার খরচ সাজায় এবং দেখায় কোথায় সাশ্রয় করবেন।">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://budgetgo.ai/bn/">
+  <meta property="og:image" content="https://budgetgo.ai/src/images/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#101010">
+  <link rel="canonical" href="https://budgetgo.ai/bn/">
+  <link rel="preload" href="/src/fonts/manrope-variable.ttf" as="font" type="font/ttf" crossorigin="">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-phone.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-sections.css?v=20261004">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"BudgetGo","operatingSystem":"iOS","applicationCategory":"FinanceApplication","description":"Track spending from voice, bank statements, bank SMS alerts, Apple Wallet and banks connected through Plaid. AI sorts every purchase, and insights show where to save.","url":"https://budgetgo.ai/","installUrl":"https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917","publisher":{"@type":"Organization","name":"GraphLeaf LLC","email":"support@budgetgo.ai"}}</script>
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/">
+  <!-- locale-alternates:end -->
+</head>
+<body class="app-site" id="top">
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-housing" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.8 10.8Q2 10 2.85 9.26L9.33 3.59Q10 3 10.8 2.6l.4-.2q.8-.4 1.6 0l.4.2q.8.4 1.47.99l6.48 5.67Q22 10 21.2 10.8l-.8.8q-.4.4-.8 0l-.2-.2q-.4-.4-.4.17v8.13q0 1.3-1.3 1.3h-2.4Q14 21 14 19.7v-3.4q0-1.3-1.3-1.3h-1.4Q10 15 10 16.3v3.4Q10 21 8.7 21H6.3Q5 21 5 19.7v-8.13q0-.57-.4-.17l-.2.2q-.4.4-.8 0Z"></path></symbol>
+  <symbol id="i-groceries" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 4q0-1 1-1h1.8q1.2 0 1.49 1.16l.42 1.68Q7 7 8.2 7h12.6q1.2 0 .82 1.14l-2.24 6.72Q19 16 17.8 16H9.2q-1.2 0-1.58-1.14L4.82 6.45Q4.5 5.5 3.5 5.5H3q-1 0-1-1ZM6.8 20a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Zm9 0a2.2 2.2 0 1 0 4.4 0 2.2 2.2 0 1 0-4.4 0Z"></path></symbol>
+  <symbol id="i-dining" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v5h1V3a1 1 0 0 1 2 0v6q0 3-2.5 4v7.5a1.5 1.5 0 0 1-3 0V13Q2 12 2 9ZM20 2q2 0 2 2v16.5a1.5 1.5 0 0 1-3 0V14h-3q-2 0-2-2 0-7 6-10Z"></path></symbol>
+  <symbol id="i-shopping" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 7V6a5 5 0 0 1 10 0v1h1q2 0 2.2 2L21 19q.2 3-3 3H6q-3.2 0-3-3l.8-10Q4 7 6 7Zm2.5 0h5V6a2.5 2.5 0 0 0-5 0Z"></path></symbol>
+  <symbol id="i-transport" viewBox="0 0 24 24"><path fill-rule="evenodd" d="m6 9 1.3-4Q8 3 10 3h4q2 0 2.7 2L18 9q4 0 4 4v4q0 1-1 1v2a2 2 0 0 1-4 0v-2H7v2a2 2 0 0 1-4 0v-2q-1 0-1-1v-4q0-4 4-4Zm2.8 0q-.8 0-.58-.77l.56-1.96Q9 5.5 9.8 5.5h4.4q.8 0 1.02.77l.56 1.96Q16 9 15.2 9ZM6 12h1q1 0 1 1t-1 1H6q-1 0-1-1t1-1Zm11 0h1q1 0 1 1t-1 1h-1q-1 0-1-1t1-1Z"></path></symbol>
+  <symbol id="i-fun" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5 3h14q3 0 3 3v3q0 1-1 1a2 2 0 0 0 0 4q1 0 1 1v3q0 3-3 3H5q-3 0-3-3v-3q0-1 1-1a2 2 0 0 0 0-4q-1 0-1-1V6q0-3 3-3Zm11 2q1 0 1 1v1q0 1-1 1t-1-1V6q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Zm0 5.5q1 0 1 1v1q0 1-1 1t-1-1v-1q0-1 1-1Z"></path></symbol>
+  <symbol id="i-subs" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3q0-2 1.5-.5L6 4a9 9 0 0 1 15 4q.5 2-1 2-1.5 0-2-1.5A6 6 0 0 0 8 6l2 2q1 1.5-1 1.5H4q-1 0-1-1Zm18 18q0 2-1.5.5L18 20A9 9 0 0 1 3 16q-.5-2 1-2 1.5 0 2 1.5A6 6 0 0 0 16 18l-2-2q-1-1.5 1-1.5h5q1 0 1 1Z"></path></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"></path></g></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"></rect><path d="M3 10h18M16 14h2"></path></g></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9 12 4l9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10-6.5a1 1 0 0 0 0-1.7l-10-6.6A1 1 0 0 0 8 5.5z" fill="currentColor"></path></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></g></symbol>
+</svg>
+
+<a class="skip-link" href="#main">মূল বিষয়বস্তুতে যান</a>
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="BudgetGo হোমপেজ"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="নেভিগেশন খুলুন" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="প্রধান নেভিগেশন">
+      <a href="#inputs">খরচ যোগ করুন</a><a href="#insights">ইনসাইট</a><a href="#analytics">অ্যানালিটিক্স</a><a href="#privacy">গোপনীয়তা</a><a href="/bn/automations.html">গাইড</a><a href="/blog/">ব্লগ</a>
+      <a class="btn btn--light btn--sm" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">অ্যাপ নিন</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero: the onboarding headline over a fan of real app screens rising from the fold. -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- The onboarding's slot reels, faded into the backdrop. -->
+  <div class="hero__reels" aria-hidden="true"><div class="reel"><ul><li>কফি<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>ভাড়া</li><li>জিম<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>ট্যাক্সি</li><li>ওয়াইন<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>বিল</li><li>দুপুরের খাবার</li><li>টাকো<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul><ul aria-hidden="true"><li>কফি<span class="sticker sticker--0" style="--r:-8deg">$4.20</span></li><li>ভাড়া</li><li>জিম<span class="sticker sticker--2" style="--r:-5deg">$35.00</span></li><li>ট্যাক্সি</li><li>ওয়াইন<span class="sticker sticker--0" style="--r:7deg">$9.90</span></li><li>বিল</li><li>দুপুরের খাবার</li><li>টাকো<span class="sticker sticker--1" style="--r:6deg">$11.50</span></li></ul></div><div class="reel reel--rev"><ul><li>বই<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>ফ্লাইট</li><li>সিনেমা<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>উপহার</li><li>পিৎজা<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>হোটেল</li><li>পেট্রোল</li><li>অনুষ্ঠান<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul><ul aria-hidden="true"><li>বই<span class="sticker sticker--2" style="--r:-5deg">$18.00</span></li><li>ফ্লাইট</li><li>সিনেমা<span class="sticker sticker--0" style="--r:-7deg">$12</span></li><li>উপহার</li><li>পিৎজা<span class="sticker sticker--1" style="--r:5deg">$14.80</span></li><li>হোটেল</li><li>পেট্রোল</li><li>অনুষ্ঠান<span class="sticker sticker--2" style="--r:-5deg">$58.00</span></li></ul></div><div class="reel"><ul><li>গাছ<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>নাস্তা<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>চুল কাটা<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>মুদি</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>ব্রাঞ্চ<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>কনসার্ট</li></ul><ul aria-hidden="true"><li>গাছ<span class="sticker sticker--0" style="--r:7deg">$14.00</span></li><li>নাস্তা<span class="sticker sticker--1" style="--r:-6deg">$3.10</span></li><li>চুল কাটা<span class="sticker sticker--2" style="--r:5deg">$25</span></li><li>মুদি</li><li>Netflix<span class="sticker sticker--1" style="--r:-4deg">$15.49</span></li><li>Uber</li><li>ব্রাঞ্চ<span class="sticker sticker--0" style="--r:6deg">$22</span></li><li>কনসার্ট</li></ul></div></div>
+  <div class="wrap hero__copy">
+    <h1 id="hero-title" class="hero__title" data-split="">চলুন সবকিছু<br> <em>বুঝে নিই।</em></h1>
+    <p class="hero__lead" data-reveal="">দিনটা উপভোগ করুন। জানুন আপনার টাকা কোথায় যায়।</p>
+    <div class="hero__actions" data-reveal="">
+      <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">BudgetGo নিন</a>
+      <a class="btn btn--ghost" href="#inputs">দেখুন এটি কীভাবে কাজ করে</a>
+    </div>
+  </div>
+  <div class="hero__stage" data-tilt="">
+    <div class="hero__fan">
+      <img class="fan fan--left" decoding="async" src="/src/images/app-live/mockup-analytics.webp" alt="BudgetGo অ্যানালিটিক্স: সেপ্টেম্বরের খরচ, পূর্বাভাস, ক্যাশ ফ্লো ও শীর্ষ দোকান" width="754" height="1639">
+      <img class="fan fan--right" decoding="async" src="/src/images/app-live/mockup-story.webp" alt="BudgetGo লক্ষ্য অগ্রগতির গল্প: দেখুন কতদূর এসেছেন, নতুন ল্যাপটপ লক্ষ্যের জন্য আরও 85 বাকি" width="754" height="1639">
+      <img class="fan fan--center" fetchpriority="high" decoding="async" src="/src/images/app-live/mockup-home.webp" alt="BudgetGo হোম: ৩০ দিনের মধ্যে ২য় দিনে $4,000 বাজেটের $2,800.00 অবশিষ্ট, Apple TV+ আজ প্রদেয় এবং আপনার ইনসাইটের সারসংক্ষেপ" width="754" height="1639">
+    </div>
+  </div>
+</section>
+
+
+<!-- Ways spending arrives. -->
+<section class="marquee" aria-label="খরচ যোগ করার উপায়">
+  <div class="marquee__track">
+    <ul><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>শুধু বলুন</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>ব্যাংক স্টেটমেন্ট</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>ব্যাংক SMS অ্যালার্ট</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>সংযুক্ত ব্যাংক</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV ও Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>রসিদের ছবি</li></ul>
+    <ul aria-hidden="true"><li><span class="tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span>শুধু বলুন</li><li><span class="tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span>ব্যাংক স্টেটমেন্ট</li><li><span class="tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span>ব্যাংক SMS অ্যালার্ট</li><li><span class="tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span>Apple Wallet</li><li><span class="tile tile--bank"><img src="/src/images/data-hub/bank.svg" alt="" width="40" height="40"></span>সংযুক্ত ব্যাংক</li><li><span class="tile tile--spreadsheet"><img src="/src/images/data-hub/spreadsheet.svg" alt="" width="40" height="40"></span>CSV ও Excel</li><li><span class="tile tile--receipt"><img src="/src/images/data-hub/receipt.svg" alt="" width="40" height="40"></span>রসিদের ছবি</li></ul>
+  </div>
+</section>
+
+<!-- Pinned story: four ways in, one phone. -->
+<section class="inputs" id="inputs" aria-labelledby="inputs-title">
+  <div class="wrap inputs__grid">
+    <div class="inputs__copy">
+      <p class="eyebrow">পেমেন্টের প্রতিটি উপায়</p>
+      <h2 id="inputs-title" data-split="">যেভাবেই হোক,<br><span>সব এখানে এসে জমা হয়।</span></h2>
+      <ol class="steps">
+        <li class="step is-active" data-step="0"><span class="step__icon tile tile--voice"><img src="/src/images/data-hub/voice.svg" alt="" width="40" height="40"></span><div><h3>শুধু বলুন</h3><p>মাইকে ট্যাপ করে বলুন কত খরচ করেছেন।</p></div></li>
+        <li class="step" data-step="1"><span class="step__icon tile tile--import"><img src="/src/images/data-hub/import.svg" alt="" width="40" height="40"></span><div><h3>স্টেটমেন্ট ইমপোর্ট করুন</h3><p>PDF, CSV বা Excel, এমনকি রসিদের ছবিও।</p></div></li>
+        <li class="step" data-step="2"><span class="step__icon tile tile--sms"><img src="/src/images/data-hub/sms.svg" alt="" width="40" height="40"></span><div><h3>ব্যাংক অ্যালার্টকেই কাজটা করতে দিন</h3><p>ব্যাংক SMS অ্যালার্ট, আপনার ডিভাইসে পড়া হয়।</p></div></li>
+        <li class="step" data-step="3"><span class="step__icon tile tile--wallet"><img src="/src/images/data-hub/wallet.svg" alt="" width="40" height="40"></span><div><h3>যা ব্যবহার করেন তা যুক্ত করুন</h3><p>Apple Wallet এবং আপনার ব্যাংক, Plaid-এর মাধ্যমে।</p></div></li>
+      </ol>
+    </div>
+    <div class="inputs__stage">
+      <div class="iphone iphone--story">
+        
+          <img class="state" data-state="0" src="/src/images/app-live/mockup-voice.webp" alt="BudgetGo ভয়েস এন্ট্রি: Uber বাড়ি পঁচিশ চল্লিশ, Spotify আট নিরানব্বই এবং Netflix নয় নিরানব্বই, তিনটি লেনদেনে রূপান্তরিত" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="1" src="/src/images/app-live/mockup-import.webp" alt="BudgetGo ডেটা ইমপোর্ট: একটি স্টেটমেন্ট লেনদেন পড়ছে, আর একটি Chase স্টেটমেন্ট সম্পন্ন হয়েছে, 142টি লেনদেন যোগ ও 3টি বাদ" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="2" src="/src/images/app-live/mockup-sms-automation.webp" alt="BudgetGo SMS অটোমেশন: SMS ফরওয়ার্ডিং চালু, অটোমেশন তৈরি ও সংযোগ পরীক্ষা" width="754" height="1639" loading="lazy">
+          <img class="state" data-state="3" src="/src/images/app-live/mockup-data-hub.webp" alt="BudgetGo ডেটা হাব: ইমপোর্ট ও এক্সপোর্ট, iOS অটোমেশন, FinanceKit ও ব্যাংক সংযোগ" width="754" height="1639" loading="lazy">
+        
+      </div>
+      <div class="overlay overlay--voice" data-overlay="0" aria-hidden="true"><span class="overlay__mic"><svg><use href="#i-mic"></use></svg></span>“Uber বাড়ি পঁচিশ চল্লিশ, Spotify আর Netflix”</div>
+      <div class="overlay overlay--files" data-overlay="1" aria-hidden="true">
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg><b>Statement.pdf</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M10 10.02h5V21h-5zM17 21h3c1.1 0 2-.9 2-2v-9h-5v11zm3-18H5c-1.1 0-2 .9-2 2v3h19V5c0-1.1-.9-2-2-2zM3 19c0 1.1.9 2 2 2h3V10H3v9z" opacity=".9"></path></svg><b>September.csv</b></span>
+        <span class="file"><svg viewBox="0 0 24 24"><path d="M12 9a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM20 5h-3.2L15 3H9L7.2 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 14H4V7h4.05l1.83-2h4.24l1.83 2H20v12z"></path></svg><b>রসিদের ছবি</b></span>
+      </div>
+      <div class="overlay overlay--sms" data-overlay="2" aria-hidden="true"><span class="overlay__app"><svg><use href="#i-chat"></use></svg></span><span><b>ব্যাংক · এইমাত্র</b>4821-এ শেষ হওয়া আপনার কার্ড Talabat-এ $45.00 খরচে ব্যবহৃত হয়েছে।</span></div>
+      <div class="overlay overlay--hub" data-overlay="3" aria-hidden="true"><span class="overlay__pulse"></span>নতুন লেনদেন নিজে থেকেই আসে</div>
+      <div class="inputs__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Banks through Plaid. -->
+<section class="banks" aria-labelledby="banks-title">
+  <div class="wrap banks__grid">
+    <div class="banks__stage">
+      <div class="iphone iphone--banks">
+        <img src="/src/images/app-live/mockup-accounts.webp" alt="BudgetGo অ্যাকাউন্ট: Chase ও Monzo যুক্ত ও সিঙ্ক করা, দৈনন্দিন চেকিং ও সঞ্চয় ব্যালেন্সসহ" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="bank-stack" aria-hidden="true">
+        <div class="bank-card"><span class="bank-card__icon"><svg><use href="#i-bank"></use></svg></span><span><b>দৈনন্দিন চেকিং</b><em>চেকিং ··4821</em></span><b class="bank-card__bal">$3,240.18</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--b"><svg><use href="#i-wallet"></use></svg></span><span><b>রিওয়ার্ড কার্ড</b><em>ক্রেডিট ··1093</em></span><b class="bank-card__bal">$612.40</b></div>
+        <div class="bank-card"><span class="bank-card__icon bank-card__icon--c"><svg><use href="#i-bank"></use></svg></span><span><b>সঞ্চয়</b><em>সঞ্চয় ··7720</em></span><b class="bank-card__bal">$8,905.00</b></div>
+      </div>
+    </div>
+    <div class="banks__copy">
+      <p class="eyebrow">সংযুক্ত ব্যাংক</p>
+      <h2 id="banks-title" data-split="">আপনার সব ব্যাংক।<br><span>একটি পরিষ্কার চিত্র।</span></h2>
+      <p class="lead">Plaid-এর মাধ্যমে ব্যাংক যুক্ত করুন। সব অ্যাকাউন্ট এক জায়গায়।</p>
+      <ul class="banks__points">
+        <li>একাধিক ব্যাংক যুক্ত করুন<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>ব্যালেন্স ও লেনদেন হালনাগাদ থাকে<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+        <li>আপনার ব্যাংক নেই? বরং স্টেটমেন্ট ইমপোর্ট করুন<svg aria-hidden="true"><use href="#i-check"></use></svg></li>
+      </ul>
+      <p class="banks__plaid">ব্যাংক সংযোগ সরবরাহ করছে <img src="/src/images/brands/plaid-white.svg" alt="Plaid" width="64" height="24"></p>
+    </div>
+  </div>
+</section>
+
+<!-- Automatic sorting. -->
+<section class="sort" id="sort" aria-labelledby="sort-title">
+  <div class="wrap sort__grid">
+    <div class="sort__copy">
+      <p class="eyebrow">স্বয়ংক্রিয়ভাবে সাজানো</p>
+      <h2 id="sort-title" data-split="">AI সাজায়।<br><span>সিদ্ধান্ত আপনার।</span></h2>
+      <p class="lead">প্রতিটি কেনাকাটা আসামাত্র একটি ক্যাটাগরি পায়। যেকোনোটি বদলে নিন।</p>
+      <div class="sort__meter"><span class="sort__count" data-sort-count="">5</span><span class="sort__label">পর্যালোচনার জন্য</span></div>
+      <p class="sort__ai" aria-hidden="true"><span class="sort__spark"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></span><span data-sort-status="">AI সাজাচ্ছে…</span></p>
+    </div>
+    <div class="sort__list" data-sort-list="">
+      <div class="sort-row" style="--cat:#84cc16"><span class="logo logo--walmart"><img src="/src/images/merchants/walmart.svg" alt=""></span><span class="tx__t"><b>Walmart</b><em class="sort-row__cat"><i class="u">অশ্রেণিবদ্ধ</i><i class="c">মুদি<svg><use href="#i-groceries"></use></svg></i></em></span><b>-$52.80</b></div>
+      <div class="sort-row" style="--cat:#2563eb"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><span class="tx__t"><b>Uber</b><em class="sort-row__cat"><i class="u">অশ্রেণিবদ্ধ</i><i class="c">যাতায়াত<svg><use href="#i-transport"></use></svg></i></em></span><b>-$25.40</b></div>
+      <div class="sort-row" style="--cat:#06b6d4"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em class="sort-row__cat"><i class="u">অশ্রেণিবদ্ধ</i><i class="c">সাবস্ক্রিপশন<svg><use href="#i-subs"></use></svg></i></em></span><b>-$11.99</b></div>
+      <div class="sort-row" style="--cat:#f97316"><span class="logo logo--mcd"><img src="/src/images/merchants/mcdonalds.svg" alt=""></span><span class="tx__t"><b>McDonald’s</b><em class="sort-row__cat"><i class="u">অশ্রেণিবদ্ধ</i><i class="c"><svg><use href="#i-dining"></use></svg>খাওয়া-দাওয়া ও টেকঅ্যাওয়ে</i></em></span><b>-$9.85</b></div>
+      <div class="sort-row" style="--cat:#c0841a"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon</b><em class="sort-row__cat"><i class="u">অশ্রেণিবদ্ধ</i><i class="c">কেনাকাটা<svg><use href="#i-shopping"></use></svg></i></em></span><b>-$32.00</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- Insight stories: a horizontal, pinned reel. -->
+<section class="insights" id="insights" aria-labelledby="insights-title">
+  <div class="insights__pin">
+    <div class="insights__track" data-reel="">
+      <div class="reel-intro">
+        <p class="eyebrow">ব্যক্তিগত ইনসাইট</p>
+        <h2 id="insights-title" data-split="">আপনার খরচ,<br><span>গল্পের মতো করে বলা।</span></h2>
+        <p class="lead">আপনার টাকা নিয়ে ছোট ছোট গল্প: কী ঠিকঠাক চলছে আর কোথায় সাশ্রয় করা যায়।</p>
+        <div class="recap">
+          <div class="recap__stack" aria-hidden="true">
+            <span class="recap__card recap__card--pace"><em>গতি</em><svg viewBox="0 0 80 48"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="7" stroke-linecap="round"></path><path d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="7" stroke-linecap="round"></path></svg><b>$</b></span>
+            <span class="recap__card recap__card--over"><em>অতিরিক্ত</em><svg viewBox="0 0 80 36"><path d="M4 8h72M4 20h60" stroke="#FFB3AA" stroke-width="6" stroke-linecap="round"></path></svg></span>
+            <span class="recap__card recap__card--save"><em>সঞ্চয়</em><svg viewBox="0 0 80 32"><path d="M5 27 18 22 30 24 42 14 54 14 66 9 75 3" fill="none" stroke="#9CE5B9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path></svg><b>$28</b></span>
+          </div>
+          <div class="recap__copy"><span>আপনার সারসংক্ষেপ</span><b>ছোট পরিবর্তন। আরও সম্ভাবনা।</b><em>৪টি গল্প · ১ মিনিটের কম</em></div>
+          <span class="recap__play"><svg aria-hidden="true"><use href="#i-play"></use></svg></span>
+        </div>
+      </div>
+      <article class="story" style="--bg:#291d50;--fg:#d8c5ef;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">মুখোমুখি</p>
+        <h3>সেখানে যেতে খরচ হলো সেখানে খাওয়ার চেয়ে বেশি।</h3>
+        <strong class="story__number">$51</strong>
+        <p class="story__lead">এই ত্রৈমাসিকে রেস্তোরাঁর চেয়ে যাতায়াতে বেশি খরচ, প্রথমবার যাতায়াত এগিয়ে গেল।</p>
+        <div class="story__compare"><div><span>যাতায়াত</span><b>$482</b></div><i class="bar" style="--w:100%"></i><div><span>বাইরে খাওয়া</span><b>$431</b></div><i class="bar bar--b" style="--w:89%"></i></div>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">চালিয়ে যেতে ট্যাপ করুন · থামাতে ধরে রাখুন</p>
+      </article>
+      <article class="story" style="--bg:#153b2d;--fg:#b4d7c1;--accent:#9ce5b9">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">আরও সাশ্রয় করুন</p>
+        <h3>ছোট পরিবর্তন। আরও সম্ভাবনা।</h3>
+        <strong class="story__number">+$28</strong>
+        <p class="story__lead">বাইরে খাওয়ার খরচ আপনার স্বাভাবিক সপ্তাহের চেয়ে $28 বেশি হয়েছে, দুই মাসে সর্বোচ্চ।</p>
+        <figure class="story__weeks" aria-label="আট সপ্তাহের বাইরে খাওয়া, এই সপ্তাহ স্বাভাবিক $67-এর উপরে"><figcaption><span>বাইরে খাওয়া, শেষ ৮ সপ্তাহ</span><b>এই সপ্তাহ</b></figcaption><div class="story__bars"><i style="--h:62%"></i><i style="--h:69%"></i><i style="--h:59%"></i><i style="--h:67%"></i><i style="--h:71%"></i><i style="--h:65%"></i><i style="--h:69%"></i><i class="now" style="--h:100%"></i></div></figure>
+        <p class="story__advice">ওই খাবারগুলোর দুটি মুদির জিনিস দিয়ে বদলান, ব্যবধানের বেশিরভাগই মিটে যাবে।</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">চালিয়ে যেতে ট্যাপ করুন · থামাতে ধরে রাখুন</p>
+      </article>
+      <article class="story" style="--bg:#30203e;--fg:#d8c5ef;--accent:#b48aff">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">লুকানো অভ্যাস</p>
+        <h3>কফি নীরবে আপনার সাবস্ক্রিপশনকে ছাড়িয়ে গেছে।</h3>
+        <strong class="story__number">$96</strong>
+        <p class="story__lead">কাপপ্রতি প্রায় $5.60-এ কফি আপনার প্রতিটি সাবস্ক্রিপশনকে ছাড়িয়ে গেছে।</p>
+        <div class="story__compare"><div><span>কফি</span><b>$96</b></div><i class="bar" style="--w:100%"></i><div><span>সাবস্ক্রিপশন</span><b>$74</b></div><i class="bar bar--b" style="--w:77%"></i></div>
+        <p class="story__source">আপনার জুলাই – সেপ্টেম্বরের লেনদেন থেকে</p>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">চালিয়ে যেতে ট্যাপ করুন · থামাতে ধরে রাখুন</p>
+      </article>
+      <article class="story" style="--bg:#17313a;--fg:#b7d2d9;--accent:#90deed">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i><i class=""></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">গতি</p>
+        <h3>বাজেটের মধ্যে শেষ করার পথে।</h3>
+        <strong class="story__number">$143<small>/দিন</small></strong>
+        <p class="story__lead">এই পরিমাণ পর্যন্ত খরচ করুন, বাজেট ৩০তম দিন পর্যন্ত টিকবে।</p>
+        <svg class="story__art" viewBox="0 0 80 48" aria-hidden="true"><path d="M6 41a34 34 0 0 1 68 0" fill="none" stroke="#25535F" stroke-width="6" stroke-linecap="round"></path><path class="draw" d="M6 41A34 34 0 0 1 62 15" fill="none" stroke="#90DEED" stroke-width="6" stroke-linecap="round"></path><path d="M40 41 59 21" stroke="#fff" stroke-width="2" stroke-linecap="round"></path><circle cx="40" cy="41" r="3" fill="#fff"></circle></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">চালিয়ে যেতে ট্যাপ করুন · থামাতে ধরে রাখুন</p>
+      </article>
+      <article class="story" style="--bg:#161618;--fg:#b9b9b5;--accent:#b994f5">
+        <div class="story__progress" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="on"></i></div><span class="story__close" aria-hidden="true"></span>
+        <p class="story__kicker">সময়কালের তুলনা</p>
+        <h3>নতুন সময়কাল। নতুন দৃষ্টিভঙ্গি।</h3>
+        <strong class="story__number">12%<small> কম</small></strong>
+        <p class="story__lead">আগের সময়কালের একই দিনগুলোর তুলনায়।</p>
+        <svg class="story__art story__art--wide" viewBox="0 0 160 60" aria-hidden="true"><path d="M-4 48C24 36 44 44 68 50s36-2 52-22 24-20 44-20" fill="none" stroke="#d8c5ef" stroke-width="7" stroke-linecap="round" opacity=".6"></path><path class="draw" d="M-4 28C24 16 52 28 76 40s36 0 52-20 22-16 36-16" fill="none" stroke="#7132f5" stroke-width="11" stroke-linecap="round"></path></svg>
+        <div class="story__actions" aria-hidden="true"><span class="story__share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M6 12H4v9h16v-9h-2"></path></svg></span></div>
+        <p class="story__hint">চালিয়ে যেতে ট্যাপ করুন · থামাতে ধরে রাখুন</p>
+      </article>
+      <div class="reel-end"><p>চালিয়ে যেতে ট্যাপ করুন<br><span>থামাতে ধরে রাখুন</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Analytics bento. -->
+<section class="analytics" id="analytics" aria-labelledby="analytics-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">উন্নত অ্যানালিটিক্স</p><h2 id="analytics-title" data-split="">প্রতিটি সংখ্যা,<br><span>আরেক ট্যাপে আরও গভীরে।</span></h2></div>
+      <p class="lead">খরচ, পূর্বাভাস, ক্যাশ ফ্লো, দোকান ও পেমেন্ট। গভীরে যেতে যেকোনোটিতে ট্যাপ করুন।</p>
+    </div>
+    <div class="bento">
+      <article class="widget widget--spending">
+        <header><h3>খরচ</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value"><span data-count="4237.73">$4,237.73</span> <small><i class="up">▲</i> 64%</small></strong><p class="widget__meta">১ সেপ্টে – ৩০ সেপ্টে</p>
+        <svg class="widget__chart" viewBox="0 0 360 140" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g-spend" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b994f5" stop-opacity=".35"></stop><stop offset="1" stop-color="#b994f5" stop-opacity="0"></stop></linearGradient></defs><path class="area" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14V140H0Z" fill="url(#g-spend)"></path><path class="draw" d="M0 124C30 124 40 96 70 98S110 120 140 104 170 64 200 70 240 92 270 70 310 22 360 14" fill="none" stroke="#b994f5" stroke-width="3.5" stroke-linecap="round"></path><path class="draw draw--dash" d="M0 134C60 132 100 126 160 118S270 100 360 88" fill="none" stroke="#b9b9b5" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" opacity=".5"></path></svg>
+      </article>
+      <article class="widget widget--forecast">
+        <header><h3>পূর্বাভাস</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--orange" data-count="991.44">$991.44</strong><p class="widget__meta">১ নভেম্বরের মধ্যে</p>
+        <div class="fbars" aria-hidden="true"><span style="--h:14%;--c:#945922"></span><span style="--h:32%;--c:#a7672c"></span><span style="--h:52%;--c:#bd7735"></span><span style="--h:76%;--c:#d4893f"></span><span style="--h:100%;--c:#eb9b4b"></span></div>
+      </article>
+      <article class="widget widget--cash">
+        <header><h3>ক্যাশ ফ্লো</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <strong class="widget__value widget__value--lime">+<span data-count="2925.74">$2,925.74</span></strong><p class="widget__meta">আপনি আয়ের 40.8% রেখেছেন</p>
+        <div class="cbars" aria-hidden="true"><span class="cbar cbar--in" style="--w:96%"><b>আয়</b><b>$7,163.48</b></span><span class="cbar cbar--out" style="--w:58%"><b>ব্যয়</b><b>$4,237.73</b></span></div>
+      </article>
+      <article class="widget widget--merchants">
+        <header><h3>শীর্ষ দোকান</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <p class="widget__meta">$2,987.96-এর মধ্যে $1,128.40</p>
+        <div class="podium" aria-hidden="true">
+          <div style="--h:62%;--c:#1ca9de"><span class="logo logo--uber"><img src="/src/images/merchants/uber-dark.svg" alt=""></span><b>2</b><em>$312.60</em></div>
+          <div style="--h:100%;--c:#eb3d96"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><b>1</b><em>$642.30</em></div>
+          <div style="--h:44%;--c:#7060f2"><span class="logo logo--full"><img src="/src/images/merchants/starbucks.svg" alt=""></span><b>3</b><em>$173.50</em></div>
+        </div>
+      </article>
+      <article class="widget widget--payments">
+        <header><h3>পেমেন্ট</h3><svg aria-hidden="true"><use href="#i-arrow"></use></svg></header>
+        <div class="stats">
+          <div><span>মাসিক বিল</span><b class="purple">$32.81</b><em>২টি ট্র্যাক করা</em></div>
+          <div><span>প্রতি বছর</span><b>$393.76</b><em>কিছু না বদলালে</em></div>
+          <div><span>পরবর্তী প্রদেয়</span><b>আজ</b><em>Netflix</em></div>
+        </div>
+      </article>
+      <article class="widget widget--trend">
+        <header><h3>খরচের প্রবণতা</h3><span class="seg"><i>দি</i><i class="on">স</i><i>মা</i></span></header>
+        <div class="tbars" aria-hidden="true">
+          <div><span style="--h:100%"><b>$4k</b></span><em>৩০ অগাস্ট</em></div><div><span style="--h:4%"><b>$36</b></span><em>৬ সেপ্টে</em></div><div><span style="--h:4%"><b>$34</b></span><em>১৩ সেপ্টে</em></div><div><span style="--h:0%"></span><em>২০ সেপ্টে</em></div><div><span style="--h:16%"><b>$598</b></span><em>২৭ সেপ্টে</em></div><div><span style="--h:0%"><b>$0</b></span><em>৪ অক্টো</em></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Due soon: recurring payments. -->
+<section class="due" id="due" aria-labelledby="due-title">
+  <div class="wrap due__grid">
+    <div class="due__copy">
+      <p class="eyebrow">শিগগিরই প্রদেয়</p>
+      <h2 id="due-title" data-split="">যা আসছে তা দেখুন<br><span>আসার আগেই।</span></h2>
+      <p class="lead">নিয়মিত বিল ও সাবস্ক্রিপশন, চিহ্নিত ও সাজানো।</p>
+      <div class="due-card">
+        <p class="due-card__head"><b>এই সপ্তাহে প্রদেয়</b><span>সব দেখুন</span></p>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span class="tx__t"><b>Netflix সাবস্ক্রিপশন</b><em>আজ</em></span><b>$1.00</b></div>
+        <div class="due-row"><span class="logo logo--full"><img src="/src/images/merchants/spotify.svg" alt=""></span><span class="tx__t"><b>Spotify</b><em>বৃহ, ৮ অক্টো</em></span><b>$11.99</b></div>
+        <div class="due-row"><span class="logo logo--amazon"><img src="/src/images/merchants/amazon-dark.svg" alt=""></span><span class="tx__t"><b>Amazon Prime</b><em>শনি, ১০ অক্টো</em></span><b>$14.99</b></div>
+      </div>
+    </div>
+    <div class="due__stage">
+      <div class="iphone iphone--due">
+        <img src="/src/images/app-live/mockup-recurring.webp" alt="BudgetGo পুনরাবৃত্ত: অক্টোবরে মোট $128.97, Apple TV+, Netflix, Spotify ও ChatGPT Plus আজ প্রদেয়" width="754" height="1639" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- One budget, or none. Interactive. -->
+<section class="modes" aria-labelledby="modes-title">
+  <div class="wrap modes__grid">
+    <div>
+      <p class="eyebrow">আপনার সিদ্ধান্ত</p>
+      <h2 id="modes-title" data-split="">একটি বাজেট,<br><span>অথবা একেবারেই না।</span></h2>
+      <p class="lead">আপনার ক্যাটাগরিগুলোর ওপর একটি বাজেট ঠিক করুন, অথবা শুধু খরচ ট্র্যাক করুন।</p>
+      <div class="mode-toggle" role="group" aria-label="একটি মোড বেছে নিন">
+        <button type="button" aria-pressed="true" data-mode="budget">বাজেটসহ</button>
+        <button type="button" aria-pressed="false" data-mode="track">শুধু ট্র্যাকিং</button>
+        <span class="mode-toggle__thumb" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="modes__stage">
+      <div class="budget-card budget-card--xl" data-mode-card="" data-mode-state="budget" aria-live="polite">
+        <div class="budget-card__top"><span class="app-pill"><span data-mode-pill="">বাজেট সময়কাল</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><svg class="eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+        <strong class="budget-card__amount" data-mode-amount="">$1,284.50</strong>
+        <span class="budget-card__label" data-mode-label="">অবশিষ্ট</span>
+        <div class="mode-budget"><span class="progress"><span class="progress__fill" style="width:68%"></span></span><span class="budget-card__foot">$4.00k-এর মধ্যে $2,715.50 খরচ<em>৩০-এর মধ্যে দিন ২১</em></span></div>
+        <div class="mode-track"><span class="trend-line"><i>▼</i> <b>12% কম</b> গত সপ্তাহের তুলনায়</span></div>
+      </div>
+      <div class="suggest">
+        <p>পরবর্তী সময়কালের পরামর্শ<svg aria-hidden="true"><use href="#i-play"></use></svg></p>
+        <b>খাবার ডেলিভারি $190 করুন এবং মুদি $211-এ নামান।</b>
+        <em>আপনার মোট একই থাকে।</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy: words light up as you read. -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <div class="privacy__box">
+      <p class="eyebrow">আপনার গোপনীয়তা</p>
+      <h2 id="privacy-title" class="privacy__text" data-words="">আপনার খরচ ব্যক্তিগত। এটি তেমনই থাকুক।</h2>
+      <div class="privacy-first__cards">
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M16 2 28 7v8c0 7-5.5 12-12 15C9.5 27 4 22 4 15V7Zm-5 10v3h10v-3Zm0 6v3h4v-3Zm7 0v3h3v-3Z"></path></svg></span>
+          <h3>ব্যক্তিগত তথ্য, ছাঁকা।</h3><p>PII ফিল্টার OpenAI-চালিত বিশ্লেষণের সময় সংবেদনশীল ব্যক্তিগত তথ্যের এক্সপোজার সীমিত করতে সাহায্য করে।</p>
+          <span class="privacy-first__tag">AI গোপনীয়তা</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M3 11V6a3 3 0 0 1 3-3h5v3H6v5Zm18-8h5a3 3 0 0 1 3 3v5h-3V6h-5ZM3 21h3v5h5v3H6a3 3 0 0 1-3-3Zm23 0h3v5a3 3 0 0 1-3 3h-5v-3h5ZM16 8c-5 0-7 3-7 8s2 9 7 9 7-4 7-9-2-8-7-8Zm-5 6v3h2v-3Zm8 0v3h2v-3Zm-7 6a5 5 0 0 0 8 0l-2-1a3 3 0 0 1-4 0Z"></path></svg></span>
+          <h3>অ্যাক্সেসের আরেকটি স্তর।</h3><p>BudgetGo-তে প্রবেশ সুরক্ষিত রাখতে বায়োমেট্রিক প্রমাণীকরণ ব্যবহার করুন।</p>
+          <span class="privacy-first__tag">বায়োমেট্রিক সুরক্ষা</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M9 14V9a7 7 0 0 1 14 0v5h1a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4Zm3 0h8V9a4 4 0 0 0-8 0Zm4 5a2 2 0 0 0-1 3.73V26h2v-3.27A2 2 0 0 0 16 19Z"></path></svg></span>
+          <h3>আপনার ডেটা বিক্রির জন্য নয়।</h3><p>আমরা আপনার ব্যক্তিগত তথ্য বিক্রি করি না। আপনার খরচ ব্যক্তিগত, আর আমরা সেটিকে সেভাবেই দেখি।</p>
+          <span class="privacy-first__tag">ডেটা বিক্রি নয়</span>
+        </article>
+        <article class="privacy-first__card">
+          <span class="privacy-first__icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3a6 6 0 0 0-5.65 4H3v4h3.35a6 6 0 0 0 11.3 0H29V7H17.65A6 6 0 0 0 12 3Zm8 14a6 6 0 0 0-5.65 4H3v4h11.35a6 6 0 0 0 11.3 0H29v-4h-3.35A6 6 0 0 0 20 17Z"></path></svg></span>
+          <h3>চূড়ান্ত সিদ্ধান্ত আপনার।</h3><p>আপনার লেনদেন দেখুন, সম্পাদনা করুন বা মুছুন। প্রয়োজনে আপনার রেকর্ড CSV, PDF বা Excel-এ এক্সপোর্ট করুন।</p>
+          <span class="privacy-first__tag">আপনার রেকর্ড। আপনার নিয়ন্ত্রণ।</span>
+        </article>
+      </div>
+      <a class="text-link privacy__link" href="/privacy_policy.html">গোপনীয়তা নীতি পড়ুন<svg aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ. -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq__grid">
+    <div><p class="eyebrow">সাধারণ প্রশ্ন</p><h2 id="faq-title">ভালো প্রশ্ন।<br><span>স্পষ্ট উত্তর।</span></h2><p class="faq__help">সাহায্য দরকার? <a href="/bn/support.html">সাপোর্টের সঙ্গে যোগাযোগ করুন</a>।</p></div>
+    <div class="faq__list">
+      <details><summary>বাজেট ঠিক না করেও কি খরচ ট্র্যাক করতে পারি?</summary><p>হ্যাঁ। শুধু আপনার খরচ ট্র্যাক ও বুঝতে BudgetGo ব্যবহার করুন। খরচের সীমা চাইলে একটি সক্রিয় বাজেট ঠিক করে সেটি আপনার ক্যাটাগরিগুলোর মধ্যে ভাগ করে দিন।</p></details>
+      <details><summary>আমার খরচ কীভাবে BudgetGo-তে আসে?</summary><p>ভয়েস এন্ট্রিতে বলুন, Plaid-এর মাধ্যমে সমর্থিত ব্যাংক যুক্ত করুন, Apple Wallet সংযুক্ত করুন, ব্যাংক SMS অ্যালার্টের জন্য Apple শর্টকাট ব্যবহার করুন, ফাইল বা রসিদের ছবি ইমপোর্ট করুন, অথবা নিজে কেনাকাটা যোগ করুন। আপনার দিনের সঙ্গে মানানসই উৎসগুলো মিলিয়ে নিন। আমাদের <a href="/bn/automations.html">সেটআপ গাইডে</a> শর্টকাটের বিকল্পগুলো আছে।</p></details>
+      <details><summary>আমার ব্যাংক কি BudgetGo-র সঙ্গে কাজ করবে?</summary><p>BudgetGo-তে অ্যাকাউন্ট যুক্ত করার সময় আপনার ব্যাংক খুঁজুন। সংযোগ Plaid ব্যবহার করে, আর সমর্থন নির্ভর করে আপনার প্রতিষ্ঠান, দেশ ও অ্যাকাউন্টের ওপর। আপনারটি তালিকায় না থাকলে স্টেটমেন্ট ইমপোর্ট করতে বা নিজে কেনাকাটা ট্র্যাক করতে পারেন।</p></details>
+      <details><summary>AI-এর বেছে নেওয়া ক্যাটাগরি কি বদলাতে পারি?</summary><p>হ্যাঁ। AI আপনার লেনদেন সাজাতে সাহায্য করে, আর আপনি যেকোনো ক্যাটাগরি দেখে বা বদলে নিতে পারেন। আপনার রেকর্ড আপনার হাতেই থাকে।</p></details>
+      <details><summary>আমি কি আমার পুরোনো লেনদেন আনতে পারি?</summary><p>PDF ব্যাংক স্টেটমেন্ট, CSV বা Excel এক্সপোর্ট, অথবা রসিদের ছবি ইমপোর্ট করুন। ইমপোর্ট নিশ্চিত করার আগে লেনদেনগুলো দেখে নিন। ফাইলে সর্বোচ্চ ৫০০টি লেনদেন থাকতে পারে এবং আকার ৫ MB পর্যন্ত হতে পারে।</p></details>
+      <details><summary>আসন্ন বিল ও সাবস্ক্রিপশন কি দেখতে পারি?</summary><p>হ্যাঁ। BudgetGo নিয়মিত বিল ও সাবস্ক্রিপশন শনাক্ত করে এবং আসন্ন চার্জ একসঙ্গে দেখায়, যাতে আপনি আগে থেকে পরিকল্পনা করতে পারেন। এটি পেমেন্ট ট্র্যাক করে; সাবস্ক্রিপশন পরিচালনা বা বাতিল আপনি সংশ্লিষ্ট প্রদানকারীর কাছে করবেন।</p></details>
+      <details><summary>BudgetGo-র দাম কত?</summary><p>BudgetGo একটি বিনামূল্যে ট্রায়ালের পর সাবস্ক্রিপশন দেয়। সাবস্ক্রাইব করার আগে বর্তমান প্ল্যান, দাম ও ট্রায়ালের শর্ত অ্যাপে দেখে নিন।</p></details>
+      <details><summary>আমি কি আমার খরচের রেকর্ড এক্সপোর্ট বা মুছতে পারি?</summary><p>হ্যাঁ। আপনি লেনদেনের রেকর্ড সম্পাদনা বা মুছতে এবং CSV, PDF বা Excel-এ এক্সপোর্ট করতে পারেন। আমরা আপনার ব্যক্তিগত তথ্য বিক্রি করি না। আপনার ডেটা কীভাবে ব্যবহৃত হয় তা জানতে আমাদের <a href="/privacy_policy.html">গোপনীয়তা নীতি</a> পড়ুন।</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Closing. -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="closing__card">
+    <div class="closing__copy">
+      <h2 id="closing-title" data-split="">টাকার আরও পরিষ্কার চিত্রের জন্য প্রস্তুত?</h2>
+      <p>বাজেটসহ বা ছাড়া ট্র্যাক করুন। প্রতিটি কেনাকাটা সাজানো, প্রতিটি বিল আপনার নজরে।</p>
+      <div class="closing__actions">
+        <a class="btn btn--light" data-magnetic="" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">BudgetGo নিন</a>
+      </div>
+    </div>
+    <div class="closing__stage" aria-hidden="true">
+      <div class="iphone iphone--closing">
+        <img src="/src/images/app-live/mockup-home.webp" alt="" width="754" height="1639" loading="lazy">
+      </div>
+      <div class="closing__chip closing__chip--a"><span class="trend-arrow">▼</span><span><b>12% কম</b><em>গত সপ্তাহের তুলনায়</em></span></div>
+      <div class="closing__chip closing__chip--b"><span class="logo logo--sm logo--full"><img src="/src/images/merchants/netflix.jpg" alt=""></span><span><b>Netflix</b><em>আজ প্রদেয়</em></span><b>$1.00</b></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#top"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>চলুন সবকিছু বুঝে নিই।</p><a class="footer-badge" href="https://www.producthunt.com/products/budgetgo/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-budgetgo" target="_blank" rel="noopener noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1291781&amp;theme=dark" alt="Expense Tracker - BudgetGo - Know where your money goes. | Product Hunt" width="250" height="54" loading="lazy"></a></div>
+      <div><h3>অ্যাপ</h3><a href="#inputs">খরচ যোগ করুন</a><a href="#insights">ইনসাইট</a><a href="#analytics">অ্যানালিটিক্স</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">BudgetGo নিন</a></div>
+      <div><h3>সহায়তা</h3><a href="/bn/automations.html">অটোমেশন গাইড</a><a href="/blog/">ব্লগ</a><a href="/bn/support.html">সাপোর্ট</a><a href="#faq">সাধারণ প্রশ্ন</a><a href="/bn/mcp.html">MCP · শিগগিরই আসছে</a></div>
+      <div><h3>যোগাযোগ</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">গোপনীয়তা নীতি</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">সেবার শর্তাবলি</a></p></div>
+  </div>
+</footer>
+
+<script src="/src/js/i18n.js"></script>
+<script src="/src/js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer=""></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer=""></script>
+<script src="/src/js/app-site/money.js" defer=""></script>
+<script src="/src/js/app-site/interactions.js" defer=""></script>
+<script src="/src/js/app-site/motion.js" defer=""></script>
+
+
+</body></html>

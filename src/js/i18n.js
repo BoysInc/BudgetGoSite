@@ -3,6 +3,12 @@
  * the single readable source and untranslated strings simply stay English.
  * The dictionary scripts are written in synchronously so translation lands
  * before the deferred motion scripts split headings into words.
+ *
+ * Pages with translated copies (scripts/build_locales.mjs) declare them as
+ * <link rel="alternate" hreflang>. There, each language has its own URL so search
+ * engines can index it: the English page sends visitors to their language, the
+ * generated pages are already translated (<html data-locale>) and only load the
+ * dictionary for script-built text. Pages without copies still translate in place.
  */
 (function () {
   'use strict';
@@ -19,7 +25,8 @@
     { code: 'pt', name: 'Português', dir: 'ltr' },
     { code: 'ru', name: 'Русский', dir: 'ltr' },
     { code: 'ur', name: 'اردو', dir: 'rtl' },
-    { code: 'lt', name: 'Lietuvių', dir: 'ltr' }
+    { code: 'lt', name: 'Lietuvių', dir: 'ltr' },
+    { code: 'nl', name: 'Nederlands', dir: 'ltr' }
   ];
   const ATTRIBUTES = ['alt', 'aria-label', 'title', 'placeholder'];
   // Elements whose whole content is text plus these inline tags are one phrase.
@@ -35,6 +42,15 @@
 
   function store(code) {
     try { localStorage.setItem(STORAGE_KEY, code); } catch (error) { /* private mode: the choice just won't persist */ }
+  }
+
+  /** Translated copies of this page, keyed by language code (from the hreflang links in <head>). */
+  function alternates() {
+    const found = {};
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+      found[link.getAttribute('hreflang')] = new URL(link.href).pathname;
+    });
+    return found;
   }
 
   /** Stored choice first, then the visitor's browser language, then English. */
@@ -120,6 +136,7 @@
 
   function apply(dictionary, lang) {
     activeDictionary = dictionary;
+    if (staticLocale) return; // The page was translated at build time.
     const done = new WeakSet();
     phrases(document.body).forEach(function (element) {
       const translated = dictionary[markupOf(element)];
@@ -145,7 +162,7 @@
     document.documentElement.dir = lang.dir;
   }
 
-  function buildSwitcher(current, dictionary) {
+  function buildSwitcher(current, dictionary, copies) {
     const host = document.querySelector('.footer-bottom');
     if (!host) return;
     const label = document.createElement('label');
@@ -161,13 +178,16 @@
     });
     select.addEventListener('change', function () {
       store(select.value);
-      location.reload();
+      if (copies[select.value]) location.assign(copies[select.value] + location.hash);
+      else location.reload();
     });
     label.append(text, select);
     host.append(label);
   }
 
-  const current = pickLanguage();
+  const staticLocale = document.documentElement.getAttribute('data-locale');
+  const copies = alternates();
+  const current = staticLocale || pickLanguage();
   const lang = find(current);
 
   window.BudgetGoI18n = {
@@ -175,15 +195,18 @@
     /** Called by each dictionary script as it loads. */
     register: function (dictionary) {
       apply(dictionary, lang);
-      buildSwitcher(current, dictionary);
+      buildSwitcher(current, dictionary, copies);
     },
     t: t,
     phrases: phrases,
     markupOf: markupOf
   };
 
-  if (current === 'en') {
-    buildSwitcher('en', null);
+  // English page, visitor prefers another language: use that language's own URL.
+  if (!staticLocale && current !== 'en' && copies[current]) {
+    location.replace(copies[current] + location.hash);
+  } else if (current === 'en') {
+    buildSwitcher('en', null, copies);
   } else {
     // Resolve dictionaries next to this script so pages in subfolders (blog/) load them too.
     const self = document.currentScript && document.currentScript.src;

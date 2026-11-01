@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh" dir="ltr" data-locale="zh"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>设置 Apple 快捷指令自动化 | BudgetGo</title>
+  <meta name="description" content="分步指南：使用 Apple 快捷指令自动化，将 Apple Wallet 付款和银行短信提醒自动导入 BudgetGo。">
+  <meta property="og:title" content="设置 Apple 快捷指令自动化 | BudgetGo">
+  <meta property="og:description" content="使用 Apple 快捷指令，将 Apple Wallet 付款和银行短信提醒自动导入 BudgetGo。">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://budgetgo.ai/zh/automations.html">
+  <meta name="theme-color" content="#101010">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/styles.css?v=20261001-rounded">
+
+  <link rel="preload" href="/src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="/src/css/site-shell.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/inner-pages.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/automations.css?v=20261023">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-inner.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/automations.html">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/automations.html">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/automations.html">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/automations.html">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/automations.html">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/automations.html">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/automations.html">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/automations.html">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/automations.html">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/automations.html">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/automations.html">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/automations.html">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/automations.html">
+  <!-- locale-alternates:end -->
+</head>
+<body class="inner-page automations-page" id="top">
+<a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="/zh/" aria-label="BudgetGo 首页"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="主导航">
+      <a href="/zh/#inputs">添加支出</a><a href="/zh/#insights">洞察</a><a href="/zh/#analytics">分析</a><a href="/zh/#privacy">隐私</a><a href="/zh/automations.html" aria-current="page">指南</a><a href="/blog/">博客</a>
+      <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">获取应用</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container guide-hero-grid">
+        <div>
+          <p class="hero-eyebrow"><span class="hero-eyebrow-dot" aria-hidden="true"></span> 设置指南 · 每项约 2 分钟</p>
+          <h1>在支出发生的<span class="hl">那一刻就记录下来。</span></h1>
+          <p class="lead">Apple 快捷指令自动化可以把 Apple Pay 付款和银行短信提醒直接发送到 BudgetGo，交易无需输入就会进入你的记录。一切都在你的 iPhone 上运行。</p>
+          <nav class="guide-jump" aria-label="指南章节">
+            <a href="#wallet-video"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
+            <a href="#sms-video"><span class="chip-dot" style="--c: #b994f5"></span>银行短信提醒</a>
+            <a href="#troubleshooting"><span class="chip-dot" style="--c: #7132f5"></span>故障排查</a>
+          </nav>
+        </div>
+
+        <ol class="flow" aria-label="自动化是如何运作的">
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-wallet" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M3 10h18" stroke="currentColor" stroke-width="2"></path></svg>
+            </span>
+            <span><strong>你付款或收到银行短信</strong><small>Apple Pay 轻触或短信提醒</small></span>
+          </li>
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-shortcuts" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 4h8l4 4v8l-4 4H8l-4-4V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M10 9l4 3-4 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span><strong>快捷指令立即运行</strong><small>你的个人自动化</small></span>
+          </li>
+          <li class="flow-node flow-node-final">
+            <img class="flow-logo" src="/src/images/logo.png" alt="" width="40" height="40">
+            <span><strong>BudgetGo 自动记录</strong><small>金额、商家和类别</small></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="before-you-start" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </span>
+          <p class="section-label">开始之前</p>
+          <h2>三项快速检查。</h2>
+        </div>
+        <ul class="guide-checklist">
+          <li><span class="check" aria-hidden="true"></span><strong>已安装 BudgetGo</strong>从 App Store 下载并登录一次，这样它的操作才会出现在快捷指令中。</li>
+          <li><span class="check" aria-hidden="true"></span><strong>你的 iPhone 上有快捷指令</strong>Apple 的快捷指令应用已预装在 iOS 17 及更高版本中。</li>
+          <li><span class="check" aria-hidden="true"></span><strong>已开启导入</strong>在 BudgetGo 中打开 Data Hub，并开启 Wallet 或短信导入。关闭时，BudgetGo 会忽略自动化发送的任何内容。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wallet" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-lime" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"></rect><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Apple Wallet</p>
+          <h2>自动记录 Apple Pay 付款。</h2>
+          <p>每次你用钱包中的卡片付款时，此自动化都会运行，并把金额和商家发送给 BudgetGo 的 <strong>Add Transaction to Budget Go</strong> 操作。</p>
+        </div>
+
+        <figure id="wallet-video" class="guide-video" aria-labelledby="wallet-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 28 sec</p>
+            <h3 id="wallet-video-title">Set up Apple Pay in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p id="wallet-video-note">Keep <strong>Automation</strong> enabled on your phone. The recording turns it off at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#wallet-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/apple-pay-setup.mp4">Open the Apple Pay video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/apple-pay-video-poster.jpg" aria-label="Apple Pay automation setup in Apple Shortcuts" aria-describedby="wallet-video-note">
+            <source src="/src/videos/automation/apple-pay-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/apple-pay-setup.mp4">Watch the Apple Pay setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="wallet-steps" class="guide-steps">
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>打开快捷指令</h3>
+              <p>在 iPhone 上找到并打开快捷指令应用。</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step1.jpg" alt="iPhone 主屏幕上的快捷指令应用图标" width="900" height="509" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>创建个人自动化</h3>
+              <p>打开 <strong>Automation</strong> 标签页，然后点按 <strong>+</strong> 创建新的个人自动化。</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step2_a.jpg" alt="快捷指令应用中的 Automation 标签页" width="900" height="433" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step2_b.jpg" alt="用于创建个人自动化的加号按钮" width="900" height="383" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>选择 Wallet 触发器</h3>
+              <ol>
+                <li>搜索 <strong>Transaction</strong>（在某些 iOS 版本中显示为 <strong>Wallet</strong>）并选择它。</li>
+                <li>选择你希望 BudgetGo 追踪的每一张卡片。</li>
+                <li>选择 <strong>Run Immediately</strong>，让自动化无需等待确认，然后点按 <strong>Next</strong>。</li>
+              </ol>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step3_a.jpg" alt="搜索 Transaction 触发器，描述为“轻点钱包卡片或通行证时”" width="900" height="500" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_b.jpg" alt="选择要追踪的钱包卡片" width="900" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_d.jpg" alt="已选中 Run Immediately 选项" width="900" height="562" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>添加 BudgetGo 操作</h3>
+              <p>点按 <strong>New Blank Automation</strong>，搜索 <strong>BudgetGo</strong>，选择 <strong>Add Transaction to Budget Go</strong>。</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step4.jpg" alt="为自动化创建新的空白快捷指令" width="900" height="796" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step4_b.jpg" alt="搜索 Add Transaction to Budget Go 操作" width="726" height="900" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>连接付款详情</h3>
+              <ol>
+                <li>点按 <strong>Amount</strong> 字段，选择 <strong>Select Variable</strong>，然后选取 <strong>Shortcut Input</strong>。</li>
+                <li>点按插入的 <strong>Shortcut Input</strong>，并将其改为 <strong>Amount</strong>。</li>
+                <li>对 <strong>Merchant</strong> 重复此步骤，从 Shortcut Input 中选择 <strong>Merchant</strong>。</li>
+                <li>点按播放按钮进行测试，然后点按 <strong>Done</strong>。</li>
+              </ol>
+              <p class="guide-note"><strong>币种为可选项。</strong>留空则使用 BudgetGo 的默认币种，或输入 USD、EUR、NGN 等代码。</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step5_a.jpg" alt="在 Amount 字段上选择 Select Variable" width="900" height="827" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_c.jpg" alt="从 Shortcut Input 中选择 Amount" width="541" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_d.jpg" alt="带有测试播放按钮的已完成自动化" width="900" height="370" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">6</span>
+              <h3>在 BudgetGo 中检查</h3>
+              <p>在 BudgetGo 中打开 <strong>Data Hub</strong>，点按 <strong>Wallet Automation</strong>。确保 <strong>Apple Wallet tracking</strong> 已开启，然后点按 <strong>Run test shortcut</strong>。当 BudgetGo 收到来自你的自动化的付款后，状态会变为已验证。</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-wallet-automation.webp" alt="BudgetGo Wallet Automation 界面，已开启 Apple Wallet 追踪，并带有 Run test shortcut 按钮" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sms" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">信息</p>
+          <h2>把银行短信提醒变成交易。</h2>
+          <p>如果你的银行会就刷卡付款和转账给你发短信，“信息”自动化可以把每条提醒传给 BudgetGo 的 <strong>Import SMS Transaction</strong> 操作。BudgetGo 在你的设备上读取信息，只有识别为财务提醒时才会创建交易。</p>
+        </div>
+
+        <figure id="sms-video" class="guide-video" aria-labelledby="sms-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 58 sec</p>
+            <h3 id="sms-video-title">Set up bank SMS in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p>Choose your bank's sender or words from its payment alerts. This walkthrough uses <strong>debited</strong>.</p>
+            <p id="sms-video-note">Keep <strong>Automation</strong> enabled and <strong>Confirm Before Run</strong> off. The recording disables its automation at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#sms-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/bank-sms-setup.mp4">Open the bank SMS video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/bank-sms-video-poster.jpg" aria-label="Bank SMS automation setup in Apple Shortcuts" aria-describedby="sms-video-note">
+            <source src="/src/videos/automation/bank-sms-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/bank-sms-setup.mp4">Watch the bank SMS setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="sms-steps" class="guide-steps">
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>创建信息自动化</h3>
+              <p>在快捷指令中，打开 <strong>Automation</strong> 标签页，点按 <strong>+</strong>，然后选择 <strong>Message</strong>。</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>限定为你银行的信息</h3>
+              <ol>
+                <li>点按 <strong>Sender</strong> 并选择你银行的联系人或号码，或使用 <strong>Message Contains</strong>，填入每条提醒都会出现的词，例如银行名称。</li>
+                <li>选择 <strong>Run Immediately</strong>，然后点按 <strong>Next</strong>。</li>
+              </ol>
+              <p class="guide-note"><strong>让筛选条件尽量精确。</strong>只匹配你的银行，可以避免个人对话进入 BudgetGo。</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>添加 BudgetGo 操作</h3>
+              <p>点按 <strong>New Blank Automation</strong>，搜索 <strong>BudgetGo</strong>，选择 <strong>Import SMS Transaction</strong>。</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>传入信息</h3>
+              <ol>
+                <li>点按 <strong>Message</strong> 字段，选择 <strong>Select Variable</strong>，选取 <strong>Shortcut Input</strong>，并设为 <strong>Content</strong>。</li>
+                <li>点按 <strong>Sender</strong> 字段，选择 <strong>Shortcut Input</strong> 并设为 <strong>Sender</strong>。此项可选，但有助于 BudgetGo 识别你的银行。</li>
+                <li>点按 <strong>Done</strong>。</li>
+              </ol>
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>测试</h3>
+              <p>等待下一条银行提醒，或在 BudgetGo 的 <strong>Data Hub</strong> 中打开该自动化的详情并点按 <strong>Test connection</strong>。然后回到 BudgetGo 查看导入的交易。</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-sms-guide.webp" alt="BudgetGo SMS Automation 界面，带有转发开关、状态和 Test connection 按钮" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"></circle><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17.2v.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">故障排查</p>
+          <h2>如果交易没有出现。</h2>
+        </div>
+
+        <div class="guide-faq">
+          <details>
+            <summary>在快捷指令中找不到 BudgetGo 的操作</summary>
+            <p>安装或更新后先打开一次 BudgetGo，让 iOS 注册其操作，然后在快捷指令中再次搜索“BudgetGo”。</p>
+          </details>
+          <details>
+            <summary>我收到了“Transaction Import Failed”通知</summary>
+            <p>Wallet 自动化发送了空的金额或商家。请重新打开自动化，确保两个字段都使用 Shortcut Input，并分别选中 Amount 和 Merchant。</p>
+          </details>
+          <details>
+            <summary>自动化运行前会先询问</summary>
+            <p>在快捷指令中编辑该自动化，把 Run After Confirmation 改为 <strong>Run Immediately</strong>。</p>
+          </details>
+          <details>
+            <summary>短信提醒没有创建交易</summary>
+            <p>只有受支持的财务信息才会产生交易。请检查 Data Hub 中的导入已开启，并确保 Message 字段使用信息的 Content。</p>
+          </details>
+        </div>
+
+        <p class="guide-note">仍然没解决？请发送邮件至 <a class="support-inline-link" href="mailto:support@budgetgo.ai">support@budgetgo.ai</a>，或使用<a class="support-inline-link" href="/zh/support.html">支持页面</a>。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="/zh/"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>把一切都理清楚。</p></div>
+      <div><h3>应用</h3><a href="/zh/#inputs">添加支出</a><a href="/zh/#insights">洞察</a><a href="/zh/#analytics">分析</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">获取 BudgetGo</a></div>
+      <div><h3>帮助</h3><a href="/zh/automations.html">自动化指南</a><a href="/blog/">博客</a><a href="/zh/support.html">支持</a><a href="/zh/#faq">常见问题</a><a href="/zh/mcp.html">MCP · 即将推出</a></div>
+      <div><h3>联系我们</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">隐私政策</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">服务条款</a></p></div>
+  </div>
+</footer>
+
+  <script src="/src/js/i18n.js"></script>
+  <script src="/src/js/home.js"></script>
+
+
+</body></html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="fr" dir="ltr" data-locale="fr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configurer les automatisations Raccourcis d’Apple | BudgetGo</title>
+  <meta name="description" content="Guide pas à pas pour importer automatiquement les paiements Apple Wallet et les alertes SMS bancaires dans BudgetGo avec les automatisations Raccourcis d’Apple.">
+  <meta property="og:title" content="Configurer les automatisations Raccourcis d’Apple | BudgetGo">
+  <meta property="og:description" content="Importez automatiquement les paiements Apple Wallet et les alertes SMS bancaires dans BudgetGo avec Raccourcis d’Apple.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://budgetgo.ai/fr/automations.html">
+  <meta name="theme-color" content="#101010">
+  <link rel="icon" type="image/png" href="/src/images/favicon-rounded.png">
+  <link rel="apple-touch-icon" href="/src/images/favicon-rounded.png">
+  <link rel="stylesheet" href="/styles.css?v=20261001-rounded">
+
+  <link rel="preload" href="/src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="/src/css/site-shell.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/inner-pages.css?v=20261002">
+  <link rel="stylesheet" href="/src/css/automations.css?v=20261023">
+  <link rel="stylesheet" href="/src/css/app-site.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/app-site-inner.css?v=20261004">
+  <link rel="stylesheet" href="/src/css/language-switcher.css?v=20261008">
+  
+
+  <!-- locale-alternates:start -->
+  <link rel="alternate" hreflang="en" href="https://budgetgo.ai/automations.html">
+  <link rel="alternate" hreflang="zh" href="https://budgetgo.ai/zh/automations.html">
+  <link rel="alternate" hreflang="hi" href="https://budgetgo.ai/hi/automations.html">
+  <link rel="alternate" hreflang="es" href="https://budgetgo.ai/es/automations.html">
+  <link rel="alternate" hreflang="fr" href="https://budgetgo.ai/fr/automations.html">
+  <link rel="alternate" hreflang="ar" href="https://budgetgo.ai/ar/automations.html">
+  <link rel="alternate" hreflang="bn" href="https://budgetgo.ai/bn/automations.html">
+  <link rel="alternate" hreflang="pt" href="https://budgetgo.ai/pt/automations.html">
+  <link rel="alternate" hreflang="ru" href="https://budgetgo.ai/ru/automations.html">
+  <link rel="alternate" hreflang="ur" href="https://budgetgo.ai/ur/automations.html">
+  <link rel="alternate" hreflang="lt" href="https://budgetgo.ai/lt/automations.html">
+  <link rel="alternate" hreflang="nl" href="https://budgetgo.ai/nl/automations.html">
+  <link rel="alternate" hreflang="x-default" href="https://budgetgo.ai/automations.html">
+  <!-- locale-alternates:end -->
+</head>
+<body class="inner-page automations-page" id="top">
+<a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="/fr/" aria-label="Accueil BudgetGo"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir la navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Navigation principale">
+      <a href="/fr/#inputs">Ajouter des dépenses</a><a href="/fr/#insights">Aperçus</a><a href="/fr/#analytics">Analyses</a><a href="/fr/#privacy">Confidentialité</a><a href="/fr/automations.html" aria-current="page">Guides</a><a href="/blog/">Blog</a>
+      <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Obtenir l’app</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container guide-hero-grid">
+        <div>
+          <p class="hero-eyebrow"><span class="hero-eyebrow-dot" aria-hidden="true"></span> Guide de configuration · environ 2 minutes chacun</p>
+          <h1>Enregistrez vos dépenses <span class="hl">à l’instant où elles ont lieu.</span></h1>
+          <p class="lead">Les automatisations Raccourcis d’Apple peuvent envoyer les paiements Apple Pay et les alertes SMS bancaires directement à BudgetGo, pour que les transactions arrivent dans vos données sans rien saisir. Tout s’exécute sur votre iPhone.</p>
+          <nav class="guide-jump" aria-label="Sections du guide">
+            <a href="#wallet-video"><span class="chip-dot" style="--c: #98ef5a"></span>Apple Pay payments</a>
+            <a href="#sms-video"><span class="chip-dot" style="--c: #b994f5"></span>Alertes SMS bancaires</a>
+            <a href="#troubleshooting"><span class="chip-dot" style="--c: #7132f5"></span>Dépannage</a>
+          </nav>
+        </div>
+
+        <ol class="flow" aria-label="Comment fonctionne une automatisation">
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-wallet" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M3 10h18" stroke="currentColor" stroke-width="2"></path></svg>
+            </span>
+            <span><strong>Vous payez ou recevez un SMS de la banque</strong><small>Paiement Apple Pay ou alerte SMS</small></span>
+          </li>
+          <li class="flow-node">
+            <span class="flow-icon flow-icon-shortcuts" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 4h8l4 4v8l-4 4H8l-4-4V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path><path d="M10 9l4 3-4 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+            <span><strong>Raccourcis s’exécute instantanément</strong><small>Votre automatisation personnelle</small></span>
+          </li>
+          <li class="flow-node flow-node-final">
+            <img class="flow-logo" src="/src/images/logo.png" alt="" width="40" height="40">
+            <span><strong>BudgetGo l’enregistre</strong><small>Montant, commerçant et catégorie</small></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="before-you-start" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </span>
+          <p class="section-label">Avant de commencer</p>
+          <h2>Trois vérifications rapides.</h2>
+        </div>
+        <ul class="guide-checklist">
+          <li><span class="check" aria-hidden="true"></span><strong>BudgetGo est installé</strong>Téléchargez-le depuis l’App Store et connectez-vous une fois pour que ses actions apparaissent dans Raccourcis.</li>
+          <li><span class="check" aria-hidden="true"></span><strong>Raccourcis est sur votre iPhone</strong>L’app Raccourcis d’Apple est préinstallée sur iOS 17 et versions ultérieures.</li>
+          <li><span class="check" aria-hidden="true"></span><strong>Les imports sont activés</strong>Dans BudgetGo, ouvrez Data Hub et activez les imports Wallet ou SMS. S’ils sont désactivés, BudgetGo ignore tout ce que l’automatisation envoie.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="wallet" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-lime" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"></rect><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Apple Wallet</p>
+          <h2>Enregistrez automatiquement les paiements Apple Pay.</h2>
+          <p>Cette automatisation s’exécute chaque fois que vous payez avec une carte Wallet, puis envoie le montant et le commerçant à l’action <strong>Add Transaction to Budget Go</strong> de BudgetGo.</p>
+        </div>
+
+        <figure id="wallet-video" class="guide-video" aria-labelledby="wallet-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 28 sec</p>
+            <h3 id="wallet-video-title">Set up Apple Pay in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p id="wallet-video-note">Keep <strong>Automation</strong> enabled on your phone. The recording turns it off at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#wallet-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/apple-pay-setup.mp4">Open the Apple Pay video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/apple-pay-video-poster.jpg" aria-label="Apple Pay automation setup in Apple Shortcuts" aria-describedby="wallet-video-note">
+            <source src="/src/videos/automation/apple-pay-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/apple-pay-setup.mp4">Watch the Apple Pay setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="wallet-steps" class="guide-steps">
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>Ouvrir Raccourcis</h3>
+              <p>Trouvez et ouvrez l’app Raccourcis sur votre iPhone.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step1.jpg" alt="L’icône de l’app Raccourcis sur l’écran d’accueil de l’iPhone" width="900" height="509" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>Créer une automatisation personnelle</h3>
+              <p>Ouvrez l’onglet <strong>Automation</strong>, puis touchez <strong>+</strong> pour créer une nouvelle automatisation personnelle.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step2_a.jpg" alt="L’onglet Automation dans l’app Raccourcis" width="900" height="433" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step2_b.jpg" alt="Le bouton plus pour créer une automatisation personnelle" width="900" height="383" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Choisir le déclencheur Wallet</h3>
+              <ol>
+                <li>Cherchez <strong>Transaction</strong> (affiché <strong>Wallet</strong> sur certaines versions d’iOS) et sélectionnez-le.</li>
+                <li>Sélectionnez chaque carte que BudgetGo doit suivre.</li>
+                <li>Choisissez <strong>Run Immediately</strong> pour que l’automatisation n’attende jamais de confirmation, puis touchez <strong>Next</strong>.</li>
+              </ol>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step3_a.jpg" alt="Recherche du déclencheur Transaction, décrit comme Quand je touche une carte ou un pass Wallet" width="900" height="500" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_b.jpg" alt="Sélection des cartes Wallet à suivre" width="900" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step3_d.jpg" alt="L’option Run Immediately sélectionnée" width="900" height="562" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>Ajouter l’action BudgetGo</h3>
+              <p>Touchez <strong>New Blank Automation</strong>, cherchez <strong>BudgetGo</strong> et choisissez <strong>Add Transaction to Budget Go</strong>.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step4.jpg" alt="Création d’un nouveau raccourci vierge pour l’automatisation" width="900" height="796" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step4_b.jpg" alt="Recherche de l’action Add Transaction to Budget Go" width="726" height="900" loading="lazy" decoding="async">
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>Relier les détails du paiement</h3>
+              <ol>
+                <li>Touchez le champ <strong>Amount</strong>, choisissez <strong>Select Variable</strong>, puis <strong>Shortcut Input</strong>.</li>
+                <li>Touchez le <strong>Shortcut Input</strong> inséré et changez-le en <strong>Amount</strong>.</li>
+                <li>Répétez pour <strong>Merchant</strong> en choisissant <strong>Merchant</strong> dans Shortcut Input.</li>
+                <li>Touchez le bouton de lecture pour tester, puis touchez <strong>Done</strong>.</li>
+              </ol>
+              <p class="guide-note"><strong>La devise est facultative.</strong> Laissez vide pour utiliser la devise par défaut de BudgetGo, ou saisissez un code comme USD, EUR ou NGN.</p>
+            </div>
+            <div class="guide-shots">
+              <img src="/src/images/automation/step5_a.jpg" alt="Choix de Select Variable sur le champ Amount" width="900" height="827" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_c.jpg" alt="Choix de Amount dans Shortcut Input" width="541" height="900" loading="lazy" decoding="async">
+              <img src="/src/images/automation/step5_d.jpg" alt="L’automatisation terminée avec le bouton de lecture pour la tester" width="900" height="370" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">6</span>
+              <h3>Vérifier dans BudgetGo</h3>
+              <p>Dans BudgetGo, ouvrez <strong>Data Hub</strong> et touchez <strong>Wallet Automation</strong>. Vérifiez que <strong>Apple Wallet tracking</strong> est activé, puis touchez <strong>Run test shortcut</strong>. Le statut passe à vérifié dès que BudgetGo reçoit un paiement de votre automatisation.</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-wallet-automation.webp" alt="Écran Wallet Automation de BudgetGo avec le suivi Apple Wallet activé et un bouton Run test shortcut" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="sms" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-purple" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Messages</p>
+          <h2>Transformez les alertes SMS bancaires en transactions.</h2>
+          <p>Si votre banque vous envoie des SMS pour les paiements par carte et les virements, une automatisation Messages peut transmettre chaque alerte à l’action <strong>Import SMS Transaction</strong> de BudgetGo. BudgetGo lit le message sur votre appareil et ne crée une transaction que s’il reconnaît une alerte financière.</p>
+        </div>
+
+        <figure id="sms-video" class="guide-video" aria-labelledby="sms-video-title">
+          <figcaption class="guide-video-copy">
+            <p class="section-label">Video · 1 min 58 sec</p>
+            <h3 id="sms-video-title">Set up bank SMS in Shortcuts</h3>
+            <p>Follow the highlighted taps on an iPhone. Pause whenever you need to catch up, or use full screen for a closer look. This video has no sound.</p>
+            <p>Choose your bank's sender or words from its payment alerts. This walkthrough uses <strong>debited</strong>.</p>
+            <p id="sms-video-note">Keep <strong>Automation</strong> enabled and <strong>Confirm Before Run</strong> off. The recording disables its automation at the end to avoid duplicate imports.</p>
+            <a class="support-inline-link" href="#sms-steps">Read the steps below</a>
+            <a class="support-inline-link" href="/src/videos/automation/bank-sms-setup.mp4">Open the bank SMS video</a>
+          </figcaption>
+          <video controls="" playsinline="" preload="metadata" width="628" height="1480" poster="/src/images/automation/bank-sms-video-poster.jpg" aria-label="Bank SMS automation setup in Apple Shortcuts" aria-describedby="sms-video-note">
+            <source src="/src/videos/automation/bank-sms-setup.mp4" type="video/mp4">
+            <p><a href="/src/videos/automation/bank-sms-setup.mp4">Watch the bank SMS setup video</a>.</p>
+          </video>
+        </figure>
+
+        <ol id="sms-steps" class="guide-steps">
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">1</span>
+              <h3>Créer une automatisation Message</h3>
+              <p>Dans Raccourcis, ouvrez l’onglet <strong>Automation</strong>, touchez <strong>+</strong> et choisissez <strong>Message</strong>.</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">2</span>
+              <h3>La limiter aux messages de votre banque</h3>
+              <ol>
+                <li>Touchez <strong>Sender</strong> et choisissez le contact ou le numéro de votre banque, ou utilisez <strong>Message Contains</strong> avec un mot présent dans chaque alerte, comme le nom de votre banque.</li>
+                <li>Choisissez <strong>Run Immediately</strong>, puis touchez <strong>Next</strong>.</li>
+              </ol>
+              <p class="guide-note"><strong>Gardez le filtre étroit.</strong> Cibler uniquement votre banque garde vos conversations personnelles hors de BudgetGo.</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">3</span>
+              <h3>Ajouter l’action BudgetGo</h3>
+              <p>Touchez <strong>New Blank Automation</strong>, cherchez <strong>BudgetGo</strong> et choisissez <strong>Import SMS Transaction</strong>.</p>
+            </div>
+          </li>
+
+          <li class="guide-step guide-step-solo">
+            <div class="guide-step-copy">
+              <span class="step-index">4</span>
+              <h3>Transmettre le message</h3>
+              <ol>
+                <li>Touchez le champ <strong>Message</strong>, choisissez <strong>Select Variable</strong>, sélectionnez <strong>Shortcut Input</strong> et réglez-le sur <strong>Content</strong>.</li>
+                <li>Touchez le champ <strong>Sender</strong> et choisissez <strong>Shortcut Input</strong> réglé sur <strong>Sender</strong>. C’est facultatif, mais cela aide BudgetGo à identifier votre banque.</li>
+                <li>Touchez <strong>Done</strong>.</li>
+              </ol>
+            </div>
+          </li>
+
+          <li class="guide-step">
+            <div class="guide-step-copy">
+              <span class="step-index">5</span>
+              <h3>Tester</h3>
+              <p>Attendez votre prochaine alerte bancaire, ou ouvrez le détail de l’automatisation dans <strong>Data Hub</strong> de BudgetGo et touchez <strong>Test connection</strong>. Revenez ensuite dans BudgetGo pour vérifier la transaction importée.</p>
+            </div>
+            <div class="guide-shots">
+              <img class="guide-mockup" src="/src/images/app-live/mockup-sms-guide.webp" alt="Écran SMS Automation de BudgetGo avec l’interrupteur de transfert, le statut et le bouton Test connection" width="754" height="1639" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="guide-section">
+      <div class="container">
+        <div class="guide-section-head">
+          <span class="guide-badge guide-badge-gold" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"></circle><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17.2v.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+          </span>
+          <p class="section-label">Dépannage</p>
+          <h2>Si une transaction n’apparaît pas.</h2>
+        </div>
+
+        <div class="guide-faq">
+          <details>
+            <summary>Je ne trouve pas les actions BudgetGo dans Raccourcis</summary>
+            <p>Ouvrez BudgetGo une fois après l’installation ou la mise à jour pour qu’iOS enregistre ses actions, puis cherchez de nouveau « BudgetGo » dans Raccourcis.</p>
+          </details>
+          <details>
+            <summary>J’ai reçu une notification « Transaction Import Failed »</summary>
+            <p>L’automatisation Wallet a envoyé un montant ou un commerçant vide. Rouvrez l’automatisation et vérifiez que les deux champs utilisent Shortcut Input avec Amount et Merchant sélectionnés.</p>
+          </details>
+          <details>
+            <summary>L’automatisation demande confirmation avant de s’exécuter</summary>
+            <p>Modifiez l’automatisation dans Raccourcis et passez de Run After Confirmation à <strong>Run Immediately</strong>.</p>
+          </details>
+          <details>
+            <summary>Une alerte SMS n’a pas créé de transaction</summary>
+            <p>Seuls les messages financiers pris en charge produisent des transactions. Vérifiez que les imports sont activés dans Data Hub et que le champ Message utilise le contenu du message.</p>
+          </details>
+        </div>
+
+        <p class="guide-note">Toujours bloqué ? Écrivez à <a class="support-inline-link" href="mailto:support@budgetgo.ai">support@budgetgo.ai</a> ou utilisez la <a class="support-inline-link" href="/fr/support.html">page d’assistance</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="/fr/"><img src="/src/images/logo.png" alt="" width="34" height="34"><span>BudgetGo</span></a><p>Donnons du sens à tout ça.</p></div>
+      <div><h3>App</h3><a href="/fr/#inputs">Ajouter des dépenses</a><a href="/fr/#insights">Aperçus</a><a href="/fr/#analytics">Analyses</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Obtenir BudgetGo</a></div>
+      <div><h3>Aide</h3><a href="/fr/automations.html">Guides d’automatisation</a><a href="/blog/">Blog</a><a href="/fr/support.html">Assistance</a><a href="/fr/#faq">Questions fréquentes</a><a href="/fr/mcp.html">MCP · Bientôt disponible</a></div>
+      <div><h3>Contact</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="/privacy_policy.html">Politique de confidentialité</a> &nbsp;/&nbsp; <a href="/terms_of_service.html">Conditions d’utilisation</a></p></div>
+  </div>
+</footer>
+
+  <script src="/src/js/i18n.js"></script>
+  <script src="/src/js/home.js"></script>
+
+
+</body></html>
