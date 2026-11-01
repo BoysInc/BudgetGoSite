@@ -21,6 +21,12 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
   "budgeting app", "how to save money on"), seasonal and news-driven money searches, and what ranks on
   page one. Prefer a timely, high-intent keyword the backlog doesn't cover yet; otherwise use the backlog.
   Note the target keyword and the evidence for it when sending a draft for review.
+- **Tune for the keywords people actually type.** Put the primary keyword in the H1, SEO title, description
+  and first paragraph. Work 3–6 related long-tail phrases from autocomplete and "People also ask" into
+  H2s and FAQ questions in natural wording (e.g. "how much to spend on X per month", "X for beginners",
+  "X with the math"). No keyword stuffing, and no outside statistics without a linked reputable source.
+- **Daily cadence.** One new draft per day, chosen from that day's search demand, never published
+  without approval. The draft report lists the keyword, the search evidence and the preview URL.
 - **Search intent first.** One clear target keyword per post, in the H1, the SEO title,
   the description and the first paragraph. Titles promise something concrete:
   "(With the Math)", "(With a 2026 Example)", "Explained", "Step by Step".
