@@ -67,7 +67,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] how-budgetgo-categorizes-transactions (drafted)
 - [ ] ways-to-add-spending-to-budgetgo (drafted)
 - [ ] safe-to-spend-and-spending-forecast: "Safe to Spend: How BudgetGo Forecasts the Rest of Your Month"
-- [ ] track-subscriptions-and-recurring-bills: "How BudgetGo Finds Your Subscriptions and Bills Before They Hit"
+- [x] track-subscriptions-and-recurring-bills: "How BudgetGo Finds Your Subscriptions and Bills Before They Hit"
 - [ ] track-apple-pay-spending-automatically: "How to Track Apple Pay Spending Automatically"
 - [ ] track-spending-from-bank-sms-alerts: "Turn Bank SMS Alerts Into a Spending Tracker (Apple Shortcuts Guide)"
 - [ ] import-bank-statement-pdf-csv: "How to Import a Bank Statement (PDF, CSV or Excel) Into a Budget App"
@@ -97,7 +97,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] how-much-to-spend-eating-out: "How Much Should You Spend on Eating Out?"
 - [ ] impulse-spending: "How to Stop Impulse Spending Without Feeling Deprived"
 - [ ] coffee-and-small-purchases: "The Real Cost of Small Daily Purchases"
-- [ ] how-much-to-spend-on-black-friday: "How Much Should You Spend on Black Friday? (With a Budget Example)" (drafted; Black Friday is Nov 27, 2026)
+- [x] how-much-to-spend-on-black-friday: "How Much Should You Spend on Black Friday? (With a Budget Example)"
 - [ ] weekly-money-check-in: "The Weekly Money Check-In That Takes 5 Minutes"
 
 ### Saving
