@@ -97,6 +97,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] how-much-to-spend-eating-out: "How Much Should You Spend on Eating Out?"
 - [ ] impulse-spending: "How to Stop Impulse Spending Without Feeling Deprived"
 - [ ] coffee-and-small-purchases: "The Real Cost of Small Daily Purchases"
+- [ ] how-much-to-spend-on-black-friday: "How Much Should You Spend on Black Friday? (With a Budget Example)" (drafted; Black Friday is Nov 27, 2026)
 - [ ] weekly-money-check-in: "The Weekly Money Check-In That Takes 5 Minutes"
 
 ### Saving
