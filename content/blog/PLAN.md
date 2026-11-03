@@ -93,11 +93,12 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 ### Spending
 - [x] how-to-track-spending
 - [ ] lifestyle-creep: "Lifestyle Creep: What It Is and How to Spot It in Your Spending"
-- [ ] how-much-to-spend-on-groceries: "How Much Should You Spend on Groceries? (With the Math)"
+- [ ] how-much-to-spend-on-groceries: "How Much Should You Spend on Groceries? (With the Math)" (drafted)
 - [ ] how-much-to-spend-eating-out: "How Much Should You Spend on Eating Out?"
 - [ ] impulse-spending: "How to Stop Impulse Spending Without Feeling Deprived"
 - [ ] coffee-and-small-purchases: "The Real Cost of Small Daily Purchases"
 - [x] how-much-to-spend-on-black-friday: "How Much Should You Spend on Black Friday? (With a Budget Example)"
+- [x] how-much-does-thanksgiving-dinner-cost: "How Much Does Thanksgiving Dinner Cost? (Budget Per Person, With the Math)"
 - [ ] weekly-money-check-in: "The Weekly Money Check-In That Takes 5 Minutes"
 
 ### Saving
