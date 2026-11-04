@@ -68,7 +68,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] ways-to-add-spending-to-budgetgo (drafted)
 - [ ] safe-to-spend-and-spending-forecast: "Safe to Spend: How BudgetGo Forecasts the Rest of Your Month"
 - [x] track-subscriptions-and-recurring-bills: "How BudgetGo Finds Your Subscriptions and Bills Before They Hit"
-- [ ] track-apple-pay-spending-automatically: "How to Track Apple Pay Spending Automatically"
+- [x] track-apple-pay-spending-automatically: "How to Track Apple Pay Spending Automatically"
 - [ ] track-spending-from-bank-sms-alerts: "Turn Bank SMS Alerts Into a Spending Tracker (Apple Shortcuts Guide)"
 - [ ] import-bank-statement-pdf-csv: "How to Import a Bank Statement (PDF, CSV or Excel) Into a Budget App"
 - [ ] voice-expense-tracking: "Voice Expense Tracking: Log Spending by Just Saying It"

@@ -1,0 +1,105 @@
+<!--
+title: How to Track Apple Pay Spending Automatically (Step by Step)
+seo_title: How to Track Apple Pay Spending Automatically: Shortcuts Setup Guide | BudgetGo
+description: How to track Apple Pay spending automatically with an Apple Shortcuts automation: set it up in about two minutes, see what gets captured, and fix it when a payment doesn't show up.
+dek: Every tap at the checkout can log itself. Here's how to set up the automation, what it captures, and what to do when a payment goes missing.
+category: inside-budgetgo
+cover: src/images/app-live/mockup-wallet-automation.webp
+cover_alt: BudgetGo Wallet Automation screen with Apple Wallet tracking switched on, a setup guide link, and buttons to create the automation and run a test shortcut
+author: budgetgo-team
+published: 2026-11-04
+updated: 2026-11-04
+status: published
+-->
+<aside class="takeaways" aria-labelledby="takeaways-title">
+  <h2 id="takeaways-title" data-toc="false">Key takeaways</h2>
+  <ul>
+    <li>An Apple Shortcuts automation can send each Apple Pay payment to BudgetGo the moment you tap your card, with the amount and merchant.</li>
+    <li>Setup takes about two minutes, needs no bank login, and runs on your phone.</li>
+    <li>It only sees Wallet payments. Pair it with a connected bank, SMS alerts or voice entry to cover cash and physical cards.</li>
+  </ul>
+</aside>
+
+<p>The simplest way to track Apple Pay spending automatically is a Shortcuts automation that runs every time you pay with a Wallet card. It passes the amount and merchant straight into your spending tracker, so the coffee you tapped for this morning is already logged and sorted before you've left the counter. This guide walks through the setup in BudgetGo, what it does and doesn't capture, and how to fix it when a payment doesn't come through.</p>
+
+<h2>How automatic Apple Pay tracking works</h2>
+<p>Apple's Shortcuts app has a personal automation trigger called <strong>Transaction</strong> (shown as <strong>Wallet</strong> on some iOS versions). It fires when you tap a Wallet card to pay, and it can hand the payment's details, such as the amount and merchant, to another action. Apple lists Transaction among the automations that can <a href="https://support.apple.com/en-asia/guide/shortcuts/apdfbdbd7123/10.0/ios/27" target="_blank" rel="noopener noreferrer">run without asking you for confirmation</a>, which is what makes hands-free tracking possible.</p>
+<p>BudgetGo adds a Shortcuts action called <strong>Add Transaction to Budget Go</strong>. Connect the trigger to that action once, and from then on each Apple Pay payment arrives in BudgetGo on its own:</p>
+<ol>
+  <li>You tap your card to pay.</li>
+  <li>Shortcuts runs your automation instantly.</li>
+  <li>BudgetGo logs the amount and merchant, and AI gives it a category.</li>
+</ol>
+<p>There's no bank login involved. The automation only passes along what Wallet already knows about the payment you just made.</p>
+
+<h2>What you need before you start</h2>
+<p>Three quick checks save you a round of troubleshooting later:</p>
+<ul>
+  <li><strong>BudgetGo is installed and you've opened it once.</strong> Opening the app after installing or updating is what registers its actions with Shortcuts.</li>
+  <li><strong>The Shortcuts app is on your phone.</strong> It comes preinstalled on iOS 17 and later.</li>
+  <li><strong>Wallet imports are on.</strong> In BudgetGo, open <strong>Data Hub</strong> and turn on Apple Wallet tracking. When it's off, BudgetGo ignores anything the automation sends.</li>
+</ul>
+
+<figure class="article-figure">
+  <img src="../src/images/app-live/mockup-data-hub.webp" alt="BudgetGo Data Hub showing import, export, SMS and Wallet automations, FinanceKit and bank connections" loading="lazy" decoding="async" />
+  <figcaption>Data Hub is where you switch on Wallet imports and check that your automation is working.</figcaption>
+</figure>
+
+<h2>How to set up the Apple Pay automation, step by step</h2>
+<p>Prefer to watch? Our <a href="../automations.html#wallet">Apple Pay setup video</a> shows every tap in 1 minute 28 seconds. Here are the same steps in writing:</p>
+<ol>
+  <li><strong>Open Shortcuts</strong> and go to the <strong>Automation</strong> tab.</li>
+  <li><strong>Tap +</strong> to create a new personal automation.</li>
+  <li><strong>Choose the trigger.</strong> Search for <strong>Transaction</strong> (or <strong>Wallet</strong>) and select it. Pick every card you want BudgetGo to track.</li>
+  <li><strong>Choose Run Immediately</strong> so the automation never waits for you to confirm, then tap <strong>Next</strong>.</li>
+  <li><strong>Add the BudgetGo action.</strong> Tap <strong>New Blank Automation</strong>, search for BudgetGo, and choose <strong>Add Transaction to Budget Go</strong>.</li>
+  <li><strong>Connect the payment details.</strong> Tap the Amount field, choose <strong>Select Variable</strong>, pick <strong>Shortcut Input</strong>, then change it to <strong>Amount</strong>. Do the same for Merchant, choosing <strong>Merchant</strong>.</li>
+  <li><strong>Leave Currency empty</strong> to use your BudgetGo default currency, or enter a code such as USD, EUR or NGN for a card you use in another currency.</li>
+  <li><strong>Test it.</strong> Tap the play button, then <strong>Done</strong>. In BudgetGo, open <strong>Data Hub</strong>, tap <strong>Wallet Automation</strong> and tap <strong>Run test shortcut</strong>. The status changes to verified once BudgetGo receives a payment from your automation.</li>
+</ol>
+
+<!-- cta -->
+
+<h2>What gets captured (and what doesn't)</h2>
+<p>Each payment that runs the automation arrives with the <strong>amount</strong> and the <strong>merchant</strong>, plus a currency if you set one. BudgetGo then <strong>categorizes it automatically</strong>, so a tap at a grocery store lands in groceries without you touching it. You can review, edit or change the category of any transaction afterwards.</p>
+<p>The automation only knows about payments made with a Wallet card. A few kinds of spending never reach it:</p>
+<ul>
+  <li><strong>Physical card payments.</strong> Swiping or inserting the plastic card doesn't go through Wallet.</li>
+  <li><strong>Cash.</strong> There's no payment event to catch.</li>
+  <li><strong>Cards you didn't select.</strong> The trigger only runs for the cards you picked in step 3. Add a new card to Wallet? Add it to the automation too.</li>
+</ul>
+<p>Merchant names come from the payment itself, so some look like a payment processor or parent company rather than the shop you visited. It's worth a quick glance during your weekly review.</p>
+
+<h2>Apple Pay automation not working? Quick fixes</h2>
+<p>Most problems come down to one setting. Work through these in order:</p>
+<ul>
+  <li><strong>Can't find the BudgetGo action in Shortcuts.</strong> Open BudgetGo once so iOS registers its actions, then search Shortcuts again.</li>
+  <li><strong>The automation asks before it runs.</strong> Edit it in Shortcuts and switch from Run After Confirmation to <strong>Run Immediately</strong>.</li>
+  <li><strong>You got a “Transaction Import Failed” notification.</strong> The automation sent an empty amount or merchant. Reopen it and make sure both fields use Shortcut Input, set to Amount and Merchant.</li>
+  <li><strong>Nothing arrives at all.</strong> Check that Apple Wallet tracking is on in BudgetGo's Data Hub, and that the automation itself is still enabled in Shortcuts.</li>
+</ul>
+<p>Sometimes the cause isn't your setup. Developers have reported on <a href="https://developer.apple.com/forums/thread/765516" target="_blank" rel="noopener noreferrer">Apple's Developer Forums</a> that the Transaction trigger can time out when Wallet receives a payment late, and that it works with some cards and merchants but not others. If one payment goes missing now and then, add it by voice or by hand. If a card never triggers, a second source can cover it.</p>
+
+<h2>Cover everything else with a second source</h2>
+<p>Apple Pay tracking is great for the taps you make every day, but it's one piece of the picture. To see all of your spending in one place, combine it with the sources that fit how you pay:</p>
+<ul>
+  <li><strong>Apple Wallet (FinanceKit).</strong> Where available, BudgetGo can read Apple Wallet accounts such as Apple Card directly.</li>
+  <li><strong>Connected banks.</strong> Link one or more banks through Plaid, where supported, to bring in card swipes and online purchases.</li>
+  <li><strong>Bank SMS alerts.</strong> If your bank texts you about payments, a <a href="../automations.html#sms">Messages automation</a> can turn those alerts into transactions.</li>
+  <li><strong>Voice and manual entry.</strong> Say “lunch twelve fifty” for cash, then review it before saving.</li>
+  <li><strong>Imports.</strong> Bring in PDF bank statements, CSV or Excel exports, or receipt photos to fill in older history.</li>
+</ul>
+<p>If the same card reaches BudgetGo through more than one source, glance at your transactions in the first week to make sure each payment appears once. For a simple routine that ties all of this together, see <a href="how-to-track-spending.html">how to track your spending without a spreadsheet</a>.</p>
+
+<h2>What automatic tracking unlocks</h2>
+<p>Once your taps log themselves, the rest of BudgetGo has fresh data to work with. You can set one active budget and allocate it across categories, or skip the budget and just track. Either way, your analytics show your spending trend, top merchants and safe-to-spend, and repeating Apple Pay charges can show up alongside your other <a href="track-subscriptions-and-recurring-bills.html">subscriptions and recurring bills</a>. See everything BudgetGo does on the <a href="../index.html">homepage</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Do I need to link my bank to track Apple Pay spending?</h3>
+<p>No. The Shortcuts automation sends each Apple Pay payment's amount and merchant to BudgetGo without a bank login. Linking a bank is optional and helps cover payments that don't go through Wallet.</p>
+<h3>Can I track only some of my Apple Pay cards?</h3>
+<p>Yes. When you set up the Transaction trigger, you choose which Wallet cards run the automation. Only those cards are sent to BudgetGo.</p>
+<h3>Do I need a budget to use Apple Pay tracking?</h3>
+<p>No. BudgetGo works in tracking-only mode with no budget, or with one active budget at a time. Apple Pay payments are logged and categorized either way.</p>
+<h3>Why didn't an Apple Pay payment show up?</h3>
+<p>Check that the automation is set to Run Immediately, that Apple Wallet tracking is on in Data Hub, and that the card is selected in the trigger. Occasional misses can come from the Shortcuts trigger itself; add those payments by voice or manually.</p>
