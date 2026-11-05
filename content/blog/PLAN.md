@@ -87,7 +87,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] budget-for-irregular-income: "How to Budget With an Irregular Income"
 - [ ] budget-for-couples: "How to Budget as a Couple Without Fighting About Money"
 - [ ] monthly-budget-categories: "The Budget Categories You Actually Need (and the Ones You Don't)"
-- [ ] holiday-budget: "How to Make a Holiday Budget (With an Example)"
+- [ ] holiday-budget: "How to Make a Holiday Budget (With an Example)" (drafted)
 - [ ] how-much-to-spend-on-christmas: "How Much Should You Spend on Christmas Gifts? (With the Math)" (drafted; trending in November)
 
 ### Spending
@@ -107,7 +107,7 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] sinking-funds: "Sinking Funds: How to Save for Big Expenses Without Stress"
 - [ ] save-money-on-a-tight-budget: "How to Save Money on a Tight Budget: 12 Ideas That Work"
 - [ ] how-much-of-paycheck-to-save: "How Much of Your Paycheck Should You Save?"
-- [ ] no-spend-challenge: "How to Do a No-Spend Challenge (and Make It Stick)"
+- [x] no-spend-challenge: "How to Do a No-Spend Challenge (and Make It Stick)"
 
 ### Comparisons (high intent; verify competitor facts on their official sites the same day)
 - [ ] best-budgeting-apps: "The Best Budgeting Apps, Compared"
