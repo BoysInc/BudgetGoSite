@@ -1,0 +1,101 @@
+<!--
+title: Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data
+seo_title: Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data
+description: Are budgeting apps safe to use with AI? What happens to your spending data in BudgetGo: what the AI sees, who processes it, what we never do with it, and the privacy controls you keep.
+dek: A plain-English look at where your spending data goes, what the AI actually sees, and the parts you control.
+category: inside-budgetgo
+cover: src/images/app-live/mockup-accounts.webp
+cover_alt: BudgetGo Accounts screen showing linked bank accounts, sync status and a button to hide amounts
+author: budgetgo-team
+published: 2026-11-21
+updated: 2026-11-21
+status: published-->
+<aside class="takeaways" aria-labelledby="takeaways-title">
+  <h2 id="takeaways-title" data-toc="false">Key takeaways</h2>
+  <ul>
+    <li>Budgeting apps can be safe, but "safe" depends on what the app collects, who it shares data with, and what control you keep.</li>
+    <li>BudgetGo uses AI to categorize transactions and write insights. To do that, AI providers process the transaction details involved, with PII filters limiting sensitive details.</li>
+    <li>BudgetGo does not sell your personal information or share it for cross-context behavioural advertising.</li>
+    <li>You choose which sources to connect, and you can edit, delete or export your records, or delete your account, in the app.</li>
+  </ul>
+</aside>
+
+<p>Are budgeting apps safe? It's the right question to ask before you hand any app your bank transactions, and it matters even more when the app uses AI. This post answers it for BudgetGo specifically: what data the app uses, what the AI sees, who else processes it, and what we never do with it. No vague promises, just how it works.</p>
+
+<h2>What "safe" means for a budgeting app</h2>
+<p>Most worries about budgeting apps come down to three questions:</p>
+<ul>
+  <li><strong>Security:</strong> could someone break in, or open the app on a lost phone?</li>
+  <li><strong>Sharing:</strong> does the app pass your data to advertisers, data brokers or other companies?</li>
+  <li><strong>Control:</strong> can you see, fix, export and delete what it holds?</li>
+</ul>
+<p>Sharing is the one people underestimate. When Incogni reviewed the Google Play data-safety labels of 20 popular budgeting apps in 2023, it found that <a href="https://blog.incogni.com/budgeting-apps-research/" rel="noopener">12 of the 20 shared at least some user data with third parties</a>. That doesn't make every app risky, but it's a good reason to read the privacy policy before you connect a bank.</p>
+
+<h2>How BudgetGo uses AI on your spending</h2>
+<p>AI does the tedious work in BudgetGo. It's used to:</p>
+<ul>
+  <li><strong>Categorize transactions</strong> from every source, so "SQ *BLUE BOTTLE" becomes coffee without you tapping anything. (Here's <a href="track-subscriptions-and-recurring-bills.html">how recurring charges are spotted</a>, too.)</li>
+  <li><strong>Turn speech into drafts</strong> when you use voice entry, which you review before saving.</li>
+  <li><strong>Read imported files</strong> such as PDF statements, spreadsheets and receipt photos.</li>
+  <li><strong>Write insights</strong>, like the short stories on pacing, overspending and saving opportunities.</li>
+</ul>
+<p>To do this, the AI needs the relevant details: merchant names, descriptions, amounts, dates, categories and, for insights, related spending history. These requests are processed by AI providers, including OpenAI and models reached through OpenRouter. PII filters help limit exposure of sensitive personal details during that analysis. They reduce what gets through, but no filter is perfect, and our <a href="../privacy_policy.html">privacy policy</a> says so plainly.</p>
+
+<!-- cta -->
+
+<h2>What BudgetGo doesn't do with your data</h2>
+<p>This is the short list that matters most:</p>
+<ul>
+  <li><strong>We don't sell your personal information.</strong> Not to advertisers, not to data brokers, not to anyone.</li>
+  <li><strong>We don't share it for cross-context behavioural advertising,</strong> the kind of tracking that follows you around other apps and sites with ads.</li>
+  <li><strong>AI doesn't make decisions about you.</strong> BudgetGo's features don't make lending, credit or insurance decisions. AI suggestions are just suggestions, and you can correct any of them.</li>
+</ul>
+<div class="article-callout"><strong>Selling vs. processing</strong>Not selling your data is different from nobody else touching it. Like most apps, BudgetGo relies on service providers to run: cloud hosting and sync, AI processing, bank connections through Plaid, and crash reporting. They receive what they need for their role. The <a href="../privacy_policy.html">privacy policy</a> names them.</div>
+
+<h2>Where your data goes, source by source</h2>
+<p>How your spending gets into BudgetGo changes what happens to it. You pick the sources, and you can use as few as you like.</p>
+<ul>
+  <li><strong>Linked bank (Plaid):</strong> Plaid connects to your bank. Plaid says it <a href="https://support-my.plaid.com/hc/en-us/articles/4410324401047-Does-Plaid-have-access-to-my-credentials" rel="noopener">doesn't share your bank login with the apps you connect</a>, so BudgetGo receives account details and transactions, not your password.</li>
+  <li><strong>Bank SMS alerts:</strong> Messages are parsed on your device. Only recognized financial messages create transactions, and the raw text isn't synced, just details like amount, merchant and date.</li>
+  <li><strong>Apple Pay:</strong> Your <a href="track-apple-pay-spending-automatically.html">Shortcuts automation</a> sends the amount and merchant for each payment.</li>
+  <li><strong>Imported files:</strong> PDF, CSV and Excel files up to 5 MB are read, you confirm before anything is added, and uploaded files are deleted after 24 hours. The transactions you import stay in your records.</li>
+  <li><strong>Voice entry:</strong> Your recording is sent to BudgetGo's servers and transcription providers to create drafts. It isn't an on-device feature.</li>
+  <li><strong>Manual entry:</strong> Only what you type.</li>
+</ul>
+<p>Whichever sources you use, your records sync to BudgetGo's cloud so they can be categorized and analysed. One thing worth knowing: BudgetGo is not end-to-end encrypted, so its servers and providers can read the information needed to run these features. We'd rather you know that up front.</p>
+
+<figure class="article-figure">
+  <img src="../src/images/app-live/mockup-data-hub.webp" alt="BudgetGo Data Hub showing import and export options, SMS and Wallet automations, FinanceKit and bank connections" loading="lazy" decoding="async" />
+  <figcaption>Data Hub shows each source separately, so you connect only what you want.</figcaption>
+</figure>
+
+<h2>The privacy controls you keep</h2>
+<ul>
+  <li><strong>Biometric unlock.</strong> Turn on biometric unlock, such as Face ID, to help protect access to BudgetGo. BudgetGo never receives your face or fingerprint data.</li>
+  <li><strong>Hide amounts.</strong> The eye button hides balances when someone's looking over your shoulder.</li>
+  <li><strong>Edit anything.</strong> Every transaction, category and allocation is yours to change or delete.</li>
+  <li><strong>Export.</strong> Download your transactions as CSV, PDF or Excel whenever you like.</li>
+  <li><strong>Delete your account.</strong> Start account deletion in the app, or email <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a> for other privacy requests. Some copies, such as backups, can take time to clear, as the policy explains.</li>
+  <li><strong>Skip features you'd rather not use.</strong> Don't want to link a bank or use voice? Add spending manually or import a statement instead.</li>
+</ul>
+
+<h2>How to check any budgeting app's privacy in 5 minutes</h2>
+<p>Use this checklist for BudgetGo or any other app you're considering:</p>
+<ol>
+  <li><strong>Search the privacy policy for "sell".</strong> Look for a clear "we do not sell personal information" and a note on advertising.</li>
+  <li><strong>Find the list of providers.</strong> A good policy names who processes your data, including any AI providers.</li>
+  <li><strong>Check how banks connect.</strong> The app should use an aggregator like Plaid or your bank's own connection rather than asking for your bank password directly.</li>
+  <li><strong>Look for export and deletion.</strong> You should be able to take your data with you and close your account without a fight.</li>
+  <li><strong>Lock it down.</strong> Use a unique password, and turn on biometric unlock or two-factor sign-in where available. <a href="https://www.chase.com/personal/credit-cards/education/basics/safety-of-linking-bank-account-with-budgeting-apps" rel="noopener">Chase's guide to linking budgeting apps</a> also recommends checking your accounts regularly for activity you don't recognise.</li>
+</ol>
+<p>Once you're comfortable, the rest is easy. Our guide to <a href="how-to-track-spending.html">tracking your spending without a spreadsheet</a> walks through a simple routine.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Is it safe to link my bank account to a budgeting app?</h3>
+<p>It can be, if the app uses a trusted connection service and a clear privacy policy. BudgetGo links banks through Plaid, which says it doesn't share your bank login with connected apps. If you'd rather not link a bank, you can import statements or add spending yourself.</p>
+<h3>Does BudgetGo sell my data?</h3>
+<p>No. BudgetGo does not sell your personal information or share it for cross-context behavioural advertising.</p>
+<h3>Does the AI see my transactions?</h3>
+<p>Yes, the AI needs transaction details such as merchant, amount and date to categorize spending and create insights. PII filters help limit sensitive personal details during that analysis, and you can review and change anything the AI suggests.</p>
+<h3>Can I delete my data?</h3>
+<p>Yes. You can delete individual transactions, export your records, and delete your account in the app. The <a href="../privacy_policy.html">privacy policy</a> explains how long some copies, like backups, take to clear.</p>

@@ -63,42 +63,45 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 ## Topic backlog (work top to bottom)
 
 ### Inside BudgetGo (feature deep dives)
-- [ ] how-budgetgo-insight-stories-work (drafted)
-- [ ] how-budgetgo-categorizes-transactions (drafted)
-- [ ] ways-to-add-spending-to-budgetgo (drafted)
-- [ ] safe-to-spend-and-spending-forecast: "Safe to Spend: How BudgetGo Forecasts the Rest of Your Month"
+- [x] how-budgetgo-insight-stories-work
+- [x] how-budgetgo-categorizes-transactions
+- [x] ways-to-add-spending-to-budgetgo
+- [x] safe-to-spend-and-spending-forecast: "Safe to Spend: How BudgetGo Forecasts the Rest of Your Month"
 - [x] track-subscriptions-and-recurring-bills: "How BudgetGo Finds Your Subscriptions and Bills Before They Hit"
 - [x] track-apple-pay-spending-automatically: "How to Track Apple Pay Spending Automatically"
-- [ ] track-spending-from-bank-sms-alerts: "Turn Bank SMS Alerts Into a Spending Tracker (Apple Shortcuts Guide)"
-- [ ] import-bank-statement-pdf-csv: "How to Import a Bank Statement (PDF, CSV or Excel) Into a Budget App"
-- [ ] voice-expense-tracking: "Voice Expense Tracking: Log Spending by Just Saying It"
-- [ ] cash-flow-explained: "Cash Flow, Explained: Money In vs Money Out (With an Example)"
-- [ ] top-merchants-where-your-money-goes: "Your Top Merchants Say More About Your Budget Than Your Categories"
-- [ ] end-of-period-budget-review: "The 5-Minute End-of-Month Budget Review"
-- [ ] budget-or-just-track: "Should You Set a Budget or Just Track Your Spending?"
-- [ ] budgetgo-privacy-ai: "How BudgetGo Uses AI Without Selling Your Data"
+- [x] track-spending-from-bank-sms-alerts: "Turn Bank SMS Alerts Into a Spending Tracker (Apple Shortcuts Guide)"
+- [x] import-bank-statement-pdf-csv: "How to Import a Bank Statement (PDF, CSV or Excel) Into a Budget App"
+- [x] voice-expense-tracking: "Voice Expense Tracking: Log Spending by Just Saying It"
+- [x] cash-flow-explained: "Cash Flow, Explained: Money In vs Money Out (With an Example)"
+- [x] top-merchants-where-your-money-goes: "Your Top Merchants Say More About Your Budget Than Your Categories"
+- [x] end-of-period-budget-review: "The 5-Minute End-of-Month Budget Review"
+- [x] budget-or-just-track: "Should You Set a Budget or Just Track Your Spending?"
+- [x] budgetgo-privacy-ai: "How BudgetGo Uses AI Without Selling Your Data"
 
 ### Budgeting
 - [x] 50-30-20-rule
-- [ ] zero-based-budgeting: "Zero-Based Budgeting, Explained (With a Monthly Example)"
-- [ ] how-to-make-a-budget: "How to Make a Budget From Scratch in 5 Steps"
+- [x] zero-based-budgeting: "Zero-Based Budgeting, Explained (With a Monthly Example)"
+- [x] how-to-make-a-budget: "How to Make a Budget From Scratch in 5 Steps"
 - [ ] envelope-budgeting-digital: "Envelope Budgeting, Without the Envelopes"
 - [ ] pay-yourself-first: "Pay Yourself First: How It Works and How Much to Save"
 - [ ] budget-for-irregular-income: "How to Budget With an Irregular Income"
 - [ ] budget-for-couples: "How to Budget as a Couple Without Fighting About Money"
 - [ ] monthly-budget-categories: "The Budget Categories You Actually Need (and the Ones You Don't)"
-- [ ] holiday-budget: "How to Make a Holiday Budget (With an Example)" (drafted)
-- [ ] how-much-to-spend-on-christmas: "How Much Should You Spend on Christmas Gifts? (With the Math)" (drafted; trending in November)
+- [x] holiday-budget: "How to Make a Holiday Budget (With an Example)"
+- [x] how-much-to-spend-on-christmas: "How Much Should You Spend on Christmas Gifts? (With the Math)"
 
 ### Spending
 - [x] how-to-track-spending
 - [ ] lifestyle-creep: "Lifestyle Creep: What It Is and How to Spot It in Your Spending"
-- [ ] how-much-to-spend-on-groceries: "How Much Should You Spend on Groceries? (With the Math)" (drafted)
-- [ ] how-much-to-spend-eating-out: "How Much Should You Spend on Eating Out?"
-- [ ] impulse-spending: "How to Stop Impulse Spending Without Feeling Deprived"
+- [x] how-much-to-spend-on-groceries: "How Much Should You Spend on Groceries? (With the Math)"
+- [x] how-much-to-spend-on-eating-out: "How Much Should You Spend on Eating Out? (With the Math)"
+- [x] impulse-spending: "How to Stop Impulse Spending Without Feeling Deprived (With the Math)"
 - [ ] coffee-and-small-purchases: "The Real Cost of Small Daily Purchases"
 - [x] how-much-to-spend-on-black-friday: "How Much Should You Spend on Black Friday? (With a Budget Example)"
 - [x] how-much-does-thanksgiving-dinner-cost: "How Much Does Thanksgiving Dinner Cost? (Budget Per Person, With the Math)"
+- [x] holiday-tipping-guide: "Holiday Tipping Guide: Who to Tip and How Much (With the Math)"
+- [x] how-to-avoid-holiday-debt: "How to Avoid Holiday Debt This Year (With a Worked Example)"
+- [x] how-to-stop-overspending: "How to Stop Overspending Every Month (With the Math)"
 - [ ] weekly-money-check-in: "The Weekly Money Check-In That Takes 5 Minutes"
 
 ### Saving
@@ -107,6 +110,8 @@ Never commit or push a draft. Mark the topic below as done (`[x]`) with its slug
 - [ ] sinking-funds: "Sinking Funds: How to Save for Big Expenses Without Stress"
 - [ ] save-money-on-a-tight-budget: "How to Save Money on a Tight Budget: 12 Ideas That Work"
 - [ ] how-much-of-paycheck-to-save: "How Much of Your Paycheck Should You Save?"
+- [x] how-to-save-money-for-christmas: "How to Save Money for Christmas in 6 Weeks (With the Math)"
+- [x] how-to-save-money-on-heating-bill: "How to Save Money on Your Heating Bill This Winter (With the Math)"
 - [x] no-spend-challenge: "How to Do a No-Spend Challenge (and Make It Stick)"
 
 ### Comparisons (high intent; verify competitor facts on their official sites the same day)

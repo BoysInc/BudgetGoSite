@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data</title>
+  <meta name="description" content="Are budgeting apps safe to use with AI? What happens to your spending data in BudgetGo: what the AI sees, who processes it, what we never do with it, and the privacy controls you keep." />
+  <link rel="canonical" href="https://budgetgo.ai/blog/budgetgo-privacy-ai.html" />
+  <meta property="og:title" content="Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data" />
+  <meta property="og:description" content="Are budgeting apps safe to use with AI? What happens to your spending data in BudgetGo: what the AI sees, who processes it, what we never do with it, and the privacy controls you keep." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://budgetgo.ai/blog/budgetgo-privacy-ai.html" />
+  <meta property="og:image" content="https://budgetgo.ai/src/images/app-live/mockup-accounts.webp" />
+  <meta property="og:site_name" content="BudgetGo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#101010" />
+  <link rel="icon" type="image/png" href="../src/images/favicon-rounded.png" />
+  <link rel="apple-touch-icon" href="../src/images/favicon-rounded.png" />
+  <link rel="alternate" type="application/rss+xml" title="BudgetGo Blog" href="https://budgetgo.ai/blog/feed.xml" />
+  <link rel="stylesheet" href="../styles.css?v=20261001-rounded" />
+  <link rel="preload" href="../src/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../src/css/site-shell.css?v=20261002" />
+  <link rel="stylesheet" href="../src/css/inner-pages.css?v=20261002" />
+  <link rel="stylesheet" href="../src/css/app-site.css?v=20261004" />
+  <link rel="stylesheet" href="../src/css/app-site-inner.css?v=20261004" />
+  <link rel="stylesheet" href="../src/css/language-switcher.css?v=20261008" />
+  <link rel="stylesheet" href="../src/css/blog.css?v=20261101" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data", "description": "Are budgeting apps safe to use with AI? What happens to your spending data in BudgetGo: what the AI sees, who processes it, what we never do with it, and the privacy controls you keep.", "image": "https://budgetgo.ai/src/images/app-live/mockup-accounts.webp", "datePublished": "2026-11-21", "dateModified": "2026-11-21", "author": {"@type": "Organization", "name": "The BudgetGo Team", "url": "https://budgetgo.ai/"}, "publisher": {"@type": "Organization", "name": "BudgetGo", "url": "https://budgetgo.ai/", "logo": {"@type": "ImageObject", "url": "https://budgetgo.ai/src/images/logo.png"}}, "mainEntityOfPage": "https://budgetgo.ai/blog/budgetgo-privacy-ai.html", "articleSection": "Inside BudgetGo", "wordCount": 1200, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://budgetgo.ai/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://budgetgo.ai/blog/"}, {"@type": "ListItem", "position": 3, "name": "Inside BudgetGo", "item": "https://budgetgo.ai/blog/category/inside-budgetgo.html"}, {"@type": "ListItem", "position": 4, "name": "Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data", "item": "https://budgetgo.ai/blog/budgetgo-privacy-ai.html"}]}]}</script>
+</head>
+<body class="inner-page blog-page" id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="../index.html" aria-label="BudgetGo homepage"><img src="../src/images/logo.png" alt="" width="34" height="34" /><span>BudgetGo</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav id="site-nav" class="nav-links" aria-label="Primary navigation">
+      <a href="../index.html#inputs">Track spending</a><a href="../index.html#insights">Insights</a><a href="../index.html#analytics">Analytics</a><a href="../index.html#privacy">Privacy</a><a href="../automations.html">Guides</a><a href="../blog/" aria-current="page">Blog</a>
+      <a class="btn btn--light btn--sm" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="main">
+  <article class="article">
+    <header class="article-head">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="./">Blog</a></li><li><a href="category/inside-budgetgo.html">Inside BudgetGo</a></li></ol></nav>
+      <h1>Are Budgeting Apps Safe? How BudgetGo Uses AI Without Selling Your Data</h1>
+      <p class="article-dek">A plain-English look at where your spending data goes, what the AI actually sees, and the parts you control.</p>
+      <div class="article-byline">
+        <img src="../src/images/logo.png" alt="" width="44" height="44" />
+        <div><p class="article-author">The BudgetGo Team</p><p class="blog-meta"><time datetime="2026-11-21">November 21, 2026</time><span aria-hidden="true">·</span><span>5 min read</span></p></div>
+      </div>
+    </header>
+    <figure class="article-cover article-cover--product"><img src="../src/images/app-live/mockup-accounts.webp" alt="BudgetGo Accounts screen showing linked bank accounts, sync status and a button to hide amounts" fetchpriority="high" decoding="async" /></figure>
+    <div class="article-layout">
+      <nav class="article-toc" aria-labelledby="toc-title"><p id="toc-title">In this article</p><ol><li><a href="#what-safe-means-for-a-budgeting-app">What &quot;safe&quot; means for a budgeting app</a></li><li><a href="#how-budgetgo-uses-ai-on-your-spending">How BudgetGo uses AI on your spending</a></li><li><a href="#what-budgetgo-doesn-t-do-with-your-data">What BudgetGo doesn&#x27;t do with your data</a></li><li><a href="#where-your-data-goes-source-by-source">Where your data goes, source by source</a></li><li><a href="#the-privacy-controls-you-keep">The privacy controls you keep</a></li><li><a href="#how-to-check-any-budgeting-app-s-privacy-in-5-minutes">How to check any budgeting app&#x27;s privacy in 5 minutes</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li></ol></nav>
+      <div class="article-body">
+<aside class="takeaways" aria-labelledby="takeaways-title">
+  <h2 id="takeaways-title" data-toc="false">Key takeaways</h2>
+  <ul>
+    <li>Budgeting apps can be safe, but "safe" depends on what the app collects, who it shares data with, and what control you keep.</li>
+    <li>BudgetGo uses AI to categorize transactions and write insights. To do that, AI providers process the transaction details involved, with PII filters limiting sensitive details.</li>
+    <li>BudgetGo does not sell your personal information or share it for cross-context behavioural advertising.</li>
+    <li>You choose which sources to connect, and you can edit, delete or export your records, or delete your account, in the app.</li>
+  </ul>
+</aside>
+
+<p>Are budgeting apps safe? It's the right question to ask before you hand any app your bank transactions, and it matters even more when the app uses AI. This post answers it for BudgetGo specifically: what data the app uses, what the AI sees, who else processes it, and what we never do with it. No vague promises, just how it works.</p>
+
+<h2 id="what-safe-means-for-a-budgeting-app">What "safe" means for a budgeting app</h2>
+<p>Most worries about budgeting apps come down to three questions:</p>
+<ul>
+  <li><strong>Security:</strong> could someone break in, or open the app on a lost phone?</li>
+  <li><strong>Sharing:</strong> does the app pass your data to advertisers, data brokers or other companies?</li>
+  <li><strong>Control:</strong> can you see, fix, export and delete what it holds?</li>
+</ul>
+<p>Sharing is the one people underestimate. When Incogni reviewed the Google Play data-safety labels of 20 popular budgeting apps in 2023, it found that <a href="https://blog.incogni.com/budgeting-apps-research/" rel="noopener">12 of the 20 shared at least some user data with third parties</a>. That doesn't make every app risky, but it's a good reason to read the privacy policy before you connect a bank.</p>
+
+<h2 id="how-budgetgo-uses-ai-on-your-spending">How BudgetGo uses AI on your spending</h2>
+<p>AI does the tedious work in BudgetGo. It's used to:</p>
+<ul>
+  <li><strong>Categorize transactions</strong> from every source, so "SQ *BLUE BOTTLE" becomes coffee without you tapping anything. (Here's <a href="track-subscriptions-and-recurring-bills.html">how recurring charges are spotted</a>, too.)</li>
+  <li><strong>Turn speech into drafts</strong> when you use voice entry, which you review before saving.</li>
+  <li><strong>Read imported files</strong> such as PDF statements, spreadsheets and receipt photos.</li>
+  <li><strong>Write insights</strong>, like the short stories on pacing, overspending and saving opportunities.</li>
+</ul>
+<p>To do this, the AI needs the relevant details: merchant names, descriptions, amounts, dates, categories and, for insights, related spending history. These requests are processed by AI providers, including OpenAI and models reached through OpenRouter. PII filters help limit exposure of sensitive personal details during that analysis. They reduce what gets through, but no filter is perfect, and our <a href="../privacy_policy.html">privacy policy</a> says so plainly.</p>
+
+<aside class="inline-cta" aria-label="Get BudgetGo">
+  <div><p class="inline-cta-title">Try it with your own spending</p><p>BudgetGo sorts every purchase and turns it into short, clear insights.</p></div>
+  <a class="btn" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a>
+</aside>
+
+<h2 id="what-budgetgo-doesn-t-do-with-your-data">What BudgetGo doesn't do with your data</h2>
+<p>This is the short list that matters most:</p>
+<ul>
+  <li><strong>We don't sell your personal information.</strong> Not to advertisers, not to data brokers, not to anyone.</li>
+  <li><strong>We don't share it for cross-context behavioural advertising,</strong> the kind of tracking that follows you around other apps and sites with ads.</li>
+  <li><strong>AI doesn't make decisions about you.</strong> BudgetGo's features don't make lending, credit or insurance decisions. AI suggestions are just suggestions, and you can correct any of them.</li>
+</ul>
+<div class="article-callout"><strong>Selling vs. processing</strong>Not selling your data is different from nobody else touching it. Like most apps, BudgetGo relies on service providers to run: cloud hosting and sync, AI processing, bank connections through Plaid, and crash reporting. They receive what they need for their role. The <a href="../privacy_policy.html">privacy policy</a> names them.</div>
+
+<h2 id="where-your-data-goes-source-by-source">Where your data goes, source by source</h2>
+<p>How your spending gets into BudgetGo changes what happens to it. You pick the sources, and you can use as few as you like.</p>
+<ul>
+  <li><strong>Linked bank (Plaid):</strong> Plaid connects to your bank. Plaid says it <a href="https://support-my.plaid.com/hc/en-us/articles/4410324401047-Does-Plaid-have-access-to-my-credentials" rel="noopener">doesn't share your bank login with the apps you connect</a>, so BudgetGo receives account details and transactions, not your password.</li>
+  <li><strong>Bank SMS alerts:</strong> Messages are parsed on your device. Only recognized financial messages create transactions, and the raw text isn't synced, just details like amount, merchant and date.</li>
+  <li><strong>Apple Pay:</strong> Your <a href="track-apple-pay-spending-automatically.html">Shortcuts automation</a> sends the amount and merchant for each payment.</li>
+  <li><strong>Imported files:</strong> PDF, CSV and Excel files up to 5 MB are read, you confirm before anything is added, and uploaded files are deleted after 24 hours. The transactions you import stay in your records.</li>
+  <li><strong>Voice entry:</strong> Your recording is sent to BudgetGo's servers and transcription providers to create drafts. It isn't an on-device feature.</li>
+  <li><strong>Manual entry:</strong> Only what you type.</li>
+</ul>
+<p>Whichever sources you use, your records sync to BudgetGo's cloud so they can be categorized and analysed. One thing worth knowing: BudgetGo is not end-to-end encrypted, so its servers and providers can read the information needed to run these features. We'd rather you know that up front.</p>
+
+<figure class="article-figure">
+  <img src="../src/images/app-live/mockup-data-hub.webp" alt="BudgetGo Data Hub showing import and export options, SMS and Wallet automations, FinanceKit and bank connections" loading="lazy" decoding="async" />
+  <figcaption>Data Hub shows each source separately, so you connect only what you want.</figcaption>
+</figure>
+
+<h2 id="the-privacy-controls-you-keep">The privacy controls you keep</h2>
+<ul>
+  <li><strong>Biometric unlock.</strong> Turn on biometric unlock, such as Face ID, to help protect access to BudgetGo. BudgetGo never receives your face or fingerprint data.</li>
+  <li><strong>Hide amounts.</strong> The eye button hides balances when someone's looking over your shoulder.</li>
+  <li><strong>Edit anything.</strong> Every transaction, category and allocation is yours to change or delete.</li>
+  <li><strong>Export.</strong> Download your transactions as CSV, PDF or Excel whenever you like.</li>
+  <li><strong>Delete your account.</strong> Start account deletion in the app, or email <a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a> for other privacy requests. Some copies, such as backups, can take time to clear, as the policy explains.</li>
+  <li><strong>Skip features you'd rather not use.</strong> Don't want to link a bank or use voice? Add spending manually or import a statement instead.</li>
+</ul>
+
+<h2 id="how-to-check-any-budgeting-app-s-privacy-in-5-minutes">How to check any budgeting app's privacy in 5 minutes</h2>
+<p>Use this checklist for BudgetGo or any other app you're considering:</p>
+<ol>
+  <li><strong>Search the privacy policy for "sell".</strong> Look for a clear "we do not sell personal information" and a note on advertising.</li>
+  <li><strong>Find the list of providers.</strong> A good policy names who processes your data, including any AI providers.</li>
+  <li><strong>Check how banks connect.</strong> The app should use an aggregator like Plaid or your bank's own connection rather than asking for your bank password directly.</li>
+  <li><strong>Look for export and deletion.</strong> You should be able to take your data with you and close your account without a fight.</li>
+  <li><strong>Lock it down.</strong> Use a unique password, and turn on biometric unlock or two-factor sign-in where available. <a href="https://www.chase.com/personal/credit-cards/education/basics/safety-of-linking-bank-account-with-budgeting-apps" rel="noopener">Chase's guide to linking budgeting apps</a> also recommends checking your accounts regularly for activity you don't recognise.</li>
+</ol>
+<p>Once you're comfortable, the rest is easy. Our guide to <a href="how-to-track-spending.html">tracking your spending without a spreadsheet</a> walks through a simple routine.</p>
+
+<h2 id="frequently-asked-questions">Frequently asked questions</h2>
+<h3>Is it safe to link my bank account to a budgeting app?</h3>
+<p>It can be, if the app uses a trusted connection service and a clear privacy policy. BudgetGo links banks through Plaid, which says it doesn't share your bank login with connected apps. If you'd rather not link a bank, you can import statements or add spending yourself.</p>
+<h3>Does BudgetGo sell my data?</h3>
+<p>No. BudgetGo does not sell your personal information or share it for cross-context behavioural advertising.</p>
+<h3>Does the AI see my transactions?</h3>
+<p>Yes, the AI needs transaction details such as merchant, amount and date to categorize spending and create insights. PII filters help limit sensitive personal details during that analysis, and you can review and change anything the AI suggests.</p>
+<h3>Can I delete my data?</h3>
+<p>Yes. You can delete individual transactions, export your records, and delete your account in the app. The <a href="../privacy_policy.html">privacy policy</a> explains how long some copies, like backups, take to clear.</p>
+        <aside class="author-box" aria-label="About the author">
+          <img src="../src/images/logo.png" alt="" width="56" height="56" />
+          <div><p class="author-box-name">The BudgetGo Team</p><p class="author-box-role">Product & money writers</p><p>We build BudgetGo, the app that brings all your spending together and turns it into clear insights. We write about budgeting, spending habits, and how to get the most out of the app.</p></div>
+        </aside>
+      </div>
+    </div>
+  </article>
+  <section class="article-cta" aria-labelledby="cta-title">
+    <div><h2 id="cta-title">See where your money goes.</h2><p>BudgetGo brings your spending together, sorts it automatically, and shows where you can save.</p></div>
+    <a class="btn" href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a>
+  </section>
+  <section class="related" aria-labelledby="related-title">
+    <h2 id="related-title">Keep reading</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-media blog-card-media--product"><img src="../src/images/app-live/mockup-data-hub.webp" alt="BudgetGo Data Hub with imports, iOS automations and financial connections" loading="lazy" decoding="async" /></div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Inside BudgetGo</span><span>3 min read</span></div>
+            <h3><a href="ways-to-add-spending-to-budgetgo.html">7 Ways to Get Your Spending Into BudgetGo (and Which Ones to Use)</a></h3>
+            <p>Voice, Apple Pay, bank SMS alerts, Apple Wallet, connected banks, statement imports and manual entry: every way to add spending to BudgetGo, and the best setup for you.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-card-media blog-card-media--product"><img src="../src/images/app-live/mockup-voice.webp" alt="BudgetGo voice entry screen showing a spoken sentence turned into three transactions for Uber, Spotify and Netflix, each with a category and amount" loading="lazy" decoding="async" /></div>
+          <div class="blog-card-body">
+            <div class="blog-meta"><span class="blog-tag">Inside BudgetGo</span><span>6 min read</span></div>
+            <h3><a href="voice-expense-tracking.html">Voice Expense Tracking: Log Spending by Just Saying It</a></h3>
+            <p>Voice expense tracking lets you log a purchase by saying it out loud. Here&#x27;s how it works, what to say, when it beats automatic tracking, and how to make it a 10-second habit.</p>
+          </div>
+        </article>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="../index.html"><img src="../src/images/logo.png" alt="" width="34" height="34" /><span>BudgetGo</span></a><p>Let’s make sense of all of it.</p></div>
+      <div><h3>App</h3><a href="../index.html#inputs">Track spending</a><a href="../index.html#insights">Insights</a><a href="../index.html#analytics">Analytics</a><a href="https://apps.apple.com/us/app/budgetgo-track-budget/id6761938917" target="_blank" rel="noopener noreferrer">Get BudgetGo</a></div>
+      <div><h3>Help</h3><a href="../automations.html">Automation guides</a><a href="../blog/">Blog</a><a href="../support.html">Support</a><a href="../index.html#faq">Common questions</a><a href="../mcp.html">MCP · Coming soon</a></div>
+      <div><h3>Contact</h3><a href="mailto:support@budgetgo.ai">support@budgetgo.ai</a><a href="https://instagram.com/budgetgo.ai" target="_blank" rel="noopener noreferrer">Instagram →</a><a href="https://www.tiktok.com/@budgetgo.ai" target="_blank" rel="noopener noreferrer">TikTok →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GraphLeaf LLC.</p><p><a href="../privacy_policy.html">Privacy Policy</a> &nbsp;/&nbsp; <a href="../terms_of_service.html">Terms of Service</a></p></div>
+  </div>
+</footer>
+
+  <script src="../src/js/i18n.js"></script>
+  <script src="../src/js/home.js"></script>
+</body>
+</html>

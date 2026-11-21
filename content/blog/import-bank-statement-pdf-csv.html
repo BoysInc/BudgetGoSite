@@ -1,0 +1,97 @@
+<!--
+title: How to Import a Bank Statement (PDF, CSV or Excel) Into a Budget App
+seo_title: How to Import a Bank Statement Into a Budget App (PDF, CSV or Excel) | BudgetGo
+description: How to import a bank statement into a budget app step by step: download the right file from your bank, choose PDF, CSV or Excel, avoid duplicates, and check the results.
+dek: Months of spending are already sitting in your bank's statements. Here's how to bring them into your budget in a few minutes, without retyping a single line.
+category: inside-budgetgo
+cover: src/images/app-live/mockup-import.webp
+cover_alt: BudgetGo Import your data screen with a Choose files button, one file reading transactions, and a Chase statement completed with 142 transactions added and 3 skipped
+author: budgetgo-team
+published: 2026-11-21
+updated: 2026-11-21
+status: published-->
+<aside class="takeaways" aria-labelledby="takeaways-title">
+  <h2 id="takeaways-title" data-toc="false">Key takeaways</h2>
+  <ul>
+    <li>Download a statement or transaction export from your bank's website or app, then upload it to your budget app and review the transactions before you confirm.</li>
+    <li>CSV and Excel exports are the cleanest files to import. Many apps don't read PDFs at all, but BudgetGo can read PDF statements too.</li>
+    <li>Import one file per account and period, and pick date ranges that don't overlap, so your history doesn't double up.</li>
+  </ul>
+</aside>
+
+<p>Your bank already has a record of every purchase you've made. Importing a bank statement into a budget app is the fastest way to turn that record into a budget you can use, with months of history from day one instead of a blank screen. This guide walks through it step by step: which file to download, PDF vs CSV vs Excel, how to avoid duplicates, and what to check once the transactions are in.</p>
+
+<h2>Why import a bank statement at all?</h2>
+<p>Connecting a bank account is the most hands-off way to track spending, but it isn't always possible or enough. A statement import fills the gaps:</p>
+<ul>
+  <li><strong>History from the start.</strong> A new app only sees spending from the day you set it up. Importing the last few months gives your trends and comparisons something to work with straight away.</li>
+  <li><strong>Banks that won't connect.</strong> Bank connections depend on your institution, country and account. If yours isn't supported, a monthly statement still works.</li>
+  <li><strong>Accounts you rarely use.</strong> A second credit card or a savings account you check once a month can be caught up with one file.</li>
+  <li><strong>Switching apps.</strong> An export from your old app or spreadsheet can carry your history across.</li>
+</ul>
+
+<h2>PDF vs CSV vs Excel: which file should you download?</h2>
+<p>Most banks offer two kinds of download. A <strong>statement</strong> is the monthly PDF your bank produces. A <strong>transaction export</strong> (sometimes called "download activity" or "export transactions") gives you the same entries as a spreadsheet, usually CSV or Excel, for any date range you pick.</p>
+<table class="article-table">
+  <thead>
+    <tr><th>File</th><th>Good for</th><th>Watch out for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>CSV</td><td>Clean rows of date, description and amount. Any date range.</td><td>Date formats vary by bank and country.</td></tr>
+    <tr><td>Excel (.xlsx)</td><td>Same data as CSV, often with clearer column names.</td><td>Extra header rows or summary totals at the bottom.</td></tr>
+    <tr><td>PDF statement</td><td>Always available, even for old months and closed accounts.</td><td>Many apps can't read it; layout differs from bank to bank.</td></tr>
+  </tbody>
+</table>
+<p>If your bank offers a CSV or Excel export, start there. It's built to be read by software. Plenty of budgeting apps only accept spreadsheet-style files: YNAB's file import reads <a href="https://support.ynab.com/en_us/file-based-import-a-guide-Bkj4Sszyo" target="_blank" rel="noopener noreferrer">CSV, OFX, QFX and QIF but not PDF</a>, and Monarch's manual import works with <a href="https://help.monarch.com/hc/en-us/articles/4409682789908-Importing-Transactions-Manually" target="_blank" rel="noopener noreferrer">CSV files that have date and amount columns</a>. That's why so many people end up hunting for a PDF-to-CSV converter. In BudgetGo you can skip that step, because it reads PDF bank statements directly, along with CSV and Excel files.</p>
+
+<!-- cta -->
+
+<h2>How to import a bank statement into a budget app, step by step</h2>
+<p>The steps below use BudgetGo, but the same flow works in most apps that support file imports.</p>
+<ol>
+  <li><strong>Download the file from your bank.</strong> Sign in to your bank's website or app and look for <em>Statements</em> or <em>Download transactions</em>. Choose CSV or Excel if you can, or download the PDF statement.</li>
+  <li><strong>Pick the date range.</strong> For a first import, the last two or three months is usually enough to show your patterns. Go further back if you want year-over-year comparisons.</li>
+  <li><strong>Check the file size.</strong> In BudgetGo, each file can be up to 5 MB and contain up to 500 transactions. For a busy account, split a long period into a few monthly files.</li>
+  <li><strong>Open the import screen.</strong> In BudgetGo, open <strong>Data Hub</strong>, tap <strong>Import your data</strong>, then <strong>Choose files</strong>.</li>
+  <li><strong>Let the app read the transactions.</strong> BudgetGo finds the transactions in the file and AI gives each one a category.</li>
+  <li><strong>Review before you confirm.</strong> Nothing is added until you confirm. Glance over the amounts, dates and merchants, then add them to your records.</li>
+</ol>
+
+<figure class="article-figure">
+  <img src="../src/images/app-live/mockup-import.webp" alt="BudgetGo Import your data screen showing one file reading transactions and a Chase statement PDF completed with 142 transactions added and 3 skipped" loading="lazy" decoding="async" />
+  <figcaption>Imports show their progress, how many transactions were added, and how many were skipped.</figcaption>
+</figure>
+
+<h2>How to avoid duplicate transactions</h2>
+<p>Duplicates are the most common import headache. They usually come from importing overlapping date ranges, or from importing a period that a connected bank has already synced. A few habits keep your records clean:</p>
+<ul>
+  <li><strong>One account, one file, one period.</strong> Download each account separately and keep a note of the last date you imported.</li>
+  <li><strong>Don't overlap periods.</strong> If you imported September, start the next file on October 1.</li>
+  <li><strong>Don't double up with a connected bank.</strong> If an account is already linked, only import months from before the connection started.</li>
+  <li><strong>Re-importing the same file is safe in BudgetGo.</strong> Transactions already imported from that file are skipped, which is why you may see a "skipped" count on a completed import.</li>
+</ul>
+
+<h2>What to check after an import</h2>
+<p>A two-minute check now saves confusion in your budget later:</p>
+<ul>
+  <li><strong>Totals.</strong> Compare the total spending for the period with the statement. A big gap usually means a missing page or a cut-off date range.</li>
+  <li><strong>Transfers and card payments.</strong> Moving money between your own accounts or paying off a credit card isn't new spending. Make sure those are categorized so they don't inflate your totals.</li>
+  <li><strong>Categories.</strong> AI handles most merchants well, but superstores and payment apps can be ambiguous. You can change any category. Here's <a href="how-budgetgo-categorizes-transactions.html">how BudgetGo categorizes transactions</a>.</li>
+  <li><strong>Refunds.</strong> A return should show as money coming back, not as another purchase.</li>
+</ul>
+
+<h2>Is it safe to upload bank statements?</h2>
+<p>It's a fair question, since a statement contains your account details and spending history. Before uploading to any app, check what it keeps and for how long. In BudgetGo, uploaded files are deleted after 24 hours while the transactions stay in your records, PII filters limit sensitive details during AI analysis, and BudgetGo doesn't sell your personal information. You can also edit, delete or export your transactions at any time. The full details are in our <a href="../privacy_policy.html">privacy policy</a>.</p>
+
+<h2>Make imports part of your routine</h2>
+<p>Once your history is in, imports work best as a quick monthly habit, especially for accounts that don't connect. Download the new statement when it arrives, import it, and do a short review. If you'd rather not wait for statements, combine imports with an automatic source such as <a href="track-spending-from-bank-sms-alerts.html">bank SMS alerts</a> or a connected bank. Our guide to <a href="ways-to-add-spending-to-budgetgo.html">every way to add spending to BudgetGo</a> shows which mix fits you, and <a href="how-to-track-spending.html">how to track your spending</a> covers the weekly habit that makes it all useful.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>Can I import a PDF bank statement into a budget app?</h3>
+<p>It depends on the app. Many only accept CSV or similar spreadsheet formats, so you'd need to convert the PDF first. BudgetGo reads PDF bank statements directly, as well as CSV and Excel files and receipt photos.</p>
+<h3>How far back should I import?</h3>
+<p>Two or three months is enough to see your regular bills and spending patterns. Import more if you want longer trends or to compare this month with the same month last year.</p>
+<h3>What if my file has more than 500 transactions?</h3>
+<p>Split it into smaller date ranges, such as one file per month. Each BudgetGo import can hold up to 500 transactions and be up to 5 MB.</p>
+<h3>Will importing statements mess up my budget?</h3>
+<p>No. You review every import before it's added. BudgetGo works with one active budget at a time, or in tracking-only mode with no budget, and imported transactions show up the same way as spending from any other source.</p>
