@@ -130,7 +130,9 @@ def head(p, title, desc, canonical, og_type, image, ld, noindex=False):
   <meta property="og:site_name" content="BudgetGo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#101010" />
-  <link rel="icon" type="image/png" href="{p}src/images/favicon-rounded.png" />
+  <link rel="icon" href="{p}favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="144x144" href="{p}src/images/favicon-144.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="{p}src/images/favicon-96.png" />
   <link rel="apple-touch-icon" href="{p}src/images/favicon-rounded.png" />
   <link rel="alternate" type="application/rss+xml" title="BudgetGo Blog" href="{SITE}/blog/feed.xml" />
   <link rel="stylesheet" href="{p}styles.css?v=20261001-rounded" />
